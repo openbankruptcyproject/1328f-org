@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section 727(a)(8): The Chapter 7 Discharge Bar - 1328f.org</title>
+  <meta name="description" content="Explanation of Section 727(a)(8) and 727(a)(9), the Chapter 7 discharge bars for repeat filers, how they interact with Section 1328(f), and the complete bar window table.">
+  <link rel="canonical" href="https://1328f.org/reports/727-discharge-bar/">
+  <link rel="alternate" hreflang="en" href="https://1328f.org/reports/727-discharge-bar/">
+  <link rel="alternate" hreflang="es" href="https://1328f.org/reports/727-discharge-bar/index-es.html">
+  <meta property="og:title" content="Section 727(a)(8): The Chapter 7 Discharge Bar">
+  <meta property="og:description" content="How the Chapter 7 discharge bar works, its relationship to Section 1328(f), and the complete table of bar windows across all chapter combinations.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://1328f.org/reports/727-discharge-bar/">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    code { background: #161b22; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #8b949e; font-size: 1rem; }
+    nav { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.75rem 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: center; }
+    nav a { color: #8b949e; font-size: 0.9rem; font-weight: 500; padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+    nav a:hover, nav a.active { color: #f0f6fc; border-bottom-color: #58a6ff; text-decoration: none; }
+    .lang-toggle { font-size: 0.8rem; margin-left: 1rem; padding-left: 1rem; border-left: 1px solid #30363d; }
+    .lang-toggle a { color: #8b949e; border-bottom: none; }
+    .lang-toggle a:hover { color: #f0f6fc; }
+    .lang-toggle .current-lang { color: #f0f6fc; font-weight: 600; }
+
+    article { max-width: 760px; margin: 0 auto; padding: 2rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h2 { color: #f0f6fc; font-size: 1.6rem; line-height: 1.3; margin-bottom: 0.75rem; border-bottom: none; padding-bottom: 0; }
+    .article-header .meta { color: #8b949e; font-size: 0.85rem; }
+    .article-header .meta .tag { background: #21262d; padding: 0.15em 0.5em; border-radius: 3px; margin-right: 0.5rem; }
+
+    h2 { color: #f0f6fc; font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    thead th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #30363d; font-size: 0.9rem; }
+    td { color: #c9d1d9; }
+
+    .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #58a6ff; border-radius: 0 6px 6px 0; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+    .callout.green { border-left-color: #3fb950; }
+    .callout.yellow { border-left-color: #d29922; }
+    .callout h4 { color: #f0f6fc; margin-bottom: 0.5rem; }
+
+    .step-list { counter-reset: step; list-style: none; margin-left: 0; padding-left: 0; }
+    .step-list li { counter-increment: step; position: relative; padding-left: 2.5rem; margin-bottom: 1rem; }
+    .step-list li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: 0.1em;
+      width: 1.6rem; height: 1.6rem;
+      background: #21262d; border: 1px solid #30363d; border-radius: 50%;
+      color: #58a6ff; font-weight: 700; font-size: 0.8rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .back-link { display: inline-block; margin-bottom: 1rem; color: #8b949e; font-size: 0.85rem; }
+    .back-link:hover { color: #58a6ff; }
+
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 2rem; text-align: center; margin-top: 3rem; color: #8b949e; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+    @media (max-width: 600px) { header { padding: 1.5rem 1rem; } article { padding: 1rem; } }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header role="banner">
+    <h1><a href="/" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Consumer Bankruptcy Research & Accountability</p>
+  </header>
+  <nav aria-label="Main navigation">
+    <a href="/">Home</a>
+    <a href="/reports/" class="active" aria-current="page">Reports</a>
+    <a href="/watch/">Docket Watch</a>
+    <a href="/methodology/">Methodology</a>
+    <a href="/tools/">Tools</a>
+    <a href="/about/">About</a>
+    <a href="/support/">Support</a>
+    <span class="lang-toggle"><span class="current-lang">EN</span> | <a href="/reports/727-discharge-bar/index-es.html" lang="es">ES</a></span>
+  </nav>
+
+  <article id="main" role="article">
+    <a href="/reports/" class="back-link">&larr; All Reports</a>
+
+    <div class="article-header">
+      <h2>Section 727(a)(8): The Chapter 7 Discharge Bar</h2>
+      <div class="meta">
+        <span class="tag">Explainer</span>
+        Published March 2026
+      </div>
+    </div>
+
+    <div class="callout">
+      <h4>Summary</h4>
+      <p style="margin-bottom: 0;">Section 727(a)(8) bars a Chapter 7 discharge if the debtor received a prior Chapter 7 or Chapter 11 discharge within 8 years. Section 727(a)(9) bars a Chapter 7 discharge if the debtor received a prior Chapter 13 discharge within 6 years (with exceptions). Together with Section 1328(f), these provisions form a complete framework governing how often a debtor can receive bankruptcy relief across all major consumer chapters.</p>
+    </div>
+
+    <h2>1. What Section 727(a)(8) Does</h2>
+    <p>Section 727(a)(8) provides that a Chapter 7 discharge shall not be granted if the debtor received a discharge in a case filed under Chapter 7 or Chapter 11 within the 8 years preceding the current filing date.</p>
+    <p>Section 727(a)(9) extends this to prior Chapter 13 discharges: a Chapter 7 discharge is barred if the debtor received a Chapter 13 discharge in a case filed within 6 years of the current filing, unless the prior Chapter 13 plan paid unsecured creditors at least 70% of their allowed claims (and the plan was proposed in good faith and was the debtor's best effort), or paid 100% of unsecured claims.</p>
+    <p>The measurement runs from filing date to filing date - the same standard used for Section 1328(f).</p>
+
+    <h2>2. How It Relates to 1328(f)</h2>
+    <p>Section 727 governs Chapter 7 discharge bars. Section 1328(f) governs Chapter 13 discharge bars. Together they cover the four primary paths a repeat filer might take:</p>
+    <ul>
+      <li><strong>Chapter 7, then Chapter 7 again:</strong> Section 727(a)(8) - 8-year bar</li>
+      <li><strong>Chapter 7, then Chapter 13:</strong> Section 1328(f)(1) - 4-year bar</li>
+      <li><strong>Chapter 13, then Chapter 7:</strong> Section 727(a)(9) - 6-year bar (with exceptions)</li>
+      <li><strong>Chapter 13, then Chapter 13:</strong> Section 1328(f)(2) - 2-year bar</li>
+    </ul>
+    <p>The bar windows differ, creating periods where a debtor is barred from one chapter but not the other. A debtor discharged from Chapter 7 is barred from another Chapter 7 discharge for 8 years, but the Chapter 13 bar under 1328(f) is only 4 years. This creates a 4-year gap (years 4 through 8) where Chapter 13 is available but Chapter 7 is not.</p>
+
+    <h2>3. Enforcement Differences</h2>
+    <p>Section 727(a)(8) is generally more systematically enforced than Section 1328(f), for several reasons:</p>
+    <ul>
+      <li><strong>Chapter 7 trustees routinely check.</strong> The Chapter 7 trustee's standard intake procedures typically include a review of the debtor's prior filing history. A prior discharge within 8 years is a straightforward disqualifier.</li>
+      <li><strong>UST monitoring is more active in Chapter 7.</strong> The United States Trustee's office devotes significant resources to Chapter 7 oversight, including means testing and abuse screening. Prior-filing checks are part of this process.</li>
+      <li><strong>Chapter 13 trustees vary.</strong> Chapter 13 trustee practices differ widely by district. Some trustees systematically screen for 1328(f) bars; others do not. This inconsistency is a central finding of our <a href="/reports/methodology-1328f-screening/">screening methodology report</a>.</li>
+      <li><strong>Simpler calculation.</strong> The 727(a)(8) bar is binary: was there a prior Chapter 7 or 11 discharge within 8 years? The 1328(f) analysis requires identifying the prior chapter to determine whether the 2-year or 4-year window applies, adding a step that increases the chance of oversight.</li>
+    </ul>
+
+    <h2>4. The Filing Date Question</h2>
+    <p>Both Section 727(a)(8) and Section 1328(f) measure from the filing date of the prior case to the filing date of the current case. This is sometimes called the "filing-date-to-filing-date" standard.</p>
+    <p>For Section 1328(f), this standard was established in <em>In re Blendheim</em>, 803 F.3d 477 (9th Cir. 2015), which held that the phrase "filed during the [applicable] period" refers to the filing date of the prior case, not the discharge date. This is the majority position.</p>
+    <p>The same measurement applies to Section 727(a)(8). The statute says "filed under chapter 7 or 11 of this title during the 8-year period" - the word "filed" refers to the prior case's filing date, and the 8-year period is measured backward from the current filing date.</p>
+
+    <div class="callout">
+      <h4>Why This Matters</h4>
+      <p style="margin-bottom: 0;">A Chapter 13 case can take 3 to 5 years from filing to discharge. If the bar were measured from discharge date to filing date, a debtor who filed a 5-year Chapter 13 plan could refile for a new discharge as little as 0 days after completing the prior plan (if the bar and the plan length align). The filing-date-to-filing-date standard prevents this by starting the clock earlier.</p>
+    </div>
+
+    <h2>5. Practical Impact</h2>
+    <p>The interaction of Sections 727(a)(8), 727(a)(9), and 1328(f) creates distinct time windows after each type of discharge:</p>
+
+    <h3>After a Chapter 7 Discharge</h3>
+    <ul>
+      <li><strong>Years 0-4:</strong> Barred from both Chapter 7 discharge (727(a)(8)) and Chapter 13 discharge (1328(f)(1)). The debtor can file either chapter, but cannot receive a discharge in either.</li>
+      <li><strong>Years 4-8:</strong> Barred from Chapter 7 discharge only. Chapter 13 discharge is available. This is the window where debtors commonly file "Chapter 20" cases (Chapter 7 followed by Chapter 13).</li>
+      <li><strong>After 8 years:</strong> Both Chapter 7 and Chapter 13 discharges are available.</li>
+    </ul>
+
+    <h3>After a Chapter 13 Discharge</h3>
+    <ul>
+      <li><strong>Years 0-2:</strong> Barred from both Chapter 13 discharge (1328(f)(2)) and Chapter 7 discharge (727(a)(9), unless the prior plan paid 100% or 70%+). The debtor can file but cannot receive a discharge in either chapter.</li>
+      <li><strong>Years 2-6:</strong> Chapter 13 discharge is available. Chapter 7 discharge is barred (unless the payment exception applies).</li>
+      <li><strong>After 6 years:</strong> Both chapters available.</li>
+    </ul>
+
+    <h2>6. Complete Bar Window Table</h2>
+
+    <div class="callout green">
+      <h4>Discharge-to-Discharge Bar Windows</h4>
+      <table style="margin-bottom: 0;">
+        <thead>
+          <tr>
+            <th scope="col">Prior Case Chapter</th>
+            <th scope="col">New Case Chapter</th>
+            <th scope="col">Statute</th>
+            <th scope="col">Bar Period</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Chapter 7</td><td>Chapter 7</td><td>727(a)(8)</td><td>8 years</td></tr>
+          <tr><td>Chapter 7</td><td>Chapter 13</td><td>1328(f)(1)</td><td>4 years</td></tr>
+          <tr><td>Chapter 11</td><td>Chapter 7</td><td>727(a)(8)</td><td>8 years</td></tr>
+          <tr><td>Chapter 11</td><td>Chapter 13</td><td>1328(f)(1)</td><td>4 years</td></tr>
+          <tr><td>Chapter 12</td><td>Chapter 13</td><td>1328(f)(1)</td><td>4 years</td></tr>
+          <tr><td>Chapter 13</td><td>Chapter 7</td><td>727(a)(9)</td><td>6 years*</td></tr>
+          <tr><td>Chapter 13</td><td>Chapter 13</td><td>1328(f)(2)</td><td>2 years</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 0.5rem; margin-bottom: 0; font-size: 0.85rem; color: #8b949e;">* Exception: Chapter 7 discharge is available if the prior Chapter 13 plan paid 100% of unsecured claims, or paid at least 70% and was proposed in good faith as the debtor's best effort.</p>
+    </div>
+
+    <p>All bar periods are measured from the filing date of the prior case to the filing date of the current case.</p>
+
+    <h2>7. Tools and Further Reading</h2>
+    <p>The <a href="https://1328f.com">national screening dashboard</a> covers Section 1328(f) violations across all 94 federal districts. The <a href="https://1328f.com/check.html">eligibility calculator</a> lets you check whether a specific filing gap falls within a bar window.</p>
+
+    <h3>Related Reports</h3>
+    <ul>
+      <li><a href="/reports/methodology-1328f-screening/">How We Screened 4.9 Million Bankruptcy Cases</a> - full methodology for the 1328(f) screening</li>
+      <li><a href="/reports/109g-filing-bar/">Section 109(g): The Filing Bar for Dismissed Debtors</a> - the 180-day filing bar</li>
+      <li><a href="/reports/chapter-13-dismissal-rates/">Chapter 13 Dismissal Rates by District</a> - national analysis of where cases fail</li>
+      <li><a href="/reports/prior-filer-discharge-rates/">Prior-Filer Discharge Rates</a> - outcomes for debtors with prior filings</li>
+    </ul>
+
+    <div class="callout yellow">
+      <h4>Not Legal Advice</h4>
+      <p style="margin-bottom: 0;">This report presents statutory analysis and empirical findings based on public court data. It does not constitute legal advice. Whether a discharge bar applies in a specific case depends on the facts and circumstances, including the debtor's filing and discharge history. Consult a licensed attorney for advice about your situation.</p>
+    </div>
+
+  </article>
+
+  <footer role="contentinfo">
+    <p>1328f.org - Independent consumer bankruptcy research. Not legal advice.</p>
+    <p class="links">
+      <a href="https://1328f.com">Screener Tool</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/">About</a>
+      <a href="/support/">Support</a>
+    </p>
+    <p style="margin-top: 0.75rem;"><a href="/support/" style="color: #484f58;">Support this research</a></p>
+  </footer>
+</body>
+</html>

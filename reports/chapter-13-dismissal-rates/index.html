@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 13 Dismissal Rates by District: National Analysis - 1328f.org</title>
+  <meta name="description" content="National analysis of Chapter 13 dismissal rates across federal bankruptcy districts: why 60-67% of Chapter 13 cases fail, how rates vary by district and attorney, and what the data reveals.">
+  <link rel="canonical" href="https://1328f.org/reports/chapter-13-dismissal-rates/">
+  <link rel="alternate" hreflang="en" href="https://1328f.org/reports/chapter-13-dismissal-rates/">
+  <link rel="alternate" hreflang="es" href="https://1328f.org/reports/chapter-13-dismissal-rates/index-es.html">
+  <meta property="og:title" content="Chapter 13 Dismissal Rates by District: National Analysis">
+  <meta property="og:description" content="60-67% of Chapter 13 cases are dismissed. This rate varies by 30+ percentage points across districts. The strongest predictor of completion is not income or debt - it is the attorney.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://1328f.org/reports/chapter-13-dismissal-rates/">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    code { background: #161b22; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #8b949e; font-size: 1rem; }
+    nav { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.75rem 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: center; }
+    nav a { color: #8b949e; font-size: 0.9rem; font-weight: 500; padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+    nav a:hover, nav a.active { color: #f0f6fc; border-bottom-color: #58a6ff; text-decoration: none; }
+    .lang-toggle { font-size: 0.8rem; margin-left: 1rem; padding-left: 1rem; border-left: 1px solid #30363d; }
+    .lang-toggle a { color: #8b949e; border-bottom: none; }
+    .lang-toggle a:hover { color: #f0f6fc; }
+    .lang-toggle .current-lang { color: #f0f6fc; font-weight: 600; }
+
+    article { max-width: 760px; margin: 0 auto; padding: 2rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h2 { color: #f0f6fc; font-size: 1.6rem; line-height: 1.3; margin-bottom: 0.75rem; border-bottom: none; padding-bottom: 0; }
+    .article-header .meta { color: #8b949e; font-size: 0.85rem; }
+    .article-header .meta .tag { background: #21262d; padding: 0.15em 0.5em; border-radius: 3px; margin-right: 0.5rem; }
+
+    h2 { color: #f0f6fc; font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    thead th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #30363d; font-size: 0.9rem; }
+    td { color: #c9d1d9; }
+
+    .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #58a6ff; border-radius: 0 6px 6px 0; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+    .callout.green { border-left-color: #3fb950; }
+    .callout.yellow { border-left-color: #d29922; }
+    .callout h4 { color: #f0f6fc; margin-bottom: 0.5rem; }
+
+    .step-list { counter-reset: step; list-style: none; margin-left: 0; padding-left: 0; }
+    .step-list li { counter-increment: step; position: relative; padding-left: 2.5rem; margin-bottom: 1rem; }
+    .step-list li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: 0.1em;
+      width: 1.6rem; height: 1.6rem;
+      background: #21262d; border: 1px solid #30363d; border-radius: 50%;
+      color: #58a6ff; font-weight: 700; font-size: 0.8rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .back-link { display: inline-block; margin-bottom: 1rem; color: #8b949e; font-size: 0.85rem; }
+    .back-link:hover { color: #58a6ff; }
+
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 2rem; text-align: center; margin-top: 3rem; color: #8b949e; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+    @media (max-width: 600px) { header { padding: 1.5rem 1rem; } article { padding: 1rem; } }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header role="banner">
+    <h1><a href="/" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Consumer Bankruptcy Research & Accountability</p>
+  </header>
+  <nav aria-label="Main navigation">
+    <a href="/">Home</a>
+    <a href="/reports/" class="active" aria-current="page">Reports</a>
+    <a href="/watch/">Docket Watch</a>
+    <a href="/methodology/">Methodology</a>
+    <a href="/tools/">Tools</a>
+    <a href="/about/">About</a>
+    <a href="/support/">Support</a>
+    <span class="lang-toggle"><span class="current-lang">EN</span> | <a href="/reports/chapter-13-dismissal-rates/index-es.html" lang="es">ES</a></span>
+  </nav>
+
+  <article id="main" role="article">
+    <a href="/reports/" class="back-link">&larr; All Reports</a>
+
+    <div class="article-header">
+      <h2>Chapter 13 Dismissal Rates by District: National Analysis</h2>
+      <div class="meta">
+        <span class="tag">Research</span>
+        Published March 2026
+      </div>
+    </div>
+
+    <div class="callout">
+      <h4>Summary</h4>
+      <p style="margin-bottom: 0;">Chapter 13 has a national completion rate of approximately 33-40%. The remaining 60-67% of cases are dismissed without the debtor receiving a discharge. This rate varies by more than 30 percentage points across federal districts. In our target districts, the strongest predictor of whether a debtor completes a Chapter 13 plan is not income, debt load, or district - it is the attorney.</p>
+    </div>
+
+    <h2>1. What Dismissal Means</h2>
+    <p>A dismissed Chapter 13 case provides no permanent relief. When a case is dismissed:</p>
+    <ul>
+      <li>The debtor does not receive a discharge. No debts are eliminated.</li>
+      <li>The automatic stay lifts. Creditors can resume collection, foreclosure, repossession, and garnishment.</li>
+      <li>Plan payments already made are distributed to creditors, but the debtor receives no credit for partial completion.</li>
+      <li>Attorney fees - typically $3,000 to $5,000 for a Chapter 13 filing - are not refunded.</li>
+    </ul>
+    <p>For the debtor, a dismissed case means months or years of plan payments, restricted finances, and legal proceedings that produce no lasting benefit. For creditors, it means delayed recovery. For the court system, it means consumed resources that produced no resolution.</p>
+
+    <h2>2. National Overview</h2>
+    <p>Using FJC Integrated Database records covering 4.9 million Chapter 13 cases filed between fiscal years 2008 and 2024 across all 94 federal bankruptcy districts, the national dismissal rate for resolved cases (discharged plus dismissed, excluding open cases) falls between 60% and 67%, depending on the cohort and time period.</p>
+
+    <div class="callout green">
+      <h4>Key Numbers</h4>
+      <p>Dataset: 4,895,163 Chapter 13 cases across 94 federal districts</p>
+      <p>National dismissal rate (resolved cases): approximately 60-67%</p>
+      <p>Range across districts: varies by more than 30 percentage points</p>
+      <p style="margin-bottom: 0;">Some districts dismiss fewer than 50% of resolved cases. Others dismiss more than 80%.</p>
+    </div>
+
+    <p>The "dismissal rate" used throughout this report is calculated as: dismissed cases divided by (dismissed cases plus discharged cases). Open cases are excluded from the denominator because their final outcome is unknown. This is the standard approach in bankruptcy outcome research.</p>
+
+    <h2>3. Why Rates Vary</h2>
+    <p>Chapter 13 dismissal rates are not random. They are shaped by multiple factors that differ across districts:</p>
+    <ul>
+      <li><strong>Local legal culture.</strong> Some districts have faster confirmation processes, earlier intervention by trustees, and more structured plan requirements. These practices tend to surface doomed cases earlier - but may also catch fixable problems before they become fatal.</li>
+      <li><strong>Trustee practices.</strong> Chapter 13 trustees have broad discretion in how they monitor cases, enforce plan requirements, and recommend dismissal. Some trustees dismiss aggressively for minor noncompliance. Others work with debtors through difficulties.</li>
+      <li><strong>Economic conditions.</strong> Districts with higher unemployment, lower wages, or more volatile job markets see higher dismissal rates. Debtors in these districts are more likely to experience income disruptions that prevent plan completion.</li>
+      <li><strong>Attorney quality.</strong> The attorney effect is discussed in detail below, but at the district level, districts with a higher concentration of high-volume, low-quality practitioners show elevated dismissal rates.</li>
+      <li><strong>Plan requirements.</strong> Some districts require more from debtors before confirmation - employment verification, budget counseling, tax return filing. These requirements may screen out cases that would otherwise fail, but they may also create barriers for debtors who would succeed with help.</li>
+    </ul>
+
+    <h2>4. The Attorney Effect</h2>
+
+    <div class="callout">
+      <h4>Key Finding</h4>
+      <p style="margin-bottom: 0;">In our target districts (56,256 cases across 3 courts), the gap between the best and worst practitioners exceeds 40 percentage points. Control-group practitioners achieve dismissal rates around 22%, while the worst performers exceed 35%. This gap is statistically significant (p &lt; 0.001).</p>
+    </div>
+
+    <p>The attorney who files a Chapter 13 case is the single strongest predictor of whether the debtor will complete the plan. This finding holds after controlling for district, filing year, and debtor characteristics available in the public record.</p>
+    <p>Why attorneys matter so much in Chapter 13:</p>
+    <ul>
+      <li><strong>Chapter 13 requires sustained work.</strong> Unlike Chapter 7 (where the attorney's work is largely complete at filing), Chapter 13 requires ongoing attorney involvement: plan drafting, confirmation hearings, plan modifications, creditor negotiations, and response to trustee objections over a 3-to-5-year period.</li>
+      <li><strong>Case selection matters.</strong> Attorneys who carefully evaluate whether a debtor can sustain a 3-to-5-year plan before filing produce fewer doomed cases. Attorneys who file everyone who walks in the door produce more failures.</li>
+      <li><strong>Intake quality predicts outcomes.</strong> A complete, accurate petition with properly valued assets, correctly listed creditors, and a feasible plan has a dramatically better chance of confirmation and completion than a bare petition filed with missing schedules and unrealistic projections.</li>
+    </ul>
+    <p>In one analyzed portfolio, the difference between practitioners was not marginal. It was the difference between roughly 1 in 5 clients failing and roughly 1 in 3 clients failing - a gap that, across hundreds of cases, represents substantial aggregate harm to debtors.</p>
+
+    <h2>5. Where Cases Fail</h2>
+    <p>Not all dismissals are the same. Analyzing the stage at which cases fail reveals distinct patterns:</p>
+
+    <h3>Normal Failure Mode</h3>
+    <p>The most common reason Chapter 13 cases fail is that the debtor cannot sustain plan payments. Job loss, medical emergencies, divorce, and other life events disrupt the debtor's ability to make monthly payments over a 3-to-5-year period. This is the expected failure mode - Chapter 13 is hard, and some debtors will not be able to complete it despite their best efforts.</p>
+
+    <h3>Anomalous Failure Mode</h3>
+    <p>A distinct pattern emerges in cases that fail before they start:</p>
+    <ul>
+      <li><strong>Bare petitions:</strong> Cases filed with only a petition and no schedules, statements, or plan. These cases are almost always dismissed for failure to file required documents within the 14-day deadline.</li>
+      <li><strong>Filing fee failures:</strong> Cases dismissed because the debtor did not pay the filing fee or obtain a fee waiver.</li>
+      <li><strong>Failure to appear:</strong> Cases dismissed because the debtor did not attend the Section 341 meeting of creditors.</li>
+      <li><strong>Failure to file required information:</strong> Cases dismissed for missing tax returns, pay stubs, credit counseling certificates, or other required documents.</li>
+    </ul>
+
+    <div class="callout">
+      <h4>Intake-Stage Failures</h4>
+      <p style="margin-bottom: 0;">High-volume practices show elevated rates of intake-stage failures - cases that are dismissed before a plan is even considered. This pattern suggests cases being filed that should not have been filed. The debtor pays an attorney fee, receives temporary automatic stay protection, and gets nothing permanent in return.</p>
+    </div>
+
+    <h2>6. Chapter 7 as Control</h2>
+    <p>Comparing Chapter 7 and Chapter 13 outcomes for the same practitioners isolates what makes Chapter 13 different. Chapter 7 is largely a one-time event: the attorney files the petition, the debtor attends the 341 meeting, and discharge follows approximately 60 days later if no objections are raised. There is no plan, no ongoing payments, and minimal post-filing attorney work.</p>
+    <p>When a practitioner succeeds at Chapter 7 but fails at Chapter 13, the difference is not the debtor population - the same attorney is serving the same community. The difference is the work required. Chapter 7 rewards the ability to file a case. Chapter 13 rewards the ability to sustain a case.</p>
+    <p>In our target districts, practitioners with the highest Chapter 13 dismissal rates often have Chapter 7 outcomes that are close to the district average. Their Chapter 7 clients get discharged at normal rates. Their Chapter 13 clients do not. This pattern is consistent with a practice model that collects fees for filing but does not perform the ongoing work that Chapter 13 requires.</p>
+
+    <h2>7. Implications</h2>
+    <p>The data points to three conclusions:</p>
+
+    <h3>For Consumers</h3>
+    <p>A consumer selecting a Chapter 13 attorney should compare that attorney's completion rate against the district baseline. An attorney whose clients complete their plans 20 percentage points less often than the district average is an attorney whose clients are paying for a service they are unlikely to receive.</p>
+    <p>PACER records are public. An attorney's filing history, including outcomes, is available to anyone with a PACER account. Our <a href="/reports/reading-pacer-attorney-record/">guide to reading an attorney's PACER record</a> explains how to look up this information.</p>
+
+    <h3>For Policymakers</h3>
+    <p>The current system provides consumers with almost no information about attorney performance before they hire. Bar association referral services do not publish outcome data. State bar disciplinary records capture only the most extreme misconduct. A consumer choosing a bankruptcy attorney has less information available than a consumer choosing a restaurant.</p>
+    <p>Standardized outcome reporting - even at the district level rather than the individual attorney level - would give consumers, trustees, and courts a tool for identifying patterns that currently go undetected.</p>
+
+    <h3>For Trustees and Courts</h3>
+    <p>Systematic monitoring of attorney-level outcomes could identify practitioners whose clients are failing at anomalous rates before the pattern becomes entrenched. Early intervention - whether through mentorship, training requirements, or referral to bar disciplinary authorities - is more effective than addressing the problem after hundreds of debtors have been harmed.</p>
+
+    <h2>8. Methodology</h2>
+    <p>This analysis uses FJC Integrated Database records for Chapter 13 cases and PACER Case Locator exports for attorney-level analysis in target districts. Dismissal rates are calculated using resolved cases only (discharged plus dismissed). Open cases, converted cases, and cases with other dispositions are excluded from the primary rate calculation.</p>
+    <p>The target-district analysis covers 56,256 Chapter 13 cases across 3 federal bankruptcy courts. Attorney-level comparisons use a minimum case threshold to exclude practitioners with too few cases for meaningful rate calculation.</p>
+    <p>For the full technical methodology, including data sources, de-staling procedures, and statistical methods, see the <a href="/reports/methodology-1328f-screening/">methodology report</a>.</p>
+
+    <h2>Related Reports</h2>
+    <ul>
+      <li><a href="/reports/methodology-1328f-screening/">How We Screened 4.9 Million Bankruptcy Cases</a> - data sources and screening methodology</li>
+      <li><a href="/reports/prior-filer-discharge-rates/">Prior-Filer Discharge Rates</a> - outcomes for debtors with prior filings</li>
+      <li><a href="/reports/109g-filing-bar/">Section 109(g): The Filing Bar for Dismissed Debtors</a> - the 180-day filing bar</li>
+      <li><a href="/reports/727-discharge-bar/">Section 727(a)(8): The Chapter 7 Discharge Bar</a> - discharge bars across chapters</li>
+      <li><a href="/reports/reading-pacer-attorney-record/">How to Read an Attorney's PACER Record</a> - consumer guide to public court data</li>
+    </ul>
+
+    <div class="callout yellow">
+      <h4>Not Legal Advice</h4>
+      <p style="margin-bottom: 0;">This report presents empirical findings from public court data. It does not constitute legal advice. Dismissal rates reflect aggregate outcomes and do not predict the result of any individual case. Many factors beyond attorney selection affect whether a Chapter 13 plan succeeds. Consult a licensed attorney for advice about your situation.</p>
+    </div>
+
+  </article>
+
+  <footer role="contentinfo">
+    <p>1328f.org - Independent consumer bankruptcy research. Not legal advice.</p>
+    <p class="links">
+      <a href="https://1328f.com">Screener Tool</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/">About</a>
+      <a href="/support/">Support</a>
+    </p>
+    <p style="margin-top: 0.75rem;"><a href="/support/" style="color: #484f58;">Support this research</a></p>
+  </footer>
+</body>
+</html>

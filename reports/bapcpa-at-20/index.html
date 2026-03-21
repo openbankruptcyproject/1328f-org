@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BAPCPA at 20: What the Data Shows - 1328f.org</title>
+  <meta name="description" content="Twenty years after the Bankruptcy Abuse Prevention and Consumer Protection Act, empirical data from 4.9 million cases reveals whether BAPCPA achieved its stated goals.">
+  <link rel="canonical" href="https://1328f.org/reports/bapcpa-at-20/">
+  <link rel="alternate" hreflang="en" href="https://1328f.org/reports/bapcpa-at-20/">
+  <link rel="alternate" hreflang="es" href="https://1328f.org/reports/bapcpa-at-20/index-es.html">
+  <meta property="og:title" content="BAPCPA at 20: What the Data Shows">
+  <meta property="og:description" content="Twenty years after BAPCPA, empirical data from 4.9 million bankruptcy cases reveals whether the law achieved its stated goals of reducing abuse.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://1328f.org/reports/bapcpa-at-20/">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    code { background: #161b22; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #8b949e; font-size: 1rem; }
+    nav { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.75rem 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: center; }
+    nav a { color: #8b949e; font-size: 0.9rem; font-weight: 500; padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+    nav a:hover, nav a.active { color: #f0f6fc; border-bottom-color: #58a6ff; text-decoration: none; }
+    .lang-toggle { font-size: 0.8rem; margin-left: 1rem; padding-left: 1rem; border-left: 1px solid #30363d; }
+    .lang-toggle a { color: #8b949e; border-bottom: none; }
+    .lang-toggle a:hover { color: #f0f6fc; }
+    .lang-toggle .current-lang { color: #f0f6fc; font-weight: 600; }
+
+    article { max-width: 760px; margin: 0 auto; padding: 2rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h2 { color: #f0f6fc; font-size: 1.6rem; line-height: 1.3; margin-bottom: 0.75rem; border-bottom: none; padding-bottom: 0; }
+    .article-header .meta { color: #8b949e; font-size: 0.85rem; }
+    .article-header .meta .tag { background: #21262d; padding: 0.15em 0.5em; border-radius: 3px; margin-right: 0.5rem; }
+
+    h2 { color: #f0f6fc; font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    thead th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #30363d; font-size: 0.9rem; }
+    td { color: #c9d1d9; }
+
+    .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #58a6ff; border-radius: 0 6px 6px 0; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+    .callout.green { border-left-color: #3fb950; }
+    .callout.yellow { border-left-color: #d29922; }
+    .callout.red { border-left-color: #f85149; }
+    .callout h4 { color: #f0f6fc; margin-bottom: 0.5rem; }
+
+    .step-list { counter-reset: step; list-style: none; margin-left: 0; padding-left: 0; }
+    .step-list li { counter-increment: step; position: relative; padding-left: 2.5rem; margin-bottom: 1rem; }
+    .step-list li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: 0.1em;
+      width: 1.6rem; height: 1.6rem;
+      background: #21262d; border: 1px solid #30363d; border-radius: 50%;
+      color: #58a6ff; font-weight: 700; font-size: 0.8rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .back-link { display: inline-block; margin-bottom: 1rem; color: #8b949e; font-size: 0.85rem; }
+    .back-link:hover { color: #58a6ff; }
+
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 2rem; text-align: center; margin-top: 3rem; color: #8b949e; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+    @media (max-width: 600px) { header { padding: 1.5rem 1rem; } article { padding: 1rem; } }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header role="banner">
+    <h1><a href="/" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Consumer Bankruptcy Research & Accountability</p>
+  </header>
+  <nav aria-label="Main navigation">
+    <a href="/">Home</a>
+    <a href="/reports/" aria-current="page">Reports</a>
+    <a href="/watch/">Docket Watch</a>
+    <a href="/methodology/">Methodology</a>
+    <a href="/tools/">Tools</a>
+    <a href="/about/">About</a>
+    <a href="/support/">Support</a>
+    <span class="lang-toggle"><span class="current-lang">EN</span> | <a href="/reports/bapcpa-at-20/index-es.html" lang="es">ES</a></span>
+  </nav>
+
+  <article id="main" role="article">
+    <a href="/reports/" class="back-link">&larr; All Reports</a>
+
+    <div class="article-header">
+      <h2>BAPCPA at 20: What the Data Shows</h2>
+      <div class="meta">
+        <span class="tag">Policy Analysis</span>
+        <span class="tag">Empirical</span>
+        Published March 2026
+      </div>
+    </div>
+
+    <div class="callout">
+      <h4>Summary</h4>
+      <p style="margin-bottom: 0;">The Bankruptcy Abuse Prevention and Consumer Protection Act of 2005 (BAPCPA) was the largest overhaul of federal bankruptcy law in a generation. Twenty years later, empirical data from 4.9 million cases allows us to measure whether its major consumer provisions achieved their stated purpose: preventing abuse of the bankruptcy system. The results are mixed. Several provisions are unenforced, ineffective, or producing unintended consequences that harm the debtors the system was designed to protect.</p>
+    </div>
+
+    <h2>1. What Is BAPCPA</h2>
+    <p>The Bankruptcy Abuse Prevention and Consumer Protection Act (BAPCPA) was signed into law on April 20, 2005, and took effect on October 17, 2005. It was the most significant reform to federal bankruptcy law since the Bankruptcy Reform Act of 1978 created the modern Bankruptcy Code.</p>
+    <p>BAPCPA's stated purpose was to prevent abuse of the bankruptcy system - particularly the perception that debtors with the ability to repay some portion of their debts were filing Chapter 7 liquidation to discharge obligations they could afford to pay.</p>
+    <p>The law's major consumer provisions include:</p>
+    <ul>
+      <li><strong>Means test</strong> (Section 707(b)) - income-based threshold for Chapter 7 eligibility</li>
+      <li><strong>Discharge bars</strong> (Section 1328(f)) - time-based bars on repeat-filer discharges</li>
+      <li><strong>Filing bars</strong> (Section 109(g)) - restrictions on refiling after certain dismissals</li>
+      <li><strong>Credit counseling mandate</strong> (Section 109(h)) - required pre-filing and pre-discharge courses</li>
+      <li><strong>Increased documentation requirements</strong> - tax returns, pay stubs, and expense verification</li>
+      <li><strong>Increased filing fees</strong> - Chapter 13 fees raised from $150 to $274</li>
+      <li><strong>Attorney liability provisions</strong> (Section 707(b)(4)) - personal liability for attorneys who file abusive petitions</li>
+    </ul>
+    <p>These provisions were enacted as a package. Twenty years of data now allows us to assess whether each achieved its intended effect.</p>
+
+    <h2>2. The Promise vs. The Data</h2>
+    <p>BAPCPA was framed as consumer protection. Its proponents argued that preventing abuse would benefit both creditors and honest debtors by preserving the integrity of the bankruptcy system.</p>
+    <p>The law passed after nearly a decade of lobbying, primarily by the credit card industry. The legislative history reflects a specific theory: that a significant number of debtors were filing Chapter 7 when they had the means to repay some portion of their debts through a Chapter 13 plan.</p>
+    <p>Twenty years later, we can test this theory against outcomes. The questions are straightforward:</p>
+    <ul>
+      <li>Did the means test reduce Chapter 7 abuse?</li>
+      <li>Did the discharge bar prevent repeat-filer abuse?</li>
+      <li>Did the credit counseling mandate change debtor behavior?</li>
+      <li>Did debtors channeled into Chapter 13 actually complete their plans?</li>
+      <li>Did the added complexity improve outcomes, or create new problems?</li>
+    </ul>
+    <p>The data provides answers. They are not the answers BAPCPA's proponents predicted.</p>
+
+    <h2>3. Section 1328(f): The Discharge Bar</h2>
+    <p>BAPCPA created a time-based bar on Chapter 13 discharges for debtors who previously received a discharge in another case. The bar periods run from filing date to filing date:</p>
+    <table>
+      <thead><tr><th scope="col">Prior Chapter</th><th scope="col">Bar Period</th></tr></thead>
+      <tbody>
+        <tr><td>Chapter 7, 11, or 12</td><td>4 years</td></tr>
+        <tr><td>Chapter 13</td><td>2 years</td></tr>
+      </tbody>
+    </table>
+    <p>The provision exists in statute. Enforcement is another matter.</p>
+
+    <div class="callout red">
+      <h4>Key Finding: 264 Verified Violations</h4>
+      <p style="margin-bottom: 0;">Our screening of 4.9 million Chapter 13 cases identified 264 cases where debtors received discharges despite falling within the Section 1328(f) bar window. No automated screening mechanism exists in the court system. Enforcement depends entirely on whether someone - a trustee, the U.S. Trustee, or a creditor - identifies the prior filing and objects.</p>
+    </div>
+
+    <p>The violations are not randomly distributed. Six attorneys account for 73% of verified violations in our target districts. Same-firm representation on both the prior and current filing occurs in 42.8% of flagged cases. This concentration suggests the violations are not primarily a debtor problem - they are a practitioner problem.</p>
+    <p>For a detailed technical walkthrough of how we identified these cases, see the <a href="/reports/methodology-1328f-screening/">full methodology report</a>.</p>
+
+    <h2>4. Section 109(g): The Filing Bar</h2>
+    <p>Section 109(g) bars a debtor from filing a new bankruptcy case within 180 days of a prior dismissal under certain conditions:</p>
+    <ul>
+      <li>Willful failure to appear before the court or comply with court orders</li>
+      <li>Voluntary dismissal following the filing of a motion for relief from the automatic stay</li>
+    </ul>
+    <p>Like Section 1328(f), enforcement is inconsistent. The statute creates the bar, but no centralized system flags violations at the time of filing. Rapid refiles within 180 days of dismissal occur at measurable rates across the federal system.</p>
+    <p>Some districts track this systematically through trustee screening or local standing orders. Others do not. The result is uneven enforcement that varies by geography rather than by the merits of individual cases.</p>
+    <p>The pattern of rapid refiling is particularly visible in high-volume practices, where a dismissed case is followed by a new filing within days or weeks - sometimes with the same attorney, sometimes with a different firm in the same referral network.</p>
+
+    <h2>5. The Means Test (Section 707(b))</h2>
+    <p>The means test was BAPCPA's centerpiece provision. Debtors with income above the state median must pass a formulaic calculation to qualify for Chapter 7. Those who fail the test are presumed to be abusing the system and are channeled into Chapter 13 repayment plans.</p>
+
+    <div class="callout yellow">
+      <h4>Key Finding: Channel Effect</h4>
+      <p style="margin-bottom: 0;">Chapter 13 filings increased as a share of total consumer filings after BAPCPA took effect. Debtors who would have filed Chapter 7 before 2005 were channeled into Chapter 13 plans. Chapter 13 has a national completion rate of approximately 33-40%, meaning 60-67% of channeled debtors do not complete their plans and receive no discharge at all.</p>
+    </div>
+
+    <p>The means test assumes that debtors above the median income line can sustain a three-to-five-year repayment plan. The completion data does not support this assumption. Debtors channeled into Chapter 13 face years of court supervision, trustee fees, and attorney costs - and the majority emerge without a discharge.</p>
+    <p>For the debtors who would have received a Chapter 7 discharge in four months pre-BAPCPA, the means test may have converted a fresh start into a multi-year process that fails more often than it succeeds.</p>
+
+    <h2>6. Credit Counseling Mandate (Section 109(h))</h2>
+    <p>BAPCPA requires all individual debtors to complete a credit counseling course from an approved agency before filing and a financial management course before receiving a discharge.</p>
+    <p>The provision created a cottage industry of approved counseling agencies. Courses are available online and can be completed in under an hour. They typically cost $15-50 per session.</p>
+    <p>The requirement adds cost and delay to the filing process. A debtor who needs immediate protection from the automatic stay must first complete and pay for a counseling session before their attorney can file the petition.</p>
+
+    <div class="callout">
+      <h4>No Demonstrated Effect</h4>
+      <p style="margin-bottom: 0;">No published empirical research has demonstrated that the credit counseling mandate reduces repeat filing rates or improves Chapter 13 plan completion rates. The requirement applies uniformly to all debtors regardless of their circumstances - a first-time filer with a medical debt receives the same counseling as a serial filer with a gambling problem.</p>
+    </div>
+
+    <p>Cases dismissed for failure to complete the pre-filing counseling requirement appear on dockets regularly. In practice, the mandate functions as a procedural gate that occasionally traps debtors who need protection most urgently.</p>
+
+    <h2>7. Filing Fee Changes</h2>
+    <p>BAPCPA increased the Chapter 13 filing fee from $150 to $274. Subsequent adjustments have raised it to the current $313. Combined with attorney fees, credit counseling costs, and documentation requirements, the total cost of filing a Chapter 13 case has risen substantially since 2005.</p>
+    <p>Cases dismissed for failure to pay the filing fee - often within weeks of filing - occur at measurable rates.</p>
+
+    <div class="callout red">
+      <h4>Key Finding: Filing Fee Dismissal Disparity</h4>
+      <p style="margin-bottom: 0;">In our target districts, one firm shows a 4.2% filing-fee dismissal rate compared to 0.9% for control-group practitioners - a ratio of 4.9 to 1. Higher filing fees may disproportionately burden the debtors least able to afford them, particularly when combined with high-volume practices that collect retainers but do not ensure clients can sustain the costs of the process.</p>
+    </div>
+
+    <p>The filing fee is not waivable in Chapter 13 (unlike Chapter 7, where in forma pauperis filing is available). Debtors who cannot afford the fee may request installment payments, but failure to complete installments results in dismissal - often before any plan payments begin.</p>
+
+    <h2>8. Chapter 13 Completion Rates</h2>
+    <p>The fundamental question for evaluating BAPCPA is whether debtors who enter Chapter 13 actually complete their plans and receive a discharge.</p>
+
+    <table>
+      <thead><tr><th scope="col">Population</th><th scope="col">Completion Rate</th></tr></thead>
+      <tbody>
+        <tr><td>National Chapter 13 average</td><td>33-40%</td></tr>
+        <tr><td>Prior filers (BAPCPA target population)</td><td>24.1%</td></tr>
+      </tbody>
+    </table>
+
+    <div class="callout red">
+      <h4>Key Finding: Prior Filers Complete at Lower Rates</h4>
+      <p style="margin-bottom: 0;">Prior filers - the population BAPCPA specifically targeted with its repeat-filing provisions - complete Chapter 13 plans at a rate of 24.1%, well below the already-low national average. Three out of four prior filers who enter Chapter 13 do not receive a discharge. BAPCPA channeled more debtors into a chapter where the majority do not succeed.</p>
+    </div>
+
+    <p>The national completion rate has not materially improved since BAPCPA. If anything, the added complexity of the post-BAPCPA process - means test documentation, credit counseling requirements, and increased filing costs - may contribute to the high failure rate.</p>
+    <p>Chapter 13 failure is not cost-free. Debtors in dismissed cases have typically paid months or years of plan payments, trustee fees, and attorney fees without receiving a discharge. They exit the process worse off than when they entered - in debt, without the fresh start bankruptcy was designed to provide, and with fewer resources to try again.</p>
+    <p>For detailed district-level completion data, see the <a href="/reports/prior-filer-discharge-rates/">prior-filer discharge rate analysis</a>.</p>
+
+    <h2>9. The Attorney Effect</h2>
+    <p>BAPCPA increased the complexity of consumer bankruptcy practice. The means test, documentation requirements, credit counseling certification, and attorney liability provisions all added procedural layers that practitioners must navigate.</p>
+    <p>This complexity created barriers to entry for solo practitioners and small firms. It also created advantages for high-volume practices that could template the process - building standardized workflows, pre-populated forms, and assembly-line procedures that process cases at scale.</p>
+
+    <div class="callout green">
+      <h4>Key Finding: Attorney Quality Is the Strongest Predictor</h4>
+      <p style="margin-bottom: 0;">Our data shows that attorney quality is the strongest predictor of Chapter 13 outcomes. The gap between the best and worst practitioners in the same courts, handling similar populations, exceeds 40 percentage points in discharge rates. Geography, debtor demographics, and case complexity all matter less than who represents the debtor.</p>
+    </div>
+
+    <p>The attorney effect operates in both directions. The best practitioners - those who screen clients carefully, prepare complete petitions, and monitor plan compliance - achieve completion rates well above the national average. The worst practitioners - those who file bare petitions, miss deadlines, and fail to communicate with clients - produce completion rates in the single digits.</p>
+    <p>BAPCPA's added complexity may have inadvertently strengthened the position of volume practices at the expense of individualized representation. A solo practitioner who spends three hours on means test calculations for a single client cannot compete on price with a firm that automates the process and files 50 cases a month. The result is a market that rewards volume over quality - the opposite of what a consumer protection law should produce.</p>
+
+    <h2>10. Twenty-Year Assessment</h2>
+    <p>BAPCPA's consumer provisions have now been in effect for two decades. The empirical record is sufficient to evaluate whether the law achieved its stated purpose.</p>
+
+    <table>
+      <thead><tr><th scope="col">Provision</th><th scope="col">Stated Goal</th><th scope="col">Observed Outcome</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Section 1328(f) discharge bar</td>
+          <td>Prevent repeat-filer abuse</td>
+          <td>Largely unenforced; 264 verified violations; no automated screening</td>
+        </tr>
+        <tr>
+          <td>Section 109(g) filing bar</td>
+          <td>Prevent rapid refiling</td>
+          <td>Inconsistent enforcement; rapid refiles continue at measurable rates</td>
+        </tr>
+        <tr>
+          <td>Section 707(b) means test</td>
+          <td>Channel above-median debtors into Ch. 13</td>
+          <td>Channeling occurred; 60-67% of channeled debtors do not complete plans</td>
+        </tr>
+        <tr>
+          <td>Section 109(h) counseling</td>
+          <td>Improve debtor financial literacy</td>
+          <td>No demonstrated effect on repeat filing or plan completion rates</td>
+        </tr>
+        <tr>
+          <td>Filing fee increase</td>
+          <td>Fund court operations</td>
+          <td>Disproportionate dismissal rates for debtors who cannot afford fees</td>
+        </tr>
+        <tr>
+          <td>Added complexity</td>
+          <td>Ensure thorough case preparation</td>
+          <td>Favored volume practices over individualized representation</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>The data does not support the conclusion that BAPCPA achieved its stated purpose of reducing abuse. Provisions designed to prevent abuse are unenforced or ineffective. Provisions designed to channel debtors into repayment plans channel them into a process where the majority fail. And the added complexity has created market conditions that favor the practitioners least aligned with debtor interests.</p>
+    <p>The data suggests BAPCPA may have created new forms of systemic harm - not through any single provision, but through the cumulative effect of a law that made bankruptcy more expensive, more complex, and harder to navigate for the people who need it most.</p>
+
+    <h3>Where Do We Go From Here</h3>
+    <p>Empirical assessment is a starting point, not an endpoint. The data raises questions that policymakers, courts, and the bankruptcy bar should address:</p>
+    <ul>
+      <li>Should Section 1328(f) enforcement be automated at the court level?</li>
+      <li>Should the means test be reconsidered in light of Chapter 13 completion rates?</li>
+      <li>Should the credit counseling mandate be reformed or eliminated?</li>
+      <li>Should attorney performance data be published to help debtors make informed choices?</li>
+      <li>Should filing fees be waivable in Chapter 13, as they are in Chapter 7?</li>
+    </ul>
+    <p>These are policy questions, not research conclusions. But twenty years of data provides a foundation for evidence-based reform that did not exist when BAPCPA was enacted.</p>
+
+    <h3>Related Reports</h3>
+    <ul>
+      <li><a href="/reports/methodology-1328f-screening/">How We Screened 4.9 Million Bankruptcy Cases</a> - full methodology report</li>
+      <li><a href="/reports/prior-filer-discharge-rates/">Prior-Filer Discharge Rates by District</a> - completion data</li>
+      <li><a href="/guides/pacer-for-consumers/">PACER for Consumers</a> - how to access public court data</li>
+    </ul>
+
+    <div class="callout yellow">
+      <h4>Not Legal Advice</h4>
+      <p style="margin-bottom: 0;">This report presents empirical findings from public court data. It does not constitute legal advice and should not be relied upon as a substitute for professional legal counsel. The analysis reflects data available as of March 2026. Individual outcomes depend on facts and circumstances that no aggregate analysis can capture. Debtors considering bankruptcy should consult a qualified attorney licensed in their jurisdiction.</p>
+    </div>
+
+    <p style="text-align: center; margin-top: 2rem;"><a href="/support/" style="color: #8b949e; font-size: 0.9rem;">Support this research</a></p>
+
+  </article>
+
+  <footer role="contentinfo">
+    <p>1328f.org - Independent consumer bankruptcy research. Not legal advice.</p>
+    <p class="links">
+      <a href="https://1328f.com">Screener Tool</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/">About</a>
+      <a href="/support/">Support</a>
+    </p>
+    <p style="margin-top: 0.75rem;"><a href="/support/" style="color: #484f58;">Support this research</a></p>
+  </footer>
+</body>
+</html>

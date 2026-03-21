@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>What Is a Bankruptcy Mill? A Data-Driven Definition - 1328f.org</title>
+  <meta name="description" content="No standard empirical definition of 'bankruptcy mill' exists. This report proposes a data-driven framework for identifying mill-pattern practices using publicly available court data.">
+  <link rel="canonical" href="https://1328f.org/reports/bankruptcy-mill-definition/">
+  <link rel="alternate" hreflang="en" href="https://1328f.org/reports/bankruptcy-mill-definition/">
+  <link rel="alternate" hreflang="es" href="https://1328f.org/reports/bankruptcy-mill-definition/index-es.html">
+  <meta property="og:title" content="What Is a Bankruptcy Mill? A Data-Driven Definition">
+  <meta property="og:description" content="A data-driven framework for identifying bankruptcy mill practices using publicly available court data and quantitative indicators.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://1328f.org/reports/bankruptcy-mill-definition/">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    code { background: #161b22; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #8b949e; font-size: 1rem; }
+    nav { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.75rem 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: center; }
+    nav a { color: #8b949e; font-size: 0.9rem; font-weight: 500; padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+    nav a:hover, nav a.active { color: #f0f6fc; border-bottom-color: #58a6ff; text-decoration: none; }
+    .lang-toggle { font-size: 0.8rem; margin-left: 1rem; padding-left: 1rem; border-left: 1px solid #30363d; }
+    .lang-toggle a { color: #8b949e; border-bottom: none; }
+    .lang-toggle a:hover { color: #f0f6fc; }
+    .lang-toggle .current-lang { color: #f0f6fc; font-weight: 600; }
+
+    article { max-width: 760px; margin: 0 auto; padding: 2rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h2 { color: #f0f6fc; font-size: 1.6rem; line-height: 1.3; margin-bottom: 0.75rem; border-bottom: none; padding-bottom: 0; }
+    .article-header .meta { color: #8b949e; font-size: 0.85rem; }
+    .article-header .meta .tag { background: #21262d; padding: 0.15em 0.5em; border-radius: 3px; margin-right: 0.5rem; }
+
+    h2 { color: #f0f6fc; font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    thead th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #30363d; font-size: 0.9rem; }
+    td { color: #c9d1d9; }
+
+    .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #58a6ff; border-radius: 0 6px 6px 0; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+    .callout.green { border-left-color: #3fb950; }
+    .callout.yellow { border-left-color: #d29922; }
+    .callout h4 { color: #f0f6fc; margin-bottom: 0.5rem; }
+
+    .indicator-card { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 1rem 1.5rem; margin-bottom: 1rem; }
+    .indicator-card h4 { color: #f0f6fc; margin-bottom: 0.4rem; font-size: 0.95rem; }
+    .indicator-card .threshold { color: #58a6ff; font-size: 0.85rem; font-weight: 600; margin-bottom: 0.4rem; }
+    .indicator-card p { margin-bottom: 0; font-size: 0.9rem; }
+
+    .step-list { counter-reset: step; list-style: none; margin-left: 0; padding-left: 0; }
+    .step-list li { counter-increment: step; position: relative; padding-left: 2.5rem; margin-bottom: 1rem; }
+    .step-list li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: 0.1em;
+      width: 1.6rem; height: 1.6rem;
+      background: #21262d; border: 1px solid #30363d; border-radius: 50%;
+      color: #58a6ff; font-weight: 700; font-size: 0.8rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .back-link { display: inline-block; margin-bottom: 1rem; color: #8b949e; font-size: 0.85rem; }
+    .back-link:hover { color: #58a6ff; }
+
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 2rem; text-align: center; margin-top: 3rem; color: #8b949e; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+    @media (max-width: 600px) { header { padding: 1.5rem 1rem; } article { padding: 1rem; } }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header role="banner">
+    <h1><a href="/" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Consumer Bankruptcy Research & Accountability</p>
+  </header>
+  <nav aria-label="Main navigation">
+    <a href="/">Home</a>
+    <a href="/reports/" aria-current="page">Reports</a>
+    <a href="/watch/">Docket Watch</a>
+    <a href="/methodology/">Methodology</a>
+    <a href="/tools/">Tools</a>
+    <a href="/about/">About</a>
+    <a href="/support/">Support</a>
+    <span class="lang-toggle"><span class="current-lang">EN</span> | <a href="/reports/bankruptcy-mill-definition/index-es.html" lang="es">ES</a></span>
+  </nav>
+
+  <article id="main" role="article">
+    <a href="/reports/" class="back-link">&larr; All Reports</a>
+
+    <div class="article-header">
+      <h2>What Is a Bankruptcy Mill? A Data-Driven Definition</h2>
+      <div class="meta">
+        <span class="tag">Research</span>
+        Published March 2026
+      </div>
+    </div>
+
+    <div class="callout">
+      <h4>Summary</h4>
+      <p style="margin-bottom: 0;">The term "bankruptcy mill" appears in judicial opinions, bar complaints, and media coverage, but no standard empirical definition exists. This report proposes a data-driven framework for identifying mill-pattern practices using publicly available court data. The framework uses eight quantitative indicators, validated against published sanctions, and requires a control-group comparison to reduce false positives.</p>
+    </div>
+
+    <h2>1. The Problem With Existing Definitions</h2>
+    <p>Courts have used the term "bankruptcy mill" inconsistently. In <em>In re Bradley</em>, 495 B.R. 747 (Bankr. S.D. Tex. 2013), the court described a mill as a practice that processes high volumes of cases with minimal individualized attention. The ARDC (Illinois Attorney Registration and Disciplinary Commission) found in its investigation of Legal Helpers, PC that in 32 of 36 sampled client files, there were "no entries of identifiable work or communications by an attorney."</p>
+    <p>These are qualitative descriptions. They require case-by-case review - examining individual client files, interviewing debtors, and auditing internal records. This approach works for targeted disciplinary investigations, but it does not scale. A bankruptcy mill operating across multiple districts and processing thousands of cases per year cannot be identified one file at a time.</p>
+    <p>A quantitative framework would allow systematic identification using data that is already publicly available through PACER and the Federal Judicial Center.</p>
+
+    <h2>2. Proposed Indicators</h2>
+    <p>The following eight indicators are measurable using publicly available court data. Each indicator has a defined threshold relative to a control group of independent practitioners filing in the same courts during the same time periods.</p>
+
+    <div class="indicator-card">
+      <h4>A. Elevated Dismissal Rate</h4>
+      <div class="threshold">Threshold: >10 percentage points above district baseline, sustained over multiple years</div>
+      <p>The percentage of resolved cases ending in dismissal rather than discharge. A practitioner whose clients are dismissed at significantly higher rates than other attorneys in the same courts, year after year, warrants examination.</p>
+    </div>
+
+    <div class="indicator-card">
+      <h4>B. Intake-Stage Failures</h4>
+      <div class="threshold">Threshold: 3x+ above control rate for filing fee dismissals, failure-to-file-information, and bare petition dismissals</div>
+      <p>Cases that fail before any substantive legal work occurs - dismissed for nonpayment of filing fees, failure to file required schedules, or incomplete petitions. These are administrative failures, not litigation losses. Elevated rates indicate systemic intake problems.</p>
+    </div>
+
+    <div class="indicator-card">
+      <h4>C. Filing Day Concentration</h4>
+      <div class="threshold">Threshold: >50% of filings on a single day of the week</div>
+      <p>Batch processing - filing many cases on a single day each week - is a signature of assembly-line operations. Independent practitioners typically file cases as they are completed, producing a relatively even distribution across weekdays.</p>
+    </div>
+
+    <div class="indicator-card">
+      <h4>D. Low Adversary Proceeding Rate</h4>
+      <div class="threshold">Threshold: Minimal lien avoidance, preference actions, or contested litigation relative to case volume</div>
+      <p>Adversary proceedings - separate lawsuits within the bankruptcy case to avoid liens, recover preferences, or contest claims - require individualized legal work. A high-volume practice that rarely files adversary proceedings may not be performing the legal analysis that individual cases require.</p>
+    </div>
+
+    <div class="indicator-card">
+      <h4>E. Declining Discharge Rate at Scale</h4>
+      <div class="threshold">Threshold: Discharge rate decreases as filing volume increases</div>
+      <p>When a practice scales up volume and outcomes deteriorate rather than improve, it suggests that the additional cases are not receiving adequate attention. A practitioner who maintains quality at higher volumes is operating differently than one whose quality degrades.</p>
+    </div>
+
+    <div class="indicator-card">
+      <h4>F. High Early-Dismissal Rate</h4>
+      <div class="threshold">Threshold: 2x+ control rate for cases dismissed within 90 days of filing</div>
+      <p>Cases dismissed within 90 days typically failed at the earliest stages - before a plan was confirmed, before creditor negotiations, sometimes before schedules were even filed. A high rate of early deaths indicates that cases are being filed before they are ready.</p>
+    </div>
+
+    <div class="indicator-card">
+      <h4>G. Chapter Divergence</h4>
+      <div class="threshold">Threshold: Ch.7 outcomes comparable to controls, Ch.13/11 outcomes significantly worse</div>
+      <p>Chapter 7 is largely administrative - discharge is near-automatic for eligible debtors. Chapter 13 requires sustained legal work over 3-5 years. If a practitioner's Chapter 7 outcomes are normal but Chapter 13 outcomes are significantly worse, it suggests the practice can file cases but cannot perform the ongoing work that Chapter 13 demands.</p>
+    </div>
+
+    <div class="indicator-card">
+      <h4>H. Repeat-Filer Recycling</h4>
+      <div class="threshold">Threshold: Dismissed clients refiled at the same firm at elevated rates, with refiled cases also dismissed at high rates</div>
+      <p>When a dismissed debtor returns to the same firm and is dismissed again, it raises questions about whether the underlying issues were addressed or whether the refiling represents additional fee collection without improved service. Elevated same-firm refiling with high re-dismissal rates is a distinctive pattern.</p>
+    </div>
+
+    <h2>3. Why Individual Indicators Are Not Sufficient</h2>
+    <p>No single indicator is dispositive. Each has legitimate alternative explanations:</p>
+    <ul>
+      <li><strong>High dismissal rate</strong> could reflect a difficult client population - debtors with unstable income, prior failures, or complex debt profiles.</li>
+      <li><strong>Batch filing</strong> could reflect efficient case management rather than assembly-line processing.</li>
+      <li><strong>Low adversary rate</strong> could reflect a client base that does not require lien avoidance or preference actions.</li>
+      <li><strong>Early dismissals</strong> could reflect clients who abandon their cases, not attorney neglect.</li>
+    </ul>
+    <p>The mill pattern emerges when <strong>multiple indicators are present simultaneously</strong>. A practice with high dismissals, high intake-stage failures, batch filing, low adversary rates, declining discharge rates at scale, and repeat-filer recycling is exhibiting a constellation of signals that is difficult to explain through client-population effects alone.</p>
+
+    <div class="callout">
+      <h4>Scoring Approach</h4>
+      <p style="margin-bottom: 0;">A scoring framework that requires 5 or more of 8 indicators to be present reduces false positives substantially. In our analysis, independent practitioners with high caseloads typically trigger 0-2 indicators. Practitioners with known sanctions history trigger 6-8.</p>
+    </div>
+
+    <h2>4. The Control Group Requirement</h2>
+    <p>Mill identification requires a valid comparison. Comparing a practitioner against the national average is insufficient because local factors - judges, trustees, local rules, economic conditions - vary substantially between districts.</p>
+    <p>The valid comparison is against independent practitioners filing in the same courts during the same time periods. This controls for:</p>
+    <ul>
+      <li><strong>Judicial variation</strong> - different judges have different dismissal thresholds</li>
+      <li><strong>Trustee practices</strong> - some trustees pursue dismissals more aggressively</li>
+      <li><strong>Local rules</strong> - requirements vary by district</li>
+      <li><strong>Economic conditions</strong> - recessions and recoveries affect all local filers</li>
+    </ul>
+    <p>Our methodology uses a tiered control group: 5 primary benchmark attorneys and 10 secondary benchmarks, all independent practitioners, all filing in the same courts during the same time periods. Combined, the control set covers 15+ attorneys and 16,000+ resolved cases. See the <a href="/reports/attorney-performance-methodology/">attorney performance methodology report</a> for details on control group construction.</p>
+
+    <h2>5. Published Sanctions as Validation</h2>
+    <p>When courts and bar authorities have identified mills through qualitative investigation, the quantitative indicators described above are present in the public case data. Three examples from published judicial records:</p>
+
+    <h3>5.1 Legal Helpers, PC</h3>
+    <p>The Illinois Supreme Court suspended operations in 2015 following an ARDC investigation. The investigation found that in 32 of 36 sampled files, there were "no entries of identifiable work or communications by an attorney." The practice operated across multiple states through a network of local attorneys. Quantitative indicators present: elevated dismissal rates, intake-stage failures, minimal individualized work, and high early-dismissal rates across filing districts.</p>
+
+    <h3>5.2 Robert J. Semrad & Associates</h3>
+    <p>The Northern District of Georgia imposed sanctions in 2010 after finding systemic failures in case administration. The practice filed high volumes of Chapter 13 cases with outcomes significantly below district benchmarks. Quantitative indicators present: elevated dismissal rates, batch filing patterns, and low completion rates.</p>
+
+    <h3>5.3 UpRight Law</h3>
+    <p>Multiple courts imposed sanctions: $300,000 in the Western District of Virginia and $150,000 in the Northern District of Alabama, along with filing bars. Courts found the practice filed cases without adequate preparation and failed to provide individualized attention. Quantitative indicators present: elevated dismissal rates, intake-stage failures, filing day concentration, and declining outcomes at scale.</p>
+
+    <p>In each case, the sanctioned practices exhibited the same cluster of indicators that the quantitative framework identifies. The framework does not discover these practices retroactively - it identifies patterns that would have been detectable before sanctions were imposed, using data that was publicly available at the time.</p>
+
+    <h2>6. What This Framework Does Not Do</h2>
+    <ul>
+      <li><strong>It does not replace qualitative investigation.</strong> Quantitative indicators identify practices that warrant closer examination. Confirming the reasons behind the numbers requires reviewing dockets, client files, and attorney communications.</li>
+      <li><strong>It does not prove malpractice.</strong> Malpractice requires showing duty, breach, causation, and damages in individual cases. The framework identifies aggregate patterns, not individual case failures.</li>
+      <li><strong>It does not account for all legitimate variation.</strong> A practitioner who serves a particularly difficult client population may show elevated indicators for reasons unrelated to practice quality. The control group comparison mitigates this, but does not eliminate it.</li>
+      <li><strong>It is a screening tool, not a verdict.</strong> A practitioner flagged by the framework may have legitimate explanations for every indicator. The framework identifies where to look, not what to conclude.</li>
+    </ul>
+
+    <h2>7. How to Apply It</h2>
+    <ol class="step-list">
+      <li><strong>Select the practitioner and time period.</strong> Use <a href="https://pcl.uscourts.gov">PACER Case Locator</a> to export CSV data for the practitioner's Chapter 13 cases. Include all available years.</li>
+      <li><strong>Build a control group.</strong> Identify 5-15 independent practitioners filing in the same districts during the same time periods. Export their data using the same method. See the <a href="/reports/attorney-performance-methodology/">attorney performance methodology report</a> for detailed guidance.</li>
+      <li><strong>Calculate dismissal and discharge rates.</strong> For both the target practitioner and the control group, calculate the percentage of resolved cases ending in dismissal vs. discharge.</li>
+      <li><strong>Measure intake-stage failures.</strong> Identify cases dismissed for filing fee nonpayment, failure to file schedules, or other administrative reasons within 90 days of filing.</li>
+      <li><strong>Analyze filing day distribution.</strong> Plot the target practitioner's filings by day of the week and compare against the control group distribution.</li>
+      <li><strong>Check for chapter divergence.</strong> Compare Chapter 7 vs. Chapter 13 outcomes for the target practitioner and control group.</li>
+      <li><strong>Assess repeat-filer patterns.</strong> Identify debtors who filed more than once with the same practitioner and calculate the re-dismissal rate.</li>
+      <li><strong>Score the results.</strong> Count the number of indicators present. Five or more of eight indicators suggests a pattern warranting closer examination.</li>
+    </ol>
+    <p>The <a href="/reports/reading-pacer-attorney-record/">guide to reading PACER attorney records</a> provides step-by-step instructions for obtaining the underlying data.</p>
+
+    <h2>8. Related Reports</h2>
+    <ul>
+      <li><a href="/reports/attorney-performance-methodology/">Measuring Bankruptcy Attorney Performance Using Public Data</a> - control group construction and metric methodology</li>
+      <li><a href="/reports/methodology-1328f-screening/">How We Screened 4.9 Million Bankruptcy Cases</a> - the Section 1328(f) screening methodology</li>
+      <li><a href="/reports/chapter-13-dismissal-rates/">Chapter 13 Dismissal Rates by District</a> - national baseline data</li>
+      <li><a href="/reports/prior-filer-discharge-rates/">Prior-Filer Discharge Rates</a> - repeat filing analysis</li>
+    </ul>
+
+    <div class="callout yellow">
+      <h4>Not Legal Advice</h4>
+      <p style="margin-bottom: 0;">This report presents a research framework using public court data. It does not constitute legal advice and does not identify any specific practitioner as a "bankruptcy mill." Debtors seeking legal assistance should consult with a licensed attorney. Researchers applying this framework should exercise appropriate caution in interpreting results.</p>
+    </div>
+
+  </article>
+
+  <footer role="contentinfo">
+    <p>1328f.org - Independent consumer bankruptcy research. Not legal advice.</p>
+    <p class="links">
+      <a href="https://1328f.com">Screener Tool</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/">About</a>
+      <a href="/support/">Support</a>
+    </p>
+    <p style="margin-top: 0.75rem;"><a href="/support/" style="color: #484f58;">Support this research</a></p>
+  </footer>
+</body>
+</html>

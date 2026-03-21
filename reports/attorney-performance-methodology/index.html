@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Measuring Bankruptcy Attorney Performance Using Public Data - 1328f.org</title>
+  <meta name="description" content="A methodology for measuring bankruptcy attorney performance using PACER data, including control group construction, metric selection, and statistical validation.">
+  <link rel="canonical" href="https://1328f.org/reports/attorney-performance-methodology/">
+  <link rel="alternate" hreflang="en" href="https://1328f.org/reports/attorney-performance-methodology/">
+  <link rel="alternate" hreflang="es" href="https://1328f.org/reports/attorney-performance-methodology/index-es.html">
+  <meta property="og:title" content="Measuring Bankruptcy Attorney Performance Using Public Data">
+  <meta property="og:description" content="Methodology for evaluating Chapter 13 attorney outcomes using PACER Case Locator data, control groups, and statistical testing.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://1328f.org/reports/attorney-performance-methodology/">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    code { background: #161b22; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #8b949e; font-size: 1rem; }
+    nav { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.75rem 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: center; }
+    nav a { color: #8b949e; font-size: 0.9rem; font-weight: 500; padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+    nav a:hover, nav a.active { color: #f0f6fc; border-bottom-color: #58a6ff; text-decoration: none; }
+    .lang-toggle { font-size: 0.8rem; margin-left: 1rem; padding-left: 1rem; border-left: 1px solid #30363d; }
+    .lang-toggle a { color: #8b949e; border-bottom: none; }
+    .lang-toggle a:hover { color: #f0f6fc; }
+    .lang-toggle .current-lang { color: #f0f6fc; font-weight: 600; }
+
+    article { max-width: 760px; margin: 0 auto; padding: 2rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h2 { color: #f0f6fc; font-size: 1.6rem; line-height: 1.3; margin-bottom: 0.75rem; border-bottom: none; padding-bottom: 0; }
+    .article-header .meta { color: #8b949e; font-size: 0.85rem; }
+    .article-header .meta .tag { background: #21262d; padding: 0.15em 0.5em; border-radius: 3px; margin-right: 0.5rem; }
+
+    h2 { color: #f0f6fc; font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    thead th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #30363d; font-size: 0.9rem; }
+    td { color: #c9d1d9; }
+
+    .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #58a6ff; border-radius: 0 6px 6px 0; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+    .callout.green { border-left-color: #3fb950; }
+    .callout.yellow { border-left-color: #d29922; }
+    .callout h4 { color: #f0f6fc; margin-bottom: 0.5rem; }
+
+    .step-list { counter-reset: step; list-style: none; margin-left: 0; padding-left: 0; }
+    .step-list li { counter-increment: step; position: relative; padding-left: 2.5rem; margin-bottom: 1rem; }
+    .step-list li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: 0.1em;
+      width: 1.6rem; height: 1.6rem;
+      background: #21262d; border: 1px solid #30363d; border-radius: 50%;
+      color: #58a6ff; font-weight: 700; font-size: 0.8rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .back-link { display: inline-block; margin-bottom: 1rem; color: #8b949e; font-size: 0.85rem; }
+    .back-link:hover { color: #58a6ff; }
+
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 2rem; text-align: center; margin-top: 3rem; color: #8b949e; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+    @media (max-width: 600px) { header { padding: 1.5rem 1rem; } article { padding: 1rem; } }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header role="banner">
+    <h1><a href="/" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Consumer Bankruptcy Research & Accountability</p>
+  </header>
+  <nav aria-label="Main navigation">
+    <a href="/">Home</a>
+    <a href="/reports/" aria-current="page">Reports</a>
+    <a href="/watch/">Docket Watch</a>
+    <a href="/methodology/">Methodology</a>
+    <a href="/tools/">Tools</a>
+    <a href="/about/">About</a>
+    <a href="/support/">Support</a>
+    <span class="lang-toggle"><span class="current-lang">EN</span> | <a href="/reports/attorney-performance-methodology/index-es.html" lang="es">ES</a></span>
+  </nav>
+
+  <article id="main" role="article">
+    <a href="/reports/" class="back-link">&larr; All Reports</a>
+
+    <div class="article-header">
+      <h2>Measuring Bankruptcy Attorney Performance Using Public Data</h2>
+      <div class="meta">
+        <span class="tag">Methodology</span>
+        Published March 2026
+      </div>
+    </div>
+
+    <div class="callout">
+      <h4>Summary</h4>
+      <p style="margin-bottom: 0;">Attorney quality is the strongest predictor of Chapter 13 outcomes. This report describes a methodology for measuring attorney performance using publicly available PACER data, including control group construction, metric selection, and statistical validation. All tools are open-source and reproducible for any federal bankruptcy district.</p>
+    </div>
+
+    <h2>1. Why Measure Attorney Performance</h2>
+    <p>Chapter 13 success depends on sustained legal work over 3-5 years. Unlike Chapter 7 - where discharge is largely automatic for eligible debtors - Chapter 13 requires plan drafting, creditor negotiation, lien analysis, motion practice, compliance monitoring, and ongoing client communication. The quality of this work varies dramatically between practitioners.</p>
+    <p>Research confirms the variation. Professors Jimenez and Hynes (2025 JELS) documented significant attorney-effect differences in Chapter 13 outcomes. The Government Accountability Office has noted that Chapter 13 completion rates range from under 30% to over 60% depending on jurisdiction and practitioner. Yet no standard methodology exists for measuring individual attorney performance using publicly available data.</p>
+    <p>This report fills that gap. Using PACER Case Locator exports and straightforward statistical methods, any researcher, trustee, or bar authority can evaluate attorney performance against local benchmarks.</p>
+
+    <h2>2. Data Source: PACER Case Locator</h2>
+    <p>The <a href="https://pcl.uscourts.gov">PACER Case Locator</a> (PCL) provides searchable case data for all federal bankruptcy courts. CSV exports contain the fields necessary for attorney-level performance analysis:</p>
+
+    <table>
+      <thead><tr><th scope="col">Field</th><th scope="col">Use</th></tr></thead>
+      <tbody>
+        <tr><td>Case Number</td><td>Unique case identifier</td></tr>
+        <tr><td>Filing Date</td><td>Case start date, cohort assignment</td></tr>
+        <tr><td>Disposition</td><td>Outcome classification (discharged, dismissed, converted, open)</td></tr>
+        <tr><td>Chapter</td><td>Chapter 7 vs. 13 comparison</td></tr>
+        <tr><td>Attorney Name</td><td>Practitioner identification and grouping</td></tr>
+        <tr><td>District/Office</td><td>Geographic controls</td></tr>
+      </tbody>
+    </table>
+
+    <p>Cost is minimal. PCL searches cost $0.10 per page, capped at $3.00 per search. A comprehensive attorney export for a single district typically costs $3.00-$9.00. Fee-exempt PACER accounts are available to researchers and qualifying organizations.</p>
+
+    <h2>3. Key Metrics</h2>
+
+    <h3>3.1 Dismissal Rate (Resolved Cases)</h3>
+    <p>The percentage of completed cases ending in dismissal rather than discharge. This is the primary outcome metric. Calculated as: <code>dismissed / (dismissed + discharged)</code>, excluding open and converted cases. Resolving only completed cases avoids bias from recent cohorts that have high open-case percentages.</p>
+
+    <h3>3.2 Discharge Rate (Resolved Cases)</h3>
+    <p>The inverse of dismissal rate: <code>discharged / (dismissed + discharged)</code>. A practitioner whose clients achieve discharge at significantly lower rates than peers in the same courts is underperforming on the most important metric.</p>
+
+    <h3>3.3 Early Dismissal Rate</h3>
+    <p>The percentage of cases dismissed within 90 days of filing. These are intake-stage failures - cases that never reached plan confirmation, often dismissed for nonpayment of filing fees, failure to file schedules, or failure to attend the 341(a) meeting. A high early-dismissal rate indicates systemic problems in case preparation and client screening.</p>
+
+    <h3>3.4 Filing Day Distribution</h3>
+    <p>The distribution of case filings across days of the week. Independent practitioners typically show a relatively even spread across weekdays, with perhaps modest concentration on certain days. Extreme concentration - more than 50% of filings on a single day - suggests batch processing rather than individualized case preparation.</p>
+
+    <h3>3.5 Disposition Breakdown</h3>
+    <p>What causes dismissals matters as much as the dismissal rate itself. PCL disposition codes and docket-level review can distinguish between:</p>
+    <ul>
+      <li>Plan payment failure (debtor could not maintain payments)</li>
+      <li>Filing fee dismissal (never paid the filing fee)</li>
+      <li>Failure to file information (schedules, plan, or other required documents never filed)</li>
+      <li>Trustee motion to dismiss (compliance failures)</li>
+      <li>Voluntary dismissal (debtor chose to withdraw)</li>
+    </ul>
+    <p>A practitioner with a high rate of filing-fee and failure-to-file dismissals has a different problem than one whose clients fail at plan payment. The former suggests intake failures; the latter may reflect client-population effects.</p>
+
+    <h3>3.6 Chapter Comparison</h3>
+    <p>Comparing the same practitioner's Chapter 7 outcomes against Chapter 13 outcomes provides an internal control for client quality. If a practitioner's Chapter 7 discharge rate is comparable to peers but Chapter 13 outcomes are significantly worse, the divergence suggests a deficiency in the sustained legal work that Chapter 13 requires rather than a difficult client base.</p>
+
+    <h2>4. Control Group Construction</h2>
+
+    <h3>4.1 Why Controls Matter</h3>
+    <p>Raw metrics are meaningless without comparison. A 45% Chapter 13 dismissal rate could be excellent in a district where the baseline is 55%, or alarming in a district where the baseline is 30%. Comparing against national averages is insufficient because local factors - judges, trustees, local rules, economic conditions - produce significant district-to-district variation.</p>
+    <p>The valid comparison is against independent practitioners filing in the same courts during the same time periods.</p>
+
+    <h3>4.2 Tiered Control Structure</h3>
+    <p>Our methodology uses a two-tier control group:</p>
+
+    <table>
+      <thead><tr><th scope="col">Tier</th><th scope="col">Composition</th><th scope="col">Purpose</th></tr></thead>
+      <tbody>
+        <tr><td>Primary (Tier 1)</td><td>5 independent, high-volume practitioners with low dismissal rates</td><td>Best-practice benchmark</td></tr>
+        <tr><td>Secondary (Tier 2)</td><td>10 additional independent practitioners with moderate-to-high volume</td><td>Broader baseline, reduces selection bias</td></tr>
+      </tbody>
+    </table>
+
+    <h3>4.3 Selection Criteria</h3>
+    <p>Control attorneys must meet the following requirements:</p>
+    <ul>
+      <li><strong>Independent practice.</strong> Not affiliated with the target practitioner or any firm under investigation. Solo practitioners or small firms operating independently.</li>
+      <li><strong>Same courts.</strong> Filing in the same federal bankruptcy districts as the target practitioner during the same time periods.</li>
+      <li><strong>Sufficient volume.</strong> Minimum 100 resolved Chapter 13 cases to ensure statistical stability.</li>
+      <li><strong>No known anomalies.</strong> No published sanctions, disciplinary actions, or other factors that would make them inappropriate benchmarks.</li>
+    </ul>
+
+    <h3>4.4 Combined Control Set</h3>
+    <p>In one analyzed portfolio, the combined control group included 15 attorneys and 16,000+ resolved Chapter 13 cases across 3 districts. This volume provides robust statistical power for detecting meaningful differences in performance.</p>
+
+    <h2>5. Statistical Significance</h2>
+    <p>With thousands of cases, small percentage-point differences can be highly statistically significant. We use chi-squared tests for independence to assess whether differences between the target practitioner and control group are likely due to chance.</p>
+
+    <div class="callout">
+      <h4>Example</h4>
+      <p style="margin-bottom: 0;">A practitioner with a 58% dismissal rate on 1,200 resolved cases vs. a control group dismissal rate of 43% on 16,000 cases produces a chi-squared statistic with p < 0.001. The 15-percentage-point gap is not plausibly attributable to random variation.</p>
+    </div>
+
+    <p>We report confidence intervals where appropriate and flag comparisons where sample sizes are too small for reliable inference (typically fewer than 50 resolved cases).</p>
+
+    <h2>6. Controlling for Confounders</h2>
+    <p>Several factors could produce outcome differences unrelated to attorney quality. The methodology addresses each:</p>
+
+    <table>
+      <thead><tr><th scope="col">Confounder</th><th scope="col">Control Method</th></tr></thead>
+      <tbody>
+        <tr><td>Economic conditions</td><td>Compare same time periods. Year-over-year cohort analysis.</td></tr>
+        <tr><td>Judicial assignment</td><td>Compare same courts. Where case assignment is random, judge effects average out at sufficient volume.</td></tr>
+        <tr><td>Client demographics</td><td>Chapter 7 as internal control for client quality (same attorney, same intake).</td></tr>
+        <tr><td>Case age</td><td>Exclude recent cohorts with high open-case percentages. Use resolved-only metrics.</td></tr>
+        <tr><td>District variation</td><td>Weight control-group metrics by district to match the target practitioner's filing distribution.</td></tr>
+      </tbody>
+    </table>
+
+    <h3>6.1 The Chapter 7 Internal Control</h3>
+    <p>This is the most powerful confounder control available. If a practitioner's Chapter 7 clients achieve discharge at rates comparable to peers, the client base is not obviously different in quality. If Chapter 13 outcomes diverge sharply from Chapter 7 outcomes for the same practitioner - but not for controls - the divergence isolates the attorney's Chapter 13 work as the likely variable.</p>
+
+    <h2>7. Interpreting Results</h2>
+
+    <h3>7.1 What Elevated Metrics Mean</h3>
+    <p>A practitioner with metrics significantly worse than the control group is producing worse outcomes for their clients than other attorneys in the same courts. This is a factual statement about observable results. It does not, by itself, explain why.</p>
+
+    <h3>7.2 What Elevated Metrics Do Not Mean</h3>
+    <ul>
+      <li><strong>Not proof of misconduct.</strong> A high dismissal rate could have explanations that have nothing to do with attorney quality.</li>
+      <li><strong>Not proof of malpractice.</strong> Malpractice requires showing duty, breach, causation, and damages in individual cases. Aggregate performance metrics do not establish individual breach.</li>
+      <li><strong>Not a verdict.</strong> The methodology identifies practitioners whose outcomes warrant investigation, not practitioners who have committed wrongdoing.</li>
+    </ul>
+
+    <h3>7.3 Multiple Metrics Are More Informative Than One</h3>
+    <p>A single elevated metric has limited diagnostic value. Multiple elevated metrics - high dismissal rate, high early-dismissal rate, filing-day concentration, chapter divergence - collectively paint a more informative picture. See the <a href="/reports/bankruptcy-mill-definition/">bankruptcy mill definition report</a> for a scoring framework using eight quantitative indicators.</p>
+
+    <h2>8. Reproducibility</h2>
+    <p>All tools used in this methodology are open-source and available on <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>. The repository includes:</p>
+    <ul>
+      <li>PCL export parsers for attorney-level case extraction</li>
+      <li>Dismissal rate and discharge rate calculators</li>
+      <li>Filing-day distribution analysis</li>
+      <li>Chi-squared significance testing</li>
+      <li>Control group comparison tools</li>
+      <li>Visualization scripts for charts and maps</li>
+    </ul>
+    <p>Any practitioner, researcher, bar authority, or journalist can replicate this methodology for their district using the same tools and data sources. The <a href="/reports/reading-pacer-attorney-record/">guide to reading PACER attorney records</a> provides step-by-step instructions for obtaining the underlying data.</p>
+
+    <h2>9. Related Reports</h2>
+    <ul>
+      <li><a href="/reports/bankruptcy-mill-definition/">What Is a Bankruptcy Mill? A Data-Driven Definition</a> - eight quantitative indicators for identifying mill-pattern practices</li>
+      <li><a href="/reports/methodology-1328f-screening/">How We Screened 4.9 Million Bankruptcy Cases</a> - the Section 1328(f) screening methodology</li>
+      <li><a href="/reports/chapter-13-dismissal-rates/">Chapter 13 Dismissal Rates by District</a> - national baseline data</li>
+      <li><a href="/reports/prior-filer-discharge-rates/">Prior-Filer Discharge Rates</a> - repeat filing analysis</li>
+    </ul>
+
+    <div class="callout yellow">
+      <h4>Not Legal Advice</h4>
+      <p style="margin-bottom: 0;">This report describes a research methodology using publicly available court data. It does not constitute legal advice, does not evaluate any specific practitioner, and should not be used as the sole basis for any legal or disciplinary action. Researchers applying this methodology should exercise appropriate caution in interpreting results and consider all potential explanations for observed differences.</p>
+    </div>
+
+  </article>
+
+  <footer role="contentinfo">
+    <p>1328f.org - Independent consumer bankruptcy research. Not legal advice.</p>
+    <p class="links">
+      <a href="https://1328f.com">Screener Tool</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/">About</a>
+      <a href="/support/">Support</a>
+    </p>
+    <p style="margin-top: 0.75rem;"><a href="/support/" style="color: #484f58;">Support this research</a></p>
+  </footer>
+</body>
+</html>
