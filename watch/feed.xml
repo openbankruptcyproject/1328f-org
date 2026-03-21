@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>1328f.org Docket Watch</title>
+  <link href="https://1328f.org/watch/" rel="alternate"/>
+  <link href="https://1328f.org/watch/feed.xml" rel="self"/>
+  <id>https://1328f.org/watch/</id>
+  <updated>2026-03-20T12:00:00Z</updated>
+  <author>
+    <name>1328f.org</name>
+  </author>
+
+  <entry>
+    <title>Rules Committee Submission Accepted</title>
+    <link href="https://1328f.org/watch/#2026-03-20-rules-committee"/>
+    <id>https://1328f.org/watch/#2026-03-20-rules-committee</id>
+    <updated>2026-03-20T12:00:00Z</updated>
+    <summary>Empirical data submitted to the Administrative Office of the U.S. Courts in support of Suggestion 25-BK-N, the Connelly/Kahn proposed amendment to Federal Rule of Bankruptcy Procedure 4004. The submission includes data from 4.9 million cases across 94 districts, an open-source screening tool, and a public GitHub repository. The AO Rules Committee Counsel requested the submission be forwarded for posting as a related suggestion on uscourts.gov.</summary>
+  </entry>
+
+  <entry>
+    <title>Section 1328(f) Screening Complete: 264 Verified Violations</title>
+    <link href="https://1328f.org/watch/#2026-03-17-screening"/>
+    <id>https://1328f.org/watch/#2026-03-17-screening</id>
+    <updated>2026-03-17T12:00:00Z</updated>
+    <summary>Completed de-staling of all flagged cases across 94 federal bankruptcy districts. Final verified count: 264 unique cases where debtors received Chapter 13 discharges despite falling within the Section 1328(f) statutory bar window. Filing-date-to-filing-date methodology per In re Blendheim. 6 attorneys account for 73% of violations.</summary>
+  </entry>
+
+  <entry>
+    <title>National District Map Launched</title>
+    <link href="https://1328f.org/watch/#2026-03-15-map"/>
+    <id>https://1328f.org/watch/#2026-03-15-map</id>
+    <updated>2026-03-15T12:00:00Z</updated>
+    <summary>Interactive map of all 94 federal bankruptcy districts now live at 1328f.com. Includes screening status, violation counts, prior-filer rates, and sortable district table. Data derived from FJC Integrated Database (Ch.13 cases FY2008-2024).</summary>
+  </entry>
+</feed>

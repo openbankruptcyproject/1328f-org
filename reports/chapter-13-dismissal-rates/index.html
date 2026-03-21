@@ -10,6 +10,7 @@
   gtag('config', 'G-CF8T1FYRCV');
 </script>
 <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Chapter 13 Dismissal Rates by District: National Analysis - 1328f.org</title>
   <meta name="description" content="National analysis of Chapter 13 dismissal rates across federal bankruptcy districts: why 60-67% of Chapter 13 cases fail, how rates vary by district and attorney, and what the data reveals.">
@@ -20,6 +21,7 @@
   <meta property="og:description" content="60-67% of Chapter 13 cases are dismissed. This rate varies by 30+ percentage points across districts. The strongest predictor of completion is not income or debt - it is the attorney.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://1328f.org/reports/chapter-13-dismissal-rates/">
+  <meta property="og:image" content="https://1328f.org/og-image.svg">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
@@ -82,6 +84,21 @@
     footer .links { margin-top: 0.5rem; }
     footer .links a { margin: 0 0.75rem; }
     @media (max-width: 600px) { header { padding: 1.5rem 1rem; } article { padding: 1rem; } }
+    @media print {
+      body { background: #fff; color: #000; }
+      header, nav, footer, .skip-link, .back-link { display: none; }
+      article { max-width: 100%; padding: 0; }
+      a { color: #000; text-decoration: underline; }
+      a[href]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
+      .callout { border-color: #ccc; background: #f9f9f9; }
+      .callout h4 { color: #000; }
+      code { background: #f0f0f0; }
+      h2 { border-bottom-color: #ccc; color: #000; }
+      h3 { color: #000; }
+      table { border: 1px solid #ccc; }
+      th { background: #f0f0f0; color: #000; }
+      td { color: #000; }
+    }
   </style>
 </head>
 <body>
@@ -218,6 +235,11 @@
       <li><a href="/reports/727-discharge-bar/">Section 727(a)(8): The Chapter 7 Discharge Bar</a> - discharge bars across chapters</li>
       <li><a href="/reports/reading-pacer-attorney-record/">How to Read an Attorney's PACER Record</a> - consumer guide to public court data</li>
     </ul>
+
+    <div class="callout" style="border-left-color: #8b949e;">
+      <h4>How to Cite</h4>
+      <p style="margin-bottom: 0; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 0.85rem;">1328f.org, "Chapter 13 Dismissal Rates by District: National Analysis," March 2026, https://1328f.org/reports/chapter-13-dismissal-rates/</p>
+    </div>
 
     <div class="callout yellow">
       <h4>Not Legal Advice</h4>

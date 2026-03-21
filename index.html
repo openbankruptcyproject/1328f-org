@@ -10,6 +10,7 @@
   gtag('config', 'G-CF8T1FYRCV');
 </script>
 <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>1328f.org - Consumer Bankruptcy Research & Accountability</title>
   <meta name="description" content="Independent research on consumer bankruptcy attorney performance, Section 1328(f) enforcement, and PACER data analysis. Open-source tools and empirical reports.">
@@ -23,6 +24,7 @@
   <meta property="og:description" content="Independent empirical research on consumer bankruptcy attorney performance using public court data.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://1328f.org/">
+  <meta property="og:image" content="https://1328f.org/og-image.svg">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary">
@@ -274,6 +276,70 @@
       .stats-bar { grid-template-columns: 1fr; }
     }
   </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do you detect bankruptcy mill firms?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "We compare attorney and firm outcomes against district-level controls using public PACER data. Key indicators include dismissal rates significantly above district averages, accelerated dismissal velocity (cases failing faster than average while successful cases finish on normal timelines), and cross-chapter differentials where Chapter 7 outcomes are normal but Chapter 13 outcomes are abnormal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is dismissal velocity in bankruptcy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Dismissal velocity measures how quickly cases fail, compared to the district average. When a firm's dismissed cases collapse faster than other firms' dismissed cases, but its successful cases finish on the same timeline, the pattern indicates inadequate case preparation rather than complex litigation or difficult clients. This differential is a key indicator of systemic underperformance."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the cross-chapter differential in bankruptcy attorney analysis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The cross-chapter differential compares a firm's Chapter 7 and Chapter 13 outcomes independently. Chapter 7 requires minimal ongoing attorney work. Chapter 13 requires plan drafting, creditor negotiation, and payment administration over 3 to 5 years. When a firm produces normal Chapter 7 outcomes but elevated Chapter 13 dismissal rates, it demonstrates the firm fails only when sustained effort is required. This eliminates client quality and judicial assignment as explanations."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What data sources are used for bankruptcy attorney performance analysis?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All analysis uses publicly available data: the FJC Integrated Database (4.9 million Chapter 13 cases, FY 2008-2024), PACER Case Locator CSV exports for attorney-level case data, CourtListener RECAP archive for free docket access, and court RSS feeds for real-time monitoring. No discovery, subpoena, or client cooperation is required for initial screening."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many bankruptcy cases have been screened for Section 1328(f) violations?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The screening covers 4,895,163 Chapter 13 cases across all 94 federal bankruptcy districts (FJC IDB, FY 2008-2024). Of 1,627,116 prior filers with known dispositions, 391,951 received discharge with no eligibility verification. In a verified 7-district sample, 264 unique cases were filed within the statutory bar window, and 114 received discharges despite the bar."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Rules Suggestion 25-BK-N?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Rules Suggestion 25-BK-N is a proposal by Judges Rebecca B. Connelly and Benjamin Kahn to amend Federal Rule of Bankruptcy Procedure 4004. The amendment would require courts to independently verify discharge eligibility under Sections 727(a)(8), 727(a)(9), and 1328(f) rather than relying on parties to file objections. The proposal is currently before the Advisory Committee on Bankruptcy Rules."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I check my bankruptcy attorney's track record?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The PACER Case Locator allows free searches for all bankruptcy cases associated with a specific attorney. You can determine how many cases they have filed, what percentage were dismissed versus discharged, and how their outcomes compare to other attorneys in the same district. Our guide explains the process step by step."
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
@@ -404,6 +470,23 @@
       <span class="date">2026-03-17</span>
       <h3>Section 1328(f) Screening Complete: 264 Verified Violations</h3>
       <p>Full de-staling complete across all 94 federal bankruptcy districts. 264 unique cases identified where debtors received Chapter 13 discharges despite falling within the Section 1328(f) statutory bar window. Filing-date-to-filing-date methodology per <em>In re Blendheim</em>.</p>
+    </div>
+
+    
+    <!-- Legal References -->
+    <h2 class="section-header">Legal References</h2>
+    <div class="report-list">
+      <div class="report-card">
+        <p>All research references the following federal statutes and rules. Full text available from the Legal Information Institute at Cornell Law School.</p>
+        <ul style="list-style: none; padding: 0;">
+          <li style="padding: 0.5rem 0; border-bottom: 1px solid #30363d;"><a href="https://www.law.cornell.edu/uscode/text/11/1328">11 U.S.C. Section 1328</a> - Discharge (including subsection (f) discharge bar)</li>
+          <li style="padding: 0.5rem 0; border-bottom: 1px solid #30363d;"><a href="https://www.law.cornell.edu/uscode/text/11/727">11 U.S.C. Section 727</a> - Discharge under Chapter 7 (including (a)(8) and (a)(9) time bars)</li>
+          <li style="padding: 0.5rem 0; border-bottom: 1px solid #30363d;"><a href="https://www.law.cornell.edu/uscode/text/11/109">11 U.S.C. Section 109</a> - Who may be a debtor (including (g) filing bar)</li>
+          <li style="padding: 0.5rem 0; border-bottom: 1px solid #30363d;"><a href="https://www.law.cornell.edu/uscode/text/11/329">11 U.S.C. Section 329</a> - Debtor's transactions with attorneys (fee disgorgement)</li>
+          <li style="padding: 0.5rem 0; border-bottom: 1px solid #30363d;"><a href="https://www.law.cornell.edu/rules/frbp/rule_4004">Fed. R. Bankr. P. 4004</a> - Granting or Denying a Discharge</li>
+          <li style="padding: 0.5rem 0;"><a href="https://www.law.cornell.edu/uscode/text/28/2075">28 U.S.C. Section 2075</a> - Bankruptcy Rules Enabling Act</li>
+        </ul>
+      </div>
     </div>
 
     <!-- Tools -->

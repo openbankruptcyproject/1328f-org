@@ -10,6 +10,7 @@
   gtag('config', 'G-CF8T1FYRCV');
 </script>
 <meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>How We Screened 4.9 Million Bankruptcy Cases - 1328f.org</title>
   <meta name="description" content="Technical walkthrough of the Section 1328(f) screening methodology: data sources, filing-date-to-filing-date calculation, de-staling procedures, and verification.">
@@ -20,6 +21,7 @@
   <meta property="og:description" content="Technical methodology for screening Section 1328(f) discharge bar violations across all 94 federal bankruptcy districts.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://1328f.org/reports/methodology-1328f-screening/">
+  <meta property="og:image" content="https://1328f.org/og-image.svg">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
@@ -82,6 +84,21 @@
     footer .links { margin-top: 0.5rem; }
     footer .links a { margin: 0 0.75rem; }
     @media (max-width: 600px) { header { padding: 1.5rem 1rem; } article { padding: 1rem; } }
+    @media print {
+      body { background: #fff; color: #000; }
+      header, nav, footer, .skip-link, .back-link { display: none; }
+      article { max-width: 100%; padding: 0; }
+      a { color: #000; text-decoration: underline; }
+      a[href]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
+      .callout { border-color: #ccc; background: #f9f9f9; }
+      .callout h4 { color: #000; }
+      code { background: #f0f0f0; }
+      h2 { border-bottom-color: #ccc; color: #000; }
+      h3 { color: #000; }
+      table { border: 1px solid #ccc; }
+      th { background: #f0f0f0; color: #000; }
+      td { color: #000; }
+    }
   </style>
 </head>
 <body>
@@ -227,6 +244,11 @@
     <h2>7. Reproducibility</h2>
     <p>The complete source code, data processing pipeline, and documentation are available on <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>. Researchers and practitioners can replicate the screening for any district or time period using the same methodology.</p>
     <p>The <a href="https://1328f.com/check.html">eligibility calculator</a> implements the same screening logic in a client-side tool that anyone can use to check a specific case. No data is collected.</p>
+
+    <div class="callout" style="border-left-color: #8b949e;">
+      <h4>How to Cite</h4>
+      <p style="margin-bottom: 0; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 0.85rem;">1328f.org, "How We Screened 4.9 Million Bankruptcy Cases," March 2026, https://1328f.org/reports/methodology-1328f-screening/</p>
+    </div>
 
     <div class="callout yellow">
       <h4>Not Legal Advice</h4>
