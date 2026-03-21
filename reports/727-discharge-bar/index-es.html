@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section 727(a)(8): La prohibicion de condonacion del Capitulo 7 - 1328f.org</title>
+  <meta name="description" content="Explicacion de Section 727(a)(8) y 727(a)(9), las prohibiciones de condonacion del Capitulo 7 para presentadores repetidos, como interactuan con Section 1328(f), y la tabla completa de ventanas de prohibicion.">
+  <link rel="canonical" href="https://1328f.org/reports/727-discharge-bar/index-es.html">
+  <link rel="alternate" hreflang="es" href="https://1328f.org/reports/727-discharge-bar/index-es.html">
+  <link rel="alternate" hreflang="en" href="https://1328f.org/reports/727-discharge-bar/">
+  <meta property="og:title" content="Section 727(a)(8): La prohibicion de condonacion del Capitulo 7">
+  <meta property="og:description" content="Como funciona la prohibicion de condonacion del Capitulo 7, su relacion con Section 1328(f), y la tabla completa de ventanas de prohibicion para todas las combinaciones de capitulos.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://1328f.org/reports/727-discharge-bar/index-es.html">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    code { background: #161b22; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #8b949e; font-size: 1rem; }
+    nav { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.75rem 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: center; }
+    nav a { color: #8b949e; font-size: 0.9rem; font-weight: 500; padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+    nav a:hover, nav a.active { color: #f0f6fc; border-bottom-color: #58a6ff; text-decoration: none; }
+    .lang-toggle { font-size: 0.8rem; margin-left: 1rem; padding-left: 1rem; border-left: 1px solid #30363d; }
+    .lang-toggle a { color: #8b949e; border-bottom: none; }
+    .lang-toggle a:hover { color: #f0f6fc; }
+    .lang-toggle .current-lang { color: #f0f6fc; font-weight: 600; }
+
+    article { max-width: 760px; margin: 0 auto; padding: 2rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h2 { color: #f0f6fc; font-size: 1.6rem; line-height: 1.3; margin-bottom: 0.75rem; border-bottom: none; padding-bottom: 0; }
+    .article-header .meta { color: #8b949e; font-size: 0.85rem; }
+    .article-header .meta .tag { background: #21262d; padding: 0.15em 0.5em; border-radius: 3px; margin-right: 0.5rem; }
+
+    h2 { color: #f0f6fc; font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    thead th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #30363d; font-size: 0.9rem; }
+    td { color: #c9d1d9; }
+
+    .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #58a6ff; border-radius: 0 6px 6px 0; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+    .callout.green { border-left-color: #3fb950; }
+    .callout.yellow { border-left-color: #d29922; }
+    .callout h4 { color: #f0f6fc; margin-bottom: 0.5rem; }
+
+    .step-list { counter-reset: step; list-style: none; margin-left: 0; padding-left: 0; }
+    .step-list li { counter-increment: step; position: relative; padding-left: 2.5rem; margin-bottom: 1rem; }
+    .step-list li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: 0.1em;
+      width: 1.6rem; height: 1.6rem;
+      background: #21262d; border: 1px solid #30363d; border-radius: 50%;
+      color: #58a6ff; font-weight: 700; font-size: 0.8rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .back-link { display: inline-block; margin-bottom: 1rem; color: #8b949e; font-size: 0.85rem; }
+    .back-link:hover { color: #58a6ff; }
+
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 2rem; text-align: center; margin-top: 3rem; color: #8b949e; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+    @media (max-width: 600px) { header { padding: 1.5rem 1rem; } article { padding: 1rem; } }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+  <header role="banner">
+    <h1><a href="/" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Investigacion y Transparencia en Bancarrota del Consumidor</p>
+  </header>
+  <nav aria-label="Navegacion principal">
+    <a href="/">Inicio</a>
+    <a href="/reports/index-es.html" class="active" aria-current="page">Informes</a>
+    <a href="/watch/">Seguimiento</a>
+    <a href="/methodology/">Metodologia</a>
+    <a href="/tools/">Herramientas</a>
+    <a href="/about/">Acerca de</a>
+    <a href="/support/">Apoyar</a>
+    <span class="lang-toggle"><a href="/reports/727-discharge-bar/" lang="en">EN</a> | <span class="current-lang">ES</span></span>
+  </nav>
+
+  <article id="main" role="article">
+    <a href="/reports/index-es.html" class="back-link">&larr; Todos los informes</a>
+
+    <div class="article-header">
+      <h2>Section 727(a)(8): La prohibicion de condonacion del Capitulo 7</h2>
+      <div class="meta">
+        <span class="tag">Explicativo</span>
+        Publicado en marzo de 2026
+      </div>
+    </div>
+
+    <div class="callout">
+      <h4>Resumen</h4>
+      <p style="margin-bottom: 0;">Section 727(a)(8) prohibe una condonacion del Capitulo 7 si el deudor recibio una condonacion previa del Capitulo 7 o Capitulo 11 dentro de 8 anos. Section 727(a)(9) prohibe una condonacion del Capitulo 7 si el deudor recibio una condonacion previa del Capitulo 13 dentro de 6 anos (con excepciones). Junto con Section 1328(f), estas disposiciones forman un marco completo que gobierna con que frecuencia un deudor puede recibir alivio de bancarrota a traves de todos los capitulos principales de consumidor.</p>
+    </div>
+
+    <h2>1. Que hace Section 727(a)(8)</h2>
+    <p>Section 727(a)(8) establece que una condonacion del Capitulo 7 no sera otorgada si el deudor recibio una condonacion en un caso presentado bajo el Capitulo 7 o Capitulo 11 dentro de los 8 anos anteriores a la fecha de presentacion actual.</p>
+    <p>Section 727(a)(9) extiende esto a condonaciones previas del Capitulo 13: una condonacion del Capitulo 7 esta prohibida si el deudor recibio una condonacion del Capitulo 13 en un caso presentado dentro de los 6 anos de la presentacion actual, a menos que el plan previo del Capitulo 13 haya pagado a los acreedores no garantizados al menos el 70% de sus reclamaciones permitidas (y el plan haya sido propuesto de buena fe y haya sido el mejor esfuerzo del deudor), o haya pagado el 100% de las reclamaciones no garantizadas.</p>
+    <p>La medicion va de fecha de presentacion a fecha de presentacion - el mismo estandar usado para Section 1328(f).</p>
+
+    <h2>2. Como se relaciona con 1328(f)</h2>
+    <p>Section 727 gobierna las prohibiciones de condonacion del Capitulo 7. Section 1328(f) gobierna las prohibiciones de condonacion del Capitulo 13. Juntas cubren las cuatro rutas principales que un presentador repetido podria tomar:</p>
+    <ul>
+      <li><strong>Capitulo 7, luego Capitulo 7 de nuevo:</strong> Section 727(a)(8) - prohibicion de 8 anos</li>
+      <li><strong>Capitulo 7, luego Capitulo 13:</strong> Section 1328(f)(1) - prohibicion de 4 anos</li>
+      <li><strong>Capitulo 13, luego Capitulo 7:</strong> Section 727(a)(9) - prohibicion de 6 anos (con excepciones)</li>
+      <li><strong>Capitulo 13, luego Capitulo 13:</strong> Section 1328(f)(2) - prohibicion de 2 anos</li>
+    </ul>
+    <p>Las ventanas de prohibicion difieren, creando periodos donde un deudor esta prohibido de un capitulo pero no del otro. Un deudor condonado del Capitulo 7 esta prohibido de otra condonacion del Capitulo 7 durante 8 anos, pero la prohibicion del Capitulo 13 bajo 1328(f) es solo de 4 anos. Esto crea un intervalo de 4 anos (anos 4 a 8) donde el Capitulo 13 esta disponible pero el Capitulo 7 no.</p>
+
+    <h2>3. Diferencias en la aplicacion</h2>
+    <p>Section 727(a)(8) es generalmente aplicada mas sistematicamente que Section 1328(f), por varias razones:</p>
+    <ul>
+      <li><strong>Los fideicomisarios del Capitulo 7 verifican rutinariamente.</strong> Los procedimientos estandar de recepcion del fideicomisario del Capitulo 7 tipicamente incluyen una revision del historial de presentaciones previas del deudor. Una condonacion previa dentro de 8 anos es un descalificador directo.</li>
+      <li><strong>El monitoreo del UST es mas activo en el Capitulo 7.</strong> La oficina del Fideicomisario de los Estados Unidos dedica recursos significativos a la supervision del Capitulo 7, incluyendo la prueba de medios y la revision de abuso. Las verificaciones de presentaciones previas son parte de este proceso.</li>
+      <li><strong>Los fideicomisarios del Capitulo 13 varian.</strong> Las practicas de los fideicomisarios del Capitulo 13 difieren ampliamente por distrito. Algunos fideicomisarios buscan sistematicamente prohibiciones de 1328(f); otros no. Esta inconsistencia es un hallazgo central de nuestro <a href="/reports/methodology-1328f-screening/">informe de metodologia de analisis</a>.</li>
+      <li><strong>Calculo mas simple.</strong> La prohibicion de 727(a)(8) es binaria: hubo una condonacion previa del Capitulo 7 u 11 dentro de 8 anos? El analisis de 1328(f) requiere identificar el capitulo previo para determinar si se aplica la ventana de 2 anos o 4 anos, anadiendo un paso que aumenta la posibilidad de omision.</li>
+    </ul>
+
+    <h2>4. La cuestion de la fecha de presentacion</h2>
+    <p>Tanto Section 727(a)(8) como Section 1328(f) miden desde la fecha de presentacion del caso previo hasta la fecha de presentacion del caso actual. Esto a veces se llama el estandar de "fecha de presentacion a fecha de presentacion."</p>
+    <p>Para Section 1328(f), este estandar fue establecido en <em>In re Blendheim</em>, 803 F.3d 477 (9th Cir. 2015), que sostuvo que la frase "presentado durante el periodo [aplicable]" se refiere a la fecha de presentacion del caso previo, no a la fecha de condonacion. Esta es la posicion mayoritaria.</p>
+    <p>La misma medicion se aplica a Section 727(a)(8). La ley dice "presentado bajo el capitulo 7 u 11 de este titulo durante el periodo de 8 anos" - la palabra "presentado" se refiere a la fecha de presentacion del caso previo, y el periodo de 8 anos se mide hacia atras desde la fecha de presentacion actual.</p>
+
+    <div class="callout">
+      <h4>Por que esto importa</h4>
+      <p style="margin-bottom: 0;">Un caso del Capitulo 13 puede tomar de 3 a 5 anos desde la presentacion hasta la condonacion. Si la prohibicion se midiera desde la fecha de condonacion hasta la fecha de presentacion, un deudor que presento un plan de Capitulo 13 de 5 anos podria volver a presentar para una nueva condonacion tan pronto como 0 dias despues de completar el plan previo (si la prohibicion y la duracion del plan se alinean). El estandar de fecha de presentacion a fecha de presentacion previene esto al iniciar el reloj antes.</p>
+    </div>
+
+    <h2>5. Impacto practico</h2>
+    <p>La interaccion de las secciones 727(a)(8), 727(a)(9) y 1328(f) crea ventanas de tiempo distintas despues de cada tipo de condonacion:</p>
+
+    <h3>Despues de una condonacion del Capitulo 7</h3>
+    <ul>
+      <li><strong>Anos 0-4:</strong> Prohibido de la condonacion del Capitulo 7 (727(a)(8)) y la condonacion del Capitulo 13 (1328(f)(1)). El deudor puede presentar bajo cualquier capitulo, pero no puede recibir condonacion en ninguno.</li>
+      <li><strong>Anos 4-8:</strong> Prohibido solo de la condonacion del Capitulo 7. La condonacion del Capitulo 13 esta disponible. Esta es la ventana donde los deudores comunmente presentan casos "Capitulo 20" (Capitulo 7 seguido de Capitulo 13).</li>
+      <li><strong>Despues de 8 anos:</strong> Las condonaciones del Capitulo 7 y del Capitulo 13 estan disponibles.</li>
+    </ul>
+
+    <h3>Despues de una condonacion del Capitulo 13</h3>
+    <ul>
+      <li><strong>Anos 0-2:</strong> Prohibido de la condonacion del Capitulo 13 (1328(f)(2)) y la condonacion del Capitulo 7 (727(a)(9), a menos que el plan previo haya pagado 100% o 70%+). El deudor puede presentar pero no puede recibir condonacion en ninguno de los dos capitulos.</li>
+      <li><strong>Anos 2-6:</strong> La condonacion del Capitulo 13 esta disponible. La condonacion del Capitulo 7 esta prohibida (a menos que aplique la excepcion de pago).</li>
+      <li><strong>Despues de 6 anos:</strong> Ambos capitulos disponibles.</li>
+    </ul>
+
+    <h2>6. Tabla completa de ventanas de prohibicion</h2>
+
+    <div class="callout green">
+      <h4>Ventanas de prohibicion de condonacion a condonacion</h4>
+      <table style="margin-bottom: 0;">
+        <thead>
+          <tr>
+            <th scope="col">Capitulo del caso previo</th>
+            <th scope="col">Capitulo del nuevo caso</th>
+            <th scope="col">Estatuto</th>
+            <th scope="col">Periodo de prohibicion</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Capitulo 7</td><td>Capitulo 7</td><td>727(a)(8)</td><td>8 anos</td></tr>
+          <tr><td>Capitulo 7</td><td>Capitulo 13</td><td>1328(f)(1)</td><td>4 anos</td></tr>
+          <tr><td>Capitulo 11</td><td>Capitulo 7</td><td>727(a)(8)</td><td>8 anos</td></tr>
+          <tr><td>Capitulo 11</td><td>Capitulo 13</td><td>1328(f)(1)</td><td>4 anos</td></tr>
+          <tr><td>Capitulo 12</td><td>Capitulo 13</td><td>1328(f)(1)</td><td>4 anos</td></tr>
+          <tr><td>Capitulo 13</td><td>Capitulo 7</td><td>727(a)(9)</td><td>6 anos*</td></tr>
+          <tr><td>Capitulo 13</td><td>Capitulo 13</td><td>1328(f)(2)</td><td>2 anos</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top: 0.5rem; margin-bottom: 0; font-size: 0.85rem; color: #8b949e;">* Excepcion: La condonacion del Capitulo 7 esta disponible si el plan previo del Capitulo 13 pago el 100% de las reclamaciones no garantizadas, o pago al menos el 70% y fue propuesto de buena fe como el mejor esfuerzo del deudor.</p>
+    </div>
+
+    <p>Todos los periodos de prohibicion se miden desde la fecha de presentacion del caso previo hasta la fecha de presentacion del caso actual.</p>
+
+    <h2>7. Herramientas y lecturas adicionales</h2>
+    <p>El <a href="https://1328f.com">panel de deteccion nacional</a> cubre violaciones de Section 1328(f) en los 94 distritos federales. La <a href="https://1328f.com/check.html">calculadora de elegibilidad</a> permite verificar si un intervalo especifico entre presentaciones cae dentro de una ventana de prohibicion.</p>
+
+    <h3>Informes relacionados</h3>
+    <ul>
+      <li><a href="/reports/methodology-1328f-screening/">Como analizamos 4.9 millones de casos de bancarrota</a> - metodologia completa para el analisis de 1328(f)</li>
+      <li><a href="/reports/109g-filing-bar/">Section 109(g): La prohibicion de presentacion para deudores desestimados</a> - la prohibicion de presentacion de 180 dias</li>
+      <li><a href="/reports/chapter-13-dismissal-rates/">Tasas de desestimiento del Capitulo 13 por distrito</a> - analisis nacional de donde fracasan los casos</li>
+      <li><a href="/reports/prior-filer-discharge-rates/">Tasas de condonacion de presentadores previos</a> - resultados para deudores con presentaciones anteriores</li>
+    </ul>
+
+    <div class="callout yellow">
+      <h4>No constituye asesoramiento legal</h4>
+      <p style="margin-bottom: 0;">Este informe presenta analisis estatutario y hallazgos empiricos basados en datos publicos del tribunal. No constituye asesoramiento legal. Si una prohibicion de condonacion aplica en un caso especifico depende de los hechos y circunstancias, incluyendo el historial de presentaciones y condonaciones del deudor. Consulte a un abogado con licencia para obtener asesoramiento sobre su situacion.</p>
+    </div>
+
+  </article>
+
+  <footer role="contentinfo">
+    <p>1328f.org - Investigacion independiente de bancarrota del consumidor. No constituye asesoramiento legal.</p>
+    <p class="links">
+      <a href="https://1328f.com">Herramienta de deteccion</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/">Acerca de</a>
+      <a href="/support/">Apoyar</a>
+    </p>
+    <p style="margin-top: 0.75rem;"><a href="/support/" style="color: #484f58;">Apoyar esta investigacion</a></p>
+  </footer>
+</body>
+</html>

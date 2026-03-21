@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasas de desestimiento del Capitulo 13 por distrito: Analisis nacional - 1328f.org</title>
+  <meta name="description" content="Analisis nacional de las tasas de desestimiento del Capitulo 13 en los distritos federales de bancarrota: por que el 60-67% de los casos del Capitulo 13 fracasan, como varian las tasas por distrito y abogado, y lo que revelan los datos.">
+  <link rel="canonical" href="https://1328f.org/reports/chapter-13-dismissal-rates/index-es.html">
+  <link rel="alternate" hreflang="es" href="https://1328f.org/reports/chapter-13-dismissal-rates/index-es.html">
+  <link rel="alternate" hreflang="en" href="https://1328f.org/reports/chapter-13-dismissal-rates/">
+  <meta property="og:title" content="Tasas de desestimiento del Capitulo 13 por distrito: Analisis nacional">
+  <meta property="og:description" content="El 60-67% de los casos del Capitulo 13 son desestimados. Esta tasa varia en mas de 30 puntos porcentuales entre distritos. El predictor mas fuerte de completacion no es el ingreso ni la deuda - es el abogado.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://1328f.org/reports/chapter-13-dismissal-rates/index-es.html">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    code { background: #161b22; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #8b949e; font-size: 1rem; }
+    nav { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.75rem 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: center; }
+    nav a { color: #8b949e; font-size: 0.9rem; font-weight: 500; padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+    nav a:hover, nav a.active { color: #f0f6fc; border-bottom-color: #58a6ff; text-decoration: none; }
+    .lang-toggle { font-size: 0.8rem; margin-left: 1rem; padding-left: 1rem; border-left: 1px solid #30363d; }
+    .lang-toggle a { color: #8b949e; border-bottom: none; }
+    .lang-toggle a:hover { color: #f0f6fc; }
+    .lang-toggle .current-lang { color: #f0f6fc; font-weight: 600; }
+
+    article { max-width: 760px; margin: 0 auto; padding: 2rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h2 { color: #f0f6fc; font-size: 1.6rem; line-height: 1.3; margin-bottom: 0.75rem; border-bottom: none; padding-bottom: 0; }
+    .article-header .meta { color: #8b949e; font-size: 0.85rem; }
+    .article-header .meta .tag { background: #21262d; padding: 0.15em 0.5em; border-radius: 3px; margin-right: 0.5rem; }
+
+    h2 { color: #f0f6fc; font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    thead th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #30363d; font-size: 0.9rem; }
+    td { color: #c9d1d9; }
+
+    .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #58a6ff; border-radius: 0 6px 6px 0; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+    .callout.green { border-left-color: #3fb950; }
+    .callout.yellow { border-left-color: #d29922; }
+    .callout h4 { color: #f0f6fc; margin-bottom: 0.5rem; }
+
+    .step-list { counter-reset: step; list-style: none; margin-left: 0; padding-left: 0; }
+    .step-list li { counter-increment: step; position: relative; padding-left: 2.5rem; margin-bottom: 1rem; }
+    .step-list li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: 0.1em;
+      width: 1.6rem; height: 1.6rem;
+      background: #21262d; border: 1px solid #30363d; border-radius: 50%;
+      color: #58a6ff; font-weight: 700; font-size: 0.8rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .back-link { display: inline-block; margin-bottom: 1rem; color: #8b949e; font-size: 0.85rem; }
+    .back-link:hover { color: #58a6ff; }
+
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 2rem; text-align: center; margin-top: 3rem; color: #8b949e; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+    @media (max-width: 600px) { header { padding: 1.5rem 1rem; } article { padding: 1rem; } }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+  <header role="banner">
+    <h1><a href="/" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Investigacion y Transparencia en Bancarrota del Consumidor</p>
+  </header>
+  <nav aria-label="Navegacion principal">
+    <a href="/">Inicio</a>
+    <a href="/reports/index-es.html" class="active" aria-current="page">Informes</a>
+    <a href="/watch/">Seguimiento</a>
+    <a href="/methodology/">Metodologia</a>
+    <a href="/tools/">Herramientas</a>
+    <a href="/about/">Acerca de</a>
+    <a href="/support/">Apoyar</a>
+    <span class="lang-toggle"><a href="/reports/chapter-13-dismissal-rates/" lang="en">EN</a> | <span class="current-lang">ES</span></span>
+  </nav>
+
+  <article id="main" role="article">
+    <a href="/reports/index-es.html" class="back-link">&larr; Todos los informes</a>
+
+    <div class="article-header">
+      <h2>Tasas de desestimiento del Capitulo 13 por distrito: Analisis nacional</h2>
+      <div class="meta">
+        <span class="tag">Investigacion</span>
+        Publicado en marzo de 2026
+      </div>
+    </div>
+
+    <div class="callout">
+      <h4>Resumen</h4>
+      <p style="margin-bottom: 0;">El Capitulo 13 tiene una tasa de completacion nacional de aproximadamente 33-40%. El 60-67% restante de los casos son desestimados sin que el deudor reciba una condonacion. Esta tasa varia en mas de 30 puntos porcentuales entre los distritos federales. En nuestros distritos objetivo, el predictor mas fuerte de si un deudor completa un plan del Capitulo 13 no es el ingreso, la carga de deuda ni el distrito - es el abogado.</p>
+    </div>
+
+    <h2>1. Que significa el desestimiento</h2>
+    <p>Un caso del Capitulo 13 desestimado no proporciona alivio permanente. Cuando un caso es desestimado:</p>
+    <ul>
+      <li>El deudor no recibe una condonacion. Ninguna deuda es eliminada.</li>
+      <li>La suspension automatica se levanta. Los acreedores pueden reanudar cobros, ejecuciones hipotecarias, embargos de bienes y retenciones de salario.</li>
+      <li>Los pagos del plan ya realizados se distribuyen a los acreedores, pero el deudor no recibe credito por la completacion parcial.</li>
+      <li>Los honorarios del abogado - tipicamente entre $3,000 y $5,000 para una presentacion del Capitulo 13 - no se reembolsan.</li>
+    </ul>
+    <p>Para el deudor, un caso desestimado significa meses o anos de pagos del plan, finanzas restringidas y procedimientos legales que no producen ningun beneficio duradero. Para los acreedores, significa una recuperacion retrasada. Para el sistema judicial, significa recursos consumidos que no produjeron ninguna resolucion.</p>
+
+    <h2>2. Panorama nacional</h2>
+    <p>Usando registros de la Base de Datos Integrada del FJC que cubren 4.9 millones de casos del Capitulo 13 presentados entre los anos fiscales 2008 y 2024 en los 94 distritos federales de bancarrota, la tasa de desestimiento nacional para casos resueltos (condonados mas desestimados, excluyendo casos abiertos) se encuentra entre el 60% y el 67%, dependiendo de la cohorte y el periodo de tiempo.</p>
+
+    <div class="callout green">
+      <h4>Cifras clave</h4>
+      <p>Conjunto de datos: 4,895,163 casos del Capitulo 13 en 94 distritos federales</p>
+      <p>Tasa de desestimiento nacional (casos resueltos): aproximadamente 60-67%</p>
+      <p>Rango entre distritos: varia en mas de 30 puntos porcentuales</p>
+      <p style="margin-bottom: 0;">Algunos distritos desestiman menos del 50% de los casos resueltos. Otros desestiman mas del 80%.</p>
+    </div>
+
+    <p>La "tasa de desestimiento" utilizada a lo largo de este informe se calcula como: casos desestimados divididos por (casos desestimados mas casos condonados). Los casos abiertos se excluyen del denominador porque su resultado final es desconocido. Este es el enfoque estandar en la investigacion de resultados de bancarrota.</p>
+
+    <h2>3. Por que varian las tasas</h2>
+    <p>Las tasas de desestimiento del Capitulo 13 no son aleatorias. Estan moldeadas por multiples factores que difieren entre distritos:</p>
+    <ul>
+      <li><strong>Cultura legal local.</strong> Algunos distritos tienen procesos de confirmacion mas rapidos, intervencion mas temprana de los fideicomisarios y requisitos de plan mas estructurados. Estas practicas tienden a identificar casos condenados antes, pero tambien pueden detectar problemas solucionables antes de que se vuelvan fatales.</li>
+      <li><strong>Practicas del fideicomisario.</strong> Los fideicomisarios del Capitulo 13 tienen amplia discrecion en como monitorean los casos, aplican los requisitos del plan y recomiendan el desestimiento. Algunos fideicomisarios desestiman agresivamente por incumplimientos menores. Otros trabajan con los deudores a traves de las dificultades.</li>
+      <li><strong>Condiciones economicas.</strong> Los distritos con mayor desempleo, salarios mas bajos o mercados laborales mas volatiles muestran tasas de desestimiento mas altas. Los deudores en estos distritos son mas propensos a experimentar interrupciones de ingresos que impiden la completacion del plan.</li>
+      <li><strong>Calidad del abogado.</strong> El efecto del abogado se discute en detalle a continuacion, pero a nivel de distrito, los distritos con mayor concentracion de profesionales de alto volumen y baja calidad muestran tasas de desestimiento elevadas.</li>
+      <li><strong>Requisitos del plan.</strong> Algunos distritos exigen mas de los deudores antes de la confirmacion - verificacion de empleo, asesoria presupuestaria, presentacion de declaraciones de impuestos. Estos requisitos pueden filtrar casos que de otro modo fracasarian, pero tambien pueden crear barreras para deudores que tendrian exito con ayuda.</li>
+    </ul>
+
+    <h2>4. El efecto del abogado</h2>
+
+    <div class="callout">
+      <h4>Hallazgo clave</h4>
+      <p style="margin-bottom: 0;">En nuestros distritos objetivo (56,256 casos en 3 tribunales), la brecha entre los mejores y peores profesionales supera los 40 puntos porcentuales. Los profesionales del grupo de control logran tasas de desestimiento de alrededor del 22%, mientras que los peores superan el 35%. Esta brecha es estadisticamente significativa (p &lt; 0.001).</p>
+    </div>
+
+    <p>El abogado que presenta un caso del Capitulo 13 es el predictor individual mas fuerte de si el deudor completara el plan. Este hallazgo se mantiene despues de controlar por distrito, ano de presentacion y caracteristicas del deudor disponibles en el registro publico.</p>
+    <p>Por que los abogados importan tanto en el Capitulo 13:</p>
+    <ul>
+      <li><strong>El Capitulo 13 requiere trabajo sostenido.</strong> A diferencia del Capitulo 7 (donde el trabajo del abogado esta en gran parte completo al presentar), el Capitulo 13 requiere participacion continua del abogado: redaccion del plan, audiencias de confirmacion, modificaciones del plan, negociaciones con acreedores y respuesta a objeciones del fideicomisario durante un periodo de 3 a 5 anos.</li>
+      <li><strong>La seleccion de casos importa.</strong> Los abogados que evaluan cuidadosamente si un deudor puede sostener un plan de 3 a 5 anos antes de presentar producen menos casos condenados. Los abogados que presentan a todos los que llegan a su puerta producen mas fracasos.</li>
+      <li><strong>La calidad de la recepcion predice los resultados.</strong> Una peticion completa y precisa con activos correctamente valorados, acreedores correctamente listados y un plan factible tiene una posibilidad dramaticamente mejor de confirmacion y completacion que una peticion incompleta presentada con listas faltantes y proyecciones poco realistas.</li>
+    </ul>
+    <p>En un portafolio analizado, la diferencia entre profesionales no era marginal. Era la diferencia entre que aproximadamente 1 de cada 5 clientes fracasara y que aproximadamente 1 de cada 3 clientes fracasara - una brecha que, a traves de cientos de casos, representa un dano agregado sustancial para los deudores.</p>
+
+    <h2>5. Donde fracasan los casos</h2>
+    <p>No todos los desestimientos son iguales. Analizar la etapa en la que fracasan los casos revela patrones distintos:</p>
+
+    <h3>Modo de fracaso normal</h3>
+    <p>La razon mas comun por la que los casos del Capitulo 13 fracasan es que el deudor no puede sostener los pagos del plan. Perdida de empleo, emergencias medicas, divorcio y otros eventos de la vida interrumpen la capacidad del deudor para hacer pagos mensuales durante un periodo de 3 a 5 anos. Este es el modo de fracaso esperado - el Capitulo 13 es dificil, y algunos deudores no podran completarlo a pesar de sus mejores esfuerzos.</p>
+
+    <h3>Modo de fracaso anomalo</h3>
+    <p>Un patron distinto emerge en los casos que fracasan antes de comenzar:</p>
+    <ul>
+      <li><strong>Peticiones incompletas:</strong> Casos presentados con solo una peticion y sin listas, declaraciones o plan. Estos casos casi siempre son desestimados por no presentar los documentos requeridos dentro del plazo de 14 dias.</li>
+      <li><strong>Fracasos por tasa de presentacion:</strong> Casos desestimados porque el deudor no pago la tasa de presentacion ni obtuvo una exencion de tasa.</li>
+      <li><strong>Incomparecencia:</strong> Casos desestimados porque el deudor no asistio a la reunion de acreedores Section 341.</li>
+      <li><strong>Incumplimiento de presentar informacion requerida:</strong> Casos desestimados por declaraciones de impuestos faltantes, comprobantes de pago, certificados de asesoria crediticia u otros documentos requeridos.</li>
+    </ul>
+
+    <div class="callout">
+      <h4>Fracasos en etapa de recepcion</h4>
+      <p style="margin-bottom: 0;">Las practicas de alto volumen muestran tasas elevadas de fracasos en etapa de recepcion - casos que son desestimados antes de que un plan sea siquiera considerado. Este patron sugiere que se estan presentando casos que no deberian haberse presentado. El deudor paga honorarios de abogado, recibe proteccion temporal de la suspension automatica y no obtiene nada permanente a cambio.</p>
+    </div>
+
+    <h2>6. El Capitulo 7 como control</h2>
+    <p>Comparar los resultados del Capitulo 7 y del Capitulo 13 para los mismos profesionales aisla lo que hace diferente al Capitulo 13. El Capitulo 7 es en gran parte un evento unico: el abogado presenta la peticion, el deudor asiste a la reunion 341, y la condonacion sigue aproximadamente 60 dias despues si no se presentan objeciones. No hay plan, no hay pagos continuos y hay un minimo trabajo del abogado posterior a la presentacion.</p>
+    <p>Cuando un profesional tiene exito en el Capitulo 7 pero fracasa en el Capitulo 13, la diferencia no es la poblacion de deudores - el mismo abogado esta sirviendo a la misma comunidad. La diferencia es el trabajo requerido. El Capitulo 7 premia la capacidad de presentar un caso. El Capitulo 13 premia la capacidad de sostener un caso.</p>
+    <p>En nuestros distritos objetivo, los profesionales con las tasas de desestimiento mas altas del Capitulo 13 frecuentemente tienen resultados del Capitulo 7 que estan cerca del promedio del distrito. Sus clientes del Capitulo 7 reciben condonacion a tasas normales. Sus clientes del Capitulo 13 no. Este patron es consistente con un modelo de practica que cobra honorarios por presentar pero no realiza el trabajo continuo que el Capitulo 13 requiere.</p>
+
+    <h2>7. Implicaciones</h2>
+    <p>Los datos apuntan a tres conclusiones:</p>
+
+    <h3>Para los consumidores</h3>
+    <p>Un consumidor que selecciona un abogado del Capitulo 13 deberia comparar la tasa de completacion de ese abogado contra la linea base del distrito. Un abogado cuyos clientes completan sus planes 20 puntos porcentuales menos que el promedio del distrito es un abogado cuyos clientes estan pagando por un servicio que es poco probable que reciban.</p>
+    <p>Los registros de PACER son publicos. El historial de presentaciones de un abogado, incluyendo los resultados, esta disponible para cualquier persona con una cuenta de PACER. Nuestra <a href="/reports/reading-pacer-attorney-record/">guia para leer el registro de un abogado en PACER</a> explica como buscar esta informacion.</p>
+
+    <h3>Para los legisladores</h3>
+    <p>El sistema actual proporciona a los consumidores casi ninguna informacion sobre el desempeno del abogado antes de contratarlo. Los servicios de referencia de colegios de abogados no publican datos de resultados. Los registros disciplinarios del colegio de abogados capturan solo la mala conducta mas extrema. Un consumidor que elige un abogado de bancarrota tiene menos informacion disponible que un consumidor que elige un restaurante.</p>
+    <p>La presentacion estandarizada de resultados - incluso a nivel de distrito en lugar de a nivel de abogado individual - daria a los consumidores, fideicomisarios y tribunales una herramienta para identificar patrones que actualmente pasan desapercibidos.</p>
+
+    <h3>Para fideicomisarios y tribunales</h3>
+    <p>El monitoreo sistematico de resultados a nivel de abogado podria identificar a profesionales cuyos clientes fracasan a tasas anomalas antes de que el patron se arraigue. La intervencion temprana - ya sea a traves de mentoria, requisitos de capacitacion o referencia a las autoridades disciplinarias del colegio de abogados - es mas efectiva que abordar el problema despues de que cientos de deudores hayan sido perjudicados.</p>
+
+    <h2>8. Metodologia</h2>
+    <p>Este analisis utiliza registros de la Base de Datos Integrada del FJC para casos del Capitulo 13 y exportaciones de PACER Case Locator para analisis a nivel de abogado en los distritos objetivo. Las tasas de desestimiento se calculan usando solo los casos resueltos (condonados mas desestimados). Los casos abiertos, convertidos y casos con otras disposiciones se excluyen del calculo de tasa principal.</p>
+    <p>El analisis de distritos objetivo cubre 56,256 casos del Capitulo 13 en 3 tribunales federales de bancarrota. Las comparaciones a nivel de abogado usan un umbral minimo de casos para excluir a profesionales con muy pocos casos para un calculo de tasa significativo.</p>
+    <p>Para la metodologia tecnica completa, incluyendo fuentes de datos, procedimientos de actualizacion y metodos estadisticos, vea el <a href="/reports/methodology-1328f-screening/">informe de metodologia</a>.</p>
+
+    <h2>Informes relacionados</h2>
+    <ul>
+      <li><a href="/reports/methodology-1328f-screening/">Como analizamos 4.9 millones de casos de bancarrota</a> - fuentes de datos y metodologia de analisis</li>
+      <li><a href="/reports/prior-filer-discharge-rates/">Tasas de condonacion de presentadores previos</a> - resultados para deudores con presentaciones anteriores</li>
+      <li><a href="/reports/109g-filing-bar/">Section 109(g): La prohibicion de presentacion para deudores desestimados</a> - la prohibicion de 180 dias</li>
+      <li><a href="/reports/727-discharge-bar/">Section 727(a)(8): La prohibicion de condonacion del Capitulo 7</a> - prohibiciones de condonacion entre capitulos</li>
+      <li><a href="/reports/reading-pacer-attorney-record/">Como leer el registro de un abogado en PACER</a> - guia del consumidor sobre datos publicos del tribunal</li>
+    </ul>
+
+    <div class="callout yellow">
+      <h4>No constituye asesoramiento legal</h4>
+      <p style="margin-bottom: 0;">Este informe presenta hallazgos empiricos de datos publicos del tribunal. No constituye asesoramiento legal. Las tasas de desestimiento reflejan resultados agregados y no predicen el resultado de ningun caso individual. Muchos factores mas alla de la seleccion del abogado afectan si un plan del Capitulo 13 tiene exito. Consulte a un abogado con licencia para obtener asesoramiento sobre su situacion.</p>
+    </div>
+
+  </article>
+
+  <footer role="contentinfo">
+    <p>1328f.org - Investigacion independiente de bancarrota del consumidor. No constituye asesoramiento legal.</p>
+    <p class="links">
+      <a href="https://1328f.com">Herramienta de deteccion</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/">Acerca de</a>
+      <a href="/support/">Apoyar</a>
+    </p>
+    <p style="margin-top: 0.75rem;"><a href="/support/" style="color: #484f58;">Apoyar esta investigacion</a></p>
+  </footer>
+</body>
+</html>

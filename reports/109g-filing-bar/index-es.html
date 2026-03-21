@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Section 109(g): La prohibicion de presentacion para deudores desestimados - 1328f.org</title>
+  <meta name="description" content="Explicacion de Section 109(g), la prohibicion de presentacion de 180 dias para deudores de bancarrota desestimados, como la aplican los tribunales y lo que muestran los datos sobre re-presentaciones rapidas.">
+  <link rel="canonical" href="https://1328f.org/reports/109g-filing-bar/index-es.html">
+  <link rel="alternate" hreflang="es" href="https://1328f.org/reports/109g-filing-bar/index-es.html">
+  <link rel="alternate" hreflang="en" href="https://1328f.org/reports/109g-filing-bar/">
+  <meta property="og:title" content="Section 109(g): La prohibicion de presentacion para deudores desestimados">
+  <meta property="og:description" content="Como funciona la prohibicion de presentacion de 180 dias, por que la aplicacion es inconsistente y lo que revelan los datos publicos sobre patrones de presentacion serial.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://1328f.org/reports/109g-filing-bar/index-es.html">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    code { background: #161b22; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #8b949e; font-size: 1rem; }
+    nav { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.75rem 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: center; }
+    nav a { color: #8b949e; font-size: 0.9rem; font-weight: 500; padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+    nav a:hover, nav a.active { color: #f0f6fc; border-bottom-color: #58a6ff; text-decoration: none; }
+    .lang-toggle { font-size: 0.8rem; margin-left: 1rem; padding-left: 1rem; border-left: 1px solid #30363d; }
+    .lang-toggle a { color: #8b949e; border-bottom: none; }
+    .lang-toggle a:hover { color: #f0f6fc; }
+    .lang-toggle .current-lang { color: #f0f6fc; font-weight: 600; }
+
+    article { max-width: 760px; margin: 0 auto; padding: 2rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h2 { color: #f0f6fc; font-size: 1.6rem; line-height: 1.3; margin-bottom: 0.75rem; border-bottom: none; padding-bottom: 0; }
+    .article-header .meta { color: #8b949e; font-size: 0.85rem; }
+    .article-header .meta .tag { background: #21262d; padding: 0.15em 0.5em; border-radius: 3px; margin-right: 0.5rem; }
+
+    h2 { color: #f0f6fc; font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    thead th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #30363d; font-size: 0.9rem; }
+    td { color: #c9d1d9; }
+
+    .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #58a6ff; border-radius: 0 6px 6px 0; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+    .callout.green { border-left-color: #3fb950; }
+    .callout.yellow { border-left-color: #d29922; }
+    .callout h4 { color: #f0f6fc; margin-bottom: 0.5rem; }
+
+    .step-list { counter-reset: step; list-style: none; margin-left: 0; padding-left: 0; }
+    .step-list li { counter-increment: step; position: relative; padding-left: 2.5rem; margin-bottom: 1rem; }
+    .step-list li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: 0.1em;
+      width: 1.6rem; height: 1.6rem;
+      background: #21262d; border: 1px solid #30363d; border-radius: 50%;
+      color: #58a6ff; font-weight: 700; font-size: 0.8rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .back-link { display: inline-block; margin-bottom: 1rem; color: #8b949e; font-size: 0.85rem; }
+    .back-link:hover { color: #58a6ff; }
+
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 2rem; text-align: center; margin-top: 3rem; color: #8b949e; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+    @media (max-width: 600px) { header { padding: 1.5rem 1rem; } article { padding: 1rem; } }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+  <header role="banner">
+    <h1><a href="/" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Investigacion y Transparencia en Bancarrota del Consumidor</p>
+  </header>
+  <nav aria-label="Navegacion principal">
+    <a href="/">Inicio</a>
+    <a href="/reports/index-es.html" class="active" aria-current="page">Informes</a>
+    <a href="/watch/">Seguimiento</a>
+    <a href="/methodology/">Metodologia</a>
+    <a href="/tools/">Herramientas</a>
+    <a href="/about/">Acerca de</a>
+    <a href="/support/">Apoyar</a>
+    <span class="lang-toggle"><a href="/reports/109g-filing-bar/" lang="en">EN</a> | <span class="current-lang">ES</span></span>
+  </nav>
+
+  <article id="main" role="article">
+    <a href="/reports/index-es.html" class="back-link">&larr; Todos los informes</a>
+
+    <div class="article-header">
+      <h2>Section 109(g): La prohibicion de presentacion para deudores desestimados</h2>
+      <div class="meta">
+        <span class="tag">Explicativo</span>
+        Publicado en marzo de 2026
+      </div>
+    </div>
+
+    <div class="callout">
+      <h4>Resumen</h4>
+      <p style="margin-bottom: 0;">Section 109(g) del Codigo de Bancarrota prohibe a un individuo presentar un nuevo caso de bancarrota dentro de los 180 dias de un desestimiento previo bajo ciertas circunstancias. Es la primera linea de defensa contra el abuso de presentacion serial. Cuando no se aplica, los deudores pueden ciclar a traves de presentaciones indefinidamente - obteniendo suspensiones automaticas, pagando honorarios de abogado y nunca completando un plan.</p>
+    </div>
+
+    <h2>1. Que hace Section 109(g)</h2>
+    <p>Section 109(g) prohibe a un individuo ser deudor bajo cualquier capitulo del Codigo de Bancarrota durante 180 dias despues de que un caso previo sea desestimado si se cumple alguna de dos condiciones:</p>
+    <ul>
+      <li><strong>109(g)(1):</strong> El deudor incumplio voluntariamente las ordenes del tribunal o no comparecio ante el tribunal en la prosecucion adecuada del caso.</li>
+      <li><strong>109(g)(2):</strong> El deudor solicito y obtuvo el desestimiento voluntario del caso despues de la presentacion de una solicitud de alivio de la suspension automatica.</li>
+    </ul>
+    <p>La prohibicion no es automatica. Debe ser planteada por una parte interesada - tipicamente un acreedor, el fideicomisario del Capitulo 13 o el Fideicomisario de los Estados Unidos. Si nadie la plantea, el nuevo caso procede como si la prohibicion no existiera.</p>
+
+    <h2>2. Por que importa</h2>
+    <p>La suspension automatica bajo Section 362 es una de las protecciones mas poderosas en la ley de bancarrota. En el momento en que se presenta una peticion, toda la actividad de cobro se detiene: ejecuciones hipotecarias, embargos de bienes, retenciones de salario, demandas. Esta proteccion es inmediata y automatica.</p>
+    <p>Sin Section 109(g), un deudor podria presentar una peticion de bancarrota, recibir la suspension automatica, permitir que el caso sea desestimado por incumplimiento, e inmediatamente volver a presentar para obtener una nueva suspension. Este patron - a veces llamado "presentacion serial" - usa la suspension automatica como tactica dilatoria en lugar de un camino hacia el alivio financiero.</p>
+
+    <div class="callout">
+      <h4>El patron de presentacion serial</h4>
+      <p style="margin-bottom: 0;">Presentar peticion (la suspension se activa) - incumplir los requisitos - caso desestimado (la suspension se levanta) - volver a presentar inmediatamente (nueva suspension se activa). Cada ciclo puede retrasar a los acreedores por semanas o meses. Los honorarios de abogado se cobran cada vez. El deudor nunca recibe una condonacion.</p>
+    </div>
+
+    <p>Section 109(g) existe para romper este ciclo imponiendo un periodo de espera. Pero solo funciona cuando alguien lo aplica.</p>
+
+    <h2>3. Como los tribunales lo aplican</h2>
+    <p>La aplicacion de Section 109(g) varia significativamente entre distritos:</p>
+    <ul>
+      <li><strong>Revision sistematica:</strong> Algunos tribunales y oficinas del secretario verifican presentaciones previas al momento de la recepcion y senalan casos que pueden caer dentro de la ventana de 109(g). Estos tribunales pueden emitir ordenes para mostrar causa o requerir que el deudor aborde el desestimiento previo.</li>
+      <li><strong>Impulsado por acreedores:</strong> En muchos distritos, la aplicacion depende enteramente de que los acreedores o sus abogados monitoreen las re-presentaciones y planteen el asunto mediante mocion.</li>
+      <li><strong>Monitoreo del UST:</strong> La oficina del Fideicomisario de los Estados Unidos puede buscar presentadores seriales como parte de su funcion de supervision, pero las practicas varian por region.</li>
+      <li><strong>Senalamiento del fideicomisario:</strong> Los fideicomisarios del Capitulo 13 a veces identifican desestimientos previos durante la reunion de acreedores Section 341.</li>
+    </ul>
+    <p>La Base de Datos Integrada del FJC contiene un campo <code>PRBANKFL</code> que indica presentaciones previas, pero este indicador es descriptivo en lugar de prescriptivo. El sistema registra que existe una presentacion previa - no bloquea automaticamente la nueva presentacion ni alerta al tribunal.</p>
+
+    <h2>4. Lo que muestran los datos</h2>
+    <p>Usando datos del FJC y PACER, podemos medir la tasa a la que los casos desestimados son seguidos por re-presentaciones rapidas - nuevas presentaciones dentro de los 180 dias del desestimiento previo.</p>
+
+    <div class="callout green">
+      <h4>Hallazgo clave</h4>
+      <p style="margin-bottom: 0;">En un portafolio analizado, el 85.3% de las cadenas fracaso-luego-re-presentacion ocurrieron dentro de los 180 dias del desestimiento previo. Esto significa que la gran mayoria de las re-presentaciones despues de un fracaso ocurren dentro de la ventana de Section 109(g) - el periodo donde una prohibicion de presentacion puede aplicarse.</p>
+    </div>
+
+    <p>Las tasas de re-presentacion rapida no son uniformes. Varian por distrito, por profesional y por la razon del desestimiento previo. En nuestros distritos objetivo, ciertos profesionales muestran tasas de re-presentacion rapida significativamente mas altas que los grupos de control, sugiriendo que algunos modelos de practica generan sistematicamente el tipo de casos mas propensos a generar preocupaciones de 109(g).</p>
+    <p>Patrones dignos de atencion:</p>
+    <ul>
+      <li>Los casos desestimados por incumplimiento de presentar documentos requeridos (peticiones incompletas) se vuelven a presentar a tasas mas altas que los casos desestimados despues de intentos de confirmacion del plan.</li>
+      <li>Los casos donde el mismo abogado representa al deudor tanto en el caso desestimado como en la re-presentacion muestran las tasas de re-presentacion rapida mas altas.</li>
+      <li>Algunos profesionales presentan nuevas peticiones para el mismo cliente dentro de dias de un desestimiento, sugiriendo que la re-presentacion fue planeada antes de que ocurriera el desestimiento.</li>
+    </ul>
+
+    <h2>5. La conexion con Section 1328(f)</h2>
+    <p>Section 109(g) y Section 1328(f) abordan diferentes aspectos del abuso de presentacion repetida:</p>
+
+    <table>
+      <thead>
+        <tr><th scope="col">Disposicion</th><th scope="col">Que prohibe</th><th scope="col">Ventana</th><th scope="col">Disparador</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Section 109(g)</td><td>Presentar un nuevo caso</td><td>180 dias</td><td>Desestimiento previo (con condiciones)</td></tr>
+        <tr><td>Section 1328(f)</td><td>Recibir una condonacion</td><td>2 o 4 anos</td><td>Condonacion previa</td></tr>
+      </tbody>
+    </table>
+
+    <p>Juntas forman una proteccion de dos capas. Section 109(g) previene re-presentaciones inmediatas despues de un desestimiento. Section 1328(f) previene la acumulacion de condonaciones cuando un deudor que ya recibio una condonacion vuelve a presentar demasiado pronto.</p>
+    <p>Cuando ninguna se aplica, el sistema no tiene un control efectivo sobre las re-presentaciones. Un deudor puede presentar, fracasar, volver a presentar, fracasar, volver a presentar, tener exito, recibir una condonacion, volver a presentar y recibir otra condonacion - todo dentro de plazos que la ley fue disenada para prevenir.</p>
+    <p>Nuestra <a href="/reports/methodology-1328f-screening/">metodologia de analisis</a> identifico 264 casos donde las prohibiciones de Section 1328(f) no fueron aplicadas. La capa de 109(g) no ha sido sistematicamente analizada a nivel nacional, pero los datos de re-presentacion rapida sugieren que tambien existen brechas de aplicacion.</p>
+
+    <h2>6. Como verificar</h2>
+    <p>Si usted es un acreedor, fideicomisario o profesional que desea verificar si un deudor puede estar sujeto a una prohibicion de Section 109(g):</p>
+    <ol class="step-list">
+      <li><strong>Busque en PACER Case Locator.</strong> Vaya a <a href="https://pcl.uscourts.gov">pcl.uscourts.gov</a> y busque al deudor por nombre. Busque presentaciones de bancarrota previas.</li>
+      <li><strong>Verifique la disposicion del caso previo.</strong> Si el deudor tuvo un caso previo, determine si fue desestimado y cuando.</li>
+      <li><strong>Calcule el intervalo.</strong> Cuente los dias entre la fecha de desestimiento previo y la fecha de la nueva presentacion. Si es menos de 180 dias, Section 109(g) puede aplicarse.</li>
+      <li><strong>Verifique la razon del desestimiento.</strong> Section 109(g)(1) requiere incumplimiento voluntario de cumplir con las ordenes del tribunal o comparecer. Section 109(g)(2) requiere desestimiento voluntario despues de que se presento una mocion de alivio de suspension. No todos los desestimientos activan la prohibicion.</li>
+      <li><strong>Plantee el asunto.</strong> Si la prohibicion parece aplicarse, presente una mocion o plantee el asunto en la reunion Section 341. El tribunal no aplicara Section 109(g) por si solo.</li>
+    </ol>
+    <p>Para una guia mas amplia sobre el uso de PACER como consumidor, vea nuestra <a href="/reports/reading-pacer-attorney-record/">guia para leer el registro de un abogado en PACER</a>.</p>
+
+    <h2>Informes relacionados</h2>
+    <ul>
+      <li><a href="/reports/methodology-1328f-screening/">Como analizamos 4.9 millones de casos de bancarrota</a> - la metodologia de analisis de Section 1328(f)</li>
+      <li><a href="/reports/727-discharge-bar/">Section 727(a)(8): La prohibicion de condonacion del Capitulo 7</a> - la prohibicion de condonacion complementaria para el Capitulo 7</li>
+      <li><a href="/reports/chapter-13-dismissal-rates/">Tasas de desestimiento del Capitulo 13 por distrito</a> - analisis nacional de donde fracasan los casos</li>
+      <li><a href="/reports/prior-filer-discharge-rates/">Tasas de condonacion de presentadores previos</a> - resultados para deudores con presentaciones anteriores</li>
+    </ul>
+
+    <div class="callout yellow">
+      <h4>No constituye asesoramiento legal</h4>
+      <p style="margin-bottom: 0;">Este informe presenta hallazgos empiricos y analisis estatutario basado en datos publicos del tribunal. No constituye asesoramiento legal. Si Section 109(g) aplica en un caso especifico depende de los hechos y circunstancias del desestimiento previo. Consulte a un abogado con licencia para obtener asesoramiento sobre su situacion.</p>
+    </div>
+
+  </article>
+
+  <footer role="contentinfo">
+    <p>1328f.org - Investigacion independiente de bancarrota del consumidor. No constituye asesoramiento legal.</p>
+    <p class="links">
+      <a href="https://1328f.com">Herramienta de deteccion</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/">Acerca de</a>
+      <a href="/support/">Apoyar</a>
+    </p>
+    <p style="margin-top: 0.75rem;"><a href="/support/" style="color: #484f58;">Apoyar esta investigacion</a></p>
+  </footer>
+</body>
+</html>
