@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apoyar esta investigacion - 1328f.org</title>
+  <meta name="description" content="Apoye la investigacion independiente sobre quiebras de consumidores. Financie los costos de PACER, el desarrollo de herramientas y el analisis de codigo abierto que exige responsabilidad al sistema.">
+  <link rel="canonical" href="https://1328f.org/support/index-es.html">
+  <link rel="alternate" hreflang="es" href="https://1328f.org/support/index-es.html">
+  <link rel="alternate" hreflang="en" href="https://1328f.org/support/">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; text-decoration: none; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #8b949e; font-size: 1rem; }
+    nav { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.75rem 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; }
+    nav a { color: #8b949e; font-size: 0.9rem; font-weight: 500; padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+    nav a:hover, nav a[aria-current="page"] { color: #f0f6fc; border-bottom-color: #58a6ff; text-decoration: none; }
+    .lang-toggle { margin-left: 1rem; font-size: 0.8rem; color: #484f58; }
+    .lang-toggle a { color: #8b949e; font-size: 0.8rem; }
+
+    main { max-width: 760px; margin: 0 auto; padding: 2rem; }
+
+    h2 { color: #f0f6fc; font-size: 1.3rem; margin: 2.5rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+
+    .hero {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .hero h2 {
+      color: #f0f6fc;
+      font-size: 1.5rem;
+      margin: 0 0 1rem;
+      padding: 0;
+      border: none;
+    }
+    .hero p {
+      color: #c9d1d9;
+      max-width: 600px;
+      margin: 0 auto 1.5rem;
+      font-size: 1.05rem;
+    }
+    .hero .btn-row {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 0.7rem 1.5rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+    .btn:hover { text-decoration: none; }
+    .btn-primary { background: #238636; color: #fff; }
+    .btn-primary:hover { background: #2ea043; }
+    .btn-secondary { background: #21262d; color: #c9d1d9; border: 1px solid #30363d; }
+    .btn-secondary:hover { background: #30363d; }
+
+    .cost-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .cost-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 1.25rem;
+      text-align: center;
+    }
+    .cost-card .amount {
+      color: #58a6ff;
+      font-size: 1.4rem;
+      font-weight: 700;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      display: block;
+    }
+    .cost-card .desc {
+      color: #8b949e;
+      font-size: 0.85rem;
+      margin-top: 0.25rem;
+    }
+
+    .way-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    .way-card h3 {
+      margin-top: 0;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .way-card .badge {
+      font-size: 0.7rem;
+      background: #21262d;
+      color: #8b949e;
+      padding: 0.15em 0.5em;
+      border-radius: 3px;
+      font-weight: 400;
+    }
+
+    .transparency {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-left: 3px solid #3fb950;
+      border-radius: 0 6px 6px 0;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .transparency h4 { color: #f0f6fc; margin-bottom: 0.5rem; }
+
+    .free-notice {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-left: 3px solid #58a6ff;
+      border-radius: 0 6px 6px 0;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .free-notice h4 { color: #f0f6fc; margin-bottom: 0.5rem; }
+
+    .other-ways {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .other-ways h3 { margin-top: 0; }
+
+    footer {
+      background: #161b22;
+      border-top: 1px solid #30363d;
+      padding: 2rem; text-align: center;
+      margin-top: 3rem; color: #8b949e; font-size: 0.85rem;
+    }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+
+    @media (max-width: 600px) {
+      header { padding: 1.5rem 1rem; }
+      main { padding: 1rem; }
+      .hero { padding: 1.5rem 1rem; }
+      .hero h2 { font-size: 1.3rem; }
+      .cost-grid { grid-template-columns: repeat(2, 1fr); }
+      .hero .btn-row { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+
+  <header>
+    <h1><a href="/index-es.html" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Investigacion y rendicion de cuentas sobre quiebras de consumidores</p>
+  </header>
+
+  <nav aria-label="Navegacion principal">
+    <a href="/index-es.html">Inicio</a>
+    <a href="/reports/index-es.html">Informes</a>
+    <a href="/watch/index-es.html">Seguimiento</a>
+    <a href="/methodology/index-es.html">Metodologia</a>
+    <a href="/tools/index-es.html">Herramientas</a>
+    <a href="/about/index-es.html">Acerca de</a>
+    <a href="/support/index-es.html" aria-current="page">Apoyar</a>
+    <span class="lang-toggle"><a href="/support/" lang="en">EN</a> | <span class="current-lang">ES</span></span>
+  </nav>
+
+  <main id="main">
+
+    <div class="hero">
+      <h2>Apoye la investigacion independiente sobre quiebras</h2>
+      <p>Cada conjunto de datos, cada herramienta y cada informe en este sitio es gratuito. Su contribucion lo mantiene asi y financia los costos de PACER, la infraestructura de servidores y el tiempo de investigacion que hacen posible este trabajo.</p>
+      <div class="btn-row">
+        <a href="https://github.com/sponsors/ilikemath9999" class="btn btn-primary">GitHub Sponsors</a>
+        <a href="#one-time" class="btn btn-secondary">Contribucion unica</a>
+      </div>
+    </div>
+
+    <h2>En que se usa su contribucion</h2>
+    <p>Esta investigacion se basa en datos publicos, pero acceder y verificar esos datos cuesta dinero. Asi se distribuyen las contribuciones:</p>
+
+    <div class="cost-grid">
+      <div class="cost-card">
+        <span class="amount">$0.10</span>
+        <span class="desc">Por pagina de PACER consultada para verificacion de casos</span>
+      </div>
+      <div class="cost-card">
+        <span class="amount">$3.00</span>
+        <span class="desc">Maximo por documento descargado de tribunales federales</span>
+      </div>
+      <div class="cost-card">
+        <span class="amount">264</span>
+        <span class="desc">Violaciones verificadas que requieren revision individual del expediente</span>
+      </div>
+      <div class="cost-card">
+        <span class="amount">94</span>
+        <span class="desc">Distritos federales analizados y mantenidos</span>
+      </div>
+    </div>
+
+    <p>Mas alla de las tarifas de PACER, las contribuciones apoyan el registro de dominios, costos de alojamiento, pruebas de accesibilidad, traducciones al espanol y el tiempo de investigacion necesario para mantener y expandir las herramientas de deteccion y los informes publicados.</p>
+
+    <h2>Como contribuir</h2>
+
+    <div class="way-card">
+      <h3>GitHub Sponsors <span class="badge">Recurrente</span></h3>
+      <p>Contribuciones mensuales a traves de GitHub. Directamente conectadas al repositorio de codigo abierto. GitHub puede igualar las contribuciones del primer ano para proyectos que califiquen.</p>
+      <a href="https://github.com/sponsors/ilikemath9999" class="btn btn-primary" style="margin-top: 0.5rem;">Patrocinar en GitHub</a>
+    </div>
+
+    <div class="way-card" id="one-time">
+      <h3>Contribucion unica</h3>
+      <p>Una sola contribucion de cualquier monto. El 100% se destina a costos de PACER, alojamiento e infraestructura de investigacion.</p>
+      <p style="color: #8b949e; font-size: 0.85rem;">Enlace de pago disponible proximamente. Mientras tanto, puede contribuir a traves de GitHub Sponsors (opcion de pago unico disponible).</p>
+    </div>
+
+    <div class="way-card">
+      <h3>Open Collective <span class="badge">Transparente</span></h3>
+      <p>Para instituciones, organizaciones de asistencia legal y fundaciones que desean total transparencia en el uso de los fondos. Cada gasto es publico.</p>
+      <p style="color: #8b949e; font-size: 0.85rem;">Perfil de Open Collective disponible proximamente.</p>
+    </div>
+
+    <h2>Transparencia</h2>
+
+    <div class="transparency">
+      <h4>A donde va el dinero</h4>
+      <p style="margin-bottom: 0.5rem;">Todas las contribuciones se utilizan para costos directos del proyecto:</p>
+      <ul style="margin-bottom: 0;">
+        <li><strong>Tarifas de acceso a PACER</strong> - verificacion de casos, descarga de expedientes, busquedas de abogados</li>
+        <li><strong>Alojamiento y dominios</strong> - 1328f.com, 1328f.org, certificados SSL</li>
+        <li><strong>Tiempo de investigacion</strong> - analisis de datos, desarrollo de herramientas, redaccion de informes</li>
+        <li><strong>Accesibilidad</strong> - pruebas con lectores de pantalla, cumplimiento de WCAG, traducciones al espanol</li>
+      </ul>
+    </div>
+
+    <p>Ningun fondo se utiliza para honorarios legales, litigios o gastos personales. Cuando se lance el perfil de Open Collective, cada gasto sera visible publicamente.</p>
+
+    <p style="color: #8b949e; font-size: 0.85rem;">Nota: 1328f.org es actualmente un proyecto de investigacion individual. Las contribuciones no son deducibles de impuestos. Si el proyecto se formaliza como organizacion sin fines de lucro 501(c)(3) en el futuro, las contribuciones deducibles de impuestos estaran disponibles a traves de patrocinio fiscal o exencion directa.</p>
+
+    <h2>Otras formas de ayudar</h2>
+
+    <div class="other-ways">
+      <h3>Sin necesidad de dinero</h3>
+      <ul>
+        <li><strong>Comparta las herramientas.</strong> Enlace a <a href="https://1328f.com">1328f.com</a> o a este sitio desde su propio sitio web, blog o redes sociales. Cada enlace mejora la visibilidad.</li>
+        <li><strong>Use el verificador.</strong> Cuantas mas personas usen la <a href="https://1328f.com/check.html">calculadora de elegibilidad</a>, mas visible sera en los resultados de busqueda.</li>
+        <li><strong>Contribuya codigo.</strong> Las herramientas son de <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">codigo abierto en GitHub</a>. Reportes de errores, pull requests y mejoras de documentacion son bienvenidos.</li>
+        <li><strong>Proporcione datos.</strong> Si tiene acceso a datos de PACER para distritos que aun no hemos analizado, o si puede verificar casos marcados en su jurisdiccion, contactenos en <strong>research@1328f.org</strong>.</li>
+        <li><strong>Cite la investigacion.</strong> Si es abogado, academico, periodista o legislador, cite este trabajo en sus propias publicaciones. Las citas academicas y referencias institucionales fortalecen la credibilidad y alcance del proyecto.</li>
+        <li><strong>Instale RECAP.</strong> La <a href="https://free.law/recap">extension de navegador RECAP</a> del Free Law Project contribuye automaticamente documentos de PACER al archivo publico mientras navega, reduciendo costos para todos.</li>
+      </ul>
+    </div>
+
+    <div class="free-notice">
+      <h4>Todo permanece gratuito</h4>
+      <p style="margin-bottom: 0;">Las contribuciones apoyan la infraestructura detras de esta investigacion. Cada herramienta, cada informe y cada conjunto de datos en 1328f.com y 1328f.org es gratuito y seguira siendo gratuito independientemente del financiamiento. El acceso abierto a los datos publicos de los tribunales es el objetivo central.</p>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>1328f.org - Investigacion independiente sobre quiebras de consumidores. No constituye asesoramiento legal.</p>
+    <p class="links">
+      <a href="https://1328f.com">Herramienta de verificacion</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/index-es.html">Acerca de</a>
+      <a href="/support/index-es.html">Apoyar</a>
+    </p>
+    <p style="margin-top: 0.75rem;"><a href="/support/index-es.html" style="color: #484f58;">Apoyar esta investigacion</a></p>
+  </footer>
+</body>
+</html>

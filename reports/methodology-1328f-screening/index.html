@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How We Screened 4.9 Million Bankruptcy Cases - 1328f.org</title>
+  <meta name="description" content="Technical walkthrough of the Section 1328(f) screening methodology: data sources, filing-date-to-filing-date calculation, de-staling procedures, and verification.">
+  <link rel="canonical" href="https://1328f.org/reports/methodology-1328f-screening/">
+  <link rel="alternate" hreflang="en" href="https://1328f.org/reports/methodology-1328f-screening/">
+  <link rel="alternate" hreflang="es" href="https://1328f.org/reports/methodology-1328f-screening/index-es.html">
+  <meta property="og:title" content="How We Screened 4.9 Million Bankruptcy Cases">
+  <meta property="og:description" content="Technical methodology for screening Section 1328(f) discharge bar violations across all 94 federal bankruptcy districts.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://1328f.org/reports/methodology-1328f-screening/">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    code { background: #161b22; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #8b949e; font-size: 1rem; }
+    nav { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.75rem 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: center; }
+    nav a { color: #8b949e; font-size: 0.9rem; font-weight: 500; padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+    nav a:hover, nav a.active { color: #f0f6fc; border-bottom-color: #58a6ff; text-decoration: none; }
+    .lang-toggle { font-size: 0.8rem; margin-left: 1rem; padding-left: 1rem; border-left: 1px solid #30363d; }
+    .lang-toggle a { color: #8b949e; border-bottom: none; }
+    .lang-toggle a:hover { color: #f0f6fc; }
+    .lang-toggle .current-lang { color: #f0f6fc; font-weight: 600; }
+
+    article { max-width: 760px; margin: 0 auto; padding: 2rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h2 { color: #f0f6fc; font-size: 1.6rem; line-height: 1.3; margin-bottom: 0.75rem; border-bottom: none; padding-bottom: 0; }
+    .article-header .meta { color: #8b949e; font-size: 0.85rem; }
+    .article-header .meta .tag { background: #21262d; padding: 0.15em 0.5em; border-radius: 3px; margin-right: 0.5rem; }
+
+    h2 { color: #f0f6fc; font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    thead th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #30363d; font-size: 0.9rem; }
+    td { color: #c9d1d9; }
+
+    .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #58a6ff; border-radius: 0 6px 6px 0; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+    .callout.green { border-left-color: #3fb950; }
+    .callout.yellow { border-left-color: #d29922; }
+    .callout h4 { color: #f0f6fc; margin-bottom: 0.5rem; }
+
+    .step-list { counter-reset: step; list-style: none; margin-left: 0; padding-left: 0; }
+    .step-list li { counter-increment: step; position: relative; padding-left: 2.5rem; margin-bottom: 1rem; }
+    .step-list li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: 0.1em;
+      width: 1.6rem; height: 1.6rem;
+      background: #21262d; border: 1px solid #30363d; border-radius: 50%;
+      color: #58a6ff; font-weight: 700; font-size: 0.8rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .back-link { display: inline-block; margin-bottom: 1rem; color: #8b949e; font-size: 0.85rem; }
+    .back-link:hover { color: #58a6ff; }
+
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 2rem; text-align: center; margin-top: 3rem; color: #8b949e; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+    @media (max-width: 600px) { header { padding: 1.5rem 1rem; } article { padding: 1rem; } }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header role="banner">
+    <h1><a href="/" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Consumer Bankruptcy Research & Accountability</p>
+  </header>
+  <nav aria-label="Main navigation">
+    <a href="/">Home</a>
+    <a href="/reports/" aria-current="page">Reports</a>
+    <a href="/watch/">Docket Watch</a>
+    <a href="/methodology/">Methodology</a>
+    <a href="/tools/">Tools</a>
+    <a href="/about/">About</a>
+    <a href="/support/">Support</a>
+    <span class="lang-toggle"><span class="current-lang">EN</span> | <a href="/reports/methodology-1328f-screening/index-es.html" lang="es">ES</a></span>
+  </nav>
+
+  <article id="main" role="article">
+    <a href="/reports/" class="back-link">&larr; All Reports</a>
+
+    <div class="article-header">
+      <h2>How We Screened 4.9 Million Bankruptcy Cases</h2>
+      <div class="meta">
+        <span class="tag">Methodology</span>
+        Published March 2026 | Updated March 21, 2026
+      </div>
+    </div>
+
+    <div class="callout">
+      <h4>Summary</h4>
+      <p style="margin-bottom: 0;">We built an open-source screening tool that analyzed 4,895,163 Chapter 13 bankruptcy filings across all 94 federal bankruptcy districts. We identified 264 cases where debtors received discharges despite falling within the statutory bar of 11 U.S.C. Section 1328(f). This report describes our data sources, methodology, quality controls, and results.</p>
+    </div>
+
+    <h2>1. Background</h2>
+    <p>Section 1328(f), added by BAPCPA in 2005, bars Chapter 13 discharge for debtors who received a prior discharge within a specified window: four years for a prior Chapter 7, 11, or 12 discharge, and two years for a prior Chapter 13 discharge. The measurement runs from filing date to filing date.</p>
+    <p>Despite this statutory bar, no centralized enforcement mechanism exists. Enforcement depends on the trustee, the United States Trustee, or individual creditors identifying the prior filing and raising an objection. If nobody objects, the discharge enters automatically.</p>
+    <p>We built a tool to find the cases that fell through the gaps.</p>
+
+    <h2>2. Data Sources</h2>
+
+    <h3>2.1 FJC Integrated Database</h3>
+    <p>The Federal Judicial Center maintains the Integrated Database (IDB), which contains case-level records for all federal court filings. The bankruptcy subset includes fields for filing date, termination date, disposition, chapter, district, and prior filing indicators.</p>
+    <p>We used the Chapter 13 subset covering fiscal years 2008 through 2024. This dataset contains 4,895,163 cases filed across all 94 federal bankruptcy districts.</p>
+
+    <h3>2.2 PACER Case Locator</h3>
+    <p>The PACER Case Locator (PCL) provides searchable case data including attorney-case associations, filing dates, and disposition codes. We used PCL CSV exports for attorney-level analysis in target districts, covering 56,256 Chapter 13 cases in the Western District of Missouri, the District of Kansas, and the Eastern District of Missouri.</p>
+
+    <h3>2.3 CourtListener RECAP Archive</h3>
+    <p>The Free Law Project's CourtListener hosts the RECAP archive, a collection of millions of PACER documents contributed by users of the RECAP browser extension. We used the CL API for docket-level verification, attorney career tracking, and cross-district case identification.</p>
+
+    <h2>3. Screening Methodology</h2>
+
+    <h3>3.1 Identifying Prior Filers</h3>
+    <p>The FJC IDB includes a <code>PRBANKFL</code> field indicating whether the debtor had a prior bankruptcy filing. Of 4,895,163 Chapter 13 cases in our dataset, 1,627,116 (33.2%) had prior filings.</p>
+
+    <h3>3.2 Matching Prior Cases</h3>
+    <p>For each prior-filer case, we identified the most recent prior bankruptcy filing to determine its chapter and filing date. This step uses a combination of FJC cross-references, PACER lookups, and debtor-name matching with date validation.</p>
+
+    <h3>3.3 Calculating the Gap</h3>
+    <p>The statutory bar runs from the filing date of the prior case to the filing date of the current case. This is the filing-date-to-filing-date standard established in <em>In re Blendheim</em>, 803 F.3d 477 (9th Cir. 2015), which is the majority position.</p>
+
+    <div class="callout">
+      <h4>Bar Windows</h4>
+      <table style="margin-bottom: 0;">
+        <thead><tr><th scope="col">Prior Chapter</th><th scope="col">Bar Period</th></tr></thead>
+        <tbody>
+          <tr><td>Chapter 7, 11, or 12</td><td>4 years from prior filing date</td></tr>
+          <tr><td>Chapter 13</td><td>2 years from prior filing date</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>3.4 Flagging Violations</h3>
+    <p>A case is flagged as a potential violation when:</p>
+    <ol>
+      <li>The debtor had a prior bankruptcy filing</li>
+      <li>The gap between prior filing date and current filing date is less than the applicable bar window</li>
+      <li>A Chapter 13 discharge was entered in the current case</li>
+    </ol>
+
+    <h3>3.5 The Screening Pipeline</h3>
+    <ol class="step-list">
+      <li><strong>Extract prior-filer cases from FJC IDB.</strong> Filter to Chapter 13 cases with <code>PRBANKFL</code> indicating a prior filing. Result: 1,627,116 cases.</li>
+      <li><strong>Identify discharged prior filers.</strong> Filter to cases where the disposition code indicates a discharge was entered. Result: 391,951 discharged prior filers.</li>
+      <li><strong>Match prior case details.</strong> For each discharged prior filer, identify the prior case's chapter and filing date.</li>
+      <li><strong>Calculate gap and apply bar.</strong> Compare filing dates and flag cases where the gap is less than the applicable bar window.</li>
+      <li><strong>Raw flag count.</strong> Initial screening produces a raw list of potential violations before verification.</li>
+      <li><strong>De-stale and verify.</strong> Each flagged case is checked against current docket records to confirm the discharge was actually entered and not subsequently vacated, converted, or dismissed.</li>
+    </ol>
+
+    <h2>4. De-Staling</h2>
+    <p>The FJC IDB is a snapshot dataset. Cases that were discharged at the time of the snapshot may have subsequently been reopened, had their discharges vacated, or been converted to a different chapter. De-staling removes false positives caused by stale data.</p>
+
+    <h3>4.1 De-Staling Process</h3>
+    <p>For each flagged case, we verify against current docket records (PACER or CourtListener) that:</p>
+    <ul>
+      <li>The discharge order is still on the docket and has not been vacated</li>
+      <li>The case was not converted to a different chapter before discharge</li>
+      <li>The case was not reopened and the discharge revoked</li>
+      <li>The prior case identification is correct (matching debtor, correct chapter, correct filing date)</li>
+    </ul>
+
+    <h3>4.2 De-Staling Results</h3>
+    <p>Of the raw flagged cases, approximately 12-15% were removed during de-staling due to:</p>
+    <ul>
+      <li>Discharge vacated after FJC snapshot</li>
+      <li>Case converted before discharge (e.g., Chapter 13 to Chapter 7)</li>
+      <li>Prior case misidentified (wrong debtor match or incorrect chapter)</li>
+      <li>Data entry errors in FJC filing dates</li>
+    </ul>
+
+    <h2>5. Results</h2>
+
+    <div class="callout green">
+      <h4>Final Count: 264 Verified Violations</h4>
+      <p style="margin-bottom: 0;">After de-staling and verification, 264 unique cases remain where debtors received Chapter 13 discharges despite falling within the Section 1328(f) statutory bar window.</p>
+    </div>
+
+    <h3>5.1 National Distribution</h3>
+    <p>Violations were identified across multiple federal districts, with concentration in districts that have higher prior-filer rates. The <a href="https://1328f.com">national dashboard</a> provides an interactive map with per-district results.</p>
+
+    <h3>5.2 Attorney Concentration</h3>
+    <p>A small number of attorneys account for a disproportionate share of violations. In our target districts:</p>
+    <ul>
+      <li>6 attorneys account for 73% of verified violations</li>
+      <li>The highest single-attorney count is 97 violations</li>
+      <li>Same-firm representation on both the prior and current filing occurs in 42.8% of flagged cases</li>
+    </ul>
+
+    <h3>5.3 Discharge Rates for Prior Filers</h3>
+    <p>Of 1,627,116 Chapter 13 debtors with prior bankruptcies, 391,951 (24.1%) received discharges. This rate varies significantly by district, ranging from under 10% to over 50%. See the <a href="/reports/prior-filer-discharge-rates/">full prior-filer discharge rate analysis</a>.</p>
+
+    <h2>6. Limitations</h2>
+    <ul>
+      <li><strong>FJC data lag.</strong> The IDB is updated periodically, not in real time. Cases filed or resolved after the most recent update are not included.</li>
+      <li><strong>Prior case matching.</strong> Matching relies on FJC cross-references and debtor-name matching, which can miss cases with name variations, misspellings, or incomplete records.</li>
+      <li><strong>Chapter determination.</strong> The prior case's chapter at the time of discharge (not filing) determines the bar window. For converted cases, we use the chapter at termination where available.</li>
+      <li><strong>Minority position.</strong> A small number of courts measure Section 1328(f) from discharge date to filing date rather than filing date to filing date. Our screening uses the majority position (<em>Blendheim</em>). Cases in minority-rule jurisdictions may not be violations under local precedent.</li>
+    </ul>
+
+    <h2>7. Reproducibility</h2>
+    <p>The complete source code, data processing pipeline, and documentation are available on <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>. Researchers and practitioners can replicate the screening for any district or time period using the same methodology.</p>
+    <p>The <a href="https://1328f.com/check.html">eligibility calculator</a> implements the same screening logic in a client-side tool that anyone can use to check a specific case. No data is collected.</p>
+
+    <div class="callout yellow">
+      <h4>Not Legal Advice</h4>
+      <p style="margin-bottom: 0;">This report presents empirical findings from public court data. It does not constitute legal advice. Debtors, attorneys, and courts should independently verify Section 1328(f) applicability in individual cases.</p>
+    </div>
+
+  </article>
+
+  <footer role="contentinfo">
+    <p>1328f.org - Independent consumer bankruptcy research. Not legal advice.</p>
+    <p class="links">
+      <a href="https://1328f.com">Screener Tool</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/">About</a>
+      <a href="/support/">Support</a>
+    </p>
+    <p style="margin-top: 0.75rem;"><a href="/support/" style="color: #484f58;">Support this research</a></p>
+  </footer>
+</body>
+</html>

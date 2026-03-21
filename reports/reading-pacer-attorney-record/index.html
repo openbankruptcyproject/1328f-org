@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Read Your Attorney's PACER Record - 1328f.org</title>
+  <meta name="description" content="A plain-English guide to using free public court records to evaluate a bankruptcy attorney's track record before you hire them.">
+  <link rel="canonical" href="https://1328f.org/reports/reading-pacer-attorney-record/">
+  <link rel="alternate" hreflang="en" href="https://1328f.org/reports/reading-pacer-attorney-record/">
+  <link rel="alternate" hreflang="es" href="https://1328f.org/reports/reading-pacer-attorney-record/index-es.html">
+  <meta property="og:title" content="How to Read Your Attorney's PACER Record">
+  <meta property="og:description" content="A plain-English guide to using free public court records to evaluate a bankruptcy attorney's track record.">
+  <meta property="og:type" content="article">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    code { background: #161b22; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #8b949e; font-size: 1rem; }
+    nav { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.75rem 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: center; }
+    nav a { color: #8b949e; font-size: 0.9rem; font-weight: 500; padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+    nav a:hover, nav a.active { color: #f0f6fc; border-bottom-color: #58a6ff; text-decoration: none; }
+    .lang-toggle { font-size: 0.8rem; margin-left: 1rem; padding-left: 1rem; border-left: 1px solid #30363d; }
+    .lang-toggle a { color: #8b949e; border-bottom: none; }
+    .lang-toggle a:hover { color: #f0f6fc; }
+    .lang-toggle .current-lang { color: #f0f6fc; font-weight: 600; }
+    article { max-width: 760px; margin: 0 auto; padding: 2rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h2 { color: #f0f6fc; font-size: 1.6rem; line-height: 1.3; margin-bottom: 0.75rem; border-bottom: none; padding-bottom: 0; }
+    .article-header .meta { color: #8b949e; font-size: 0.85rem; }
+    .article-header .meta .tag { background: #21262d; padding: 0.15em 0.5em; border-radius: 3px; margin-right: 0.5rem; }
+    h2 { color: #f0f6fc; font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    thead th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #30363d; font-size: 0.9rem; }
+    td { color: #c9d1d9; }
+    .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #58a6ff; border-radius: 0 6px 6px 0; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+    .callout.green { border-left-color: #3fb950; }
+    .callout.yellow { border-left-color: #d29922; }
+    .callout.red { border-left-color: #f85149; }
+    .callout h4 { color: #f0f6fc; margin-bottom: 0.5rem; }
+    .back-link { display: inline-block; margin-bottom: 1rem; color: #8b949e; font-size: 0.85rem; }
+    .back-link:hover { color: #58a6ff; }
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 2rem; text-align: center; margin-top: 3rem; color: #8b949e; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+    @media (max-width: 600px) { header { padding: 1.5rem 1rem; } article { padding: 1rem; } }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header role="banner">
+    <h1><a href="/" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Consumer Bankruptcy Research & Accountability</p>
+  </header>
+  <nav aria-label="Main navigation">
+    <a href="/">Home</a>
+    <a href="/reports/" aria-current="page">Reports</a>
+    <a href="/watch/">Docket Watch</a>
+    <a href="/methodology/">Methodology</a>
+    <a href="/tools/">Tools</a>
+    <a href="/about/">About</a>
+    <a href="/support/">Support</a>
+    <span class="lang-toggle"><span class="current-lang">EN</span> | <a href="/reports/reading-pacer-attorney-record/index-es.html" lang="es">ES</a></span>
+  </nav>
+
+  <article id="main" role="article">
+    <a href="/reports/" class="back-link">&larr; All Reports</a>
+
+    <div class="article-header">
+      <h2>How to Read Your Attorney's PACER Record</h2>
+      <div class="meta">
+        <span class="tag">Consumer Guide</span>
+        Published March 2026
+      </div>
+    </div>
+
+    <div class="callout">
+      <h4>Who This Is For</h4>
+      <p style="margin-bottom: 0;">Anyone considering hiring a bankruptcy attorney, or anyone whose case was dismissed and wants to understand whether the outcome was typical. No legal training required. All data comes from public court records.</p>
+    </div>
+
+    <h2>1. What Is PACER?</h2>
+    <p>PACER (Public Access to Court Electronic Records) is the federal court system's electronic records platform. Every bankruptcy case filed in a federal court is recorded in PACER, including who filed it, which attorney represented the debtor, and how the case ended.</p>
+    <p>PACER charges $0.10 per page, capped at $3.00 per document. There is a fee exemption for users whose quarterly charges are $30 or less. A PACER account is free to create at <a href="https://pacer.uscourts.gov">pacer.uscourts.gov</a>.</p>
+
+    <h2>2. What You Can Learn</h2>
+    <p>The PACER Case Locator lets you search for all bankruptcy cases associated with a specific attorney. From this search, you can determine:</p>
+    <ul>
+      <li><strong>How many cases the attorney has filed.</strong> Volume alone is not a red flag, but extremely high volume (500+ cases per year) combined with poor outcomes is a warning sign.</li>
+      <li><strong>How cases ended.</strong> Cases end in one of three ways: discharged (debtor completed the plan and received relief), dismissed (case was terminated without the debtor receiving relief), or still open.</li>
+      <li><strong>How quickly cases failed.</strong> A case dismissed within 90 days of filing usually means the filing was never completed. A case dismissed after 2-3 years usually means the debtor could not maintain plan payments.</li>
+      <li><strong>What chapter the attorney files.</strong> Some attorneys file primarily Chapter 7 (quick, automatic discharge) and very little Chapter 13 (3-5 year payment plan requiring ongoing attorney work). The ratio can indicate practice focus.</li>
+    </ul>
+
+    <h2>3. How to Search</h2>
+    <ol>
+      <li>Go to the <a href="https://pcl.uscourts.gov">PACER Case Locator</a> (pcl.uscourts.gov)</li>
+      <li>Select "Attorney" search</li>
+      <li>Enter the attorney's last name (and optionally first name)</li>
+      <li>Select the court (e.g., "Western District of Missouri Bankruptcy Court")</li>
+      <li>Set the case type to "bk" (bankruptcy)</li>
+      <li>Run the search</li>
+      <li>Export results as CSV for analysis, or browse on screen</li>
+    </ol>
+    <p>The results will show every case where that attorney appeared as counsel. Each row includes the case number, filing date, chapter, and disposition.</p>
+
+    <h2>4. What to Look For</h2>
+
+    <h3>4.1 Dismissal Rate</h3>
+    <p>The dismissal rate is the percentage of resolved cases (discharged + dismissed) that ended in dismissal. This is the single most important metric.</p>
+
+    <div class="callout green">
+      <h4>Typical Range</h4>
+      <p style="margin-bottom: 0;">A well-performing Chapter 13 attorney in most districts has a dismissal rate between 20% and 30% on resolved cases. The national average is approximately 33-40%. Rates above 40% warrant further investigation.</p>
+    </div>
+
+    <div class="callout red">
+      <h4>Warning Signs</h4>
+      <p style="margin-bottom: 0;">A dismissal rate above 40% on resolved cases, or a rate that is significantly higher than other attorneys in the same district, may indicate quality issues. Compare the attorney's rate against peers in the same court during the same time period.</p>
+    </div>
+
+    <h3>4.2 Early Dismissals</h3>
+    <p>Cases dismissed within 90 days of filing are a strong indicator of intake problems. These cases typically failed before the debtor even began making plan payments. Common causes:</p>
+    <ul>
+      <li><strong>Failure to file required information.</strong> The petition was filed but schedules, statements, or plan documents were never completed.</li>
+      <li><strong>Failure to pay the filing fee.</strong> The debtor could not pay the $313 filing fee.</li>
+      <li><strong>Bare petition filing.</strong> The case was filed with only the petition (no schedules, no plan) and the follow-up documents were never submitted.</li>
+    </ul>
+    <p>An early dismissal rate above 5% is unusual. Above 10% is a significant concern.</p>
+
+    <h3>4.3 Filing Day Concentration</h3>
+    <p>Most attorneys file cases throughout the week. An attorney who files 50% or more of their cases on a single day of the week is likely batch-processing cases rather than providing individualized attention. This is not dispositive, but it is a pattern worth noting when combined with other indicators.</p>
+
+    <h3>4.4 Chapter 7 vs. Chapter 13 Outcomes</h3>
+    <p>Chapter 7 cases are largely automatic. The attorney files the petition, the debtor attends a brief meeting, and discharge enters within 3-4 months absent objection. An attorney's Chapter 7 discharge rate tells you whether they can file paperwork correctly.</p>
+    <p>Chapter 13 cases require sustained legal work over 3 to 5 years: plan drafting, creditor negotiation, lien analysis, motion practice, compliance monitoring, and client communication. An attorney's Chapter 13 discharge rate tells you whether they actually do that work.</p>
+    <p>If an attorney's Chapter 7 rate is normal (90%+) but their Chapter 13 rate is significantly below district averages, the divergence suggests the attorney can file cases but does not perform the ongoing work that Chapter 13 requires.</p>
+
+    <h2>5. Building a Comparison</h2>
+    <p>A single attorney's numbers mean more when compared against a baseline. To build a comparison:</p>
+    <ol>
+      <li>Search for 3-5 other bankruptcy attorneys in the same district</li>
+      <li>Choose attorneys with similar case volumes (comparing a 50-case attorney to a 500-case attorney is not meaningful)</li>
+      <li>Calculate the same metrics for each: dismissal rate, early dismissal rate, discharge rate</li>
+      <li>Look for outliers: is one attorney significantly worse than the others?</li>
+    </ol>
+
+    <h2>6. Free Alternatives to PACER</h2>
+    <p>If you want to avoid PACER fees:</p>
+    <ul>
+      <li><strong>CourtListener RECAP:</strong> <a href="https://www.courtlistener.com">courtlistener.com</a> hosts millions of PACER documents for free, contributed by users of the RECAP browser extension. Coverage varies by court and time period.</li>
+      <li><strong>PACER fee exemption:</strong> If your quarterly PACER charges are $30 or less, they are waived. For occasional searches, this effectively makes PACER free.</li>
+      <li><strong>State bar records:</strong> Most state bar associations maintain public records of attorney disciplinary history. Search your attorney's name on the state bar website to check for complaints or sanctions.</li>
+    </ul>
+
+    <h2>7. What These Numbers Cannot Tell You</h2>
+    <ul>
+      <li>Why a specific case was dismissed (the numbers show outcomes, not causes)</li>
+      <li>Whether the attorney was responsible for the dismissal or the client was</li>
+      <li>Whether the attorney is a good communicator, responsive, or trustworthy</li>
+      <li>Whether the attorney is the right fit for your specific case</li>
+    </ul>
+    <p>PACER data gives you the track record. It does not replace a consultation. But it can tell you whether to schedule one.</p>
+
+    <div class="callout yellow">
+      <h4>Not Legal Advice</h4>
+      <p style="margin-bottom: 0;">This guide explains how to access and interpret public court records. It does not constitute legal advice or a recommendation for or against any attorney. Outcomes vary by case, client, and circumstances.</p>
+    </div>
+
+  </article>
+
+  <footer role="contentinfo">
+    <p>1328f.org - Independent consumer bankruptcy research. Not legal advice.</p>
+    <p class="links">
+      <a href="https://1328f.com">Screener Tool</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/">About</a>
+      <a href="/support/">Support</a>
+    </p>
+    <p style="margin-top: 0.75rem;"><a href="/support/" style="color: #484f58;">Support this research</a></p>
+  </footer>
+</body>
+</html>

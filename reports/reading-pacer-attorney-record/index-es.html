@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como leer el historial PACER de su abogado - 1328f.org</title>
+  <meta name="description" content="Una guia en lenguaje sencillo para usar registros publicos gratuitos de tribunales y evaluar el historial de un abogado de quiebras antes de contratarlo.">
+  <link rel="canonical" href="https://1328f.org/reports/reading-pacer-attorney-record/index-es.html">
+  <link rel="alternate" hreflang="en" href="https://1328f.org/reports/reading-pacer-attorney-record/">
+  <link rel="alternate" hreflang="es" href="https://1328f.org/reports/reading-pacer-attorney-record/index-es.html">
+  <meta property="og:title" content="Como leer el historial PACER de su abogado">
+  <meta property="og:description" content="Una guia en lenguaje sencillo para usar registros publicos gratuitos de tribunales y evaluar el historial de un abogado de quiebras.">
+  <meta property="og:type" content="article">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    code { background: #161b22; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #8b949e; font-size: 1rem; }
+    nav { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.75rem 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: center; }
+    nav a { color: #8b949e; font-size: 0.9rem; font-weight: 500; padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+    nav a:hover, nav a.active { color: #f0f6fc; border-bottom-color: #58a6ff; text-decoration: none; }
+    .lang-toggle { font-size: 0.8rem; margin-left: 1rem; padding-left: 1rem; border-left: 1px solid #30363d; }
+    .lang-toggle a { color: #8b949e; border-bottom: none; }
+    .lang-toggle a:hover { color: #f0f6fc; }
+    .lang-toggle .current-lang { color: #f0f6fc; font-weight: 600; }
+    article { max-width: 760px; margin: 0 auto; padding: 2rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h2 { color: #f0f6fc; font-size: 1.6rem; line-height: 1.3; margin-bottom: 0.75rem; border-bottom: none; padding-bottom: 0; }
+    .article-header .meta { color: #8b949e; font-size: 0.85rem; }
+    .article-header .meta .tag { background: #21262d; padding: 0.15em 0.5em; border-radius: 3px; margin-right: 0.5rem; }
+    h2 { color: #f0f6fc; font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+    .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #58a6ff; border-radius: 0 6px 6px 0; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+    .callout.green { border-left-color: #3fb950; }
+    .callout.yellow { border-left-color: #d29922; }
+    .callout.red { border-left-color: #f85149; }
+    .callout h4 { color: #f0f6fc; margin-bottom: 0.5rem; }
+    .back-link { display: inline-block; margin-bottom: 1rem; color: #8b949e; font-size: 0.85rem; }
+    .back-link:hover { color: #58a6ff; }
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 2rem; text-align: center; margin-top: 3rem; color: #8b949e; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+    @media (max-width: 600px) { header { padding: 1.5rem 1rem; } article { padding: 1rem; } }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+  <header role="banner">
+    <h1><a href="/index-es.html" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Investigacion sobre quiebras de consumidores y rendicion de cuentas</p>
+  </header>
+  <nav aria-label="Navegacion principal">
+    <a href="/index-es.html">Inicio</a>
+    <a href="/reports/index-es.html" aria-current="page">Informes</a>
+    <a href="/watch/index-es.html">Seguimiento</a>
+    <a href="/methodology/index-es.html">Metodologia</a>
+    <a href="/tools/index-es.html">Herramientas</a>
+    <a href="/about/index-es.html">Acerca de</a>
+    <a href="/support/index-es.html">Apoyar</a>
+    <span class="lang-toggle"><a href="/reports/reading-pacer-attorney-record/" lang="en">EN</a> | <span class="current-lang">ES</span></span>
+  </nav>
+
+  <article id="main" role="article">
+    <a href="/reports/index-es.html" class="back-link">&larr; Todos los informes</a>
+
+    <div class="article-header">
+      <h2>Como leer el historial PACER de su abogado</h2>
+      <div class="meta">
+        <span class="tag">Guia para consumidores</span>
+        Publicado en marzo 2026
+      </div>
+    </div>
+
+    <div class="callout">
+      <h4>Para quien es esta guia</h4>
+      <p style="margin-bottom: 0;">Para cualquier persona que este considerando contratar un abogado de quiebras, o cualquier persona cuyo caso fue desestimado y quiere entender si el resultado fue tipico. No se requiere formacion legal. Todos los datos provienen de registros publicos de tribunales.</p>
+    </div>
+
+    <h2>1. Que es PACER?</h2>
+    <p>PACER (Public Access to Court Electronic Records) es la plataforma de registros electronicos del sistema de tribunales federales. Cada caso de quiebra presentado en un tribunal federal se registra en PACER, incluyendo quien lo presento, que abogado represento al deudor y como termino el caso.</p>
+    <p>PACER cobra $0.10 por pagina, con un tope de $3.00 por documento. Existe una exencion de tarifas para usuarios cuyos cargos trimestrales son de $30 o menos. Crear una cuenta de PACER es gratuito en <a href="https://pacer.uscourts.gov">pacer.uscourts.gov</a>.</p>
+
+    <h2>2. Que puede aprender</h2>
+    <p>El PACER Case Locator le permite buscar todos los casos de quiebra asociados con un abogado especifico. A partir de esta busqueda, puede determinar:</p>
+    <ul>
+      <li><strong>Cuantos casos ha presentado el abogado.</strong> El volumen por si solo no es una senal de alerta, pero un volumen extremadamente alto (mas de 500 casos por ano) combinado con malos resultados es una senal de advertencia.</li>
+      <li><strong>Como terminaron los casos.</strong> Los casos terminan de una de tres formas: descargados (el deudor completo el plan y recibio alivio), desestimados (el caso se termino sin que el deudor recibiera alivio), o aun abiertos.</li>
+      <li><strong>Que tan rapido fracasaron los casos.</strong> Un caso desestimado dentro de los 90 dias de la presentacion generalmente significa que la solicitud nunca se completo. Un caso desestimado despues de 2-3 anos generalmente significa que el deudor no pudo mantener los pagos del plan.</li>
+      <li><strong>Que capitulo presenta el abogado.</strong> Algunos abogados presentan principalmente Capitulo 7 (rapido, descarga automatica) y muy poco Capitulo 13 (plan de pago de 3-5 anos que requiere trabajo legal continuo). La proporcion puede indicar el enfoque de la practica.</li>
+    </ul>
+
+    <h2>3. Como buscar</h2>
+    <ol>
+      <li>Vaya al <a href="https://pcl.uscourts.gov">PACER Case Locator</a> (pcl.uscourts.gov)</li>
+      <li>Seleccione busqueda por "Attorney" (Abogado)</li>
+      <li>Ingrese el apellido del abogado (y opcionalmente el nombre)</li>
+      <li>Seleccione el tribunal (por ejemplo, "Western District of Missouri Bankruptcy Court")</li>
+      <li>Establezca el tipo de caso en "bk" (quiebra)</li>
+      <li>Ejecute la busqueda</li>
+      <li>Exporte los resultados como CSV para analisis, o naveguelos en pantalla</li>
+    </ol>
+    <p>Los resultados mostraran cada caso donde ese abogado aparecio como representante legal. Cada fila incluye el numero de caso, fecha de presentacion, capitulo y disposicion.</p>
+
+    <h2>4. Que buscar</h2>
+
+    <h3>4.1 Tasa de desestimacion</h3>
+    <p>La tasa de desestimacion es el porcentaje de casos resueltos (descargados + desestimados) que terminaron en desestimacion. Esta es la metrica individual mas importante.</p>
+
+    <div class="callout green">
+      <h4>Rango tipico</h4>
+      <p style="margin-bottom: 0;">Un abogado de Capitulo 13 con buen desempeno en la mayoria de los distritos tiene una tasa de desestimacion entre el 20% y el 30% en casos resueltos. El promedio nacional es aproximadamente del 33-40%. Tasas superiores al 40% ameritan una investigacion mas profunda.</p>
+    </div>
+
+    <div class="callout red">
+      <h4>Senales de advertencia</h4>
+      <p style="margin-bottom: 0;">Una tasa de desestimacion superior al 40% en casos resueltos, o una tasa significativamente mas alta que la de otros abogados en el mismo distrito, puede indicar problemas de calidad. Compare la tasa del abogado con la de sus pares en el mismo tribunal durante el mismo periodo de tiempo.</p>
+    </div>
+
+    <h3>4.2 Desestimaciones tempranas</h3>
+    <p>Los casos desestimados dentro de los 90 dias de la presentacion son un fuerte indicador de problemas en el proceso de admision. Estos casos tipicamente fracasaron antes de que el deudor comenzara a hacer pagos del plan. Causas comunes:</p>
+    <ul>
+      <li><strong>Falta de presentacion de informacion requerida.</strong> La solicitud se presento pero los anexos, declaraciones o documentos del plan nunca se completaron.</li>
+      <li><strong>Falta de pago de la tarifa de presentacion.</strong> El deudor no pudo pagar la tarifa de presentacion de $313.</li>
+      <li><strong>Presentacion de solicitud basica.</strong> El caso se presento solo con la solicitud (sin anexos, sin plan) y los documentos de seguimiento nunca se presentaron.</li>
+    </ul>
+    <p>Una tasa de desestimacion temprana superior al 5% es inusual. Superior al 10% es una preocupacion significativa.</p>
+
+    <h3>4.3 Concentracion de dia de presentacion</h3>
+    <p>La mayoria de los abogados presentan casos a lo largo de la semana. Un abogado que presenta el 50% o mas de sus casos en un solo dia de la semana probablemente esta procesando casos en lote en lugar de proporcionar atencion individualizada. Esto no es determinante, pero es un patron que vale la pena notar cuando se combina con otros indicadores.</p>
+
+    <h3>4.4 Resultados de Capitulo 7 vs. Capitulo 13</h3>
+    <p>Los casos del Capitulo 7 son en gran parte automaticos. El abogado presenta la solicitud, el deudor asiste a una breve reunion y la descarga se ingresa dentro de 3-4 meses salvo objecion. La tasa de descarga del Capitulo 7 de un abogado le dice si puede presentar documentos correctamente.</p>
+    <p>Los casos del Capitulo 13 requieren trabajo legal sostenido durante 3 a 5 anos: redaccion del plan, negociacion con acreedores, analisis de gravamenes, practica de mociones, monitoreo de cumplimiento y comunicacion con el cliente. La tasa de descarga del Capitulo 13 de un abogado le dice si realmente hace ese trabajo.</p>
+    <p>Si la tasa de Capitulo 7 de un abogado es normal (90%+) pero su tasa de Capitulo 13 esta significativamente por debajo de los promedios del distrito, la divergencia sugiere que el abogado puede presentar casos pero no realiza el trabajo continuo que el Capitulo 13 requiere.</p>
+
+    <h2>5. Construir una comparacion</h2>
+    <p>Los numeros de un solo abogado significan mas cuando se comparan con una referencia. Para construir una comparacion:</p>
+    <ol>
+      <li>Busque 3-5 otros abogados de quiebras en el mismo distrito</li>
+      <li>Elija abogados con volumenes de casos similares (comparar un abogado de 50 casos con uno de 500 casos no es significativo)</li>
+      <li>Calcule las mismas metricas para cada uno: tasa de desestimacion, tasa de desestimacion temprana, tasa de descarga</li>
+      <li>Busque valores atipicos: algun abogado es significativamente peor que los demas?</li>
+    </ol>
+
+    <h2>6. Alternativas gratuitas a PACER</h2>
+    <p>Si desea evitar las tarifas de PACER:</p>
+    <ul>
+      <li><strong>CourtListener RECAP:</strong> <a href="https://www.courtlistener.com">courtlistener.com</a> alberga millones de documentos de PACER de forma gratuita, contribuidos por usuarios de la extension de navegador RECAP. La cobertura varia por tribunal y periodo de tiempo.</li>
+      <li><strong>Exencion de tarifas de PACER:</strong> Si sus cargos trimestrales de PACER son de $30 o menos, se eximen. Para busquedas ocasionales, esto efectivamente hace que PACER sea gratuito.</li>
+      <li><strong>Registros del colegio de abogados estatal:</strong> La mayoria de los colegios de abogados estatales mantienen registros publicos del historial disciplinario de abogados. Busque el nombre de su abogado en el sitio web del colegio de abogados estatal para verificar quejas o sanciones.</li>
+    </ul>
+
+    <h2>7. Lo que estos numeros no pueden decirle</h2>
+    <ul>
+      <li>Por que un caso especifico fue desestimado (los numeros muestran resultados, no causas)</li>
+      <li>Si el abogado fue responsable de la desestimacion o el cliente lo fue</li>
+      <li>Si el abogado es buen comunicador, receptivo o confiable</li>
+      <li>Si el abogado es la opcion adecuada para su caso especifico</li>
+    </ul>
+    <p>Los datos de PACER le dan el historial. No reemplazan una consulta. Pero pueden decirle si vale la pena programar una.</p>
+
+    <div class="callout yellow">
+      <h4>No constituye asesoramiento legal</h4>
+      <p style="margin-bottom: 0;">Esta guia explica como acceder e interpretar registros publicos de tribunales. No constituye asesoramiento legal ni una recomendacion a favor o en contra de ningun abogado. Los resultados varian segun el caso, el cliente y las circunstancias.</p>
+    </div>
+
+  </article>
+
+  <footer role="contentinfo">
+    <p>1328f.org - Investigacion independiente sobre quiebras de consumidores. No constituye asesoramiento legal.</p>
+    <p class="links">
+      <a href="https://1328f.com">Herramienta de verificacion</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/index-es.html">Acerca de</a>
+      <a href="/support/index-es.html">Apoyar</a>
+    </p>
+    <p style="margin-top: 0.75rem;"><a href="/support/index-es.html" style="color: #484f58;">Apoyar esta investigacion</a></p>
+  </footer>
+</body>
+</html>

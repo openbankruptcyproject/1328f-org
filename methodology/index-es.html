@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metodologia - 1328f.org</title>
+  <meta name="description" content="Fuentes de datos, metodos analiticos y controles de calidad utilizados en la investigacion de quiebras de consumidores de 1328f.org. Disenado para replicacion.">
+  <link rel="canonical" href="https://1328f.org/methodology/index-es.html">
+  <link rel="alternate" hreflang="en" href="https://1328f.org/methodology/">
+  <link rel="alternate" hreflang="es" href="https://1328f.org/methodology/index-es.html">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.6; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #8b949e; font-size: 1rem; }
+    nav { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.75rem 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: center; }
+    nav a { color: #8b949e; font-size: 0.9rem; font-weight: 500; padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+    nav a:hover, nav a.active { color: #f0f6fc; border-bottom-color: #58a6ff; text-decoration: none; }
+    .lang-toggle { font-size: 0.8rem; margin-left: 1rem; padding-left: 1rem; border-left: 1px solid #30363d; }
+    .lang-toggle a { color: #8b949e; border-bottom: none; }
+    .lang-toggle a:hover { color: #f0f6fc; }
+    .lang-toggle .current-lang { color: #f0f6fc; font-weight: 600; }
+    main { max-width: 760px; margin: 0 auto; padding: 2rem; }
+    h2 { color: #f0f6fc; font-size: 1.3rem; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+    code { background: #161b22; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .card { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .card h3 { margin-top: 0; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    thead th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #30363d; font-size: 0.9rem; }
+    td { color: #c9d1d9; }
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 2rem; text-align: center; margin-top: 3rem; color: #8b949e; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+    @media (max-width: 600px) { header { padding: 1.5rem 1rem; } main { padding: 1rem; } }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+  <header role="banner">
+    <h1><a href="/index-es.html" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Investigacion sobre quiebras de consumidores y rendicion de cuentas</p>
+  </header>
+  <nav aria-label="Navegacion principal">
+    <a href="/index-es.html">Inicio</a>
+    <a href="/reports/index-es.html">Informes</a>
+    <a href="/watch/index-es.html">Seguimiento</a>
+    <a href="/methodology/index-es.html" aria-current="page">Metodologia</a>
+    <a href="/tools/index-es.html">Herramientas</a>
+    <a href="/about/index-es.html">Acerca de</a>
+    <a href="/support/index-es.html">Apoyar</a>
+    <span class="lang-toggle"><a href="/methodology/" lang="en">EN</a> | <span class="current-lang">ES</span></span>
+  </nav>
+  <main id="main">
+    <h2>Resumen de la metodologia</h2>
+    <p>Toda la investigacion publicada en 1328f.org esta basada en datos publicos de tribunales utilizando metodos reproducibles. Esta pagina describe nuestras fuentes de datos, enfoque analitico y controles de calidad.</p>
+
+    <h2>Fuentes de datos</h2>
+    <div class="card">
+      <h3>Base de datos integrada del FJC</h3>
+      <p>La base de datos integrada del Centro Judicial Federal contiene registros a nivel de caso para todas las solicitudes federales de quiebra. Utilizamos el subconjunto del Capitulo 13 (anos fiscales 2008-2024), que cubre aproximadamente 4.9 millones de casos en los 94 distritos federales de quiebras.</p>
+      <p>Campos utilizados: fecha de presentacion, fecha de terminacion, codigo de disposicion, indicador de presentacion previa, capitulo, distrito.</p>
+    </div>
+
+    <div class="card">
+      <h3>PACER Case Locator</h3>
+      <p>El sistema de acceso publico a registros electronicos de tribunales proporciona datos de casos a nivel de abogado. Utilizamos exportaciones CSV del PCL para identificar asociaciones abogado-caso, lo que permite el analisis de resultados por abogado. Cobertura: mas de 56,256 casos del Capitulo 13 en distritos objetivo.</p>
+      <p>Campos utilizados: numero de caso, fecha de presentacion, disposicion, nombre del abogado, tribunal, capitulo.</p>
+    </div>
+
+    <div class="card">
+      <h3>Archivo CourtListener RECAP</h3>
+      <p>El archivo RECAP del Free Law Project proporciona acceso gratuito a millones de documentos de PACER. Utilizamos la API de CL para analisis a nivel de expediente, seguimiento de carreras de abogados e identificacion de casos entre distritos.</p>
+    </div>
+
+    <h2>Metodo de deteccion Section 1328(f)</h2>
+    <p>Nuestra metodologia de deteccion identifica casos en los que un deudor recibio una descarga del Capitulo 13 a pesar de una presentacion previa de quiebra dentro de la ventana de impedimento legal.</p>
+
+    <h3>Marco legal</h3>
+    <table>
+      <thead>
+        <tr><th scope="col">Capitulo previo</th><th scope="col">Periodo de impedimento</th><th scope="col">Medicion</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Capitulo 7, 11 o 12</td><td>4 anos</td><td>Fecha de presentacion a fecha de presentacion</td></tr>
+        <tr><td>Capitulo 13</td><td>2 anos</td><td>Fecha de presentacion a fecha de presentacion</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Calculo</h3>
+    <ol>
+      <li>Identificar todos los casos del Capitulo 13 con una presentacion previa de quiebra (campo <code>PRBANKFL</code> del FJC)</li>
+      <li>Emparejar el caso previo para determinar capitulo y fecha de presentacion</li>
+      <li>Calcular la brecha: fecha de presentacion actual menos fecha de presentacion previa</li>
+      <li>Aplicar ventana de impedimento: 4 anos para previo Ch. 7/11/12, 2 anos para previo Ch. 13</li>
+      <li>Senalar casos donde la brecha &lt; ventana de impedimento Y se ingreso la descarga</li>
+      <li>Depurar: verificar contra registros de expedientes que la descarga fue efectivamente ingresada (no anulada, no convertida)</li>
+    </ol>
+
+    <h3>Precedente clave</h3>
+    <p><em>In re Blendheim</em>, 803 F.3d 477 (9th Cir. 2015): La medicion de fecha de presentacion a fecha de presentacion se aplica bajo Section 1328(f). Esta es la posicion mayoritaria adoptada por la mayoria de los tribunales que han abordado la cuestion. Nuestra herramienta de deteccion aplica este estandar.</p>
+
+    <h2>Analisis de desempeno de abogados</h2>
+    <p>Al comparar resultados de abogados, utilizamos una metodologia de grupo de control por niveles para asegurar referencias validas.</p>
+
+    <div class="card">
+      <h3>Construccion del grupo de control</h3>
+      <p>Los grupos de control se seleccionan de profesionales independientes que presentan solicitudes en los mismos tribunales durante los mismos periodos. Los abogados con afiliaciones conocidas a operaciones de alto volumen de solicitudes son excluidos. El grupo de control esta escalonado:</p>
+      <ul>
+        <li><strong>Referencia primaria:</strong> 5 profesionales independientes de alto volumen con tasas de desestimacion verificadas bajas</li>
+        <li><strong>Referencia secundaria:</strong> 10 profesionales independientes adicionales para comparacion complementaria</li>
+        <li><strong>Niveles invalidados:</strong> Abogados con sus propias anomalias son excluidos de los grupos de control y analizados por separado</li>
+      </ul>
+    </div>
+
+    <h2>Controles de calidad</h2>
+    <ul>
+      <li><strong>Depuracion:</strong> Todos los casos senalados son verificados contra registros actuales de expedientes antes de ser contados como violaciones</li>
+      <li><strong>Deduplicacion:</strong> Los casos con multiples abogados se deduplican por ID de caso para prevenir inflacion</li>
+      <li><strong>Verificacion de sesgo de recencia:</strong> Las cohortes recientes con altos porcentajes de casos abiertos se analizan por separado</li>
+      <li><strong>Validacion cruzada:</strong> Los datos del FJC se cruzan con PACER y CourtListener donde estan disponibles</li>
+      <li><strong>Privacidad:</strong> Los nombres individuales de deudores nunca se publican. Toda la produccion publica utiliza estadisticas agregadas o ejemplos anonimizados</li>
+    </ul>
+
+    <h2>Reproducibilidad</h2>
+    <p>Todas las herramientas de deteccion y analisis estan disponibles en <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>. El repositorio incluye codigo fuente, scripts de procesamiento de datos y documentacion suficiente para replicacion independiente.</p>
+
+  </main>
+  <footer role="contentinfo">
+    <p>1328f.org - Investigacion independiente sobre quiebras de consumidores. No constituye asesoramiento legal.</p>
+    <p class="links">
+      <a href="https://1328f.com">Herramienta de verificacion</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/index-es.html">Acerca de</a>
+      <a href="/support/index-es.html">Apoyar</a>
+    </p>
+    <p style="margin-top: 0.75rem;"><a href="/support/index-es.html" style="color: #484f58;">Apoyar esta investigacion</a></p>
+  </footer>
+</body>
+</html>

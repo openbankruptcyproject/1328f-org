@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herramientas - 1328f.org</title>
+  <meta name="description" content="Herramientas de codigo abierto para deteccion de quiebras de consumidores, analisis de desempeno de abogados y visualizacion de datos de PACER.">
+  <link rel="canonical" href="https://1328f.org/tools/index-es.html">
+  <link rel="alternate" hreflang="en" href="https://1328f.org/tools/">
+  <link rel="alternate" hreflang="es" href="https://1328f.org/tools/index-es.html">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.6; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #8b949e; font-size: 1rem; }
+    nav { background: #161b22; border-bottom: 1px solid #30363d; padding: 0.75rem 2rem; display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap; align-items: center; }
+    nav a { color: #8b949e; font-size: 0.9rem; font-weight: 500; padding: 0.25rem 0; border-bottom: 2px solid transparent; }
+    nav a:hover, nav a.active { color: #f0f6fc; border-bottom-color: #58a6ff; text-decoration: none; }
+    .lang-toggle { font-size: 0.8rem; margin-left: 1rem; padding-left: 1rem; border-left: 1px solid #30363d; }
+    .lang-toggle a { color: #8b949e; border-bottom: none; }
+    .lang-toggle a:hover { color: #f0f6fc; }
+    .lang-toggle .current-lang { color: #f0f6fc; font-weight: 600; }
+    main { max-width: 900px; margin: 0 auto; padding: 2rem; }
+    h2 { color: #f0f6fc; font-size: 1.3rem; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #30363d; }
+    .tools-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+    .tool-card { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 1.5rem; }
+    .tool-card h3 { color: #f0f6fc; font-size: 1.1rem; margin-bottom: 0.5rem; }
+    .tool-card p { color: #8b949e; font-size: 0.9rem; margin-bottom: 1rem; }
+    .tool-card .features { list-style: none; margin: 0 0 1rem; padding: 0; }
+    .tool-card .features li { color: #c9d1d9; font-size: 0.85rem; padding: 0.25rem 0; padding-left: 1.2rem; position: relative; }
+    .tool-card .features li::before { content: "\2713"; color: #3fb950; position: absolute; left: 0; }
+    .btn { display: inline-block; background: #238636; color: #fff; padding: 0.5rem 1rem; border-radius: 6px; font-weight: 600; font-size: 0.85rem; text-decoration: none; margin-right: 0.5rem; transition: background 0.2s; }
+    .btn:hover { background: #2ea043; text-decoration: none; }
+    .btn.secondary { background: #21262d; color: #c9d1d9; }
+    .btn.secondary:hover { background: #30363d; }
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 2rem; text-align: center; margin-top: 3rem; color: #8b949e; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+    @media (max-width: 600px) { header { padding: 1.5rem 1rem; } main { padding: 1rem; } .tools-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <a href="#main" class="skip-link">Saltar al contenido principal</a>
+  <header role="banner">
+    <h1><a href="/index-es.html" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Investigacion sobre quiebras de consumidores y rendicion de cuentas</p>
+  </header>
+  <nav aria-label="Navegacion principal">
+    <a href="/index-es.html">Inicio</a>
+    <a href="/reports/index-es.html">Informes</a>
+    <a href="/watch/index-es.html">Seguimiento</a>
+    <a href="/methodology/index-es.html">Metodologia</a>
+    <a href="/tools/index-es.html" aria-current="page">Herramientas</a>
+    <a href="/about/index-es.html">Acerca de</a>
+    <a href="/support/index-es.html">Apoyar</a>
+    <span class="lang-toggle"><a href="/tools/" lang="en">EN</a> | <span class="current-lang">ES</span></span>
+  </nav>
+  <main id="main">
+    <h2>Herramientas de codigo abierto</h2>
+    <p style="color: #8b949e; margin-bottom: 1.5rem;">Todas las herramientas son gratuitas, de codigo abierto y disenadas para replicacion. No se recopilan datos de los usuarios.</p>
+
+    <div class="tools-grid">
+
+      <div class="tool-card">
+        <h3>Verificador de descarga Section 1328(f)</h3>
+        <p>Verifique si Section 1328(f) impide la descarga en un caso especifico. Ingrese las fechas de presentacion y obtenga una respuesta inmediata.</p>
+        <ul class="features">
+          <li>Solo del lado del cliente - cero recopilacion de datos</li>
+          <li>Fecha de presentacion a fecha de presentacion segun <em>In re Blendheim</em></li>
+          <li>Muestra el calculo completo con fecha de expiracion del impedimento</li>
+          <li>Disponible en ingles y espanol</li>
+        </ul>
+        <a href="https://1328f.com/check.html" class="btn">Usar verificador</a>
+        <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener" class="btn secondary">Codigo fuente</a>
+      </div>
+
+      <div class="tool-card">
+        <h3>Panel nacional de distritos</h3>
+        <p>Mapa interactivo y tabla ordenable de los 94 distritos federales de quiebras con resultados de deteccion.</p>
+        <ul class="features">
+          <li>4.9 millones de casos analizados</li>
+          <li>264 violaciones verificadas identificadas</li>
+          <li>Tasas de deudores con presentaciones previas por distrito</li>
+          <li>Tabla de datos ordenable y con busqueda</li>
+        </ul>
+        <a href="https://1328f.com" class="btn">Ver panel</a>
+      </div>
+
+      <div class="tool-card">
+        <h3>Explicacion en lenguaje sencillo</h3>
+        <p>Que significa Section 1328(f), a quien afecta y como funciona - sin jerga legal.</p>
+        <ul class="features">
+          <li>Tres ejemplos detallados con lineas de tiempo</li>
+          <li>Brecha de cumplimiento de la Pregunta 9 explicada</li>
+          <li>Seccion de preguntas frecuentes</li>
+          <li>Disponible en ingles y espanol</li>
+        </ul>
+        <a href="https://1328f.com/explainer.html" class="btn">Leer explicacion</a>
+      </div>
+
+    </div>
+
+    <h2>Para desarrolladores e investigadores</h2>
+    <p>El codigo fuente completo, los scripts de procesamiento de datos y las herramientas de analisis estan disponibles en GitHub. El repositorio incluye:</p>
+    <ul style="margin-left: 1.5rem; margin-bottom: 1rem;">
+      <li>Logica de deteccion y calculadora de elegibilidad</li>
+      <li>Pipeline de procesamiento de datos del FJC</li>
+      <li>Scripts de agregacion a nivel de distrito</li>
+      <li>Herramientas de visualizacion y mapeo</li>
+      <li>Documentacion y notas de metodologia</li>
+    </ul>
+    <p><a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener" class="btn">Ver en GitHub</a></p>
+
+  </main>
+  <footer role="contentinfo">
+    <p>1328f.org - Investigacion independiente sobre quiebras de consumidores. No constituye asesoramiento legal.</p>
+    <p class="links">
+      <a href="https://1328f.com">Herramienta de verificacion</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/index-es.html">Acerca de</a>
+      <a href="/support/index-es.html">Apoyar</a>
+    </p>
+    <p style="margin-top: 0.75rem;"><a href="/support/index-es.html" style="color: #484f58;">Apoyar esta investigacion</a></p>
+  </footer>
+</body>
+</html>
