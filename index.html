@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RV60F9WDXN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-RV60F9WDXN');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1328f.org — Bankruptcy Filing Integrity Project</title>
+    <meta name="description" content="Nonprofit consumer protection organization ensuring bankruptcy discharge eligibility compliance through open-source screening tools, public data, and systemic accountability.">
+    <meta name="keywords" content="1328(f), bankruptcy, consumer protection, discharge bar, nonprofit, open source, PACER, filing integrity">
+    <link rel="canonical" href="https://1328f.org/">
+    <meta property="og:title" content="1328f.org — Bankruptcy Filing Integrity Project">
+    <meta property="og:description" content="Open-source tools and public data ensuring bankruptcy discharge eligibility compliance across 94 federal districts.">
+    <meta property="og:url" content="https://1328f.org/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="1328f.org — Bankruptcy Filing Integrity Project">
+    <meta name="twitter:description" content="Open-source tools and public data ensuring bankruptcy discharge eligibility compliance across 94 federal districts.">
+    <style>
+        :root {
+            --bg: #0d1117;
+            --surface: #161b22;
+            --border: #30363d;
+            --text: #e6edf3;
+            --text-muted: #8b949e;
+            --accent: #58a6ff;
+            --green: #3fb950;
+            --red: #f85149;
+            --yellow: #d29922;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 0 auto; padding: 0 24px; }
+
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 80px 0 60px;
+            border-bottom: 1px solid var(--border);
+        }
+        .hero h1 {
+            font-size: 42px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+        .hero h1 span { color: var(--accent); }
+        .hero .tagline {
+            font-size: 20px;
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-stat {
+            display: inline-block;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px 32px;
+            margin: 8px;
+        }
+        .hero-stat .number {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .hero-stat .label {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Sections */
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        section:last-of-type { border-bottom: none; }
+        h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+        h2 .accent { color: var(--accent); }
+        p { margin-bottom: 16px; color: var(--text-muted); }
+        p strong { color: var(--text); }
+
+        /* Mission cards */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 24px;
+        }
+        .card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 24px;
+        }
+        .card h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: var(--text);
+        }
+        .card p { font-size: 14px; margin-bottom: 0; }
+        .card .icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        /* Data highlights */
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+        .data-item {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+        }
+        .data-item .value {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--green);
+        }
+        .data-item .desc {
+            font-size: 13px;
+            color: var(--text-muted);
+            margin-top: 4px;
+        }
+
+        /* CTA */
+        .cta-section { text-align: center; padding: 60px 0; }
+        .cta-btn {
+            display: inline-block;
+            background: var(--accent);
+            color: #fff;
+            padding: 14px 32px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            margin: 8px;
+            transition: opacity 0.2s;
+        }
+        .cta-btn:hover { opacity: 0.9; }
+        .cta-btn.secondary {
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text);
+        }
+        .cta-btn.secondary:hover { border-color: var(--accent); }
+
+        /* Tools list */
+        .tools-list {
+            list-style: none;
+            margin-top: 16px;
+        }
+        .tools-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .tools-list li:last-child { border-bottom: none; }
+        .tools-list .tool-name {
+            font-weight: 600;
+            color: var(--text);
+        }
+        .tools-list .tool-desc {
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+        .tools-list a {
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 14px;
+        }
+        .tools-list a:hover { text-decoration: underline; }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 13px;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .hero { padding: 48px 0 40px; }
+            .hero h1 { font-size: 28px; }
+            .hero .tagline { font-size: 16px; }
+            .hero-stat { display: block; margin: 8px 0; }
+            h2 { font-size: 22px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <div class="hero">
+        <h1><span>1328f</span>.org</h1>
+        <p class="tagline">Bankruptcy Filing Integrity Project</p>
+        <p style="color: var(--text-muted); font-size: 16px; max-width: 640px; margin: 0 auto 32px;">
+            Open-source tools and public data ensuring bankruptcy discharge eligibility compliance.
+            Free. Transparent. Verifiable by anyone.
+        </p>
+        <div>
+            <div class="hero-stat">
+                <div class="number">4,895,163</div>
+                <div class="label">Cases Screened</div>
+            </div>
+            <div class="hero-stat">
+                <div class="number">94</div>
+                <div class="label">Federal Districts</div>
+            </div>
+            <div class="hero-stat">
+                <div class="number">391,951</div>
+                <div class="label">Unchecked Discharges</div>
+            </div>
+        </div>
+    </div>
+
+    <section>
+        <h2>The <span class="accent">Problem</span></h2>
+        <p>Federal law bars certain repeat bankruptcy filers from receiving a Chapter 13 discharge. <strong>Section 1328(f)</strong> of the Bankruptcy Code creates mandatory waiting periods after a prior discharge. But no federal rule requires courts to verify eligibility before entering discharge.</p>
+        <p>The result: <strong>391,951 prior-filer cases</strong> across 94 federal districts received discharge with zero eligibility verification. Some of those discharges were lawful. Some were not. Nobody checked.</p>
+        <p>Two sitting federal bankruptcy judges — Hon. Rebecca B. Connelly and Hon. Benjamin Kahn — have proposed amending the rules to require verification. Their proposal, <strong>Rules Suggestion 25-BK-N</strong>, is currently before the Advisory Committee on Bankruptcy Rules.</p>
+    </section>
+
+    <section>
+        <h2>What We <span class="accent">Do</span></h2>
+        <div class="cards">
+            <div class="card">
+                <span class="icon">&#128270;</span>
+                <h3>Screen</h3>
+                <p>Free, open-source screening tools check every Chapter 13 case against Section 1328(f) discharge eligibility using public court records and the FJC Integrated Database.</p>
+            </div>
+            <div class="card">
+                <span class="icon">&#128202;</span>
+                <h3>Monitor</h3>
+                <p>Real-time court RSS feeds track new filings across federal bankruptcy courts. Automated alerts flag potential compliance issues as they happen.</p>
+            </div>
+            <div class="card">
+                <span class="icon">&#128218;</span>
+                <h3>Educate</h3>
+                <p>Plain-English explainers, an eligibility checker, and case law references — in English and Spanish — help debtors and attorneys understand discharge eligibility.</p>
+            </div>
+            <div class="card">
+                <span class="icon">&#128300;</span>
+                <h3>Publish</h3>
+                <p>All data, methodology, and source code are public. Every finding is reproducible. Every tool is free. Transparency is not a feature — it is the foundation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>The <span class="accent">Data</span></h2>
+        <div class="data-grid">
+            <div class="data-item">
+                <div class="value">4.9M</div>
+                <div class="desc">Chapter 13 cases (FY 2008-2024)</div>
+            </div>
+            <div class="data-item">
+                <div class="value">94</div>
+                <div class="desc">Federal districts covered</div>
+            </div>
+            <div class="data-item">
+                <div class="value">264</div>
+                <div class="desc">Verified bar-period violations (7-district sample)</div>
+            </div>
+            <div class="data-item">
+                <div class="value">114</div>
+                <div class="desc">Discharges granted despite statutory bar</div>
+            </div>
+            <div class="data-item">
+                <div class="value">27.4%</div>
+                <div class="desc">Prior filers who received discharge</div>
+            </div>
+            <div class="data-item">
+                <div class="value">$0</div>
+                <div class="desc">Cost to use any tool</div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Open-Source <span class="accent">Tools</span></h2>
+        <p>Every tool is free, runs locally, and makes no network calls with your data.</p>
+        <ul class="tools-list">
+            <li>
+                <div>
+                    <div class="tool-name">National Screening Dashboard</div>
+                    <div class="tool-desc">Interactive map and data table covering all 94 federal bankruptcy districts</div>
+                </div>
+                <a href="https://1328f.com/dashboard.html">Open &rarr;</a>
+            </li>
+            <li>
+                <div>
+                    <div class="tool-name">Section 1328(f) Explainer</div>
+                    <div class="tool-desc">Plain-English guide to the discharge bar statute (English &amp; Spanish)</div>
+                </div>
+                <a href="https://1328f.com/explainer.html">Read &rarr;</a>
+            </li>
+            <li>
+                <div>
+                    <div class="tool-name">Eligibility Checker</div>
+                    <div class="tool-desc">Enter your dates — instantly check if Section 1328(f) bars discharge</div>
+                </div>
+                <a href="https://1328f.com/check.html">Check &rarr;</a>
+            </li>
+            <li>
+                <div>
+                    <div class="tool-name">Case Law Reference</div>
+                    <div class="tool-desc">Key decisions on discharge bar enforcement and Rule 4004</div>
+                </div>
+                <a href="https://1328f.com/caselaw.html">Read &rarr;</a>
+            </li>
+            <li>
+                <div>
+                    <div class="tool-name">Source Code</div>
+                    <div class="tool-desc">Python screener, data pipeline, and methodology — fully open</div>
+                </div>
+                <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub &rarr;</a>
+            </li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Rules Committee <span class="accent">Submission</span></h2>
+        <p>In March 2026, the Administrative Office of the U.S. Courts requested this project's empirical findings for posting as a related suggestion to <strong>Rules Suggestion 25-BK-N</strong> — a proposed amendment to Federal Rule of Bankruptcy Procedure 4004 that would require courts to verify discharge eligibility independently.</p>
+        <p>The data confirms that the gap identified by Judges Connelly and Kahn is systemic, not anecdotal. Converting Section 1328(f) enforcement from an objection model to a court-verified eligibility model would address a measurable compliance failure.</p>
+    </section>
+
+    <section class="cta-section">
+        <h2>Support This Work</h2>
+        <p style="max-width: 500px; margin: 0 auto 24px;">Every tool is free. Every dataset is public. This project is sustained by people who believe court records should be accessible and discharge eligibility should be verified.</p>
+        <a href="https://1328f.com/" class="cta-btn">Use the Screening Tools</a>
+        <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener" class="cta-btn secondary">View Source Code</a>
+    </section>
+
+</div>
+
+<footer>
+    <div class="container">
+        <p style="margin-bottom: 8px;">
+            <a href="https://1328f.com/">Screener</a> &middot;
+            <a href="https://1328f.com/dashboard.html">Dashboard</a> &middot;
+            <a href="https://1328f.com/explainer.html">Explainer</a> &middot;
+            <a href="https://1328f.com/check.html">Eligibility Checker</a> &middot;
+            <a href="https://1328f.com/caselaw.html">Case Law</a> &middot;
+            <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+        </p>
+        <p>Data sourced from publicly available PACER records and the FJC Integrated Database. This is not legal advice.</p>
+        <p style="margin-top: 8px;">&copy; 2026 Bankruptcy Filing Integrity Project</p>
+    </div>
+</footer>
+
+</body>
+</html>
