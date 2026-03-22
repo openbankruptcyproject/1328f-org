@@ -255,8 +255,28 @@
     </div>
 
     <h2>Contact</h2>
-    <p>For research inquiries, data requests, or collaboration: <strong>research@1328f.org</strong></p>
-    <p>For media inquiries: <strong>press@1328f.org</strong></p>
+    <p>For research inquiries, data requests, media, or collaboration:</p>
+    <form action="https://formspree.io/f/xzaboraj" method="POST" style="margin: 1rem 0;">
+      <div style="margin-bottom: 0.75rem;">
+        <input type="text" name="name" placeholder="Name" required style="width: 100%; padding: 0.6rem 1rem; border: 1px solid #30363d; border-radius: 6px; background: #0d1117; color: #c9d1d9; font-size: 0.95rem;">
+      </div>
+      <div style="margin-bottom: 0.75rem;">
+        <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 0.6rem 1rem; border: 1px solid #30363d; border-radius: 6px; background: #0d1117; color: #c9d1d9; font-size: 0.95rem;">
+      </div>
+      <div style="margin-bottom: 0.75rem;">
+        <select name="type" style="width: 100%; padding: 0.6rem 1rem; border: 1px solid #30363d; border-radius: 6px; background: #0d1117; color: #c9d1d9; font-size: 0.95rem;">
+          <option value="research">Research inquiry</option>
+          <option value="data">Data request</option>
+          <option value="media">Media / press</option>
+          <option value="collaboration">Collaboration</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div style="margin-bottom: 0.75rem;">
+        <textarea name="message" placeholder="Message" required rows="4" style="width: 100%; padding: 0.6rem 1rem; border: 1px solid #30363d; border-radius: 6px; background: #0d1117; color: #c9d1d9; font-size: 0.95rem; resize: vertical;"></textarea>
+      </div>
+      <button type="submit" style="padding: 0.6rem 1.5rem; background: #238636; color: #fff; border: none; border-radius: 6px; font-size: 0.95rem; font-weight: 600; cursor: pointer;">Send</button>
+    </form>
     <p style="color: #8b949e; font-size: 0.85rem; margin-top: 1rem;">1328f.org is an independent research project. Not affiliated with any law firm, government agency, or academic institution.</p>
 
   </main>
