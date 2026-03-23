@@ -1,0 +1,376 @@
+{
+  "_meta": {
+    "description": "Structured data (JSON-LD) templates for 1328f.com and 1328f.org pages",
+    "usage": "Copy the relevant template into a <script type='application/ld+json'> tag in each page's <head>",
+    "created": "2026-03-22",
+    "spec": "https://schema.org",
+    "validator": "https://search.google.com/test/rich-results"
+  },
+
+  "faq_page": {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is Section 1328(f) of the Bankruptcy Code?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Section 1328(f) is a provision in the U.S. Bankruptcy Code (11 U.S.C. section 1328(f)) that bars a debtor from receiving a Chapter 13 discharge if they received a prior discharge within certain time periods. If the prior case was a Chapter 7, 11, or 12, the bar is 4 years from filing to filing. If the prior case was another Chapter 13, the bar is 2 years from filing to filing. The court must deny the discharge even if no party objects."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long is the Section 1328(f) discharge bar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The bar length depends on the chapter of the prior case. A prior Chapter 7, 11, or 12 discharge creates a 4-year bar under section 1328(f)(1). A prior Chapter 13 discharge creates a 2-year bar under section 1328(f)(2). Both periods are measured from filing date to filing date, not from discharge date."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I file Chapter 13 after Chapter 7?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, you can file a Chapter 13 case after a Chapter 7 discharge, but you cannot receive a Chapter 13 discharge if the new case is filed within 4 years of the Chapter 7 filing date. You may still file for Chapter 13 during this period to use the automatic stay or to restructure secured debts, but the court must deny your discharge under section 1328(f)(1)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I file during the 1328(f) bar period?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Filing during the bar period is not prohibited, but the court must deny your Chapter 13 discharge. This means you will complete plan payments without the benefit of discharging remaining unsecured debts. Some debtors knowingly file during the bar period to use the automatic stay or cure mortgage arrears, but many are unaware of the bar and discover it after months or years of payments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the 1328(f) bar measured from filing date or discharge date?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The bar is measured from filing date to filing date. This is a critical distinction. Section 1328(f) uses the phrase 'filed after the debtor has received a discharge' in a prior case 'filed' within the specified period. Courts uniformly measure the time period between the filing dates of the two cases, not from the discharge date of the prior case."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I check if I am barred under Section 1328(f)?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can use the free screening tool at 1328f.com. Enter your federal court district and the tool will search public PACER data for prior filings associated with your case. No login or personal information is required. The screener checks filing dates and discharge records across 94 federal bankruptcy districts using data from the Federal Judicial Center."
+        }
+      }
+    ]
+  },
+
+  "scholarly_article": {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "REPLACE_WITH_TITLE",
+    "alternativeHeadline": "REPLACE_WITH_SUBTITLE",
+    "author": {
+      "@type": "Organization",
+      "name": "1328f.org",
+      "url": "https://1328f.org"
+    },
+    "datePublished": "REPLACE_WITH_ISO_DATE",
+    "dateModified": "REPLACE_WITH_ISO_DATE",
+    "publisher": {
+      "@type": "Organization",
+      "name": "1328f.org",
+      "url": "https://1328f.org",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://1328f.org/og-image.png"
+      }
+    },
+    "description": "REPLACE_WITH_DESCRIPTION",
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Bankruptcy",
+        "sameAs": "https://en.wikipedia.org/wiki/Bankruptcy_in_the_United_States"
+      },
+      {
+        "@type": "Thing",
+        "name": "Section 1328(f)",
+        "sameAs": "https://www.law.cornell.edu/uscode/text/11/1328"
+      }
+    ],
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "inLanguage": ["en", "es"],
+    "citation": "REPLACE_WITH_CITATIONS_ARRAY",
+    "keywords": "REPLACE_WITH_KEYWORDS",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "1328f.org",
+      "url": "https://1328f.org"
+    },
+    "mainEntityOfPage": "REPLACE_WITH_CANONICAL_URL"
+  },
+
+  "article_generic": {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "REPLACE_WITH_TITLE",
+    "author": {
+      "@type": "Organization",
+      "name": "1328f.org",
+      "url": "https://1328f.org"
+    },
+    "datePublished": "REPLACE_WITH_ISO_DATE",
+    "dateModified": "REPLACE_WITH_ISO_DATE",
+    "publisher": {
+      "@type": "Organization",
+      "name": "1328f.org",
+      "url": "https://1328f.org",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://1328f.org/og-image.png"
+      }
+    },
+    "description": "REPLACE_WITH_DESCRIPTION",
+    "image": "https://1328f.org/og-image.png",
+    "isAccessibleForFree": true,
+    "inLanguage": "en",
+    "mainEntityOfPage": "REPLACE_WITH_CANONICAL_URL"
+  },
+
+  "dataset": {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "U.S. Bankruptcy Court Repeat Filer Analysis Dataset",
+    "description": "Comprehensive dataset of 4.9 million federal bankruptcy cases across 94 districts, with repeat-filer identification, discharge outcomes, Section 1328(f) eligibility screening, and attorney performance metrics. Derived from Federal Judicial Center Integrated Database public records and PACER docket data.",
+    "url": "https://1328f.org/data/",
+    "identifier": "1328f-bankruptcy-dataset-v1",
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "isAccessibleForFree": true,
+    "creator": {
+      "@type": "Organization",
+      "name": "1328f.org",
+      "url": "https://1328f.org"
+    },
+    "distribution": [
+      {
+        "@type": "DataDownload",
+        "encodingFormat": "application/x-sqlite3",
+        "contentUrl": "https://1328f.com/data/bankruptcy_screener.db",
+        "description": "SQLite database queried client-side via sql.js (no server required)"
+      }
+    ],
+    "temporalCoverage": "2008/2024",
+    "spatialCoverage": {
+      "@type": "Place",
+      "name": "United States",
+      "geo": {
+        "@type": "GeoShape",
+        "description": "All 94 federal bankruptcy court districts"
+      }
+    },
+    "variableMeasured": [
+      {
+        "@type": "PropertyValue",
+        "name": "Total cases analyzed",
+        "value": "4,900,000+"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Federal districts covered",
+        "value": "94"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Discharge bar cases identified",
+        "value": "264+"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "Prior filers with subsequent discharge",
+        "value": "114+"
+      }
+    ],
+    "measurementTechnique": "Automated screening of FJC Integrated Database records cross-referenced with PACER docket entries, using filing-date-to-filing-date interval analysis per 11 U.S.C. section 1328(f)",
+    "keywords": [
+      "bankruptcy",
+      "1328(f)",
+      "discharge bar",
+      "repeat filer",
+      "PACER",
+      "FJC",
+      "consumer bankruptcy",
+      "Chapter 13",
+      "Chapter 7",
+      "attorney performance"
+    ]
+  },
+
+  "web_application": {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Section 1328(f) Discharge Bar Screener",
+    "description": "Free, open-source tool that screens bankruptcy cases for Section 1328(f) discharge eligibility bars. Runs entirely in the browser using sql.js to query 4.9 million FJC records. No server, no login, no personal data collected.",
+    "url": "https://1328f.com",
+    "applicationCategory": "LegalService",
+    "applicationSubCategory": "Bankruptcy Screening Tool",
+    "operatingSystem": "Any (web browser)",
+    "browserRequirements": "Modern web browser with JavaScript enabled (Chrome, Firefox, Safari, Edge)",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "featureList": [
+      "Screen any federal bankruptcy case for Section 1328(f) discharge bars",
+      "Cross-reference prior filings across 94 federal districts",
+      "Client-side processing via sql.js — no data sent to any server",
+      "Open-source (GitHub)",
+      "No account or login required",
+      "No personal information collected"
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "1328f.org",
+      "url": "https://1328f.org"
+    },
+    "isAccessibleForFree": true,
+    "inLanguage": ["en", "es"],
+    "screenshot": "https://1328f.org/og-image.png"
+  },
+
+  "howto_check_eligibility": {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    "name": "How to Check Your Section 1328(f) Discharge Eligibility",
+    "description": "Step-by-step instructions to determine whether a prior bankruptcy discharge bars you from receiving a Chapter 13 discharge under 11 U.S.C. section 1328(f).",
+    "totalTime": "PT5M",
+    "tool": [
+      {
+        "@type": "HowToTool",
+        "name": "Web browser (Chrome, Firefox, Safari, or Edge)"
+      }
+    ],
+    "supply": [],
+    "step": [
+      {
+        "@type": "HowToStep",
+        "position": 1,
+        "name": "Gather your case information",
+        "text": "Find your current Chapter 13 bankruptcy case number and the federal court district where it was filed. If you have prior cases, note those case numbers and filing dates as well."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 2,
+        "name": "Open the 1328(f) screener",
+        "text": "Navigate to https://1328f.com in any modern web browser. The tool loads a SQLite database entirely in your browser — no data is sent to any server.",
+        "url": "https://1328f.com"
+      },
+      {
+        "@type": "HowToStep",
+        "position": 3,
+        "name": "Select your court district",
+        "text": "Choose your federal bankruptcy court district from the dropdown menu. The tool covers all 94 federal bankruptcy districts in the United States."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 4,
+        "name": "Search for your case",
+        "text": "Enter your case number or search by name. The screener will identify any prior filings and calculate the time intervals between filing dates."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 5,
+        "name": "Review the screening result",
+        "text": "The tool will display whether your case falls within a Section 1328(f) discharge bar period. A 4-year bar applies if the prior case was Chapter 7, 11, or 12. A 2-year bar applies if the prior case was Chapter 13. The period is measured from filing date to filing date."
+      },
+      {
+        "@type": "HowToStep",
+        "position": 6,
+        "name": "Understand your result",
+        "text": "If the screener flags a potential bar: this is informational only and not legal advice. Consult a bankruptcy attorney to confirm the result and discuss your options. Some debtors file during the bar period intentionally (for the automatic stay or to cure arrears), but the discharge will be denied."
+      }
+    ]
+  },
+
+  "organization": {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "1328f.org",
+    "alternateName": "1328(f) Research Project",
+    "url": "https://1328f.org",
+    "logo": "https://1328f.org/og-image.png",
+    "description": "Independent research organization analyzing consumer bankruptcy outcomes using public federal court data. Maintains open-source screening tools and publishes empirical reports on Section 1328(f) enforcement, attorney performance, and systemic patterns in bankruptcy case outcomes.",
+    "foundingDate": "2026",
+    "sameAs": [
+      "https://github.com/ilikemath9999/bankruptcy-discharge-screener",
+      "https://1328f.com"
+    ],
+    "knowsAbout": [
+      "Bankruptcy law",
+      "Section 1328(f)",
+      "PACER",
+      "Federal Judicial Center",
+      "Consumer bankruptcy",
+      "Attorney performance metrics",
+      "Discharge bar enforcement"
+    ],
+    "publishingPrinciples": "https://1328f.org/methodology/"
+  },
+
+  "website_1328f_org": {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "1328f.org",
+    "url": "https://1328f.org",
+    "description": "Consumer bankruptcy research and accountability platform",
+    "publisher": {
+      "@type": "Organization",
+      "name": "1328f.org",
+      "url": "https://1328f.org"
+    },
+    "inLanguage": ["en", "es"],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://1328f.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  },
+
+  "website_1328f_com": {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Section 1328(f) Discharge Bar Screener",
+    "url": "https://1328f.com",
+    "description": "Free tool to screen bankruptcy cases for Section 1328(f) discharge eligibility bars using 4.9 million public court records",
+    "publisher": {
+      "@type": "Organization",
+      "name": "1328f.org",
+      "url": "https://1328f.org"
+    },
+    "inLanguage": ["en", "es"]
+  },
+
+  "breadcrumb_template": {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://1328f.org/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "REPLACE_WITH_SECTION",
+        "item": "REPLACE_WITH_SECTION_URL"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "REPLACE_WITH_PAGE",
+        "item": "REPLACE_WITH_PAGE_URL"
+      }
+    ]
+  }
+}
