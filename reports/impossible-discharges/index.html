@@ -14,19 +14,19 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>114 Courts Granted Discharge When Federal Law Said No - 1328f.org</title>
-  <meta name="description" content="264 bankruptcy cases where 11 U.S.C. section 1328(f) barred discharge. 114 received discharge anyway. Analysis of 4.9 million federal cases across 94 districts.">
+  <meta name="description" content="In a multi-district sample of bankruptcy filings, we identified 264 cases where 11 U.S.C. section 1328(f) barred discharge. 114 received discharge anyway. The actual national count is likely far higher.">
   <link rel="canonical" href="https://1328f.org/reports/impossible-discharges/">
   <link rel="alternate" hreflang="en" href="https://1328f.org/reports/impossible-discharges/">
   <link rel="alternate" type="application/atom+xml" title="1328f.org Docket Watch" href="/watch/feed.xml">
   <meta property="og:title" content="114 Courts Granted Discharge When Federal Law Said No">
-  <meta property="og:description" content="264 bankruptcy cases where the discharge bar applied. 114 received discharge anyway. National analysis of 4.9M federal cases.">
+  <meta property="og:description" content="In a multi-district sample, we identified 264 cases where the discharge bar applied. 114 received discharge anyway. A full national screen has never been conducted.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://1328f.org/reports/impossible-discharges/">
   <meta property="og:site_name" content="1328f.org">
   <meta property="og:image" content="https://1328f.org/og-image.png">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="114 Courts Granted Discharge When Federal Law Said No">
-  <meta name="twitter:description" content="264 bankruptcy cases where the discharge bar applied. 114 received discharge anyway. National analysis of 4.9M federal cases.">
+  <meta name="twitter:description" content="In a multi-district sample, we identified 264 cases where the discharge bar applied. 114 received discharge anyway. A full national screen has never been conducted.">
   <meta name="twitter:image" content="https://1328f.org/og-image.png">
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -95,6 +95,7 @@
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
   "headline": "114 Courts Granted Discharge When Federal Law Said No",
+  "description": "In a focused multi-district analysis, we identified 264 bankruptcy cases where the Section 1328(f) discharge bar applied. In 114 of those cases, the court granted discharge anyway. The actual national count is likely far higher.",
   "datePublished": "2026-03-23",
   "publisher": {
     "@type": "Organization",
@@ -201,7 +202,7 @@
     <div class="stat-block">
       <div class="stat">
         <span class="num">264</span>
-        <span class="label">Cases where the bar applied</span>
+        <span class="label">Barred cases in our sample</span>
       </div>
       <div class="stat">
         <span class="num red">114</span>
@@ -209,7 +210,7 @@
       </div>
       <div class="stat">
         <span class="num">43.2%</span>
-        <span class="label">Error rate</span>
+        <span class="label">Error rate in sample</span>
       </div>
       <div class="stat">
         <span class="num">150</span>
@@ -219,7 +220,7 @@
 
     <div class="callout red">
       <h4>Summary</h4>
-      <p style="margin-bottom: 0;">Federal law prohibits bankruptcy courts from granting discharge to debtors who received a prior discharge within a statutory waiting period. Using national data from the Federal Judicial Center covering 4.9 million cases across 94 federal districts, we identified 264 cases where 11 U.S.C. &sect; 1328(f) barred discharge. In 114 of those cases&mdash;43.2%&mdash;the court granted discharge anyway. No court in the country has a systematic mechanism to screen for the bar before entering discharge. The statute is enforced only when someone catches the problem, and in nearly half of identifiable cases, no one did.</p>
+      <p style="margin-bottom: 0;">Federal law prohibits bankruptcy courts from granting discharge to debtors who received a prior discharge within a statutory waiting period. In a focused analysis of bankruptcy filings across multiple federal districts, we identified 264 cases where 11 U.S.C. &sect; 1328(f) barred discharge. In 114 of those cases&mdash;43.2%&mdash;the court granted discharge anyway. This is not a comprehensive national count. It reflects what one independent research effort found in a subset of available data. No court in the country has a systematic mechanism to screen for the bar before entering discharge. The actual number of barred cases nationwide is likely much higher.</p>
     </div>
 
     <h2>1. What Is the Discharge Bar?</h2>
@@ -242,17 +243,22 @@
 
     <h2>2. How We Found Them</h2>
 
-    <p>The Federal Judicial Center (FJC) maintains the Integrated Database, a comprehensive record of every federal bankruptcy case filed in the United States. We obtained national data covering approximately <strong>4.9 million cases across all 94 federal judicial districts</strong>.</p>
+    <p>The Federal Judicial Center (FJC) maintains the Integrated Database, a comprehensive record of every federal bankruptcy case filed in the United States. The full dataset contains approximately <strong>4.9 million cases across all 94 federal judicial districts</strong>. Our analysis cross-referenced a subset of this data, focusing on filings across multiple districts where debtor identifiers allowed prior-case matching.</p>
+
+    <div class="callout yellow">
+      <h4>Scope of This Analysis</h4>
+      <p style="margin-bottom: 0;">This analysis covers a fraction of the federal caseload. A full national screen&mdash;which the FJC data would support&mdash;has not been conducted by any institution, including this project. The 264 cases reported here emerged from a focused, multi-district research effort, not a comprehensive sweep of all 94 districts. The open-source screener at <a href="https://1328f.com">1328f.com</a> demonstrates that such a full national screen is technically feasible.</p>
+    </div>
 
     <h3>Methodology</h3>
 
     <ol>
-      <li><strong>Prior filing identification.</strong> For each Chapter 13 case, we checked whether the same debtor had a prior bankruptcy case that resulted in discharge. The FJC data includes debtor identifiers that allow cross-referencing across cases.</li>
+      <li><strong>Prior filing identification.</strong> For each Chapter 13 case in our sample, we checked whether the same debtor had a prior bankruptcy case that resulted in discharge. The FJC data includes debtor identifiers that allow cross-referencing across cases.</li>
       <li><strong>Bar period computation.</strong> Using the filing-to-filing measurement per <em>Blendheim</em>, we calculated whether the new filing fell within 4 years of a prior Chapter 7 discharge or 2 years of a prior Chapter 13 discharge.</li>
       <li><strong>Outcome verification.</strong> We then checked the disposition of each barred case: Was it dismissed (the expected outcome), or did it receive discharge (the prohibited outcome)?</li>
     </ol>
 
-    <p>This produced <strong>264 cases</strong> where the statutory bar verifiably applied based on the debtor's own filing history in the federal record.</p>
+    <p>Our sample produced <strong>264 cases</strong> where the statutory bar verifiably applied based on the debtor's own filing history in the federal record.</p>
 
     <h3>What the Data Shows</h3>
 
@@ -276,7 +282,7 @@
           <td>56.8%</td>
         </tr>
         <tr>
-          <td style="font-weight: 600;">Total barred cases identified</td>
+          <td style="font-weight: 600;">Total barred cases identified in sample</td>
           <td style="font-weight: 600;">264</td>
           <td style="font-weight: 600;">100%</td>
         </tr>
@@ -284,6 +290,8 @@
     </table>
 
     <p>The 150 dismissals represent cases where the system worked&mdash;someone identified the bar and the case was terminated. But the 114 discharges represent cases where the bar was never caught. The court entered an order granting discharge that federal law expressly prohibited.</p>
+
+    <p>The 43.2% error rate in our sample suggests the problem is widespread. If the same rate holds across the full national caseload, the total number of improperly granted discharges could be substantially larger than the 114 we identified. Only a comprehensive national screen would reveal the true scope.</p>
 
     <h2>3. What Went Wrong</h2>
 
@@ -301,16 +309,16 @@
 
     <p>The statute is enforced <strong>reactively</strong>, not proactively. Someone&mdash;the U.S. Trustee, the Chapter 13 trustee, a creditor, or the court itself&mdash;must affirmatively discover the prior filing and raise the issue. If no one does, discharge is entered as a matter of course at the conclusion of the plan.</p>
 
-    <p>This means the discharge bar is only as effective as the participants who happen to notice it. In 43.2% of the cases we identified, no one did.</p>
+    <p>This means the discharge bar is only as effective as the participants who happen to notice it. In 43.2% of the cases in our sample, no one did.</p>
 
     <div class="callout yellow">
       <h4>A Structural Gap, Not an Isolated Error</h4>
-      <p style="margin-bottom: 0;">The 43.2% error rate is not attributable to any single court, district, or trustee. It reflects a nationwide structural gap: a mandatory statutory bar with no mandatory screening process. The same statute that says "the court shall not grant a discharge" provides no mechanism to ensure the court knows the bar applies before entering one.</p>
+      <p style="margin-bottom: 0;">The 43.2% error rate in our sample is not attributable to any single court, district, or trustee. It reflects a structural gap in how the statute is enforced: a mandatory discharge bar with no mandatory screening process. The same statute that says "the court shall not grant a discharge" provides no mechanism to ensure the court knows the bar applies before entering one.</p>
     </div>
 
     <h2>4. The Cost to Debtors</h2>
 
-    <p>Every one of the 264 barred cases involved a debtor who paid to file. Attorney fees in Chapter 13 cases typically range from <strong>$3,000 to $5,000</strong>, depending on the district. Filing fees are $338. Many debtors also paid for the mandatory credit counseling certificate ($25 to $50) and financial management course ($25 to $50).</p>
+    <p>Every one of the 264 barred cases in our sample involved a debtor who paid to file. Attorney fees in Chapter 13 cases typically range from <strong>$3,000 to $5,000</strong>, depending on the district. Filing fees are $338. Many debtors also paid for the mandatory credit counseling certificate ($25 to $50) and financial management course ($25 to $50).</p>
 
     <h3>For the 150 Dismissed Cases</h3>
 
@@ -320,7 +328,7 @@
 
     <p>These debtors received a discharge that the statute prohibited. Whether that discharge is later vacated&mdash;potentially years after the debtor relied on it&mdash;is an open question. Any creditor or the U.S. Trustee could theoretically move to revoke discharge under <a href="https://www.law.cornell.edu/uscode/text/11/1330">11 U.S.C. &sect; 1330</a> if the bar is later discovered. The debtor is left in a state of legal uncertainty through no fault of their own.</p>
 
-    <h3>Conservative Cost Estimate</h3>
+    <h3>Conservative Cost Estimate for Our Sample</h3>
 
     <table>
       <thead>
@@ -345,7 +353,7 @@
           <td>$342,000 &ndash; $570,000</td>
         </tr>
         <tr>
-          <td style="font-weight: 600;">Total debtor expenditure on barred cases</td>
+          <td style="font-weight: 600;">Total for cases in our sample</td>
           <td style="font-weight: 600;">264</td>
           <td style="font-weight: 600;">&mdash;</td>
           <td style="font-weight: 600;">$792,000 &ndash; $1,320,000</td>
@@ -353,7 +361,7 @@
       </tbody>
     </table>
 
-    <p>Between $792,000 and $1.32 million was spent by debtors on cases that federal law said could not result in a valid discharge. This is a conservative estimate based on the 264 cases identifiable through FJC data alone. The actual number of barred cases is likely higher, as the FJC database may not capture every cross-district prior filing.</p>
+    <p>For the 264 cases in our sample alone, between $792,000 and $1.32 million was spent by debtors on cases that federal law said could not result in a valid discharge. This is a conservative estimate limited to the cases our research identified. The actual nationwide total is likely significantly larger, as our sample covered only a fraction of the districts and time periods in the FJC data.</p>
 
     <h2>5. What Should Change</h2>
 
@@ -367,18 +375,18 @@
 
     <p>Attorneys Jeffrey Connelly and Michael Kahn have submitted Suggestion 25-BK-N to the Advisory Committee on Bankruptcy Rules, proposing an amendment to Federal Rule of Bankruptcy Procedure 4004 that would require courts to verify discharge eligibility before entering a discharge order. The suggestion addresses the structural gap this report documents: a mandatory statutory bar with no mandatory verification process.</p>
 
-    <p>Empirical data submitted to the Rules Committee in support of the suggestion includes national discharge-bar analysis covering 4.9 million cases across 94 districts&mdash;the same dataset underlying this report.</p>
+    <p>Empirical data submitted to the Rules Committee in support of the suggestion includes discharge-bar analysis drawn from FJC data&mdash;the same data source underlying this report. The FJC dataset encompasses approximately 4.9 million cases across 94 districts, and is available for a comprehensive national screen that no institution has yet conducted.</p>
 
     <div class="callout green">
       <h4>A Solvable Problem</h4>
-      <p style="margin-bottom: 0;">Unlike many systemic issues in bankruptcy, the discharge bar gap has a clear, implementable solution. The data exists. The computation is simple. The screening tool has already been built and released as open source. What is missing is the procedural requirement that courts check before entering discharge. Suggestion 25-BK-N would provide that requirement. The 114 impossible discharges documented here are the empirical case for why it is needed.</p>
+      <p style="margin-bottom: 0;">Unlike many systemic issues in bankruptcy, the discharge bar gap has a clear, implementable solution. The data exists. The computation is simple. The screening tool has already been built and released as open source. What is missing is the procedural requirement that courts check before entering discharge. Suggestion 25-BK-N would provide that requirement. The 114 impossible discharges documented here&mdash;from just a portion of the national caseload&mdash;are the empirical case for why it is needed.</p>
     </div>
 
     <h2>Sources &amp; Methodology</h2>
 
     <h3>Data Sources</h3>
     <ul>
-      <li><strong>Federal Judicial Center, Integrated Database</strong> &mdash; national bankruptcy case data, approximately 4.9 million cases across 94 federal judicial districts</li>
+      <li><strong>Federal Judicial Center, Integrated Database</strong> &mdash; national bankruptcy case data (approximately 4.9 million cases across 94 federal judicial districts exist in the full dataset; our analysis cross-referenced a multi-district subset)</li>
       <li><strong>Free Law Project / CourtListener</strong> &mdash; bulk docket data access for verification and enrichment (<a href="https://www.courtlistener.com/">courtlistener.com</a>)</li>
       <li><strong>RECAP Archive</strong> &mdash; freely accessible PACER documents contributed by the public via the RECAP browser extension (<a href="https://free.law/recap">free.law/recap</a>)</li>
     </ul>
