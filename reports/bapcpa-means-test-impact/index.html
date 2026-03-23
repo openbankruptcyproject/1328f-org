@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CF8T1FYRCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CF8T1FYRCV');
+</script>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Means Test at 20: Did It Work? - 1328f.org</title>
+  <meta name="description" content="Empirical analysis of BAPCPA's means test after 20 years. Data from 4.9 million cases shows whether Section 707(b) reduced abuse or created new barriers for consumer debtors.">
+  <link rel="canonical" href="https://1328f.org/reports/bapcpa-means-test-impact/">
+  <link rel="alternate" hreflang="en" href="https://1328f.org/reports/bapcpa-means-test-impact/">
+  <link rel="alternate" hreflang="es" href="https://1328f.org/reports/bapcpa-means-test-impact/index-es.html">
+  <link rel="alternate" type="application/atom+xml" title="1328f.org Docket Watch" href="/watch/feed.xml">
+  <meta property="og:title" content="The Means Test at 20: Did It Work?">
+  <meta property="og:description" content="BAPCPA's signature provision was the means test. Twenty years of data from 4.9 million cases reveals whether it reduced abuse or just created barriers.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://1328f.org/reports/bapcpa-means-test-impact/">
+  <meta property="og:site_name" content="1328f.org">
+  <meta property="og:image" content="https://1328f.org/og-image.png">
+<!-- Twitter Card -->  <meta name="twitter:card" content="summary_large_image">  <meta name="twitter:title" content="The Means Test at 20: Did It Work?">  <meta name="twitter:description" content="BAPCPA's signature provision was the means test. Twenty years of data from 4.9 million cases reveals whether it reduced abuse or just created barriers.">  <meta name="twitter:image" content="https://1328f.org/og-image.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    code { background: #161b22; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #9eaab6; font-size: 1rem; }
+article { max-width: 760px; margin: 0 auto; padding: 2rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h2 { color: #f0f6fc; font-size: 1.6rem; line-height: 1.3; margin-bottom: 0.75rem; border-bottom: none; padding-bottom: 0; }
+    .article-header .meta { color: #9eaab6; font-size: 0.85rem; }
+    .article-header .meta .tag { background: #21262d; padding: 0.15em 0.5em; border-radius: 3px; margin-right: 0.5rem; }
+
+    h2 { color: #f0f6fc; font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    thead th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #30363d; font-size: 0.9rem; }
+    td { color: #c9d1d9; }
+
+    .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #58a6ff; border-radius: 0 6px 6px 0; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+    .callout.green { border-left-color: #3fb950; }
+    .callout.yellow { border-left-color: #e3a835; }
+    .callout.red { border-left-color: #f85149; }
+    .callout h4 { color: #f0f6fc; margin-bottom: 0.5rem; }
+
+    .step-list { counter-reset: step; list-style: none; margin-left: 0; padding-left: 0; }
+    .step-list li { counter-increment: step; position: relative; padding-left: 2.5rem; margin-bottom: 1rem; }
+    .step-list li::before {
+      content: counter(step);
+      position: absolute; left: 0; top: 0.1em;
+      width: 1.6rem; height: 1.6rem;
+      background: #21262d; border: 1px solid #30363d; border-radius: 50%;
+      color: #58a6ff; font-weight: 700; font-size: 0.8rem;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .back-link { display: inline-block; margin-bottom: 1rem; color: #9eaab6; font-size: 0.85rem; }
+    .back-link:hover { color: #58a6ff; }
+
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 2rem; text-align: center; margin-top: 3rem; color: #9eaab6; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+@media (max-width: 600px) { header { padding: 1.5rem 1rem; } article { padding: 1rem; } }
+    @media print {
+      body { background: #fff; color: #000; }
+      header, nav, footer, .skip-link, .back-link { display: none; }
+      article { max-width: 100%; padding: 0; }
+      a { color: #000; text-decoration: underline; }
+      a[href]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
+      .callout { border-color: #ccc; background: #f9f9f9; }
+      .callout h4 { color: #000; }
+      code { background: #f0f0f0; }
+      h2 { border-bottom-color: #ccc; color: #000; }
+      h3 { color: #000; }
+      table { border: 1px solid #ccc; }
+      th { background: #f0f0f0; color: #000; }
+      td { color: #000; }
+    }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "The Means Test at 20: Did It Work?",
+  "datePublished": "2026-03-22",
+  "publisher": {
+    "@type": "Organization",
+    "name": "1328f.org",
+    "url": "https://1328f.org"
+  },
+  "url": "https://1328f.org/reports/bapcpa-means-test-impact/",
+  "inLanguage": "en",
+  "isAccessibleForFree": true,
+  "isPartOf": {
+    "@type": "PublicationIssue",
+    "name": "BAPCPA at 20 Series"
+  }
+}
+</script>
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+</head>
+<body>
+<style>
+#site-nav{background:#0d1117;border-bottom:1px solid #30363d;padding:0.5rem 1rem;text-align:center;font-size:0.78rem;line-height:1.9}
+#site-nav a{margin:0 0.3rem}
+#site-nav .sep{color:#30363d;margin:0 0.25rem}
+#site-nav .nav-label{color:#f0f6fc;margin:0 0.4rem;font-weight:700}
+#site-nav .nav-label:first-child{margin-right:0.4rem}
+.nav-toggle{display:none;background:none;border:1px solid #30363d;color:#c9d1d9;font-size:1.2rem;padding:0.4rem 0.75rem;border-radius:4px;cursor:pointer;line-height:1}
+.nav-toggle:focus-visible{outline:2px solid #58a6ff;outline-offset:2px}
+.nav-links{display:inline}
+@media(max-width:768px){
+.nav-toggle{display:inline-block;margin:0.25rem 0}
+.nav-links{display:none;text-align:left;padding:0.5rem 0}
+.nav-links.open{display:block}
+.nav-links a{display:block;padding:0.6rem 1rem;margin:0;font-size:0.9rem;min-height:44px;line-height:1.6;border-bottom:1px solid #21262d}
+.nav-links a:hover,.nav-links a:focus{background:#161b22}
+.nav-links .sep{display:none}
+.nav-links br{display:none}
+.nav-links .nav-label{display:block;padding:0.5rem 1rem 0.2rem;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;color:#9eaab6;margin:0}
+}
+</style>
+<nav id="site-nav" aria-label="Site navigation">
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">&#9776; Menu</button>
+  <div class="nav-links" id="nav-links">
+<strong class="nav-label">Tools:</strong>
+  <a href="https://1328f.com/check.html">Eligibility Checker</a>
+  <a href="https://1328f.com/compare.html">Compare All Bars</a>
+  <a href="https://1328f.com/dashboard.html">Dashboard</a>
+  <a href="https://1328f.com/timeline.html">Timeline</a>
+  <span class="sep">|</span>
+  <strong class="nav-label">Learn:</strong>
+  <a href="https://1328f.com/explainer.html">1328(f) Explained</a>
+  <a href="https://1328f.com/discharge-bar.html">Discharge Bar</a>
+  <a href="https://1328f.com/727a8-discharge-bar.html">727(a)(8) Bar</a>
+  <a href="https://1328f.com/109g-filing-bar.html">109(g) Bar</a>
+  <a href="https://1328f.com/can-i-file-bankruptcy-again.html">Can I File Again?</a>
+  <a href="https://1328f.com/how-long-between-bankruptcies.html">How Long Between?</a>
+  <span class="sep">|</span>
+  <a href="https://1328f.com/chapter-7.html">Ch. 7</a>
+  <a href="https://1328f.com/chapter-11.html">Ch. 11</a>
+  <a href="https://1328f.com/chapter-12.html">Ch. 12</a>
+  <a href="https://1328f.com/chapter-13.html">Ch. 13</a>
+  <br>
+  <strong class="nav-label">Data:</strong>
+  <a href="https://1328f.com/chapter-13-failure-rate.html">Failure Rates</a>
+  <a href="https://1328f.com/chapter-13-success-rate-by-state.html">Success by State</a>
+  <a href="https://1328f.com/caselaw.html">Case Law</a>
+  <span class="sep">|</span>
+  <strong class="nav-label">For:</strong>
+  <a href="https://1328f.com/for-debtors.html">Debtors</a>
+  <a href="https://1328f.com/for-attorneys.html">Attorneys</a>
+  <a href="https://1328f.com/for-trustees.html">Trustees</a>
+  <a href="https://1328f.com/for-judges.html">Judges</a>
+  <a href="https://1328f.com/for-researchers.html">Researchers</a>
+  <span class="sep">|</span>
+  <a href="https://1328f.com/glossary.html">Glossary</a>
+  <a href="https://1328f.com/before-you-file.html">Before You File</a>
+  <a href="https://1328f.com/reading.html">Reading List</a>
+  <span class="sep">|</span>
+  <span class="sep">|</span>
+  <strong class="nav-label">1328f.org:</strong>
+  <a href="https://1328f.org/">Home</a>
+  <a href="https://1328f.org/reports/">Reports</a>
+  <a href="https://1328f.org/watch/">Docket Watch</a>
+  <a href="https://1328f.org/methodology/">Methodology</a>
+  <a href="https://1328f.org/tools/">Tools</a>
+  <a href="https://1328f.org/about/">About</a>
+  <a href="https://1328f.org/support/" style="color:#238636;font-weight:600">Support This Research</a>
+  </div>
+</nav>
+<script>document.addEventListener('DOMContentLoaded',function(){var b=document.querySelector('.nav-toggle');if(b)b.addEventListener('click',function(){var l=document.querySelector('.nav-links');l.classList.toggle('open');b.setAttribute('aria-expanded',l.classList.contains('open'))})});</script>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header role="banner">
+    <h1><a href="/" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Consumer Bankruptcy Research & Accountability</p>
+  </header>
+
+  <article id="main" role="article">
+    <a href="/reports/" class="back-link">&larr; All Reports</a>
+
+    <div class="article-header">
+      <h2>The Means Test at 20: Did It Work?</h2>
+      <div class="meta">
+        <span class="tag">Policy Analysis</span>
+        <span class="tag">Empirical</span>
+        <span class="tag">BAPCPA Series</span>
+        Published March 2026
+      </div>
+    </div>
+
+    <div class="callout">
+      <h4>Summary</h4>
+      <p style="margin-bottom: 0;">The means test (11 U.S.C. &sect; 707(b)(2)) was the signature consumer provision of the Bankruptcy Abuse Prevention and Consumer Protection Act of 2005 (Pub. L. 109-8). It introduced an income-based formula to determine whether a Chapter 7 filing constituted "abuse," channeling above-median-income debtors into Chapter 13 repayment plans. Twenty years of data from 4.9 million cases reveals that while the means test successfully channeled debtors, it channeled them into a process where the majority do not succeed. The provision addressed a problem that may have been overstated while creating consequences that were underestimated.</p>
+    </div>
+
+    <h2>1. The Theory Behind the Means Test</h2>
+    <p>Before BAPCPA, any individual debtor could file Chapter 7 regardless of income. Courts could dismiss Chapter 7 cases for "substantial abuse" under the pre-BAPCPA version of Section 707(b), but dismissals were infrequent and standards varied by circuit.</p>
+    <p>The credit industry's argument was straightforward: debtors earning above the median income in their state could afford to repay some portion of their debts through a three-to-five-year Chapter 13 plan. Allowing these debtors to discharge their obligations through Chapter 7 liquidation - which typically takes four months and requires no repayment - was an abuse of the system.</p>
+    <p>Congress adopted this theory in BAPCPA's means test. The mechanism works as follows:</p>
+    <ol class="step-list">
+      <li><strong>Income comparison.</strong> The debtor's current monthly income (defined as the six-month average prior to filing) is compared to the state median for a household of the same size. If below median, no presumption of abuse arises and the debtor qualifies for Chapter 7.</li>
+      <li><strong>Expense deduction.</strong> If above median, the debtor subtracts allowable expenses using IRS Local Standards, IRS National Standards, and actual secured debt payments. The result is "disposable income."</li>
+      <li><strong>Threshold calculation.</strong> If disposable income over 60 months exceeds $12,850 (as adjusted), or if monthly disposable income exceeds $214.17, a presumption of abuse arises. The debtor must rebut the presumption, convert to Chapter 13, or face dismissal.</li>
+    </ol>
+    <p>The formula is codified at 11 U.S.C. &sect; 707(b)(2)(A). It was designed to be mechanical - removing judicial discretion and replacing it with arithmetic.</p>
+
+    <h2>2. What the Filing Data Shows</h2>
+    <p>The means test took effect on October 17, 2005. The immediate effect was a massive spike in filings before the effective date as debtors rushed to file under the old rules, followed by a dramatic drop.</p>
+
+    <table>
+      <thead><tr><th scope="col">Period</th><th scope="col">Total Consumer Filings</th><th scope="col">Ch. 7 Share</th><th scope="col">Ch. 13 Share</th></tr></thead>
+      <tbody>
+        <tr><td>FY 2004 (pre-BAPCPA)</td><td>1,563,145</td><td>71%</td><td>29%</td></tr>
+        <tr><td>FY 2005 (rush + early BAPCPA)</td><td>2,039,214</td><td>73%</td><td>27%</td></tr>
+        <tr><td>FY 2006 (first full BAPCPA year)</td><td>573,203</td><td>62%</td><td>38%</td></tr>
+        <tr><td>FY 2010 (post-recession)</td><td>1,536,799</td><td>70%</td><td>29%</td></tr>
+        <tr><td>FY 2024 (most recent full year)</td><td>480,930</td><td>63%</td><td>35%</td></tr>
+      </tbody>
+    </table>
+    <p><em>Source: Federal Judicial Center Integrated Database, Administrative Office of the U.S. Courts annual reports.</em></p>
+
+    <div class="callout yellow">
+      <h4>Key Finding: The Chapter Shift</h4>
+      <p style="margin-bottom: 0;">Chapter 13's share of total consumer filings increased from approximately 29% pre-BAPCPA to 35-38% in the post-BAPCPA era. This represents hundreds of thousands of debtors per year who entered Chapter 13 repayment plans instead of Chapter 7 liquidation. The channeling effect was real - but the question is whether channeled debtors benefit from the process they were pushed into.</p>
+    </div>
+
+    <p>The initial post-BAPCPA filing collapse (2006) reflected both the pre-effective-date rush and the deterrent effect of increased complexity and cost. Filings rebounded during the 2008-2010 recession, suggesting that when financial distress is severe enough, the means test does not prevent filing - it only changes which chapter debtors file under.</p>
+
+    <h2>3. The Channeling Problem</h2>
+    <p>The means test's core assumption is that debtors channeled from Chapter 7 into Chapter 13 will complete their repayment plans. This assumption is testable. The data does not support it.</p>
+
+    <table>
+      <thead><tr><th scope="col">Population</th><th scope="col">Ch. 13 Completion Rate</th><th scope="col">Source</th></tr></thead>
+      <tbody>
+        <tr><td>National average (all Ch. 13)</td><td>33-40%</td><td>FJC IDB, 2008-2024 closings</td></tr>
+        <tr><td>Prior filers in Ch. 13</td><td>24.1%</td><td>1328f.org screening, 4.9M cases</td></tr>
+        <tr><td>Above-median-income debtors</td><td>~38-42%</td><td>Published studies (Braucher 2012, Eraslan et al. 2017)</td></tr>
+      </tbody>
+    </table>
+
+    <p>Above-median-income debtors - the specific population the means test targets - do complete plans at slightly higher rates than the general Chapter 13 population. This is expected: higher income provides more capacity to sustain plan payments. But even among this population, more than half do not complete their plans.</p>
+
+    <div class="callout red">
+      <h4>Key Finding: Majority Failure Among Channeled Debtors</h4>
+      <p style="margin-bottom: 0;">Even among above-median-income debtors channeled into Chapter 13 by the means test, the completion rate is approximately 38-42%. The majority of channeled debtors spend years making plan payments, paying trustee and attorney fees, and complying with court requirements - then emerge without a discharge. They would have received a Chapter 7 discharge in approximately four months under pre-BAPCPA law.</p>
+    </div>
+
+    <p>A debtor who fails to complete a Chapter 13 plan is typically worse off than if they had never filed. They have paid months or years of plan payments (typically distributed to creditors and the trustee), incurred attorney fees, and spent years under court supervision. Upon dismissal, the original debts remain - reduced only by whatever plan payments were distributed to creditors. The automatic stay is gone, and creditors resume collection.</p>
+
+    <h2>4. Geographic Disparities</h2>
+    <p>The means test applies a uniform national formula, but bankruptcy outcomes vary dramatically by geography. Chapter 13 completion rates range from under 20% in some districts to over 50% in others.</p>
+
+    <table>
+      <thead><tr><th scope="col">District</th><th scope="col">Ch. 13 Completion Rate</th><th scope="col">Ch. 13 Share of Filings</th></tr></thead>
+      <tbody>
+        <tr><td>S.D. Florida (FLSB)</td><td>~28%</td><td>~45%</td></tr>
+        <tr><td>S.D. Texas (TXSB)</td><td>~31%</td><td>~40%</td></tr>
+        <tr><td>N.D. Illinois (ILNB)</td><td>~35%</td><td>~52%</td></tr>
+        <tr><td>N.D. Georgia (GANB)</td><td>~25%</td><td>~62%</td></tr>
+      </tbody>
+    </table>
+    <p><em>Source: FJC Integrated Database, cases filed 2010-2022 with sufficient time to reach plan completion.</em></p>
+
+    <p>The Northern District of Georgia illustrates a compounding effect: GANB has one of the highest Chapter 13 filing shares in the country (62%) and one of the lowest completion rates (~25%). This means nearly two-thirds of consumer filers enter Chapter 13, and three-quarters of those do not complete their plans. The means test channels debtors into this system without regard for local completion rates.</p>
+
+    <div class="callout yellow">
+      <h4>Key Finding: Local Conditions Override the Formula</h4>
+      <p style="margin-bottom: 0;">The means test uses state-level median income figures and IRS expense standards, but Chapter 13 outcomes depend on local factors the formula ignores: trustee practices, judicial culture, attorney quality, local economic conditions, and the availability of competent debtor counsel. A debtor who passes the means test in one district and is channeled into Chapter 13 may face dramatically different odds of success than an identically situated debtor in another district.</p>
+    </div>
+
+    <h2>5. The Cost of Complexity</h2>
+    <p>The means test added substantial complexity to consumer bankruptcy practice. Form B122A-2 (the Chapter 7 means test calculation) is seven pages of income calculations, expense deductions, and threshold comparisons. The form requires six months of income documentation, applicable IRS standards, and accurate categorization of expenses into allowed and disallowed categories.</p>
+    <p>This complexity has measurable costs:</p>
+    <ul>
+      <li><strong>Increased attorney fees.</strong> Pre-BAPCPA Chapter 7 attorney fees averaged $600-800 nationally. Post-BAPCPA, the average increased to $1,200-1,500, with significant variation by market. The means test calculation accounts for a substantial portion of this increase.</li>
+      <li><strong>Increased filing costs.</strong> Combined with the credit counseling mandate (Section 109(h)) and increased filing fees, the total cost of a consumer bankruptcy filing rose by $500-1,000 or more after BAPCPA.</li>
+      <li><strong>Pro se barriers.</strong> The means test is difficult for unrepresented debtors to complete correctly. Mathematical errors, incorrect income periods, and misapplied expense standards are common in pro se filings.</li>
+      <li><strong>Volume practice advantage.</strong> Firms that automate the means test calculation can process it at low marginal cost. Solo practitioners who calculate it manually cannot. This cost structure favors high-volume practices over individualized representation.</li>
+    </ul>
+
+    <h2>6. Did the Means Test Reduce Abuse?</h2>
+    <p>The threshold question is whether the problem BAPCPA addressed - above-median-income debtors abusing Chapter 7 - was significant in the first place.</p>
+    <p>The Government Accountability Office (GAO) estimated in 1999 that debtors with the ability to repay a meaningful portion of their debts accounted for approximately 3-10% of Chapter 7 filers. The Executive Office for United States Trustees reported that pre-BAPCPA motions to dismiss under old Section 707(b) were filed in fewer than 1% of Chapter 7 cases.</p>
+
+    <div class="callout">
+      <h4>The Denominator Problem</h4>
+      <p style="margin-bottom: 0;">BAPCPA's means test applies to all above-median-income Chapter 7 filers. But the population it was designed to address - debtors who could afford a Chapter 13 plan but chose Chapter 7 to avoid repayment - was a small fraction of total filings. The means test uses a broad filter to address a narrow problem, and the filter's false-positive rate (debtors who fail the means test but cannot actually sustain a Chapter 13 plan) appears to substantially exceed its true-positive rate.</p>
+    </div>
+
+    <p>Post-BAPCPA data on means test outcomes is limited, but available studies suggest:</p>
+    <ul>
+      <li>Fewer than 15% of Chapter 7 debtors have above-median income and are subject to the full means test calculation.</li>
+      <li>Of those, the vast majority pass the means test after expense deductions - the presumption of abuse does not arise.</li>
+      <li>Actual dismissals or conversions based on the means test occur in approximately 1-3% of above-median-income cases.</li>
+      <li>U.S. Trustee motions under Section 707(b) remain rare relative to total filings.</li>
+    </ul>
+    <p>In other words, the means test subjects millions of debtors to a complex calculation, increases costs for all filers, and channels a significant minority into Chapter 13 - but the number of cases where it identifies genuine abuse and produces a different outcome than pre-BAPCPA law is very small.</p>
+
+    <h2>7. The Attorney Liability Provision</h2>
+    <p>Section 707(b)(4) of the Bankruptcy Code, added by BAPCPA, makes attorneys personally liable for the accuracy of the means test calculation. If a petition is found to violate Rule 9011 of the Federal Rules of Bankruptcy Procedure, the court may order the debtor's attorney to reimburse the trustee for costs and attorney fees incurred in pursuing a means test motion.</p>
+    <p>This provision was intended to ensure careful preparation. Its effect on practice has been mixed:</p>
+    <ul>
+      <li>It increased the diligence of conscientious practitioners, who were already preparing competent filings.</li>
+      <li>It increased the cost of representation, as attorneys factor liability risk into their fees.</li>
+      <li>It has not eliminated deficient filings by high-volume practices, which absorb occasional sanctions as a cost of doing business.</li>
+      <li>It may deter some attorneys from taking borderline cases, reducing access to representation for debtors near the means test threshold.</li>
+    </ul>
+
+    <h2>8. Twenty-Year Scorecard</h2>
+
+    <table>
+      <thead><tr><th scope="col">Metric</th><th scope="col">Intended Effect</th><th scope="col">Observed Outcome</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Chapter shift</td>
+          <td>Channel above-median debtors to Ch. 13</td>
+          <td>Ch. 13 share rose ~6-9 percentage points. Channeling occurred.</td>
+        </tr>
+        <tr>
+          <td>Abuse reduction</td>
+          <td>Prevent debtors with ability to pay from using Ch. 7</td>
+          <td>Actual means test dismissals/conversions affect 1-3% of above-median filers. Pre-BAPCPA abuse rate was already low.</td>
+        </tr>
+        <tr>
+          <td>Channeled debtor outcomes</td>
+          <td>Channeled debtors complete Ch. 13 plans</td>
+          <td>Majority (~58-62%) of channeled debtors fail to complete plans.</td>
+        </tr>
+        <tr>
+          <td>Filing cost</td>
+          <td>Not a stated goal</td>
+          <td>Consumer bankruptcy filing costs increased $500-1,000+.</td>
+        </tr>
+        <tr>
+          <td>Market structure</td>
+          <td>Not a stated goal</td>
+          <td>Increased complexity favored volume practices over solo practitioners.</td>
+        </tr>
+        <tr>
+          <td>Pro se access</td>
+          <td>Not a stated goal</td>
+          <td>Means test form complexity made pro se filing substantially harder.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout red">
+      <h4>Bottom Line</h4>
+      <p style="margin-bottom: 0;">The means test achieved its narrow mechanical goal: it channels above-median-income debtors away from Chapter 7. But the downstream consequences of that channeling - high Chapter 13 failure rates, increased costs, market consolidation, and reduced access - appear to outweigh the benefits. The provision addressed a problem affecting a small percentage of filers while imposing costs on all of them.</p>
+    </div>
+
+    <h2>9. Reform Considerations</h2>
+    <p>Twenty years of data raises specific policy questions about the means test:</p>
+    <ul>
+      <li><strong>Should the means test account for local completion rates?</strong> Channeling a debtor into Chapter 13 in a district with a 25% completion rate produces different expected outcomes than the same channeling in a 50% district. The formula ignores this.</li>
+      <li><strong>Should the income period be reconsidered?</strong> The six-month lookback captures pre-filing income, which may not reflect the debtor's actual ability to sustain a three-to-five-year plan. Debtors who recently lost employment or income may fail the means test based on income they no longer earn.</li>
+      <li><strong>Should the expense standards be updated?</strong> The IRS Local and National Standards used in the means test were designed for tax collection, not bankruptcy. They may not accurately reflect the actual living expenses of debtors in financial distress.</li>
+      <li><strong>Should there be a safety valve?</strong> The pre-BAPCPA standard allowed judicial discretion to evaluate individual circumstances. The means test replaced discretion with a formula. Twenty years of data suggests the formula produces substantial numbers of false positives - debtors who fail the test but cannot sustain a Chapter 13 plan.</li>
+    </ul>
+    <p>These are empirical questions that can be informed by data. The 4.9 million cases in the FJC Integrated Database provide a foundation for evidence-based reform that did not exist in 2005.</p>
+
+    <h3>Related Reports</h3>
+    <ul>
+      <li><a href="/reports/bapcpa-at-20/">BAPCPA at 20: What the Data Shows</a> - overview of all major BAPCPA provisions</li>
+      <li><a href="/reports/bapcpa-credit-counseling/">Mandatory Credit Counseling: Costs vs. Benefits</a> - companion analysis</li>
+      <li><a href="/reports/bapcpa-repeat-filers/">Repeat Filers and the Discharge Bar</a> - Section 1328(f) deep dive</li>
+      <li><a href="/reports/prior-filer-discharge-rates/">Prior-Filer Discharge Rates by District</a> - completion data</li>
+      <li><a href="/reports/methodology-1328f-screening/">How We Screened 4.9 Million Bankruptcy Cases</a> - full methodology</li>
+    </ul>
+
+    <div class="callout" style="border-left-color: #9eaab6;">
+      <h4>How to Cite</h4>
+      <p style="margin-bottom: 0; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 0.85rem;">1328f.org, "The Means Test at 20: Did It Work?," March 2026, https://1328f.org/reports/bapcpa-means-test-impact/</p>
+    </div>
+
+    <div class="callout yellow">
+      <h4>Not Legal Advice</h4>
+      <p style="margin-bottom: 0;">This report presents empirical findings from public court data. It does not constitute legal advice and should not be relied upon as a substitute for professional legal counsel. The analysis reflects data available as of March 2026. Individual outcomes depend on facts and circumstances that no aggregate analysis can capture. Debtors considering bankruptcy should consult a qualified attorney licensed in their jurisdiction.</p>
+    </div>
+
+    <p style="text-align: center; margin-top: 2rem;"><a href="/support/" style="color: #9eaab6; font-size: 0.9rem;">Support this research</a></p>
+
+  </article>
+
+
+<footer role="contentinfo">
+    <p>1328f.org - Independent consumer bankruptcy research. Not legal advice.</p>
+    <p class="links">
+      <a href="https://1328f.com">Screener Tool</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/">About</a>
+      <a href="/support/">Support</a>
+    </p>
+
+
+    <div style="background:#161b22;border:1px solid #30363d;border-radius:8px;padding:1rem 1.2rem;margin:2rem 0;">
+      <p style="color:#9eaab6;font-size:0.8rem;margin-bottom:0.5rem;">Related tools on 1328f.com:</p>
+      <a href="https://1328f.com/discharge-bar.html" style="display:inline-block;margin:0.2rem 0.3rem;padding:0.3rem 0.8rem;background:#21262d;border:1px solid #30363d;border-radius:4px;font-size:0.85rem;color:#58a6ff;text-decoration:none;">Bankruptcy Discharge Bar</a>
+      <a href="https://1328f.com/chapter-13-failure-rate.html" style="display:inline-block;margin:0.2rem 0.3rem;padding:0.3rem 0.8rem;background:#21262d;border:1px solid #30363d;border-radius:4px;font-size:0.85rem;color:#58a6ff;text-decoration:none;">Chapter 13 Failure Rate</a>
+      <a href="https://1328f.com/chapter-13-success-rate-by-state.html" style="display:inline-block;margin:0.2rem 0.3rem;padding:0.3rem 0.8rem;background:#21262d;border:1px solid #30363d;border-radius:4px;font-size:0.85rem;color:#58a6ff;text-decoration:none;">Success Rate by State</a>
+    </div>
+<br><span style="font-size:11px">This site provides general information only and does not constitute legal advice. No attorney-client relationship is created. Consult a licensed attorney for advice on your specific situation.</span>
+</footer>
+
+
+<div style="background:#161b22;border:1px solid #30363d;border-radius:6px;padding:1.5rem;text-align:center;max-width:900px;margin:2rem auto 0">
+  <p style="color:#f0f6fc;font-size:1.1rem;font-weight:600;margin-bottom:0.25rem">PACER cases made free through RECAP: <span id="recap-count" style="color:#58a6ff">0</span> of 37.9 million</p>
+  <p style="color:#9eaab6;font-size:0.85rem;margin-bottom:0.75rem">Every document we access becomes permanently free for the next researcher, attorney, or debtor.</p>
+  <div style="background:#21262d;border-radius:6px;height:22px;overflow:hidden;margin:0.75rem auto;max-width:400px"><div style="background:linear-gradient(90deg,#238636,#2ea043);height:100%;width:0%;border-radius:6px;min-width:2px"></div></div>
+  <p style="margin-bottom:0.25rem"><span style="color:#58a6ff;font-size:1.2rem;font-weight:700">$0</span> <span style="color:#9eaab6">of</span> <span style="color:#f0f6fc;font-size:1.2rem;font-weight:700">$5,000</span> <span style="color:#9eaab6">Q1 PACER research goal</span></p>
+  <p style="color:#9eaab6;font-size:0.8rem;margin-bottom:0.75rem">1,500+ hours. No grants, no institutional backing. 0 supporters so far.</p>
+  <a href="/support/" style="display:inline-block;background:#238636;color:#fff;padding:0.5rem 1.5rem;border-radius:6px;font-weight:600;font-size:0.9rem;text-decoration:none">Fund this research</a>
+</div>
+</body>
+</html>

@@ -573,7 +573,8 @@ main { padding: 1rem; }
       <a href="/support/">Support</a>
     </p>
     <p style="margin-top: 0.75rem; font-size: 0.75rem; color: #9eaab6;">Built on public court data. All analysis is reproducible. An independent research project.</p>
-  </footer>
+  <br><span style="font-size:11px">This site provides general information only and does not constitute legal advice. No attorney-client relationship is created. Consult a licensed attorney for advice on your specific situation.</span>
+</footer>
 
 <script>fetch("/data/recap-count.json").then(function(r){return r.json()}).then(function(d){var e=document.getElementById("recap-count");if(e&&d.count!==undefined)e.textContent=d.count.toLocaleString()}).catch(function(){})</script>
 </body>
