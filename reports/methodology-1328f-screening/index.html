@@ -101,15 +101,96 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
   "@context": "https://schema.org",
   "@type": "ScholarlyArticle",
   "headline": "How We Screened 4.9 Million Bankruptcy Cases",
-  "datePublished": "2026-03-21",
-  "publisher": {
+  "alternativeHeadline": "Technical Methodology for Section 1328(f) Discharge Bar Screening",
+  "author": {
     "@type": "Organization",
     "name": "1328f.org",
     "url": "https://1328f.org"
   },
+  "datePublished": "2026-03-21",
+  "dateModified": "2026-03-22",
+  "publisher": {
+    "@type": "Organization",
+    "name": "1328f.org",
+    "url": "https://1328f.org",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://1328f.org/og-image.png"
+    }
+  },
+  "description": "Technical walkthrough of the Section 1328(f) screening methodology: data sources, filing-date-to-filing-date calculation, de-staling procedures, and verification.",
+  "about": [
+    {
+      "@type": "Thing",
+      "name": "Bankruptcy",
+      "sameAs": "https://en.wikipedia.org/wiki/Bankruptcy_in_the_United_States"
+    },
+    {
+      "@type": "Thing",
+      "name": "Section 1328(f)",
+      "sameAs": "https://www.law.cornell.edu/uscode/text/11/1328"
+    }
+  ],
+  "isAccessibleForFree": true,
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "inLanguage": ["en", "es"],
+  "keywords": "1328(f) screening, bankruptcy methodology, filing date calculation, FJC Integrated Database, PACER, de-staling, discharge bar verification",
+  "isPartOf": {
+    "@type": "WebSite",
+    "name": "1328f.org",
+    "url": "https://1328f.org"
+  },
+  "mainEntityOfPage": "https://1328f.org/reports/methodology-1328f-screening/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "Section 1328(f) Discharge Bar Screening Dataset",
+  "description": "Comprehensive dataset of 4.9 million federal bankruptcy cases across 94 districts, with repeat-filer identification, discharge outcomes, and Section 1328(f) eligibility screening. Derived from Federal Judicial Center Integrated Database public records and PACER docket data.",
   "url": "https://1328f.org/reports/methodology-1328f-screening/",
-  "inLanguage": "en",
-  "isAccessibleForFree": true
+  "identifier": "1328f-screening-methodology-dataset",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
+  "creator": {
+    "@type": "Organization",
+    "name": "1328f.org",
+    "url": "https://1328f.org"
+  },
+  "temporalCoverage": "2008/2024",
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "United States",
+    "geo": {
+      "@type": "GeoShape",
+      "description": "All 94 federal bankruptcy court districts"
+    }
+  },
+  "variableMeasured": [
+    {
+      "@type": "PropertyValue",
+      "name": "Total cases analyzed",
+      "value": "4,900,000+"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Federal districts covered",
+      "value": "94"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Discharge bar cases identified",
+      "value": "264+"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "Prior filers with subsequent discharge",
+      "value": "114+"
+    }
+  ],
+  "measurementTechnique": "Automated screening of FJC Integrated Database records cross-referenced with PACER docket entries, using filing-date-to-filing-date interval analysis per 11 U.S.C. section 1328(f)",
+  "keywords": ["bankruptcy", "1328(f)", "discharge bar", "repeat filer", "PACER", "FJC", "consumer bankruptcy", "Chapter 13", "Chapter 7", "attorney performance"]
 }
 </script>
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
