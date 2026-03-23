@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Impossible Discharges: Courts Granted Discharge When Law Said No | 1328f.org</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #1a1a2e;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+  .chart-container {
+    width: 100%;
+    max-width: 600px;
+  }
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 0.25rem;
+  }
+  .subtitle {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+  }
+  .donut-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .donut {
+    position: relative;
+    width: 180px;
+    height: 180px;
+    flex-shrink: 0;
+  }
+  .donut svg {
+    width: 100%;
+    height: 100%;
+    transform: rotate(-90deg);
+  }
+  .donut circle {
+    fill: none;
+    stroke-width: 28;
+    cx: 90;
+    cy: 90;
+    r: 70;
+  }
+  .donut .track { stroke: #e5e7eb; }
+  .donut .discharged {
+    stroke: #dc2626;
+    stroke-dasharray: 190.1 249.8;
+    stroke-linecap: round;
+    transition: stroke-dasharray 1s ease-out;
+  }
+  .donut .dismissed-seg {
+    stroke: #9ca3af;
+    stroke-dasharray: 249.8 190.1;
+    stroke-dashoffset: -190.1;
+  }
+  .donut-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  .donut-center .big {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #dc2626;
+    display: block;
+    line-height: 1.1;
+  }
+  .donut-center .small {
+    font-size: 0.7rem;
+    color: #6b7280;
+  }
+  .legend {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+  }
+  .legend-dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 3px;
+    flex-shrink: 0;
+  }
+  .legend-dot.red { background: #dc2626; }
+  .legend-dot.gray { background: #9ca3af; }
+  .legend-label {
+    font-size: 0.85rem;
+    color: #1a1a2e;
+  }
+  .legend-label strong {
+    font-size: 1rem;
+    display: block;
+  }
+  .context {
+    font-size: 0.78rem;
+    color: #6b7280;
+    margin-top: 1.25rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e5e7eb;
+    line-height: 1.6;
+  }
+  .context strong { color: #1a1a2e; }
+  .attribution {
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.72rem;
+    color: #9ca3af;
+  }
+  .attribution a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+  .attribution a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="chart-container">
+  <h2>Courts Granted Discharge When Federal Law Said No</h2>
+  <p class="subtitle">Verified 7-district sample: 264 cases where Section 1328(f) bar applied</p>
+
+  <div class="donut-wrapper">
+    <div class="donut">
+      <svg viewBox="0 0 180 180">
+        <circle class="track" />
+        <circle class="discharged" />
+      </svg>
+      <div class="donut-center">
+        <span class="big">43.2%</span>
+        <span class="small">discharged<br>anyway</span>
+      </div>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item">
+        <div class="legend-dot red"></div>
+        <div class="legend-label">
+          <strong>114 discharged</strong>
+          Granted despite statutory bar
+        </div>
+      </div>
+      <div class="legend-item">
+        <div class="legend-dot gray"></div>
+        <div class="legend-label">
+          <strong>150 dismissed</strong>
+          Case failed (bar not tested)
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="context">
+    <strong>What this means:</strong> In 114 verified cases, debtors filed a new Chapter 13 before the statutory waiting period expired. Federal law (11 U.S.C. &sect;1328(f)) prohibits discharge in these cases. No court, trustee, or automated system flagged the violation.
+  </div>
+
+  <div class="attribution">
+    Source: <a href="https://1328f.org/reports/impossible-discharges/" target="_blank" rel="noopener">1328f.org</a> &middot; Verified against PACER dockets, filing-date-to-filing-date methodology
+  </div>
+</div>
+</body>
+</html>

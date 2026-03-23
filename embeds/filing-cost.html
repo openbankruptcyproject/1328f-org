@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Cost of a Failed Chapter 13 Bankruptcy | 1328f.org</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #fff;
+    color: #1a1a2e;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+  }
+  .chart-container {
+    width: 100%;
+    max-width: 600px;
+  }
+  h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 0.25rem;
+  }
+  .subtitle {
+    font-size: 0.8rem;
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+  }
+  .total-banner {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  .total-banner .label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #991b1b;
+  }
+  .total-banner .amount {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #dc2626;
+  }
+  .cost-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+  .cost-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+  .cost-bar-wrapper {
+    flex: 1;
+    min-width: 0;
+  }
+  .cost-name {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.2rem;
+  }
+  .cost-name .name {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #1a1a2e;
+  }
+  .cost-name .amount {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: #dc2626;
+  }
+  .cost-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+    height: 24px;
+    overflow: hidden;
+  }
+  .cost-fill {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #dc2626, #ef4444);
+    display: flex;
+    align-items: center;
+    padding-left: 0.5rem;
+  }
+  .cost-fill .inner-label {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #fff;
+    white-space: nowrap;
+  }
+  .bar-attorney { width: 88%; }
+  .bar-filing { width: 5.5%; min-width: 40px; }
+  .bar-credit { width: 0.9%; min-width: 40px; background: linear-gradient(90deg, #b91c1c, #dc2626); }
+  .bar-financial { width: 0.9%; min-width: 40px; background: linear-gradient(90deg, #b91c1c, #dc2626); }
+
+  .refund-badge {
+    display: inline-block;
+    background: #dc2626;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    padding: 0.15rem 0.4rem;
+    border-radius: 3px;
+    letter-spacing: 0.03em;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+  }
+
+  .context {
+    font-size: 0.78rem;
+    color: #6b7280;
+    margin-top: 1.25rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid #e5e7eb;
+    line-height: 1.6;
+  }
+  .context strong { color: #1a1a2e; }
+  .attribution {
+    margin-top: 1rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid #e5e7eb;
+    font-size: 0.72rem;
+    color: #9ca3af;
+  }
+  .attribution a {
+    color: #2563eb;
+    text-decoration: none;
+  }
+  .attribution a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="chart-container">
+  <h2>The Cost of a Failed Chapter 13 Bankruptcy</h2>
+  <p class="subtitle">What debtors pay when their case is dismissed &mdash; and what they get back</p>
+
+  <div class="total-banner">
+    <span class="label">Total Non-Refundable Cost</span>
+    <span class="amount">$3,400 &ndash; $5,700</span>
+  </div>
+
+  <div class="cost-stack">
+    <div class="cost-bar-wrapper">
+      <div class="cost-name">
+        <span class="name">Attorney Fees <span class="refund-badge">NON-REFUNDABLE</span></span>
+        <span class="amount">$3,000 &ndash; $5,000</span>
+      </div>
+      <div class="cost-track">
+        <div class="cost-fill bar-attorney">
+          <span class="inner-label">87% of total cost</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="cost-bar-wrapper">
+      <div class="cost-name">
+        <span class="name">Court Filing Fee <span class="refund-badge">NON-REFUNDABLE</span></span>
+        <span class="amount">$313</span>
+      </div>
+      <div class="cost-track">
+        <div class="cost-fill bar-filing"></div>
+      </div>
+    </div>
+
+    <div class="cost-bar-wrapper">
+      <div class="cost-name">
+        <span class="name">Credit Counseling <span class="refund-badge">NON-REFUNDABLE</span></span>
+        <span class="amount">$50</span>
+      </div>
+      <div class="cost-track">
+        <div class="cost-fill bar-credit"></div>
+      </div>
+    </div>
+
+    <div class="cost-bar-wrapper">
+      <div class="cost-name">
+        <span class="name">Financial Management Course <span class="refund-badge">NON-REFUNDABLE</span></span>
+        <span class="amount">$50</span>
+      </div>
+      <div class="cost-track">
+        <div class="cost-fill bar-financial"></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="context">
+    <strong>When a Chapter 13 case is dismissed,</strong> the debtor loses all fees paid. Attorney fees are typically collected upfront or through the plan before meaningful work is done. With a 48% national dismissal rate, nearly half of all Chapter 13 debtors pay thousands of dollars for no legal relief.
+  </div>
+
+  <div class="attribution">
+    Source: <a href="https://1328f.org/reports/filing-fee-trap/" target="_blank" rel="noopener">1328f.org</a> &middot; Fee ranges based on court-approved no-look fees across 94 districts
+  </div>
+</div>
+</body>
+</html>

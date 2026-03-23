@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CF8T1FYRCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CF8T1FYRCV');
+</script>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Data — Downloadable Datasets | 1328f.org</title>
+  <meta name="description" content="Download public bankruptcy datasets: Chapter 13 dismissal rates, Section 1328(f) screening results, prior-filer discharge rates, and national filing statistics. CC BY 4.0.">
+  <meta name="keywords" content="bankruptcy data, open data, Chapter 13 dismissal rates, 1328(f), prior filer, FJC, PACER, CSV, JSON, download">
+  <link rel="canonical" href="https://1328f.org/data/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Open Data — Downloadable Datasets | 1328f.org">
+  <meta property="og:description" content="Download public bankruptcy datasets derived from 4.9M federal cases. CSV and JSON formats. CC BY 4.0.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://1328f.org/data/">
+  <meta property="og:image" content="https://1328f.org/og-image.png">
+  <meta property="og:site_name" content="1328f.org">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
+    }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible, button:focus-visible {
+      outline: 2px solid #58a6ff;
+      outline-offset: 2px;
+    }
+    code {
+      background: #161b22;
+      padding: 0.15em 0.4em;
+      border-radius: 3px;
+      font-size: 0.9em;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+    .skip-link {
+      position: absolute; left: -9999px; top: auto;
+      width: 1px; height: 1px; overflow: hidden; z-index: 9999;
+      padding: 1rem; background: #238636; color: #fff;
+      font-weight: 600; text-decoration: none;
+    }
+    .skip-link:focus {
+      position: fixed; top: 10px; left: 10px;
+      width: auto; height: auto; overflow: visible;
+    }
+
+    /* Header */
+    header {
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 {
+      color: #f0f6fc;
+      font-size: 1.8rem;
+      margin-bottom: 0.5rem;
+    }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle {
+      color: #9eaab6;
+      font-size: 1rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* Main */
+    main { max-width: 900px; margin: 0 auto; padding: 2rem; }
+
+    /* Intro */
+    .intro {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    .intro p {
+      color: #c9d1d9;
+      margin-bottom: 0.75rem;
+    }
+    .intro p:last-child { margin-bottom: 0; }
+
+    /* Dataset Cards */
+    .dataset-card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      transition: border-color 0.2s;
+    }
+    .dataset-card:hover { border-color: #58a6ff; }
+    .dataset-card h3 {
+      color: #f0f6fc;
+      font-size: 1.15rem;
+      margin-bottom: 0.5rem;
+    }
+    .dataset-card .meta {
+      color: #9eaab6;
+      font-size: 0.8rem;
+      margin-bottom: 0.75rem;
+    }
+    .dataset-card .meta .tag {
+      background: #21262d;
+      padding: 0.15em 0.5em;
+      border-radius: 3px;
+      margin-right: 0.5rem;
+      display: inline-block;
+    }
+    .dataset-card p.desc {
+      color: #c9d1d9;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    .dataset-card .download-links {
+      margin-bottom: 1rem;
+    }
+    .dataset-card .download-links a {
+      display: inline-block;
+      background: #238636;
+      color: #fff;
+      padding: 0.4rem 1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
+      margin-right: 0.5rem;
+      margin-bottom: 0.5rem;
+      transition: background 0.2s;
+    }
+    .dataset-card .download-links a:hover {
+      background: #2ea043;
+      text-decoration: none;
+    }
+
+    /* Preview Tables */
+    .preview-toggle {
+      background: none;
+      border: 1px solid #30363d;
+      color: #58a6ff;
+      padding: 0.3rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.8rem;
+      cursor: pointer;
+      margin-bottom: 0.75rem;
+    }
+    .preview-toggle:hover { background: #21262d; }
+    .preview-wrap { display: none; overflow-x: auto; }
+    .preview-wrap.open { display: block; }
+    .preview-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.8rem;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      margin-bottom: 0.5rem;
+    }
+    .preview-table th {
+      background: #21262d;
+      color: #f0f6fc;
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+      border-bottom: 2px solid #30363d;
+      white-space: nowrap;
+    }
+    .preview-table td {
+      padding: 0.4rem 0.75rem;
+      border-bottom: 1px solid #21262d;
+      color: #c9d1d9;
+      white-space: nowrap;
+    }
+    .preview-table tr:hover td { background: #161b2288; }
+    .preview-note {
+      color: #9eaab6;
+      font-size: 0.75rem;
+      font-style: italic;
+    }
+
+    /* Methodology & License */
+    .info-section {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .info-section h2 {
+      color: #f0f6fc;
+      font-size: 1.2rem;
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #30363d;
+    }
+    .info-section p {
+      color: #c9d1d9;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+    .info-section p:last-child { margin-bottom: 0; }
+    .license-badge {
+      display: inline-block;
+      background: #21262d;
+      border: 1px solid #30363d;
+      padding: 0.25rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.85rem;
+      color: #58a6ff;
+      font-weight: 600;
+    }
+
+    /* Section Headers */
+    .section-header {
+      color: #f0f6fc;
+      font-size: 1.3rem;
+      margin: 2.5rem 0 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid #30363d;
+    }
+
+    /* Footer */
+    footer {
+      background: #161b22;
+      border-top: 1px solid #30363d;
+      padding: 2rem;
+      text-align: center;
+      margin-top: 3rem;
+      color: #9eaab6;
+      font-size: 0.85rem;
+    }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+
+    /* Responsive */
+    @media (max-width: 600px) {
+      header { padding: 1.5rem 1rem; }
+      header h1 { font-size: 1.4rem; }
+      main { padding: 1rem; }
+      .intro { padding: 1.25rem; }
+      .dataset-card { padding: 1.25rem; }
+      .preview-table { font-size: 0.7rem; }
+      .preview-table th, .preview-table td { padding: 0.3rem 0.5rem; }
+    }
+  </style>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Dataset",
+  "name": "1328f.org Open Bankruptcy Data",
+  "description": "Aggregated, anonymized bankruptcy statistics derived from public federal court data. Includes Chapter 13 dismissal rates by district, Section 1328(f) screening results, prior-filer discharge rates, and national filing statistics.",
+  "url": "https://1328f.org/data/",
+  "license": "https://creativecommons.org/licenses/by/4.0/",
+  "creator": {
+    "@type": "Organization",
+    "name": "1328f.org",
+    "url": "https://1328f.org"
+  },
+  "distribution": [
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://1328f.org/data/chapter13_dismissal_by_district.csv"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://1328f.org/data/1328f_barred_cases.csv"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "application/json",
+      "contentUrl": "https://1328f.org/data/1328f_barred_cases.json"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://1328f.org/data/prior_filer_rates_by_district.csv"
+    },
+    {
+      "@type": "DataDownload",
+      "encodingFormat": "text/csv",
+      "contentUrl": "https://1328f.org/data/national_filing_stats.csv"
+    }
+  ],
+  "temporalCoverage": "2008/2024",
+  "spatialCoverage": "United States"
+}
+</script>
+</head>
+<body>
+<style>
+#site-nav{background:#0d1117;border-bottom:1px solid #30363d;padding:0.5rem 1rem;text-align:center;font-size:0.78rem;line-height:1.9}
+#site-nav a{margin:0 0.3rem}
+#site-nav .sep{color:#30363d;margin:0 0.25rem}
+#site-nav .nav-label{color:#f0f6fc;margin:0 0.4rem;font-weight:700}
+#site-nav .nav-label:first-child{margin-right:0.4rem}
+.nav-toggle{display:none;background:none;border:1px solid #30363d;color:#c9d1d9;font-size:1.2rem;padding:0.4rem 0.75rem;border-radius:4px;cursor:pointer;line-height:1}
+.nav-toggle:focus-visible{outline:2px solid #58a6ff;outline-offset:2px}
+.nav-links{display:inline}
+@media(max-width:768px){
+.nav-toggle{display:inline-block;margin:0.25rem 0}
+.nav-links{display:none;text-align:left;padding:0.5rem 0}
+.nav-links.open{display:block}
+.nav-links a{display:block;padding:0.6rem 1rem;margin:0;font-size:0.9rem;min-height:44px;line-height:1.6;border-bottom:1px solid #21262d}
+.nav-links a:hover,.nav-links a:focus{background:#161b22}
+.nav-links .sep{display:none}
+.nav-links br{display:none}
+.nav-links .nav-label{display:block;padding:0.5rem 1rem 0.2rem;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;color:#9eaab6;margin:0}
+}
+</style>
+<nav id="site-nav" aria-label="Site navigation">
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">&#9776; Menu</button>
+  <div class="nav-links" id="nav-links">
+<strong class="nav-label">Tools:</strong>
+  <a href="https://1328f.com/check.html">Eligibility Checker</a>
+  <a href="https://1328f.com/compare.html">Compare All Bars</a>
+  <a href="https://1328f.com/dashboard.html">Dashboard</a>
+  <a href="https://1328f.com/timeline.html">Timeline</a>
+  <span class="sep">|</span>
+  <strong class="nav-label">Learn:</strong>
+  <a href="https://1328f.com/explainer.html">1328(f) Explained</a>
+  <a href="https://1328f.com/discharge-bar.html">Discharge Bar</a>
+  <a href="https://1328f.com/727a8-discharge-bar.html">727(a)(8) Bar</a>
+  <a href="https://1328f.com/109g-filing-bar.html">109(g) Bar</a>
+  <a href="https://1328f.com/can-i-file-bankruptcy-again.html">Can I File Again?</a>
+  <a href="https://1328f.com/how-long-between-bankruptcies.html">How Long Between?</a>
+  <span class="sep">|</span>
+  <a href="https://1328f.com/chapter-7.html">Ch. 7</a>
+  <a href="https://1328f.com/chapter-11.html">Ch. 11</a>
+  <a href="https://1328f.com/chapter-12.html">Ch. 12</a>
+  <a href="https://1328f.com/chapter-13.html">Ch. 13</a>
+  <br>
+  <strong class="nav-label">Data:</strong>
+  <a href="https://1328f.com/chapter-13-failure-rate.html">Failure Rates</a>
+  <a href="https://1328f.com/chapter-13-success-rate-by-state.html">Success by State</a>
+  <a href="https://1328f.com/caselaw.html">Case Law</a>
+  <span class="sep">|</span>
+  <strong class="nav-label">For:</strong>
+  <a href="https://1328f.com/for-debtors.html">Debtors</a>
+  <a href="https://1328f.com/for-attorneys.html">Attorneys</a>
+  <a href="https://1328f.com/for-trustees.html">Trustees</a>
+  <a href="https://1328f.com/for-judges.html">Judges</a>
+  <a href="https://1328f.com/for-researchers.html">Researchers</a>
+  <span class="sep">|</span>
+  <a href="https://1328f.com/glossary.html">Glossary</a>
+  <a href="https://1328f.com/before-you-file.html">Before You File</a>
+  <a href="https://1328f.com/reading.html">Reading List</a>
+  <span class="sep">|</span>
+  <span class="sep">|</span>
+  <strong class="nav-label">1328f.org:</strong>
+  <a href="https://1328f.org/">Home</a>
+  <a href="https://1328f.org/reports/">Reports</a>
+  <a href="https://1328f.org/watch/">Docket Watch</a>
+  <a href="https://1328f.org/methodology/">Methodology</a>
+  <a href="https://1328f.org/tools/">Tools</a>
+  <a href="https://1328f.org/data/" style="color:#f0f6fc;font-weight:600">Open Data</a>
+  <a href="https://1328f.org/about/">About</a>
+  <a href="https://1328f.org/support/" style="color:#238636;font-weight:600">Support This Research</a>
+  </div>
+</nav>
+<script>document.addEventListener('DOMContentLoaded',function(){var b=document.querySelector('.nav-toggle');if(b)b.addEventListener('click',function(){var l=document.querySelector('.nav-links');l.classList.toggle('open');b.setAttribute('aria-expanded',l.classList.contains('open'))})});</script>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <header>
+    <h1>Open <span class="accent">Data</span></h1>
+    <p class="subtitle">Downloadable Datasets</p>
+  </header>
+
+  <main id="main">
+
+    <div class="intro">
+      <p>All statistics published on 1328f.org are derived from public federal data. We provide these exports so journalists, researchers, and advocates can independently verify our findings.</p>
+      <p>Every file below contains <strong>aggregated, anonymized statistics only</strong> &mdash; no individual case numbers, no debtor names, no attorney names. District-level data and de-identified case attributes only.</p>
+    </div>
+
+    <h2 class="section-header">Datasets</h2>
+
+    <!-- Dataset 1: Ch13 Dismissal Rates -->
+    <div class="dataset-card">
+      <h3>Chapter 13 Dismissal Rates by District</h3>
+      <div class="meta">
+        <span class="tag">CSV</span>
+        <span class="tag">63 districts</span>
+        <span class="tag">~3 KB</span>
+      </div>
+      <p class="desc">Dismissal rates for every federal bankruptcy district with Chapter 13 filings in our database. Includes total filing counts, dismissal counts, and computed dismissal rates.</p>
+      <div class="download-links">
+        <a href="/data/chapter13_dismissal_by_district.csv" download>Download CSV</a>
+      </div>
+      <button class="preview-toggle" onclick="togglePreview('p1')" aria-expanded="false" aria-controls="p1">Preview first 5 rows</button>
+      <div class="preview-wrap" id="p1">
+        <table class="preview-table">
+          <thead>
+            <tr><th scope="col">court</th><th scope="col">total_cases</th><th scope="col">dismissed</th><th scope="col">dismissal_rate</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>almbk</td><td>850</td><td>4</td><td>0.0047</td></tr>
+            <tr><td>alnbk</td><td>415</td><td>2</td><td>0.0048</td></tr>
+            <tr><td>arebk</td><td>192</td><td>19</td><td>0.0990</td></tr>
+            <tr><td>arwbk</td><td>305</td><td>60</td><td>0.1967</td></tr>
+            <tr><td>cacbk</td><td>744</td><td>454</td><td>0.6102</td></tr>
+          </tbody>
+        </table>
+        <p class="preview-note">Showing 5 of 63 rows. Download the full file for all districts.</p>
+      </div>
+    </div>
+
+    <!-- Dataset 2: 1328(f) Barred Cases -->
+    <div class="dataset-card">
+      <h3>Section 1328(f) Screening Results</h3>
+      <div class="meta">
+        <span class="tag">CSV + JSON</span>
+        <span class="tag">316 cases</span>
+        <span class="tag">~25 KB</span>
+      </div>
+      <p class="desc">Anonymized records of 316 cases where the statutory discharge bar under 11 U.S.C. &sect; 1328(f) applied. Each row includes the district, filing year, prior chapter, gap between filings (days), bar type, and outcome (discharged, dismissed, or pending). No case numbers or names.</p>
+      <div class="download-links">
+        <a href="/data/1328f_barred_cases.csv" download>Download CSV</a>
+        <a href="/data/1328f_barred_cases.json" download>Download JSON</a>
+      </div>
+      <button class="preview-toggle" onclick="togglePreview('p2')" aria-expanded="false" aria-controls="p2">Preview first 5 rows</button>
+      <div class="preview-wrap" id="p2">
+        <table class="preview-table">
+          <thead>
+            <tr><th scope="col">district</th><th scope="col">filing_year</th><th scope="col">prior_chapter</th><th scope="col">gap_days</th><th scope="col">f_type</th><th scope="col">outcome</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>ilnbk</td><td>2009</td><td>13</td><td>6</td><td>f(2)</td><td>pending</td></tr>
+            <tr><td>flsbk</td><td>2015</td><td>7</td><td>812</td><td>f(1)</td><td>discharged</td></tr>
+            <tr><td>txsbk</td><td>2018</td><td>7</td><td>971</td><td>f(1)</td><td>discharged</td></tr>
+            <tr><td>ganbk</td><td>2020</td><td>7</td><td>303</td><td>f(1)</td><td>dismissed</td></tr>
+            <tr><td>flsbk</td><td>2021</td><td>13</td><td>536</td><td>f(2)</td><td>pending</td></tr>
+          </tbody>
+        </table>
+        <p class="preview-note">Showing 5 of 316 rows. Download the full file for complete dataset.</p>
+      </div>
+    </div>
+
+    <!-- Dataset 3: Prior-Filer Rates -->
+    <div class="dataset-card">
+      <h3>Prior-Filer Discharge Rates by District</h3>
+      <div class="meta">
+        <span class="tag">CSV</span>
+        <span class="tag">63 districts</span>
+        <span class="tag">~3 KB</span>
+      </div>
+      <p class="desc">For each district: the total Chapter 13 caseload, the number of identified prior filers (debtors who previously filed bankruptcy), the prior-filing rate, and the discharge rate among those prior filers. Districts with zero prior filers identified are included for completeness.</p>
+      <div class="download-links">
+        <a href="/data/prior_filer_rates_by_district.csv" download>Download CSV</a>
+      </div>
+      <button class="preview-toggle" onclick="togglePreview('p3')" aria-expanded="false" aria-controls="p3">Preview first 5 rows</button>
+      <div class="preview-wrap" id="p3">
+        <table class="preview-table">
+          <thead>
+            <tr><th scope="col">court</th><th scope="col">total_ch13</th><th scope="col">prior_filers</th><th scope="col">prior_filer_rate</th><th scope="col">prior_filer_discharge_rate</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>almbk</td><td>850</td><td>0</td><td>0.000000</td><td>0.0000</td></tr>
+            <tr><td>flsbk</td><td>19,270</td><td>0</td><td>0.000000</td><td>0.0000</td></tr>
+            <tr><td>ilnbk</td><td>3,084</td><td>1</td><td>0.000324</td><td>0.0000</td></tr>
+            <tr><td>txsbk</td><td>18,641</td><td>0</td><td>0.000000</td><td>0.0000</td></tr>
+            <tr><td>ganbk</td><td>197</td><td>0</td><td>0.000000</td><td>0.0000</td></tr>
+          </tbody>
+        </table>
+        <p class="preview-note">Showing 5 representative rows. Full file includes all 63 districts.</p>
+      </div>
+    </div>
+
+    <!-- Dataset 4: National Filing Stats -->
+    <div class="dataset-card">
+      <h3>National Filing Statistics (FJC)</h3>
+      <div class="meta">
+        <span class="tag">CSV</span>
+        <span class="tag">1,706 rows</span>
+        <span class="tag">~45 KB</span>
+      </div>
+      <p class="desc">Aggregate case counts by chapter (7, 11, 12, 13), year (2008&ndash;2024), and district. Derived from the Federal Judicial Center Integrated Database. Useful for trend analysis, cross-district comparisons, and normalization of other metrics.</p>
+      <div class="download-links">
+        <a href="/data/national_filing_stats.csv" download>Download CSV</a>
+      </div>
+      <button class="preview-toggle" onclick="togglePreview('p4')" aria-expanded="false" aria-controls="p4">Preview first 5 rows</button>
+      <div class="preview-wrap" id="p4">
+        <table class="preview-table">
+          <thead>
+            <tr><th scope="col">year</th><th scope="col">chapter</th><th scope="col">district</th><th scope="col">case_count</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>2008</td><td>11</td><td>cacbk</td><td>4</td></tr>
+            <tr><td>2008</td><td>11</td><td>flmbk</td><td>9</td></tr>
+            <tr><td>2008</td><td>11</td><td>flsbk</td><td>20</td></tr>
+            <tr><td>2008</td><td>13</td><td>flsbk</td><td>1,131</td></tr>
+            <tr><td>2008</td><td>7</td><td>ganbk</td><td>52</td></tr>
+          </tbody>
+        </table>
+        <p class="preview-note">Showing 5 of 1,706 rows. Download the full file for all years, chapters, and districts.</p>
+      </div>
+    </div>
+
+    <h2 class="section-header">Methodology &amp; License</h2>
+
+    <div class="info-section">
+      <h2>Data Sources</h2>
+      <p>Data derived from the <strong>Federal Judicial Center Integrated Database</strong>, <strong>CourtListener RECAP archive</strong>, and <strong>PACER</strong> (Public Access to Court Electronic Records). Case-level records are aggregated to district level; individual identifiers are stripped before export.</p>
+      <p>Last updated: <strong>March 2026</strong>.</p>
+      <p>For details on how each metric is computed, see our <a href="/methodology/">Methodology</a> page.</p>
+    </div>
+
+    <div class="info-section">
+      <h2>License</h2>
+      <p><span class="license-badge">CC BY 4.0</span></p>
+      <p style="margin-top: 0.75rem;">This data is provided under <a href="https://creativecommons.org/licenses/by/4.0/" rel="noopener">Creative Commons Attribution 4.0 International</a>. You may use, share, and adapt it for any purpose with attribution to <strong>1328f.org</strong>.</p>
+      <p>Suggested citation: <code>1328f.org, "Open Bankruptcy Data," https://1328f.org/data/, March 2026.</code></p>
+    </div>
+
+    <div class="info-section">
+      <h2>Reproducibility</h2>
+      <p>All analysis code is open source. The screening tools and export scripts are available at <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener" rel="noopener">github.com/ilikemath9999/bankruptcy-discharge-screener</a>.</p>
+      <p>If you find errors or have questions about the data, please <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener/issues">open an issue</a> on GitHub.</p>
+    </div>
+
+  </main>
+
+<footer role="contentinfo">
+    <p>1328f.org - Independent consumer bankruptcy research. Not legal advice.</p>
+    <p class="links">
+      <a href="https://1328f.com">Screener Tool</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/">About</a>
+      <a href="/support/">Support</a>
+    </p>
+    <p style="margin-top: 0.75rem; font-size: 0.75rem; color: #9eaab6;">Built on public court data. All analysis is reproducible. An independent research project.</p>
+  <br><span style="font-size:11px">This site provides general information only and does not constitute legal advice. No attorney-client relationship is created. Consult a licensed attorney for advice on your specific situation.</span>
+</footer>
+
+<script>
+function togglePreview(id) {
+  var el = document.getElementById(id);
+  var btn = el.previousElementSibling;
+  if (el.classList.contains('open')) {
+    el.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    btn.textContent = 'Preview first 5 rows';
+  } else {
+    el.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+    btn.textContent = 'Hide preview';
+  }
+}
+</script>
+</body>
+</html>
