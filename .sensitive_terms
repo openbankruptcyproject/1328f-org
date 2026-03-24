@@ -1,0 +1,67 @@
+# Sensitive terms blocklist for public repo push protection
+# One term per line. Case-insensitive matching.
+# Lines starting with # are comments.
+
+# Attorney names — WM Law
+Wagoner
+Blay
+Stowell
+Williamson
+Cardwell
+Tiede
+Jeppson
+Trusdale
+WM Law
+wagonergroup
+wmlaw-kc
+
+# Attorney names — opposing counsel
+Moscov
+Hayden
+Pappas
+
+# Case-specific
+Victory Cleaning
+VCS
+24-40010
+24-40120
+26-20160
+26-20176
+25-20315
+
+# Contact info (email/phone should not be in code files)
+dan@vcleaning
+913-269-2103
+9132692103
+
+# Firm-specific identifiers
+Legal Helpers Debt Resolution
+DebtStoppers
+UpRight Law
+
+# Bar numbers
+KS-001066
+
+# Financial
+$18,738
+$14,442
+$93,092
+
+# Internal references
+NOTES FOR DAN
+private repo
+danbrown20/Bankruptcy
+memory/
+investigation/
+CLAUDE.md
+
+# Trustee / Judge
+Messerli
+Norton
+Fink
+Skinner
+
+# Creditor contacts
+Sara Bass
+Kleppinger
+Becket & Lee

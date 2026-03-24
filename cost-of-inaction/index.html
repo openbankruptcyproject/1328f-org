@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CF8T1FYRCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CF8T1FYRCV');
+</script>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cost of Inaction: Ineligible Discharges While the Rule Amendment Is Pending - 1328f.org</title>
+  <meta name="description" content="A live counter estimating how many potentially ineligible bankruptcy discharges are being granted while the proposed Rule 4004 amendment (Suggestion 26-BK-3) remains pending. Interactive calculator with adjustable assumptions.">
+  <link rel="canonical" href="https://1328f.org/cost-of-inaction/">
+  <link rel="alternate" hreflang="en" href="https://1328f.org/cost-of-inaction/">
+  <link rel="alternate" type="application/atom+xml" title="1328f.org Docket Watch" href="/watch/feed.xml">
+  <meta property="og:title" content="Cost of Inaction: Ineligible Discharges While the Rule Amendment Is Pending">
+  <meta property="og:description" content="A live counter estimating how many potentially ineligible discharges are being granted while the proposed Rule 4004 amendment remains pending.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://1328f.org/cost-of-inaction/">
+  <meta property="og:site_name" content="1328f.org">
+  <meta property="og:image" content="https://1328f.org/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Cost of Inaction: Ineligible Discharges While the Rule Amendment Is Pending">
+  <meta name="twitter:description" content="A live counter estimating how many potentially ineligible discharges are being granted while the proposed Rule 4004 amendment remains pending.">
+  <meta name="twitter:image" content="https://1328f.org/og-image.png">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    code { background: #161b22; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #9eaab6; font-size: 1rem; }
+    article { max-width: 760px; margin: 0 auto; padding: 2rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h2 { color: #f0f6fc; font-size: 1.6rem; line-height: 1.3; margin-bottom: 0.75rem; border-bottom: none; padding-bottom: 0; }
+    .article-header .meta { color: #9eaab6; font-size: 0.85rem; }
+    .article-header .meta .tag { background: #21262d; padding: 0.15em 0.5em; border-radius: 3px; margin-right: 0.5rem; }
+    h2 { color: #f0f6fc; font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    thead th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #30363d; font-size: 0.9rem; }
+    td { color: #c9d1d9; }
+    .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #58a6ff; border-radius: 0 6px 6px 0; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+    .callout.green { border-left-color: #3fb950; }
+    .callout.yellow { border-left-color: #e3a835; }
+    .callout.red { border-left-color: #f85149; }
+    .callout h4 { color: #f0f6fc; margin-bottom: 0.5rem; }
+    .back-link { display: inline-block; margin-bottom: 1rem; color: #9eaab6; font-size: 0.85rem; }
+    .back-link:hover { color: #58a6ff; }
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 2rem; text-align: center; margin-top: 3rem; color: #9eaab6; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+    @media (max-width: 600px) { header { padding: 1.5rem 1rem; } article { padding: 1rem; } }
+    @media print {
+      body { background: #fff; color: #000; }
+      header, nav, footer, .skip-link, .back-link { display: none; }
+      article { max-width: 100%; padding: 0; }
+      a { color: #000; text-decoration: underline; }
+      a[href]::after { content: " (" attr(href) ")"; font-size: 0.8em; color: #666; }
+      .callout { border-color: #ccc; background: #f9f9f9; }
+      .callout h4 { color: #000; }
+      code { background: #f0f0f0; }
+      h2 { border-bottom-color: #ccc; color: #000; }
+      h3 { color: #000; }
+      table { border: 1px solid #ccc; }
+      th { background: #f0f0f0; color: #000; }
+      td { color: #000; }
+    }
+
+    /* Counter-specific styles */
+    .counter-panel {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 2rem;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .counter-panel .days-count {
+      font-size: 3rem;
+      font-weight: 700;
+      color: #f85149;
+      line-height: 1.2;
+    }
+    .counter-panel .days-label {
+      font-size: 0.95rem;
+      color: #9eaab6;
+      margin-bottom: 1.5rem;
+    }
+    .counter-panel .main-counter {
+      font-size: 4rem;
+      font-weight: 700;
+      color: #f0f6fc;
+      line-height: 1.1;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+    .counter-panel .main-counter-label {
+      font-size: 1.1rem;
+      color: #f85149;
+      font-weight: 600;
+      margin-top: 0.25rem;
+      margin-bottom: 1rem;
+    }
+    .counter-row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-top: 1.5rem;
+    }
+    .counter-stat {
+      text-align: center;
+    }
+    .counter-stat .num {
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #58a6ff;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+    .counter-stat .label {
+      font-size: 0.8rem;
+      color: #9eaab6;
+    }
+    .pipeline-table td.num-cell {
+      text-align: right;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      font-weight: 600;
+    }
+    .slider-section {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 8px;
+      padding: 1.5rem 2rem;
+      margin-bottom: 1.5rem;
+    }
+    .slider-section label {
+      display: block;
+      color: #f0f6fc;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+    .slider-row {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .slider-row input[type="range"] {
+      flex: 1;
+      accent-color: #58a6ff;
+      height: 6px;
+      cursor: pointer;
+    }
+    .slider-value {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: #58a6ff;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+      min-width: 4rem;
+      text-align: right;
+    }
+    .slider-result {
+      background: #21262d;
+      border-radius: 6px;
+      padding: 1rem 1.5rem;
+      text-align: center;
+    }
+    .slider-result .big-num {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #f85149;
+      font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    }
+    .slider-result .desc {
+      color: #9eaab6;
+      font-size: 0.9rem;
+    }
+    .pulse {
+      animation: pulse 2s ease-in-out infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.6; }
+    }
+    @media (max-width: 600px) {
+      .counter-panel .main-counter { font-size: 2.5rem; }
+      .counter-panel .days-count { font-size: 2rem; }
+      .counter-row { gap: 1rem; }
+      .slider-row { flex-direction: column; align-items: stretch; }
+      .slider-value { text-align: center; }
+    }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Cost of Inaction: Ineligible Discharges While the Rule Amendment Is Pending",
+  "datePublished": "2026-03-23",
+  "publisher": {
+    "@type": "Organization",
+    "name": "1328f.org",
+    "url": "https://1328f.org"
+  },
+  "url": "https://1328f.org/cost-of-inaction/",
+  "inLanguage": "en",
+  "isAccessibleForFree": true
+}
+</script>
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+</head>
+<body>
+<style>
+#site-nav{background:#0d1117;border-bottom:1px solid #30363d;padding:0.5rem 1rem;text-align:center;font-size:0.78rem;line-height:1.9}
+#site-nav a{margin:0 0.3rem}
+#site-nav .sep{color:#30363d;margin:0 0.25rem}
+#site-nav .nav-label{color:#f0f6fc;margin:0 0.4rem;font-weight:700}
+#site-nav .nav-label:first-child{margin-right:0.4rem}
+.nav-toggle{display:none;background:none;border:1px solid #30363d;color:#c9d1d9;font-size:1.2rem;padding:0.4rem 0.75rem;border-radius:4px;cursor:pointer;line-height:1}
+.nav-toggle:focus-visible{outline:2px solid #58a6ff;outline-offset:2px}
+.nav-links{display:inline}
+@media(max-width:768px){
+.nav-toggle{display:inline-block;margin:0.25rem 0}
+.nav-links{display:none;text-align:left;padding:0.5rem 0}
+.nav-links.open{display:block}
+.nav-links a{display:block;padding:0.6rem 1rem;margin:0;font-size:0.9rem;min-height:44px;line-height:1.6;border-bottom:1px solid #21262d}
+.nav-links a:hover,.nav-links a:focus{background:#161b22}
+.nav-links .sep{display:none}
+.nav-links br{display:none}
+.nav-links .nav-label{display:block;padding:0.5rem 1rem 0.2rem;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;color:#9eaab6;margin:0}
+}
+</style>
+<nav id="site-nav" aria-label="Site navigation">
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">&#9776; Menu</button>
+  <div class="nav-links" id="nav-links">
+<strong class="nav-label">Tools:</strong>
+  <a href="https://1328f.com/check.html">Eligibility Checker</a>
+  <a href="https://1328f.com/compare.html">Compare All Bars</a>
+  <a href="https://1328f.com/dashboard.html">Dashboard</a>
+  <a href="https://1328f.com/timeline.html">Timeline</a>
+  <span class="sep">|</span>
+  <strong class="nav-label">Learn:</strong>
+  <a href="https://1328f.com/explainer.html">1328(f) Explained</a>
+  <a href="https://1328f.com/discharge-bar.html">Discharge Bar</a>
+  <a href="https://1328f.com/727a8-discharge-bar.html">727(a)(8) Bar</a>
+  <a href="https://1328f.com/109g-filing-bar.html">109(g) Bar</a>
+  <a href="https://1328f.com/can-i-file-bankruptcy-again.html">Can I File Again?</a>
+  <a href="https://1328f.com/how-long-between-bankruptcies.html">How Long Between?</a>
+  <span class="sep">|</span>
+  <a href="https://1328f.com/chapter-7.html">Ch. 7</a>
+  <a href="https://1328f.com/chapter-11.html">Ch. 11</a>
+  <a href="https://1328f.com/chapter-12.html">Ch. 12</a>
+  <a href="https://1328f.com/chapter-13.html">Ch. 13</a>
+  <br>
+  <strong class="nav-label">Data:</strong>
+  <a href="https://1328f.com/chapter-13-failure-rate.html">Failure Rates</a>
+  <a href="https://1328f.com/chapter-13-success-rate-by-state.html">Success by State</a>
+  <a href="https://1328f.com/caselaw.html">Case Law</a>
+  <span class="sep">|</span>
+  <strong class="nav-label">For:</strong>
+  <a href="https://1328f.com/for-debtors.html">Debtors</a>
+  <a href="https://1328f.com/for-attorneys.html">Attorneys</a>
+  <a href="https://1328f.com/for-trustees.html">Trustees</a>
+  <a href="https://1328f.com/for-judges.html">Judges</a>
+  <a href="https://1328f.com/for-researchers.html">Researchers</a>
+  <span class="sep">|</span>
+  <a href="https://1328f.com/glossary.html">Glossary</a>
+  <a href="https://1328f.com/before-you-file.html">Before You File</a>
+  <a href="https://1328f.com/reading.html">Reading List</a>
+  <span class="sep">|</span>
+  <span class="sep">|</span>
+  <strong class="nav-label">1328f.org:</strong>
+  <a href="https://1328f.org/">Home</a>
+  <a href="https://1328f.org/reports/">Reports</a>
+  <a href="https://1328f.org/watch/">Docket Watch</a>
+  <a href="https://1328f.org/methodology/">Methodology</a>
+  <a href="https://1328f.org/tools/">Tools</a>
+  <a href="https://1328f.org/about/">About</a>
+  <a href="https://1328f.org/support/" style="color:#238636;font-weight:600">Support This Research</a>
+  </div>
+</nav>
+<script>document.addEventListener('DOMContentLoaded',function(){var b=document.querySelector('.nav-toggle');if(b)b.addEventListener('click',function(){var l=document.querySelector('.nav-links');l.classList.toggle('open');b.setAttribute('aria-expanded',l.classList.contains('open'))})});</script>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header role="banner">
+    <h1><a href="/" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Consumer Bankruptcy Research &amp; Accountability</p>
+  </header>
+
+  <article id="main" role="article">
+    <a href="/reports/" class="back-link">&larr; All Reports</a>
+
+    <div class="article-header">
+      <h2>Cost of Inaction: Ineligible Discharges While the Rule Amendment Is Pending</h2>
+      <div class="meta">
+        <span class="tag">Policy Analysis</span>
+        <span class="tag">Interactive</span>
+        Published March 2026
+      </div>
+    </div>
+
+    <div class="callout red">
+      <h4>Summary</h4>
+      <p style="margin-bottom: 0;">Under current bankruptcy rules, no procedural mechanism requires courts to verify whether a debtor is eligible for discharge under 11 U.S.C. &sect; 1328(f) before granting one. Suggestion 26-BK-3, submitted to the Advisory Committee on Bankruptcy Rules in January 2026, proposes amending Rule 4004 to add a mandatory eligibility certification at case opening. Every day the amendment remains pending, prior filers who fall within the statutory discharge bar window may be receiving discharges that no party has standing or incentive to challenge. This page estimates the cumulative scope of that gap using conservative, sourced assumptions.</p>
+    </div>
+
+    <!-- ========== LIVE COUNTER ========== -->
+    <div class="counter-panel" aria-live="polite">
+      <div class="days-count" id="days-count">--</div>
+      <div class="days-label">days since Suggestion 26-BK-3 was submitted (January 15, 2026)</div>
+
+      <div class="main-counter pulse" id="main-counter">--</div>
+      <div class="main-counter-label">estimated potentially ineligible discharges</div>
+
+      <div class="counter-row">
+        <div class="counter-stat">
+          <div class="num" id="stat-filings">--</div>
+          <div class="label">consumer filings</div>
+        </div>
+        <div class="counter-stat">
+          <div class="num" id="stat-prior">--</div>
+          <div class="label">prior filer cases</div>
+        </div>
+        <div class="counter-stat">
+          <div class="num" id="stat-discharged">--</div>
+          <div class="label">prior filer discharges</div>
+        </div>
+        <div class="counter-stat">
+          <div class="num" id="stat-barwindow">--</div>
+          <div class="label">within bar window (est.)</div>
+        </div>
+      </div>
+      <p style="color: #9eaab6; font-size: 0.75rem; margin-top: 1rem; margin-bottom: 0;">Counter updates every second. Based on conservative 5% bar-window assumption. Adjust below.</p>
+    </div>
+
+    <!-- ========== THE MATH ========== -->
+    <h2>The Math: How We Derived These Numbers</h2>
+
+    <p>This estimate uses a pipeline approach. Each step narrows the population from total consumer filings down to the subset that may be receiving ineligible discharges. All rates are derived from public data.</p>
+
+    <table class="pipeline-table">
+      <thead>
+        <tr>
+          <th scope="col">Step</th>
+          <th scope="col">Metric</th>
+          <th scope="col" style="text-align:right;">Value</th>
+          <th scope="col">Source</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Annual consumer bankruptcy filings</td>
+          <td class="num-cell">~534,000</td>
+          <td>FJC IDB, CY 2024</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Daily consumer filings</td>
+          <td class="num-cell">~1,463</td>
+          <td>534,000 &divide; 365</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Prior filer rate</td>
+          <td class="num-cell">33.2%</td>
+          <td>FJC IDB analysis (4.9M cases)</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Daily prior filer cases</td>
+          <td class="num-cell">~486</td>
+          <td>1,463 &times; 33.2%</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Prior filer discharge rate</td>
+          <td class="num-cell">27.4%</td>
+          <td>FJC IDB analysis</td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>Daily prior filer discharges</td>
+          <td class="num-cell">~133</td>
+          <td>486 &times; 27.4%</td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>Within bar window (conservative)</td>
+          <td class="num-cell">5%</td>
+          <td>Conservative estimate*</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td><strong>Potentially ineligible discharges/day</strong></td>
+          <td class="num-cell" style="color:#f85149;"><strong>~6.7</strong></td>
+          <td>133 &times; 5%</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>Source Detail</h3>
+
+    <ul>
+      <li><strong>534,000 annual filings:</strong> The Federal Judicial Center's Integrated Database (FJC IDB) records all federal bankruptcy filings. Calendar year 2024 data shows approximately 534,000 consumer cases (Chapters 7, 13, 12, and 11 individual). This figure aligns with Epiq's published 2024 bankruptcy statistics.</li>
+      <li><strong>33.2% prior filer rate:</strong> Derived from analysis of 4.9 million FJC IDB consumer cases. "Prior filer" means the debtor had at least one previous bankruptcy filing, as indicated by the IDB prior-filing fields. This rate is consistent across multiple calendar years.</li>
+      <li><strong>27.4% discharge rate among prior filers:</strong> Calculated from the same FJC IDB dataset. Of prior filers who reach case disposition, 27.4% receive a discharge. The remainder are dismissed, converted, or closed without discharge.</li>
+      <li><strong>5% bar-window estimate (conservative):</strong> This is the least certain figure in the pipeline. The statutory bar windows under &sect; 1328(f) are 2 years (Ch. 13 &rarr; Ch. 13), 4 years (Ch. 7/11/12 &rarr; Ch. 13), and analogous periods under &sect;&sect; 727(a)(8)-(9). Without case-level prior discharge dates (which the FJC IDB does not reliably record), the true rate cannot be calculated from public data alone. We use 5% as a floor estimate. The actual rate may be significantly higher. Use the slider below to test different assumptions.</li>
+    </ul>
+
+    <!-- ========== COMPARISON SECTION ========== -->
+    <h2>If the Amendment Had Been in Effect</h2>
+
+    <div class="callout">
+      <h4>Preventable Ineligible Discharges</h4>
+      <p>If the proposed Rule 4004 amendment had been in effect since <strong>January 15, 2026</strong> (the date Suggestion 26-BK-3 was submitted), approximately <strong id="prevented-count">--</strong> potentially ineligible discharges could have been prevented as of today.</p>
+      <p style="margin-bottom: 0;">The amendment would require debtors to certify discharge eligibility at case opening and require the clerk to verify eligibility before entering discharge. This single procedural step would create a checkpoint that currently does not exist in any federal bankruptcy court.</p>
+    </div>
+
+    <p>For context: the Advisory Committee on Bankruptcy Rules typically takes 2 to 4 years to move a suggestion through the full rulemaking pipeline (proposal, public comment, Judicial Conference approval, Supreme Court transmission, Congressional review). If the process takes 3 years, the cumulative estimate at a 5% bar-window rate would reach approximately <strong id="three-year-total">--</strong> potentially ineligible discharges.</p>
+
+    <!-- ========== INTERACTIVE SLIDER ========== -->
+    <h2>Adjust the Assumption: Bar Window Violation Rate</h2>
+
+    <p>The 5% estimate is conservative. Adjust the slider to see how the projection changes at different bar-window violation rates.</p>
+
+    <div class="slider-section">
+      <label for="rate-slider">Percentage of prior filer discharges within the bar window:</label>
+      <div class="slider-row">
+        <span style="color: #9eaab6; font-size: 0.85rem;">1%</span>
+        <input type="range" id="rate-slider" min="1" max="20" value="5" step="0.5" aria-label="Bar window violation rate percentage">
+        <span style="color: #9eaab6; font-size: 0.85rem;">20%</span>
+        <div class="slider-value" id="slider-value" aria-live="polite">5%</div>
+      </div>
+
+      <div class="slider-result">
+        <div class="desc">Estimated potentially ineligible discharges per day</div>
+        <div class="big-num" id="slider-daily">~6.7</div>
+      </div>
+      <div class="slider-result" style="margin-top: 0.5rem;">
+        <div class="desc">Estimated total since proposal (<span id="slider-days-label">-- days</span>)</div>
+        <div class="big-num" id="slider-total">--</div>
+      </div>
+      <div class="slider-result" style="margin-top: 0.5rem;">
+        <div class="desc">Projected total after 3-year rulemaking process</div>
+        <div class="big-num" id="slider-threeyear">--</div>
+      </div>
+    </div>
+
+    <!-- ========== WHY THIS MATTERS ========== -->
+    <h2>Why This Matters for Rulemaking</h2>
+
+    <p>The Advisory Committee evaluates rule proposals based on whether they address a real problem with sufficient frequency to justify a national rule change. This calculator provides the empirical basis for that evaluation:</p>
+
+    <ul>
+      <li><strong>The problem is not hypothetical.</strong> Without a certification requirement, there is no systematic mechanism to catch ineligible discharges. Individual courts rely on trustees or creditors to raise objections, but both parties may lack the information or incentive to do so.</li>
+      <li><strong>The gap is structural.</strong> The FJC IDB records prior filings but does not link them to discharge dates. PACER does not surface bar-window violations in any automated way. Clerks have no mandate to check. The result is a systemic blind spot.</li>
+      <li><strong>Every day of delay has a measurable cost.</strong> Whether the true bar-window violation rate is 5% or 15%, the daily accumulation means hundreds or thousands of potentially ineligible discharges over the multi-year rulemaking timeline.</li>
+      <li><strong>The fix is minimal.</strong> The proposed amendment adds a single certification checkbox and a single clerk verification step. The procedural burden is negligible compared to the scope of the problem it addresses.</li>
+    </ul>
+
+    <!-- ========== SOURCES ========== -->
+    <h2>Sources</h2>
+
+    <ul>
+      <li><strong>FJC Integrated Database (IDB):</strong> Federal Judicial Center, <a href="https://www.fjc.gov/research/idb">Integrated Database</a>. Consumer bankruptcy filings, dispositions, and prior-filing indicators. Dataset includes 4.9 million cases analyzed for this project.</li>
+      <li><strong>Epiq Bankruptcy Statistics:</strong> <a href="https://www.epiqglobal.com/en-us/resource-center/news/total-bankruptcy-filings-increase-11-in-calendar-year-2025">Epiq Global, 2025 filing statistics</a>. Corroborates annual consumer filing volume.</li>
+      <li><strong>Suggestion 26-BK-3:</strong> Submitted to the Advisory Committee on Bankruptcy Rules, January 2026. Proposes amending Fed. R. Bankr. P. 4004 to require discharge eligibility certification at case opening.</li>
+      <li><strong>11 U.S.C. &sect; 1328(f):</strong> Statutory discharge bar for repeat Chapter 13 filers. 2-year bar (Ch. 13 &rarr; Ch. 13) and 4-year bar (Ch. 7/11/12 &rarr; Ch. 13).</li>
+      <li><strong>11 U.S.C. &sect; 727(a)(8)-(9):</strong> Statutory discharge bar for repeat Chapter 7 filers. 8-year bar (Ch. 7 &rarr; Ch. 7) and 6-year bar (Ch. 12/13 &rarr; Ch. 7).</li>
+      <li><strong>Prior filer rate (33.2%) and discharge rate (27.4%):</strong> Computed from the FJC IDB dataset. Methodology described at <a href="https://1328f.org/methodology/">1328f.org/methodology</a>.</li>
+    </ul>
+
+    <!-- ========== DISCLAIMERS ========== -->
+    <div class="callout green">
+      <h4>How to Cite</h4>
+      <p style="margin-bottom: 0; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; font-size: 0.85rem;">1328f.org, "Cost of Inaction: Ineligible Discharges While the Rule Amendment Is Pending," March 2026, https://1328f.org/cost-of-inaction/</p>
+    </div>
+
+    <div class="callout yellow">
+      <h4>Not Legal Advice</h4>
+      <p style="margin-bottom: 0;">This page presents estimates derived from public federal data for policy analysis purposes. It does not constitute legal advice and should not be relied upon as a substitute for professional legal counsel. The "potentially ineligible discharges" estimate is a statistical projection based on conservative assumptions; it does not identify specific cases or individuals. The 5% bar-window violation rate is an assumption, not a measured value. Actual rates may be higher or lower. Debtors considering bankruptcy should consult a qualified attorney licensed in their jurisdiction.</p>
+    </div>
+
+    <p style="text-align: center; margin-top: 2rem;"><a href="/support/" style="color: #9eaab6; font-size: 0.9rem;">Support this research</a></p>
+
+  </article>
+
+
+<footer role="contentinfo">
+    <p>1328f.org - Independent consumer bankruptcy research. Not legal advice.</p>
+    <p class="links">
+      <a href="https://1328f.com">Screener Tool</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/">About</a>
+      <a href="/support/">Support</a>
+    </p>
+
+    <div style="background:#161b22;border:1px solid #30363d;border-radius:8px;padding:1rem 1.2rem;margin:2rem 0;">
+      <p style="color:#9eaab6;font-size:0.8rem;margin-bottom:0.5rem;">Related reports:</p>
+      <a href="/reports/bankruptcy-mill-definition/" style="display:inline-block;margin:0.2rem 0.3rem;padding:0.3rem 0.8rem;background:#21262d;border:1px solid #30363d;border-radius:4px;font-size:0.85rem;color:#58a6ff;text-decoration:none;">Bankruptcy Mill Definition</a>
+      <a href="/reports/chapter-13-dismissal-rates/" style="display:inline-block;margin:0.2rem 0.3rem;padding:0.3rem 0.8rem;background:#21262d;border:1px solid #30363d;border-radius:4px;font-size:0.85rem;color:#58a6ff;text-decoration:none;">Chapter 13 Dismissal Rates</a>
+      <a href="/reports/bapcpa-credit-counseling/" style="display:inline-block;margin:0.2rem 0.3rem;padding:0.3rem 0.8rem;background:#21262d;border:1px solid #30363d;border-radius:4px;font-size:0.85rem;color:#58a6ff;text-decoration:none;">Mandatory Credit Counseling</a>
+      <a href="/reports/attorney-performance-methodology/" style="display:inline-block;margin:0.2rem 0.3rem;padding:0.3rem 0.8rem;background:#21262d;border:1px solid #30363d;border-radius:4px;font-size:0.85rem;color:#58a6ff;text-decoration:none;">Attorney Performance Methodology</a>
+    </div>
+<br><span style="font-size:11px">This site provides general information only and does not constitute legal advice. No attorney-client relationship is created. Consult a licensed attorney for advice on your specific situation.</span>
+</footer>
+
+
+<div style="background:#161b22;border:1px solid #30363d;border-radius:6px;padding:1.5rem;text-align:center;max-width:900px;margin:2rem auto 0">
+  <p style="color:#f0f6fc;font-size:1.1rem;font-weight:600;margin-bottom:0.25rem">PACER cases made free through RECAP: <span id="recap-count" style="color:#58a6ff">0</span> of 37.9 million</p>
+  <p style="color:#9eaab6;font-size:0.85rem;margin-bottom:0.75rem">Every document we access becomes permanently free for the next researcher, attorney, or debtor.</p>
+  <div style="background:#21262d;border-radius:6px;height:22px;overflow:hidden;margin:0.75rem auto;max-width:400px"><div style="background:linear-gradient(90deg,#238636,#2ea043);height:100%;width:0%;border-radius:6px;min-width:2px"></div></div>
+  <p style="margin-bottom:0.25rem"><span style="color:#58a6ff;font-size:1.2rem;font-weight:700">$0</span> <span style="color:#9eaab6">of</span> <span style="color:#f0f6fc;font-size:1.2rem;font-weight:700">$5,000</span> <span style="color:#9eaab6">Q1 PACER research goal</span></p>
+  <p style="color:#9eaab6;font-size:0.8rem;margin-bottom:0.75rem">1,500+ hours. No grants, no institutional backing. 0 supporters so far.</p>
+  <a href="/support/" style="display:inline-block;background:#238636;color:#fff;padding:0.5rem 1.5rem;border-radius:6px;font-weight:600;font-size:0.9rem;text-decoration:none">Fund this research</a>
+</div>
+
+<script>
+(function() {
+  // ===== CONSTANTS =====
+  // Suggestion 26-BK-3 submitted January 15, 2026
+  var PROPOSAL_DATE = new Date(2026, 0, 15); // Jan 15, 2026
+  var ANNUAL_FILINGS = 534000;
+  var DAILY_FILINGS = ANNUAL_FILINGS / 365;     // ~1,463
+  var PRIOR_FILER_RATE = 0.332;                  // 33.2%
+  var DISCHARGE_RATE = 0.274;                    // 27.4%
+  var DAILY_PRIOR_FILER_CASES = DAILY_FILINGS * PRIOR_FILER_RATE;   // ~486
+  var DAILY_PRIOR_FILER_DISCHARGES = DAILY_PRIOR_FILER_CASES * DISCHARGE_RATE; // ~133
+  var DEFAULT_BAR_RATE = 0.05;                   // 5%
+  var THREE_YEARS_DAYS = 365 * 3;                // 1,095
+
+  // ===== DOM REFS =====
+  var elDays = document.getElementById('days-count');
+  var elMain = document.getElementById('main-counter');
+  var elFilings = document.getElementById('stat-filings');
+  var elPrior = document.getElementById('stat-prior');
+  var elDischarged = document.getElementById('stat-discharged');
+  var elBarwindow = document.getElementById('stat-barwindow');
+  var elPrevented = document.getElementById('prevented-count');
+  var elThreeYear = document.getElementById('three-year-total');
+  var elSlider = document.getElementById('rate-slider');
+  var elSliderValue = document.getElementById('slider-value');
+  var elSliderDaily = document.getElementById('slider-daily');
+  var elSliderTotal = document.getElementById('slider-total');
+  var elSliderThreeyear = document.getElementById('slider-threeyear');
+  var elSliderDaysLabel = document.getElementById('slider-days-label');
+
+  function fmt(n) {
+    return n.toLocaleString('en-US', { maximumFractionDigits: 0 });
+  }
+
+  function fmtDecimal(n, d) {
+    return n.toLocaleString('en-US', { minimumFractionDigits: d, maximumFractionDigits: d });
+  }
+
+  function getDaysSince() {
+    var now = new Date();
+    var ms = now.getTime() - PROPOSAL_DATE.getTime();
+    return ms / (1000 * 60 * 60 * 24); // fractional days for smooth counter
+  }
+
+  function updateMainCounter() {
+    var days = getDaysSince();
+    var wholeDays = Math.floor(days);
+
+    // Main stats (using fractional days for smooth ticking)
+    var totalFilings = days * DAILY_FILINGS;
+    var totalPrior = days * DAILY_PRIOR_FILER_CASES;
+    var totalDischarged = days * DAILY_PRIOR_FILER_DISCHARGES;
+    var totalBarWindow = days * DAILY_PRIOR_FILER_DISCHARGES * DEFAULT_BAR_RATE;
+
+    elDays.textContent = wholeDays;
+    elMain.textContent = fmt(Math.floor(totalBarWindow));
+    elFilings.textContent = fmt(Math.floor(totalFilings));
+    elPrior.textContent = fmt(Math.floor(totalPrior));
+    elDischarged.textContent = fmt(Math.floor(totalDischarged));
+    elBarwindow.textContent = fmt(Math.floor(totalBarWindow));
+    elPrevented.textContent = fmt(Math.floor(totalBarWindow));
+
+    // Three-year projection
+    var threeYearTotal = THREE_YEARS_DAYS * DAILY_PRIOR_FILER_DISCHARGES * DEFAULT_BAR_RATE;
+    elThreeYear.textContent = fmt(Math.round(threeYearTotal));
+  }
+
+  function updateSlider() {
+    var rate = parseFloat(elSlider.value) / 100;
+    var days = getDaysSince();
+    var daily = DAILY_PRIOR_FILER_DISCHARGES * rate;
+    var total = days * daily;
+    var threeYear = THREE_YEARS_DAYS * daily;
+
+    elSliderValue.textContent = elSlider.value + '%';
+    elSliderDaily.textContent = '~' + fmtDecimal(daily, 1);
+    elSliderTotal.textContent = fmt(Math.floor(total));
+    elSliderThreeyear.textContent = fmt(Math.round(threeYear));
+    elSliderDaysLabel.textContent = Math.floor(days) + ' days';
+  }
+
+  // Initial render
+  updateMainCounter();
+  updateSlider();
+
+  // Tick every second
+  setInterval(function() {
+    updateMainCounter();
+    updateSlider();
+  }, 1000);
+
+  // Slider interaction
+  elSlider.addEventListener('input', updateSlider);
+})();
+</script>
+</body>
+</html>
