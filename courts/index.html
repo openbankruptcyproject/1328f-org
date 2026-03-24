@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CF8T1FYRCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CF8T1FYRCV');
+</script>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>U.S. Bankruptcy Courts Directory - 1328f.org</title>
+  <meta name="description" content="Complete directory of all 93 federal bankruptcy courts. PACER links, case statistics, and court information.">
+  <link rel="canonical" href="https://1328f.org/courts/">
+  <meta property="og:title" content="U.S. Bankruptcy Courts Directory">
+  <meta property="og:description" content="Complete directory of all 93 federal bankruptcy courts with PACER links and case statistics.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://1328f.org/courts/">
+  <meta property="og:site_name" content="1328f.org">
+  <meta name="twitter:card" content="summary">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    code { background: #161b22; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #9eaab6; font-size: 1rem; }
+    article { max-width: 900px; margin: 0 auto; padding: 2rem; }
+    h2 { color: #f0f6fc; font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    thead th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #30363d; font-size: 0.9rem; }
+    td { color: #c9d1d9; }
+    td.num { text-align: right; font-variant-numeric: tabular-nums; }
+    th.num { text-align: right; }
+    .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #58a6ff; border-radius: 0 6px 6px 0; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+    .callout h4 { color: #f0f6fc; margin-bottom: 0.5rem; }
+    .back-link { display: inline-block; margin-bottom: 1rem; color: #9eaab6; font-size: 0.85rem; }
+    .back-link:hover { color: #58a6ff; }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+    .stat-card { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 1rem; text-align: center; }
+    .stat-card .stat-value { color: #f0f6fc; font-size: 1.4rem; font-weight: 700; }
+    .stat-card .stat-label { color: #9eaab6; font-size: 0.8rem; margin-top: 0.25rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h2 { color: #f0f6fc; font-size: 1.6rem; line-height: 1.3; margin-bottom: 0.75rem; border-bottom: none; padding-bottom: 0; }
+    .article-header .meta { color: #9eaab6; font-size: 0.85rem; }
+    .article-header .meta .tag { background: #21262d; padding: 0.15em 0.5em; border-radius: 3px; margin-right: 0.5rem; }
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 2rem; text-align: center; margin-top: 3rem; color: #9eaab6; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+    .court-list { list-style: none; margin: 0; padding: 0; }
+    .court-list li { padding: 0.5rem 0; border-bottom: 1px solid #21262d; }
+    .court-list li:last-child { border-bottom: none; }
+    .court-list .court-cases { color: #9eaab6; font-size: 0.85rem; float: right; }
+    .state-section { margin-bottom: 2rem; }
+    @media (max-width: 600px) { header { padding: 1.5rem 1rem; } article { padding: 1rem; } .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media print {
+      body { background: #fff; color: #000; }
+      header, nav, footer, .skip-link, .back-link { display: none; }
+      article { max-width: 100%; padding: 0; }
+      a { color: #000; text-decoration: underline; }
+      .callout { border-color: #ccc; background: #f9f9f9; }
+      .callout h4, h2, h3 { color: #000; }
+      code { background: #f0f0f0; }
+      table { border: 1px solid #ccc; }
+      th { background: #f0f0f0; color: #000; }
+      td { color: #000; }
+      .stat-card { border-color: #ccc; }
+      .stat-card .stat-value { color: #000; }
+    }
+  </style>
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+</head>
+<body>
+<style>
+#site-nav{background:#0d1117;border-bottom:1px solid #30363d;padding:0.5rem 1rem;text-align:center;font-size:0.78rem;line-height:1.9}
+#site-nav a{margin:0 0.3rem}
+#site-nav .sep{color:#30363d;margin:0 0.25rem}
+#site-nav .nav-label{color:#f0f6fc;margin:0 0.4rem;font-weight:700}
+.nav-toggle{display:none;background:none;border:1px solid #30363d;color:#c9d1d9;font-size:1.2rem;padding:0.4rem 0.75rem;border-radius:4px;cursor:pointer;line-height:1}
+.nav-toggle:focus-visible{outline:2px solid #58a6ff;outline-offset:2px}
+.nav-links{display:inline}
+@media(max-width:768px){
+.nav-toggle{display:inline-block;margin:0.25rem 0}
+.nav-links{display:none;text-align:left;padding:0.5rem 0}
+.nav-links.open{display:block}
+.nav-links a{display:block;padding:0.6rem 1rem;margin:0;font-size:0.9rem;min-height:44px;line-height:1.6;border-bottom:1px solid #21262d}
+.nav-links a:hover,.nav-links a:focus{background:#161b22}
+.nav-links .sep{display:none}
+.nav-links br{display:none}
+.nav-links .nav-label{display:block;padding:0.5rem 1rem 0.2rem;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;color:#9eaab6;margin:0}
+}
+</style>
+<nav id="site-nav" aria-label="Site navigation">
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">&#9776; Menu</button>
+  <div class="nav-links" id="nav-links">
+<strong class="nav-label">1328f.org:</strong>
+  <a href="https://1328f.org/">Research</a>
+  <a href="https://1328f.org/directory/">Directory</a>
+  <a href="https://1328f.org/courts/">Courts</a>
+  <a href="https://1328f.org/methodology/">Methodology</a>
+  <a href="https://1328f.org/about/">About</a>
+  <span class="sep">|</span>
+  <strong class="nav-label">Tools:</strong>
+  <a href="https://1328f.com/check.html">Eligibility Checker</a>
+  <a href="https://1328f.com/dashboard.html">Dashboard</a>
+  <a href="https://1328f.org/districts/">District Cards</a>
+  <a href="https://1328f.org/support/" style="color:#238636;font-weight:600">Support</a>
+  </div>
+</nav>
+<script>document.addEventListener('DOMContentLoaded',function(){var b=document.querySelector('.nav-toggle');if(b)b.addEventListener('click',function(){var l=document.querySelector('.nav-links');l.classList.toggle('open');b.setAttribute('aria-expanded',l.classList.contains('open'))})});</script>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header role="banner">
+    <h1><a href="/" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Consumer Bankruptcy Research &amp; Accountability</p>
+  </header>
+
+  <article id="main" role="article">
+    <a href="/" class="back-link">&larr; Home</a>
+
+    <div class="article-header">
+      <h2>U.S. Bankruptcy Courts Directory</h2>
+      <div class="meta">
+        <span class="tag">Court Guide</span>
+        <span class="tag">93 Courts</span>
+        <span class="tag">FJC IDB</span>
+      </div>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-value">93</div>
+        <div class="stat-label">Federal Bankruptcy Courts</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">220,037</div>
+        <div class="stat-label">Total FJC Cases</div>
+      </div>
+    </div>
+
+    <p>The United States has 93 federal bankruptcy courts, organized by state and territory. Each court page includes PACER access links, court website, and case statistics from the <a href="https://www.fjc.gov/research/idb">FJC Integrated Database</a>.</p>
+
+    <div class="state-section">
+      <h3>Alabama</h3>
+      <ul class="court-list">
+        <li><a href="/courts/almbk/">Middle District of Alabama</a> <code>almbk</code> <span class="court-cases">1,067 cases</span></li>
+        <li><a href="/courts/alnbk/">Northern District of Alabama</a> <code>alnbk</code> <span class="court-cases">967 cases</span></li>
+        <li><a href="/courts/alsbk/">Southern District of Alabama</a> <code>alsbk</code> <span class="court-cases">&mdash;</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Alaska</h3>
+      <ul class="court-list">
+        <li><a href="/courts/akbk/">District of Alaska</a> <code>akbk</code> <span class="court-cases">1 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Arizona</h3>
+      <ul class="court-list">
+        <li><a href="/courts/azbk/">District of Arizona</a> <code>azbk</code> <span class="court-cases">47 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Arkansas</h3>
+      <ul class="court-list">
+        <li><a href="/courts/arebk/">Eastern District of Arkansas</a> <code>arebk</code> <span class="court-cases">514 cases</span></li>
+        <li><a href="/courts/arwbk/">Western District of Arkansas</a> <code>arwbk</code> <span class="court-cases">632 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>California</h3>
+      <ul class="court-list">
+        <li><a href="/courts/cacbk/">Central District of California</a> <code>cacbk</code> <span class="court-cases">5,938 cases</span></li>
+        <li><a href="/courts/caebk/">Eastern District of California</a> <code>caebk</code> <span class="court-cases">781 cases</span></li>
+        <li><a href="/courts/canbk/">Northern District of California</a> <code>canbk</code> <span class="court-cases">24 cases</span></li>
+        <li><a href="/courts/casbk/">Southern District of California</a> <code>casbk</code> <span class="court-cases">75 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Colorado</h3>
+      <ul class="court-list">
+        <li><a href="/courts/cobk/">District of Colorado</a> <code>cobk</code> <span class="court-cases">86 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Connecticut</h3>
+      <ul class="court-list">
+        <li><a href="/courts/ctbk/">District of Connecticut</a> <code>ctbk</code> <span class="court-cases">126 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Delaware</h3>
+      <ul class="court-list">
+        <li><a href="/courts/debk/">District of Delaware</a> <code>debk</code> <span class="court-cases">37 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>District of Columbia</h3>
+      <ul class="court-list">
+        <li><a href="/courts/dcbk/">District of Columbia</a> <code>dcbk</code> <span class="court-cases">16 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Florida <a href="/directory/fl/" style="font-size:0.8rem;color:#9eaab6">[attorney directory]</a></h3>
+      <ul class="court-list">
+        <li><a href="/courts/flmbk/">Middle District of Florida</a> <code>flmbk</code> <span class="court-cases">5,699 cases</span></li>
+        <li><a href="/courts/flnbk/">Northern District of Florida</a> <code>flnbk</code> <span class="court-cases">443 cases</span></li>
+        <li><a href="/courts/flsbk/">Southern District of Florida</a> <code>flsbk</code> <span class="court-cases">43,932 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Georgia <a href="/directory/ga/" style="font-size:0.8rem;color:#9eaab6">[attorney directory]</a></h3>
+      <ul class="court-list">
+        <li><a href="/courts/gambk/">Middle District of Georgia</a> <code>gambk</code> <span class="court-cases">107 cases</span></li>
+        <li><a href="/courts/ganbk/">Northern District of Georgia</a> <code>ganbk</code> <span class="court-cases">1,786 cases</span></li>
+        <li><a href="/courts/gasbk/">Southern District of Georgia</a> <code>gasbk</code> <span class="court-cases">&mdash;</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Guam</h3>
+      <ul class="court-list">
+        <li><a href="/courts/gubk/">District of Guam</a> <code>gubk</code> <span class="court-cases">&mdash;</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Hawaii</h3>
+      <ul class="court-list">
+        <li><a href="/courts/hibk/">District of Hawaii</a> <code>hibk</code> <span class="court-cases">2 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Idaho</h3>
+      <ul class="court-list">
+        <li><a href="/courts/idbk/">District of Idaho</a> <code>idbk</code> <span class="court-cases">1 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Illinois <a href="/directory/il/" style="font-size:0.8rem;color:#9eaab6">[attorney directory]</a></h3>
+      <ul class="court-list">
+        <li><a href="/courts/ilcbk/">Central District of Illinois</a> <code>ilcbk</code> <span class="court-cases">68 cases</span></li>
+        <li><a href="/courts/ilnbk/">Northern District of Illinois</a> <code>ilnbk</code> <span class="court-cases">10,280 cases</span></li>
+        <li><a href="/courts/ilsbk/">Southern District of Illinois</a> <code>ilsbk</code> <span class="court-cases">52 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Indiana</h3>
+      <ul class="court-list">
+        <li><a href="/courts/innbk/">Northern District of Indiana</a> <code>innbk</code> <span class="court-cases">1,508 cases</span></li>
+        <li><a href="/courts/insbk/">Southern District of Indiana</a> <code>insbk</code> <span class="court-cases">2,119 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Iowa <a href="/directory/ia/" style="font-size:0.8rem;color:#9eaab6">[attorney directory]</a></h3>
+      <ul class="court-list">
+        <li><a href="/courts/iandbk/">Northern District of Iowa</a> <code>iandbk</code> <span class="court-cases">&mdash;</span></li>
+        <li><a href="/courts/iasbk/">Southern District of Iowa</a> <code>iasbk</code> <span class="court-cases">3 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Kansas <a href="/directory/ks/" style="font-size:0.8rem;color:#9eaab6">[attorney directory]</a></h3>
+      <ul class="court-list">
+        <li><a href="/courts/ksbk/">District of Kansas</a> <code>ksbk</code> <span class="court-cases">41,718 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Kentucky <a href="/directory/ky/" style="font-size:0.8rem;color:#9eaab6">[attorney directory]</a></h3>
+      <ul class="court-list">
+        <li><a href="/courts/kyebk/">Eastern District of Kentucky</a> <code>kyebk</code> <span class="court-cases">1,227 cases</span></li>
+        <li><a href="/courts/kywbk/">Western District of Kentucky</a> <code>kywbk</code> <span class="court-cases">619 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Louisiana</h3>
+      <ul class="court-list">
+        <li><a href="/courts/laebk/">Eastern District of Louisiana</a> <code>laebk</code> <span class="court-cases">2 cases</span></li>
+        <li><a href="/courts/lambk/">Middle District of Louisiana</a> <code>lambk</code> <span class="court-cases">2 cases</span></li>
+        <li><a href="/courts/lawbk/">Western District of Louisiana</a> <code>lawbk</code> <span class="court-cases">1 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Maine</h3>
+      <ul class="court-list">
+        <li><a href="/courts/mebk/">District of Maine</a> <code>mebk</code> <span class="court-cases">3 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Maryland <a href="/directory/md/" style="font-size:0.8rem;color:#9eaab6">[attorney directory]</a></h3>
+      <ul class="court-list">
+        <li><a href="/courts/mdbk/">District of Maryland</a> <code>mdbk</code> <span class="court-cases">969 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Massachusetts</h3>
+      <ul class="court-list">
+        <li><a href="/courts/mabk/">District of Massachusetts</a> <code>mabk</code> <span class="court-cases">1,441 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Michigan</h3>
+      <ul class="court-list">
+        <li><a href="/courts/miebk/">Eastern District of Michigan</a> <code>miebk</code> <span class="court-cases">1,408 cases</span></li>
+        <li><a href="/courts/miwbk/">Western District of Michigan</a> <code>miwbk</code> <span class="court-cases">41 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Minnesota</h3>
+      <ul class="court-list">
+        <li><a href="/courts/mnbk/">District of Minnesota</a> <code>mnbk</code> <span class="court-cases">405 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Mississippi</h3>
+      <ul class="court-list">
+        <li><a href="/courts/msnbk/">Northern District of Mississippi</a> <code>msnbk</code> <span class="court-cases">3 cases</span></li>
+        <li><a href="/courts/mssbk/">Southern District of Mississippi</a> <code>mssbk</code> <span class="court-cases">1 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Missouri <a href="/directory/mo/" style="font-size:0.8rem;color:#9eaab6">[attorney directory]</a></h3>
+      <ul class="court-list">
+        <li><a href="/courts/moebk/">Eastern District of Missouri</a> <code>moebk</code> <span class="court-cases">4,526 cases</span></li>
+        <li><a href="/courts/mowbk/">Western District of Missouri</a> <code>mowbk</code> <span class="court-cases">42,275 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Montana</h3>
+      <ul class="court-list">
+        <li><a href="/courts/mtbk/">District of Montana</a> <code>mtbk</code> <span class="court-cases">1 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Nebraska</h3>
+      <ul class="court-list">
+        <li><a href="/courts/nebk/">District of Nebraska</a> <code>nebk</code> <span class="court-cases">92 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Nevada</h3>
+      <ul class="court-list">
+        <li><a href="/courts/nvbk/">District of Nevada</a> <code>nvbk</code> <span class="court-cases">327 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>New Hampshire</h3>
+      <ul class="court-list">
+        <li><a href="/courts/nhbk/">District of New Hampshire</a> <code>nhbk</code> <span class="court-cases">1 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>New Jersey <a href="/directory/nj/" style="font-size:0.8rem;color:#9eaab6">[attorney directory]</a></h3>
+      <ul class="court-list">
+        <li><a href="/courts/njbk/">District of New Jersey</a> <code>njbk</code> <span class="court-cases">1,647 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>New Mexico</h3>
+      <ul class="court-list">
+        <li><a href="/courts/nmbk/">District of New Mexico</a> <code>nmbk</code> <span class="court-cases">5 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>New York <a href="/directory/ny/" style="font-size:0.8rem;color:#9eaab6">[attorney directory]</a></h3>
+      <ul class="court-list">
+        <li><a href="/courts/nyebk/">Eastern District of New York</a> <code>nyebk</code> <span class="court-cases">1,087 cases</span></li>
+        <li><a href="/courts/nynbk/">Northern District of New York</a> <code>nynbk</code> <span class="court-cases">&mdash;</span></li>
+        <li><a href="/courts/nysbk/">Southern District of New York</a> <code>nysbk</code> <span class="court-cases">135 cases</span></li>
+        <li><a href="/courts/nywbk/">Western District of New York</a> <code>nywbk</code> <span class="court-cases">72 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>North Carolina</h3>
+      <ul class="court-list">
+        <li><a href="/courts/ncebk/">Eastern District of North Carolina</a> <code>ncebk</code> <span class="court-cases">732 cases</span></li>
+        <li><a href="/courts/ncmbk/">Middle District of North Carolina</a> <code>ncmbk</code> <span class="court-cases">449 cases</span></li>
+        <li><a href="/courts/ncwbk/">Western District of North Carolina</a> <code>ncwbk</code> <span class="court-cases">1 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>North Dakota</h3>
+      <ul class="court-list">
+        <li><a href="/courts/ndbk/">District of North Dakota</a> <code>ndbk</code> <span class="court-cases">26 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Ohio</h3>
+      <ul class="court-list">
+        <li><a href="/courts/ohnbk/">Northern District of Ohio</a> <code>ohnbk</code> <span class="court-cases">4,214 cases</span></li>
+        <li><a href="/courts/ohsbk/">Southern District of Ohio</a> <code>ohsbk</code> <span class="court-cases">613 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Oklahoma</h3>
+      <ul class="court-list">
+        <li><a href="/courts/okebk/">Eastern District of Oklahoma</a> <code>okebk</code> <span class="court-cases">&mdash;</span></li>
+        <li><a href="/courts/oknbk/">Northern District of Oklahoma</a> <code>oknbk</code> <span class="court-cases">8 cases</span></li>
+        <li><a href="/courts/okwbk/">Western District of Oklahoma</a> <code>okwbk</code> <span class="court-cases">106 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Oregon</h3>
+      <ul class="court-list">
+        <li><a href="/courts/orbk/">District of Oregon</a> <code>orbk</code> <span class="court-cases">7 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Pennsylvania <a href="/directory/pa/" style="font-size:0.8rem;color:#9eaab6">[attorney directory]</a></h3>
+      <ul class="court-list">
+        <li><a href="/courts/paebk/">Eastern District of Pennsylvania</a> <code>paebk</code> <span class="court-cases">1,778 cases</span></li>
+        <li><a href="/courts/pambk/">Middle District of Pennsylvania</a> <code>pambk</code> <span class="court-cases">3 cases</span></li>
+        <li><a href="/courts/pawbk/">Western District of Pennsylvania</a> <code>pawbk</code> <span class="court-cases">8 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Puerto Rico <a href="/directory/pr/" style="font-size:0.8rem;color:#9eaab6">[attorney directory]</a></h3>
+      <ul class="court-list">
+        <li><a href="/courts/prbk/">District of Puerto Rico</a> <code>prbk</code> <span class="court-cases">2 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Rhode Island</h3>
+      <ul class="court-list">
+        <li><a href="/courts/ribk/">District of Rhode Island</a> <code>ribk</code> <span class="court-cases">1 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>South Carolina</h3>
+      <ul class="court-list">
+        <li><a href="/courts/scbk/">District of South Carolina</a> <code>scbk</code> <span class="court-cases">841 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>South Dakota</h3>
+      <ul class="court-list">
+        <li><a href="/courts/sdbk/">District of South Dakota</a> <code>sdbk</code> <span class="court-cases">21 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Tennessee</h3>
+      <ul class="court-list">
+        <li><a href="/courts/tnebk/">Eastern District of Tennessee</a> <code>tnebk</code> <span class="court-cases">9 cases</span></li>
+        <li><a href="/courts/tnmbk/">Middle District of Tennessee</a> <code>tnmbk</code> <span class="court-cases">22 cases</span></li>
+        <li><a href="/courts/tnwbk/">Western District of Tennessee</a> <code>tnwbk</code> <span class="court-cases">2,014 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Texas <a href="/directory/tx/" style="font-size:0.8rem;color:#9eaab6">[attorney directory]</a></h3>
+      <ul class="court-list">
+        <li><a href="/courts/txebk/">Eastern District of Texas</a> <code>txebk</code> <span class="court-cases">1 cases</span></li>
+        <li><a href="/courts/txnbk/">Northern District of Texas</a> <code>txnbk</code> <span class="court-cases">1,249 cases</span></li>
+        <li><a href="/courts/txsbk/">Southern District of Texas</a> <code>txsbk</code> <span class="court-cases">30,412 cases</span></li>
+        <li><a href="/courts/txwbk/">Western District of Texas</a> <code>txwbk</code> <span class="court-cases">25 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Utah</h3>
+      <ul class="court-list">
+        <li><a href="/courts/utbk/">District of Utah</a> <code>utbk</code> <span class="court-cases">1 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Vermont</h3>
+      <ul class="court-list">
+        <li><a href="/courts/vtbk/">District of Vermont</a> <code>vtbk</code> <span class="court-cases">1 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Virgin Islands</h3>
+      <ul class="court-list">
+        <li><a href="/courts/vibk/">District of the Virgin Islands</a> <code>vibk</code> <span class="court-cases">&mdash;</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Virginia <a href="/directory/va/" style="font-size:0.8rem;color:#9eaab6">[attorney directory]</a></h3>
+      <ul class="court-list">
+        <li><a href="/courts/vaebk/">Eastern District of Virginia</a> <code>vaebk</code> <span class="court-cases">1,432 cases</span></li>
+        <li><a href="/courts/vawbk/">Western District of Virginia</a> <code>vawbk</code> <span class="court-cases">7 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Washington</h3>
+      <ul class="court-list">
+        <li><a href="/courts/waebk/">Eastern District of Washington</a> <code>waebk</code> <span class="court-cases">1 cases</span></li>
+        <li><a href="/courts/wawbk/">Western District of Washington</a> <code>wawbk</code> <span class="court-cases">42 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>West Virginia</h3>
+      <ul class="court-list">
+        <li><a href="/courts/wvnbk/">Northern District of West Virginia</a> <code>wvnbk</code> <span class="court-cases">68 cases</span></li>
+        <li><a href="/courts/wvsbk/">Southern District of West Virginia</a> <code>wvsbk</code> <span class="court-cases">3 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Wisconsin <a href="/directory/wi/" style="font-size:0.8rem;color:#9eaab6">[attorney directory]</a></h3>
+      <ul class="court-list">
+        <li><a href="/courts/wiebk/">Eastern District of Wisconsin</a> <code>wiebk</code> <span class="court-cases">1,520 cases</span></li>
+        <li><a href="/courts/wiwbk/">Western District of Wisconsin</a> <code>wiwbk</code> <span class="court-cases">101 cases</span></li>
+      </ul>
+    </div>
+
+    <div class="state-section">
+      <h3>Wyoming</h3>
+      <ul class="court-list">
+        <li><a href="/courts/wybk/">District of Wyoming</a> <code>wybk</code> <span class="court-cases">&mdash;</span></li>
+      </ul>
+    </div>
+
+    <h2>About This Directory</h2>
+
+    <p>Case counts reflect bankruptcy filings across all chapters in the FJC Integrated Database research dataset (FY 2008&ndash;2024). Not all courts have equal representation in the dataset. Courts with higher case counts generally have more complete data coverage.</p>
+
+    <p>PACER links point to each court's CM/ECF system. A free PACER account is required for document access. Register at <a href="https://pacer.uscourts.gov" rel="noopener">pacer.uscourts.gov</a>.</p>
+
+    <h2>Not Legal Advice</h2>
+    <p>This directory provides general reference information about federal bankruptcy courts. It does not constitute legal advice and does not create an attorney-client relationship.</p>
+
+  </article>
+
+<footer role="contentinfo">
+    <p>1328f.org &mdash; Independent consumer bankruptcy research. Not legal advice.</p>
+    <p class="links">
+      <a href="https://1328f.com">Screener Tool</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/">About</a>
+      <a href="/support/">Support</a>
+    </p>
+    <br><span style="font-size:11px">This site provides general information only and does not constitute legal advice. No attorney-client relationship is created. Consult a licensed attorney for advice on your specific situation.</span>
+</footer>
+
+</body>
+</html>

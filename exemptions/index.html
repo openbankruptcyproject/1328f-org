@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CF8T1FYRCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CF8T1FYRCV');
+</script>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bankruptcy Exemptions by State - 1328f.org</title>
+  <meta name="description" content="Compare bankruptcy exemption amounts across all 50 states and DC. Homestead, vehicle, wildcard, and federal option status for every jurisdiction.">
+  <link rel="canonical" href="https://1328f.org/exemptions/">
+  <meta property="og:title" content="Bankruptcy Exemptions by State">
+  <meta property="og:description" content="Compare bankruptcy exemption amounts across all 50 states and DC. Homestead, vehicle, wildcard, and federal option status.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://1328f.org/exemptions/">
+  <meta property="og:site_name" content="1328f.org">
+  <meta property="og:image" content="https://1328f.org/og-image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    code { background: #161b22; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; }
+    .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+    header { background: #161b22; border-bottom: 1px solid #30363d; padding: 2rem; text-align: center; }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #9eaab6; font-size: 1rem; }
+    article { max-width: 760px; margin: 0 auto; padding: 2rem; }
+    .article-header { margin-bottom: 2rem; }
+    .article-header h2 { color: #f0f6fc; font-size: 1.6rem; line-height: 1.3; margin-bottom: 0.75rem; border-bottom: none; padding-bottom: 0; }
+    .article-header .meta { color: #9eaab6; font-size: 0.85rem; }
+    .article-header .meta .tag { background: #21262d; padding: 0.15em 0.5em; border-radius: 3px; margin-right: 0.5rem; }
+    h2 { color: #f0f6fc; font-size: 1.2rem; margin: 2rem 0 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.05rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.4rem; }
+    table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; }
+    thead th { color: #f0f6fc; font-weight: 600; background: #161b22; }
+    th, td { padding: 0.5rem 0.75rem; text-align: left; border-bottom: 1px solid #30363d; font-size: 0.9rem; }
+    td { color: #c9d1d9; }
+    .callout { background: #161b22; border: 1px solid #30363d; border-left: 3px solid #58a6ff; border-radius: 0 6px 6px 0; padding: 1rem 1.5rem; margin-bottom: 1.5rem; }
+    .callout.green { border-left-color: #3fb950; }
+    .callout.yellow { border-left-color: #e3a835; }
+    .callout.red { border-left-color: #f85149; }
+    .callout h4 { color: #f0f6fc; margin-bottom: 0.5rem; }
+    .back-link { display: inline-block; margin-bottom: 1rem; color: #9eaab6; font-size: 0.85rem; }
+    .back-link:hover { color: #58a6ff; }
+    footer { background: #161b22; border-top: 1px solid #30363d; padding: 2rem; text-align: center; margin-top: 3rem; color: #9eaab6; font-size: 0.85rem; }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+    .stat-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+    .stat-card { background: #161b22; border: 1px solid #30363d; border-radius: 6px; padding: 1rem; text-align: center; }
+    .stat-card .stat-value { color: #f0f6fc; font-size: 1.3rem; font-weight: 700; }
+    .stat-card .stat-label { color: #9eaab6; font-size: 0.8rem; margin-top: 0.25rem; }
+    td.num { text-align: right; font-variant-numeric: tabular-nums; }
+    th.num { text-align: right; }
+    .badge { display: inline-block; padding: 0.15em 0.5em; border-radius: 3px; font-size: 0.8rem; font-weight: 600; }
+    .badge-green { background: #238636; color: #fff; }
+    .badge-red { background: #da3633; color: #fff; }
+    @media (max-width: 600px) { header { padding: 1.5rem 1rem; } article { padding: 1rem; } .stat-grid { grid-template-columns: repeat(2, 1fr); } }
+    @media print {
+      body { background: #fff; color: #000; }
+      header, nav, footer, .skip-link, .back-link { display: none; }
+      article { max-width: 100%; padding: 0; }
+      a { color: #000; text-decoration: underline; }
+      .callout { border-color: #ccc; background: #f9f9f9; }
+      .callout h4, h2, h3 { color: #000; }
+      code { background: #f0f0f0; }
+      table { border: 1px solid #ccc; }
+      th { background: #f0f0f0; color: #000; }
+      td { color: #000; }
+      .stat-card { border-color: #ccc; }
+      .stat-card .stat-value { color: #000; }
+    }
+    #search-box { background: #161b22; border: 1px solid #30363d; color: #c9d1d9; padding: 0.6rem 1rem; border-radius: 6px; width: 100%; max-width: 400px; font-size: 1rem; margin-bottom: 1rem; }
+    #search-box::placeholder { color: #6e7681; }
+    #search-box:focus { outline: 2px solid #58a6ff; outline-offset: 1px; border-color: #58a6ff; }
+    .filter-group { margin-bottom: 1.5rem; display: flex; gap: 0.5rem; flex-wrap: wrap; align-items: center; }
+    .filter-btn { background: #21262d; border: 1px solid #30363d; color: #c9d1d9; padding: 0.35rem 0.75rem; border-radius: 4px; cursor: pointer; font-size: 0.85rem; }
+    .filter-btn:hover { background: #30363d; }
+    .filter-btn.active { background: #388bfd26; border-color: #58a6ff; color: #58a6ff; }
+    .filter-btn:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    .count-label { color: #9eaab6; font-size: 0.85rem; margin-bottom: 0.5rem; }
+    @media (max-width: 600px) {
+      table { font-size: 0.8rem; }
+      th, td { padding: 0.35rem 0.5rem; }
+    }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Bankruptcy Exemptions by State",
+  "description": "Compare bankruptcy exemption amounts across all 50 states and DC.",
+  "url": "https://1328f.org/exemptions/",
+  "publisher": {
+    "@type": "Organization",
+    "name": "1328f.org",
+    "url": "https://1328f.org"
+  }
+}
+</script>
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+</head>
+<body>
+<style>
+#site-nav{background:#0d1117;border-bottom:1px solid #30363d;padding:0.5rem 1rem;text-align:center;font-size:0.78rem;line-height:1.9}
+#site-nav a{margin:0 0.3rem}
+#site-nav .sep{color:#30363d;margin:0 0.25rem}
+#site-nav .nav-label{color:#f0f6fc;margin:0 0.4rem;font-weight:700}
+.nav-toggle{display:none;background:none;border:1px solid #30363d;color:#c9d1d9;font-size:1.2rem;padding:0.4rem 0.75rem;border-radius:4px;cursor:pointer;line-height:1}
+.nav-toggle:focus-visible{outline:2px solid #58a6ff;outline-offset:2px}
+.nav-links{display:inline}
+@media(max-width:768px){
+.nav-toggle{display:inline-block;margin:0.25rem 0}
+.nav-links{display:none;text-align:left;padding:0.5rem 0}
+.nav-links.open{display:block}
+.nav-links a{display:block;padding:0.6rem 1rem;margin:0;font-size:0.9rem;min-height:44px;line-height:1.6;border-bottom:1px solid #21262d}
+.nav-links a:hover,.nav-links a:focus{background:#161b22}
+.nav-links .sep{display:none}
+.nav-links br{display:none}
+.nav-links .nav-label{display:block;padding:0.5rem 1rem 0.2rem;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;color:#9eaab6;margin:0}
+}
+</style>
+<nav id="site-nav" aria-label="Site navigation">
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">&#9776; Menu</button>
+  <div class="nav-links" id="nav-links">
+<strong class="nav-label">Research:</strong>
+  <a href="https://1328f.org/reports/">Reports</a>
+  <a href="https://1328f.org/districts/">District Cards</a>
+  <a href="https://1328f.org/directory/">Directory</a>
+  <a href="https://1328f.org/exemptions/">Exemptions</a>
+  <a href="https://1328f.org/methodology/">Methodology</a>
+  <a href="https://1328f.org/about/">About</a>
+  <span class="sep">|</span>
+  <strong class="nav-label">Tools:</strong>
+  <a href="https://1328f.com/check.html">Eligibility Checker</a>
+  <a href="https://1328f.com/compare.html">Compare All Bars</a>
+  <a href="https://1328f.com/dashboard.html">Dashboard</a>
+  <span class="sep">|</span>
+  <strong class="nav-label">Learn:</strong>
+  <a href="https://1328f.com/explainer.html">1328(f) Explained</a>
+  <a href="https://1328f.com/can-i-file-bankruptcy-again.html">Can I File Again?</a>
+  <a href="https://1328f.com/how-long-between-bankruptcies.html">How Long Between?</a>
+  <span class="sep">|</span>
+  <a href="https://1328f.org/support/" style="color:#238636;font-weight:600">Support This Research</a>
+  </div>
+</nav>
+<script>document.addEventListener('DOMContentLoaded',function(){var b=document.querySelector('.nav-toggle');if(b)b.addEventListener('click',function(){var l=document.querySelector('.nav-links');l.classList.toggle('open');b.setAttribute('aria-expanded',l.classList.contains('open'))})});</script>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header role="banner">
+    <h1><a href="/" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Consumer Bankruptcy Research &amp; Accountability</p>
+  </header>
+
+  <article id="main" role="article">
+    <div class="article-header">
+      <h2>Bankruptcy Exemptions by State</h2>
+      <div class="meta">
+        <span class="tag">Exemptions</span>
+        <span class="tag">50 States + DC</span>
+        <span class="tag">Updated 2026</span>
+      </div>
+    </div>
+
+    <p>Bankruptcy exemptions determine what property you can keep when filing for bankruptcy. Each state sets its own exemption amounts, and approximately 21 jurisdictions also allow debtors to choose the federal exemption system instead. This directory covers all 50 states and the District of Columbia.</p>
+
+    <div class="callout">
+      <h4>How to Use This Table</h4>
+      <p style="margin-bottom: 0;">Search by state name or abbreviation, or filter by federal option availability. Click any state name for a detailed exemption breakdown including federal reference amounts, key concepts, and domicile requirements.</p>
+    </div>
+
+    <div class="stat-grid">
+      <div class="stat-card">
+        <div class="stat-value">51</div>
+        <div class="stat-label">Jurisdictions</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">21</div>
+        <div class="stat-label">Allow Federal Option</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">30</div>
+        <div class="stat-label">State-Only</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-value">$27,900</div>
+        <div class="stat-label">Federal Homestead</div>
+      </div>
+    </div>
+
+    <h2>Search &amp; Filter</h2>
+
+    <input type="text" id="search-box" placeholder="Search by state name or abbreviation..." aria-label="Search states">
+
+    <div class="filter-group">
+      <button class="filter-btn active" data-filter="all">All States</button>
+      <button class="filter-btn" data-filter="yes">Federal Option Available</button>
+      <button class="filter-btn" data-filter="no">State Exemptions Only</button>
+    </div>
+
+    <p class="count-label">Showing <span id="count">51</span> of 51 jurisdictions</p>
+
+    <div style="overflow-x: auto;">
+    <table id="state-table">
+      <thead>
+        <tr>
+          <th scope="col">State</th>
+          <th scope="col">Code</th>
+          <th scope="col">Federal Option</th>
+          <th scope="col">Homestead</th>
+          <th scope="col">Vehicle</th>
+          <th scope="col">Wildcard</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr data-state="alabama" data-abbr="al" data-federal="no">
+          <td><a href="/exemptions/alabama/">Alabama</a></td>
+          <td>AL</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$16,450 (up to 160 acres)</td>
+          <td>$5,000 (if no wildcard used)</td>
+          <td>$7,500 (personal property)</td>
+        </tr>
+        <tr data-state="alaska" data-abbr="ak" data-federal="yes">
+          <td><a href="/exemptions/alaska/">Alaska</a></td>
+          <td>AK</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>$72,900</td>
+          <td>$4,000</td>
+          <td>None</td>
+        </tr>
+        <tr data-state="arizona" data-abbr="az" data-federal="no">
+          <td><a href="/exemptions/arizona/">Arizona</a></td>
+          <td>AZ</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$250,000</td>
+          <td>$6,000 ($12,000 if disabled)</td>
+          <td>None</td>
+        </tr>
+        <tr data-state="arkansas" data-abbr="ar" data-federal="yes">
+          <td><a href="/exemptions/arkansas/">Arkansas</a></td>
+          <td>AR</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>Unlimited (up to 80 urban / 160 rural acres)</td>
+          <td>$1,200 (married: separate)</td>
+          <td>$500</td>
+        </tr>
+        <tr data-state="california" data-abbr="ca" data-federal="no">
+          <td><a href="/exemptions/california/">California</a></td>
+          <td>CA</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$300,000–$600,000 (varies by county median home price)</td>
+          <td>$7,500</td>
+          <td>$1,600 + unused homestead (System 1) or $33,050 (System 2)</td>
+        </tr>
+        <tr data-state="colorado" data-abbr="co" data-federal="no">
+          <td><a href="/exemptions/colorado/">Colorado</a></td>
+          <td>CO</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$250,000 ($350,000 if elderly/disabled)</td>
+          <td>$7,500 (elderly: $12,500)</td>
+          <td>None</td>
+        </tr>
+        <tr data-state="connecticut" data-abbr="ct" data-federal="yes">
+          <td><a href="/exemptions/connecticut/">Connecticut</a></td>
+          <td>CT</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>$75,000</td>
+          <td>$3,500</td>
+          <td>$1,000</td>
+        </tr>
+        <tr data-state="delaware" data-abbr="de" data-federal="no">
+          <td><a href="/exemptions/delaware/">Delaware</a></td>
+          <td>DE</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>None (tenancy by entirety only)</td>
+          <td>None specific</td>
+          <td>$5,000</td>
+        </tr>
+        <tr data-state="district of columbia" data-abbr="dc" data-federal="yes">
+          <td><a href="/exemptions/district-of-columbia/">District of Columbia</a></td>
+          <td>DC</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>Unlimited (as to value, principal residence)</td>
+          <td>$2,575</td>
+          <td>$1,325 + up to $12,575 unused homestead</td>
+        </tr>
+        <tr data-state="florida" data-abbr="fl" data-federal="no">
+          <td><a href="/exemptions/florida/">Florida</a></td>
+          <td>FL</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>Unlimited (up to 1/2 acre urban, 160 acres rural)</td>
+          <td>$1,000</td>
+          <td>$4,000 (if no homestead claimed) + $1,000</td>
+        </tr>
+        <tr data-state="georgia" data-abbr="ga" data-federal="no">
+          <td><a href="/exemptions/georgia/">Georgia</a></td>
+          <td>GA</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$21,500</td>
+          <td>$5,000</td>
+          <td>$1,200 + unused homestead up to $10,000</td>
+        </tr>
+        <tr data-state="hawaii" data-abbr="hi" data-federal="yes">
+          <td><a href="/exemptions/hawaii/">Hawaii</a></td>
+          <td>HI</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>$30,000 (head of family) / $20,000 (individual)</td>
+          <td>$2,575</td>
+          <td>None</td>
+        </tr>
+        <tr data-state="idaho" data-abbr="id" data-federal="no">
+          <td><a href="/exemptions/idaho/">Idaho</a></td>
+          <td>ID</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$175,000</td>
+          <td>$10,000</td>
+          <td>$1,500</td>
+        </tr>
+        <tr data-state="illinois" data-abbr="il" data-federal="no">
+          <td><a href="/exemptions/illinois/">Illinois</a></td>
+          <td>IL</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$15,000</td>
+          <td>$2,400</td>
+          <td>$4,000</td>
+        </tr>
+        <tr data-state="indiana" data-abbr="in" data-federal="no">
+          <td><a href="/exemptions/indiana/">Indiana</a></td>
+          <td>IN</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$22,750</td>
+          <td>No separate exemption (use wildcard)</td>
+          <td>$10,250</td>
+        </tr>
+        <tr data-state="iowa" data-abbr="ia" data-federal="no">
+          <td><a href="/exemptions/iowa/">Iowa</a></td>
+          <td>IA</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>Unlimited (up to 1/2 acre urban, 40 acres rural)</td>
+          <td>No separate exemption</td>
+          <td>$500 (in combination with clothing/household)</td>
+        </tr>
+        <tr data-state="kansas" data-abbr="ks" data-federal="no">
+          <td><a href="/exemptions/kansas/">Kansas</a></td>
+          <td>KS</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>Unlimited (up to 1 acre urban, 160 acres rural)</td>
+          <td>$20,000 (single) / $40,000 (married)</td>
+          <td>None</td>
+        </tr>
+        <tr data-state="kentucky" data-abbr="ky" data-federal="yes">
+          <td><a href="/exemptions/kentucky/">Kentucky</a></td>
+          <td>KY</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>$5,000</td>
+          <td>$2,500</td>
+          <td>$1,000</td>
+        </tr>
+        <tr data-state="louisiana" data-abbr="la" data-federal="no">
+          <td><a href="/exemptions/louisiana/">Louisiana</a></td>
+          <td>LA</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$35,000 (up to 200 acres)</td>
+          <td>No specific exemption (use general)</td>
+          <td>None</td>
+        </tr>
+        <tr data-state="maine" data-abbr="me" data-federal="no">
+          <td><a href="/exemptions/maine/">Maine</a></td>
+          <td>ME</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$47,500 ($95,000 if age 60+ or disabled)</td>
+          <td>$7,500</td>
+          <td>$400 per item + $6,000 aggregate</td>
+        </tr>
+        <tr data-state="maryland" data-abbr="md" data-federal="no">
+          <td><a href="/exemptions/maryland/">Maryland</a></td>
+          <td>MD</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>None (tenancy by entirety only)</td>
+          <td>No separate exemption</td>
+          <td>$6,000</td>
+        </tr>
+        <tr data-state="massachusetts" data-abbr="ma" data-federal="yes">
+          <td><a href="/exemptions/massachusetts/">Massachusetts</a></td>
+          <td>MA</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>$500,000 (if declared)</td>
+          <td>$7,500</td>
+          <td>None</td>
+        </tr>
+        <tr data-state="michigan" data-abbr="mi" data-federal="yes">
+          <td><a href="/exemptions/michigan/">Michigan</a></td>
+          <td>MI</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>$40,475 ($60,725 if age 65+)</td>
+          <td>$3,525</td>
+          <td>$1,325 + $12,250 unused homestead</td>
+        </tr>
+        <tr data-state="minnesota" data-abbr="mn" data-federal="yes">
+          <td><a href="/exemptions/minnesota/">Minnesota</a></td>
+          <td>MN</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>$450,000 (480 acres rural, 1/2 acre urban)</td>
+          <td>$4,600 ($46,000 if modified for disability)</td>
+          <td>None</td>
+        </tr>
+        <tr data-state="mississippi" data-abbr="ms" data-federal="no">
+          <td><a href="/exemptions/mississippi/">Mississippi</a></td>
+          <td>MS</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$75,000 (160 acres)</td>
+          <td>$10,000</td>
+          <td>$10,000 personal property</td>
+        </tr>
+        <tr data-state="missouri" data-abbr="mo" data-federal="no">
+          <td><a href="/exemptions/missouri/">Missouri</a></td>
+          <td>MO</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$15,000</td>
+          <td>$3,000</td>
+          <td>$600 + $1,250 head of family</td>
+        </tr>
+        <tr data-state="montana" data-abbr="mt" data-federal="no">
+          <td><a href="/exemptions/montana/">Montana</a></td>
+          <td>MT</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$250,000</td>
+          <td>$2,500</td>
+          <td>None</td>
+        </tr>
+        <tr data-state="nebraska" data-abbr="ne" data-federal="no">
+          <td><a href="/exemptions/nebraska/">Nebraska</a></td>
+          <td>NE</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$60,000</td>
+          <td>No separate exemption</td>
+          <td>$2,500</td>
+        </tr>
+        <tr data-state="nevada" data-abbr="nv" data-federal="no">
+          <td><a href="/exemptions/nevada/">Nevada</a></td>
+          <td>NV</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$605,000</td>
+          <td>$15,000</td>
+          <td>None</td>
+        </tr>
+        <tr data-state="new hampshire" data-abbr="nh" data-federal="yes">
+          <td><a href="/exemptions/new-hampshire/">New Hampshire</a></td>
+          <td>NH</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>$120,000</td>
+          <td>$4,000</td>
+          <td>$1,000 + $8,000 for any property</td>
+        </tr>
+        <tr data-state="new jersey" data-abbr="nj" data-federal="yes">
+          <td><a href="/exemptions/new-jersey/">New Jersey</a></td>
+          <td>NJ</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>None (tenancy by entirety only)</td>
+          <td>No separate exemption</td>
+          <td>$1,000</td>
+        </tr>
+        <tr data-state="new mexico" data-abbr="nm" data-federal="yes">
+          <td><a href="/exemptions/new-mexico/">New Mexico</a></td>
+          <td>NM</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>$60,000</td>
+          <td>$4,000</td>
+          <td>$500</td>
+        </tr>
+        <tr data-state="new york" data-abbr="ny" data-federal="yes">
+          <td><a href="/exemptions/new-york/">New York</a></td>
+          <td>NY</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>$179,975–$299,975 (varies by county)</td>
+          <td>$4,825</td>
+          <td>$1,175 + unused homestead portion</td>
+        </tr>
+        <tr data-state="north carolina" data-abbr="nc" data-federal="no">
+          <td><a href="/exemptions/north-carolina/">North Carolina</a></td>
+          <td>NC</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$35,000 ($60,000 if age 65+)</td>
+          <td>$3,500</td>
+          <td>$5,000 + $1,000 per dependent (up to $4,000)</td>
+        </tr>
+        <tr data-state="north dakota" data-abbr="nd" data-federal="no">
+          <td><a href="/exemptions/north-dakota/">North Dakota</a></td>
+          <td>ND</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$150,000 (2 acres urban)</td>
+          <td>$1,200 + $32,000 for head of family</td>
+          <td>$7,500</td>
+        </tr>
+        <tr data-state="ohio" data-abbr="oh" data-federal="no">
+          <td><a href="/exemptions/ohio/">Ohio</a></td>
+          <td>OH</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$145,425</td>
+          <td>$4,000</td>
+          <td>$1,325</td>
+        </tr>
+        <tr data-state="oklahoma" data-abbr="ok" data-federal="no">
+          <td><a href="/exemptions/oklahoma/">Oklahoma</a></td>
+          <td>OK</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>Unlimited (up to 1 acre urban, 160 acres rural)</td>
+          <td>$7,500</td>
+          <td>None</td>
+        </tr>
+        <tr data-state="oregon" data-abbr="or" data-federal="yes">
+          <td><a href="/exemptions/oregon/">Oregon</a></td>
+          <td>OR</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>$40,000 ($50,000 joint)</td>
+          <td>$3,000</td>
+          <td>$400 per item + $7,500 catch-all</td>
+        </tr>
+        <tr data-state="pennsylvania" data-abbr="pa" data-federal="yes">
+          <td><a href="/exemptions/pennsylvania/">Pennsylvania</a></td>
+          <td>PA</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>None (tenancy by entirety only)</td>
+          <td>No separate exemption</td>
+          <td>$300 + aggregate personal property</td>
+        </tr>
+        <tr data-state="rhode island" data-abbr="ri" data-federal="yes">
+          <td><a href="/exemptions/rhode-island/">Rhode Island</a></td>
+          <td>RI</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>$500,000</td>
+          <td>$12,000</td>
+          <td>None</td>
+        </tr>
+        <tr data-state="south carolina" data-abbr="sc" data-federal="yes">
+          <td><a href="/exemptions/south-carolina/">South Carolina</a></td>
+          <td>SC</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>$63,250 (joint: double)</td>
+          <td>$5,725</td>
+          <td>$5,725 (any property)</td>
+        </tr>
+        <tr data-state="south dakota" data-abbr="sd" data-federal="no">
+          <td><a href="/exemptions/south-dakota/">South Dakota</a></td>
+          <td>SD</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>Unlimited (up to 1 acre urban, 160 acres rural)</td>
+          <td>No separate exemption</td>
+          <td>$6,000</td>
+        </tr>
+        <tr data-state="tennessee" data-abbr="tn" data-federal="no">
+          <td><a href="/exemptions/tennessee/">Tennessee</a></td>
+          <td>TN</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$5,000 ($7,500 joint) — $25,000 if age 62+</td>
+          <td>Included in personal property</td>
+          <td>$10,000 personal property</td>
+        </tr>
+        <tr data-state="texas" data-abbr="tx" data-federal="yes">
+          <td><a href="/exemptions/texas/">Texas</a></td>
+          <td>TX</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>Unlimited (up to 10 acres urban, 100 acres single / 200 acres family rural)</td>
+          <td>$2,500 per member (up to $50,000 personal property aggregate)</td>
+          <td>$50,000 single / $100,000 family (personal property)</td>
+        </tr>
+        <tr data-state="utah" data-abbr="ut" data-federal="no">
+          <td><a href="/exemptions/utah/">Utah</a></td>
+          <td>UT</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$45,800 (joint: double)</td>
+          <td>$3,000</td>
+          <td>None</td>
+        </tr>
+        <tr data-state="vermont" data-abbr="vt" data-federal="yes">
+          <td><a href="/exemptions/vermont/">Vermont</a></td>
+          <td>VT</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>$125,000</td>
+          <td>$2,500</td>
+          <td>$400 per item + $7,000 aggregate</td>
+        </tr>
+        <tr data-state="virginia" data-abbr="va" data-federal="no">
+          <td><a href="/exemptions/virginia/">Virginia</a></td>
+          <td>VA</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$5,000 + $500 per dependent</td>
+          <td>$6,000</td>
+          <td>$1,000</td>
+        </tr>
+        <tr data-state="washington" data-abbr="wa" data-federal="yes">
+          <td><a href="/exemptions/washington/">Washington</a></td>
+          <td>WA</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>$125,000 (varies by county, some up to $125,000)</td>
+          <td>$3,250</td>
+          <td>$3,000 (additional $1,000 for certain property)</td>
+        </tr>
+        <tr data-state="west virginia" data-abbr="wv" data-federal="no">
+          <td><a href="/exemptions/west-virginia/">West Virginia</a></td>
+          <td>WV</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$25,000</td>
+          <td>$2,400</td>
+          <td>$800 per item + $8,000</td>
+        </tr>
+        <tr data-state="wisconsin" data-abbr="wi" data-federal="yes">
+          <td><a href="/exemptions/wisconsin/">Wisconsin</a></td>
+          <td>WI</td>
+          <td><span class="badge badge-green">Yes</span></td>
+          <td>$75,000</td>
+          <td>$4,000</td>
+          <td>$5,000 + unused other exemptions</td>
+        </tr>
+        <tr data-state="wyoming" data-abbr="wy" data-federal="no">
+          <td><a href="/exemptions/wyoming/">Wyoming</a></td>
+          <td>WY</td>
+          <td><span class="badge badge-red">No</span></td>
+          <td>$20,000 ($40,000 for couple)</td>
+          <td>$5,000</td>
+          <td>None</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    <h2>Federal Exemption Amounts (Reference)</h2>
+
+    <p>For states that allow the federal option, the following amounts apply under <a href="https://www.law.cornell.edu/uscode/text/11/522">11 U.S.C. &sect; 522(d)</a>, effective April 1, 2025:</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th scope="col">Category</th>
+          <th scope="col">Amount</th>
+          <th scope="col">Statute</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>Homestead</td><td><strong>$27,900</strong></td><td><code>§ 522(d)(1)</code></td></tr>
+        <tr><td>Motor Vehicle</td><td><strong>$4,450</strong></td><td><code>§ 522(d)(2)</code></td></tr>
+        <tr><td>Household Goods</td><td><strong>$14,875</strong></td><td><code>§ 522(d)(3)</code></td></tr>
+        <tr><td>Jewelry</td><td><strong>$2,075</strong></td><td><code>§ 522(d)(4)</code></td></tr>
+        <tr><td>Wildcard</td><td><strong>$1,475 + $13,950 unused homestead</strong></td><td><code>§ 522(d)(5)</code></td></tr>
+        <tr><td>Tools of Trade</td><td><strong>$2,800</strong></td><td><code>§ 522(d)(6)</code></td></tr>
+        <tr><td>Retirement Accounts</td><td><strong>Unlimited (ERISA-qualified)</strong></td><td><code>§ 522(b)(3)(C) / ERISA</code></td></tr>
+        <tr><td>Life Insurance</td><td><strong>$14,875</strong></td><td><code>§ 522(d)(8)</code></td></tr>
+        <tr><td>Personal Injury</td><td><strong>$27,900</strong></td><td><code>§ 522(d)(11)(D)</code></td></tr>
+        <tr><td>Public Benefits</td><td><strong>Unlimited</strong></td><td><code>§ 522(d)(10)</code></td></tr>
+      </tbody>
+    </table>
+
+    <h2>Not Legal Advice</h2>
+    <p>This directory provides general information about bankruptcy exemptions for educational and research purposes. It does not constitute legal advice and does not create an attorney-client relationship. Exemption amounts are subject to change through legislation and periodic adjustments. <strong>Consult a licensed bankruptcy attorney in your state before making decisions about your case.</strong></p>
+
+    <h2>Explore More</h2>
+    <ul>
+      <li><a href="/districts/">District Report Cards</a></li>
+      <li><a href="https://1328f.com/check.html">Eligibility Checker</a></li>
+      <li><a href="https://1328f.com/explainer.html">&sect;1328(f) Explained</a></li>
+      <li><a href="/methodology/">Methodology</a></li>
+    </ul>
+
+    <p style="text-align: center; margin-top: 2rem;"><a href="/support/" style="color: #9eaab6; font-size: 0.9rem;">Support this research</a></p>
+
+  </article>
+
+<footer role="contentinfo">
+    <p>1328f.org &mdash; Independent consumer bankruptcy research. Not legal advice.</p>
+    <p class="links">
+      <a href="https://1328f.com">Screener Tool</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/">About</a>
+      <a href="/support/">Support</a>
+    </p>
+    <br><span style="font-size:11px">This site provides general information only and does not constitute legal advice. No attorney-client relationship is created. Consult a licensed attorney for advice on your specific situation.</span>
+</footer>
+
+<script>
+(function() {
+  var searchBox = document.getElementById('search-box');
+  var table = document.getElementById('state-table');
+  var rows = table.querySelectorAll('tbody tr');
+  var filterBtns = document.querySelectorAll('.filter-btn');
+  var countEl = document.getElementById('count');
+  var currentFilter = 'all';
+
+  function applyFilters() {
+    var query = searchBox.value.toLowerCase().trim();
+    var visible = 0;
+    rows.forEach(function(row) {
+      var state = row.getAttribute('data-state');
+      var abbr = row.getAttribute('data-abbr');
+      var federal = row.getAttribute('data-federal');
+      var matchSearch = !query || state.indexOf(query) !== -1 || abbr.indexOf(query) !== -1;
+      var matchFilter = currentFilter === 'all' || federal === currentFilter;
+      if (matchSearch && matchFilter) {
+        row.style.display = '';
+        visible++;
+      } else {
+        row.style.display = 'none';
+      }
+    });
+    countEl.textContent = visible;
+  }
+
+  searchBox.addEventListener('input', applyFilters);
+
+  filterBtns.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      filterBtns.forEach(function(b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      currentFilter = btn.getAttribute('data-filter');
+      applyFilters();
+    });
+  });
+})();
+</script>
+
+</body>
+</html>
