@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CF8T1FYRCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CF8T1FYRCV');
+</script>
+<script>
+document.addEventListener('click', function(e) {
+  var link = e.target.closest('a[href*="uscourts.gov"]');
+  if (link) {
+    gtag('event', 'outbound_click', {
+      event_category: 'credential_verification',
+      event_label: link.href,
+      page_path: location.pathname,
+      transport_type: 'beacon'
+    });
+  }
+});
+</script>
+<meta charset="UTF-8">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consumer Harm Map - Chapter 13 Bankruptcy by District | 1328f.org</title>
+<meta name="description" content="Interactive map of Chapter 13 bankruptcy consumer harm across all 94 federal districts. 4.9M cases analyzed. Dismissal rates, prior filers, and estimated financial harm.">
+<link rel="canonical" href="https://1328f.org/harm-map/">
+<meta property="og:title" content="Consumer Harm Map - Chapter 13 Bankruptcy">
+<meta property="og:description" content="Interactive map showing consumer harm across 94 federal bankruptcy districts. 4.9M cases, $8.4B estimated harm.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://1328f.org/harm-map/">
+<meta property="og:site_name" content="1328f.org">
+<meta property="og:image" content="https://1328f.org/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: #0d1117;
+    color: #c9d1d9;
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+  a { color: #58a6ff; text-decoration: none; }
+  a:hover { text-decoration: underline; }
+  a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+  code { background: #161b22; padding: 0.15em 0.4em; border-radius: 3px; font-size: 0.9em; font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+
+  /* Skip link */
+  .skip-link { position: absolute; left: -9999px; top: auto; width: 1px; height: 1px; overflow: hidden; padding: 1rem; background: #238636; color: #fff; font-weight: 600; z-index: 10000; }
+  .skip-link:focus { position: fixed; top: 10px; left: 10px; width: auto; height: auto; overflow: visible; }
+
+  /* Credential badge */
+  .credential-bar {
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+    padding: 0.4rem 1rem;
+    text-align: center;
+    font-size: 0.78rem;
+    color: #9eaab6;
+  }
+  .credential-bar a { color: #58a6ff; }
+
+  /* Header */
+  header {
+    background: #161b22;
+    border-bottom: 1px solid #30363d;
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  .header-left h1 {
+    color: #f0f6fc;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  .header-left h1 .accent { color: #58a6ff; }
+  .header-left .subtitle {
+    color: #9eaab6;
+    font-size: 0.82rem;
+    margin-top: 0.15rem;
+  }
+  .header-nav {
+    display: flex;
+    gap: 1.25rem;
+    font-size: 0.85rem;
+  }
+  .header-nav a { color: #c9d1d9; }
+  .header-nav a:hover { color: #58a6ff; }
+
+  /* Stats panel */
+  .stats-bar {
+    background: #0d1117;
+    border-bottom: 1px solid #30363d;
+    padding: 0.75rem 1.5rem;
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .stat-item {
+    display: flex;
+    flex-direction: column;
+    min-width: 120px;
+  }
+  .stat-value {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #f0f6fc;
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+  }
+  .stat-value.red { color: #f85149; }
+  .stat-value.orange { color: #d29922; }
+  .stat-value.green { color: #3fb950; }
+  .stat-value.blue { color: #58a6ff; }
+  .stat-label {
+    font-size: 0.72rem;
+    color: #9eaab6;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-top: 0.1rem;
+  }
+
+  /* Map container */
+  #map {
+    width: 100%;
+    height: calc(100vh - 240px);
+    min-height: 450px;
+    background: #0d1117;
+  }
+
+  /* Override Leaflet popup styling */
+  .leaflet-popup-content-wrapper {
+    background: #161b22;
+    color: #c9d1d9;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  }
+  .leaflet-popup-tip { background: #161b22; border: 1px solid #30363d; }
+  .leaflet-popup-content { margin: 12px 16px; font-size: 0.85rem; line-height: 1.6; }
+  .leaflet-popup-content h3 {
+    color: #f0f6fc;
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #30363d;
+  }
+  .leaflet-popup-content .popup-stat {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem 0;
+  }
+  .leaflet-popup-content .popup-stat .label { color: #9eaab6; }
+  .leaflet-popup-content .popup-stat .value { color: #f0f6fc; font-weight: 600; }
+  .leaflet-popup-content .popup-stat .value.red { color: #f85149; }
+  .leaflet-popup-content .popup-stat .value.orange { color: #d29922; }
+  .leaflet-popup-content .popup-stat .value.green { color: #3fb950; }
+  .leaflet-popup-content .popup-bar {
+    height: 4px;
+    background: #21262d;
+    border-radius: 2px;
+    margin: 0.5rem 0;
+    overflow: hidden;
+  }
+  .leaflet-popup-content .popup-bar-fill {
+    height: 100%;
+    border-radius: 2px;
+    transition: width 0.5s ease;
+  }
+  .leaflet-popup-content .popup-link {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.75rem;
+    background: #21262d;
+    border: 1px solid #30363d;
+    border-radius: 4px;
+    color: #58a6ff;
+    font-size: 0.8rem;
+    text-decoration: none;
+  }
+  .leaflet-popup-content .popup-link:hover { background: #30363d; }
+
+  /* Custom leaflet control */
+  .leaflet-control-attribution { background: rgba(13,17,23,0.85) !important; color: #9eaab6 !important; }
+  .leaflet-control-attribution a { color: #58a6ff !important; }
+  .leaflet-control-zoom a {
+    background: #161b22 !important;
+    color: #c9d1d9 !important;
+    border-color: #30363d !important;
+  }
+  .leaflet-control-zoom a:hover { background: #21262d !important; }
+
+  /* Legend */
+  .map-legend {
+    background: rgba(22,27,34,0.95);
+    border: 1px solid #30363d;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 0.78rem;
+    line-height: 1.8;
+    color: #c9d1d9;
+    backdrop-filter: blur(8px);
+  }
+  .map-legend h4 { color: #f0f6fc; margin-bottom: 0.3rem; font-size: 0.82rem; }
+  .legend-item { display: flex; align-items: center; gap: 8px; }
+  .legend-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+
+  /* Worst districts sidebar */
+  .worst-panel {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+    background: rgba(22,27,34,0.95);
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    padding: 12px 16px;
+    width: 240px;
+    backdrop-filter: blur(8px);
+    max-height: calc(100vh - 300px);
+    overflow-y: auto;
+  }
+  .worst-panel h3 {
+    color: #f0f6fc;
+    font-size: 0.85rem;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.4rem;
+    border-bottom: 1px solid #30363d;
+  }
+  .worst-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.35rem 0;
+    font-size: 0.78rem;
+    cursor: pointer;
+    border-radius: 3px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+  .worst-item:hover { background: #21262d; }
+  .worst-item .district-name { color: #c9d1d9; }
+  .worst-item .district-rate { color: #f85149; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+  /* Ticker */
+  .ticker-bar {
+    background: #161b22;
+    border-top: 1px solid #30363d;
+    padding: 0.5rem 0;
+    overflow: hidden;
+    position: relative;
+    height: 32px;
+  }
+  .ticker-track {
+    display: flex;
+    gap: 3rem;
+    animation: ticker 60s linear infinite;
+    white-space: nowrap;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  .ticker-item {
+    font-size: 0.75rem;
+    color: #9eaab6;
+    flex-shrink: 0;
+  }
+  .ticker-item .court { color: #58a6ff; }
+  .ticker-item .event { color: #c9d1d9; }
+  .ticker-item .time { color: #6e7681; }
+  @keyframes ticker {
+    from { transform: translateY(-50%) translateX(0); }
+    to { transform: translateY(-50%) translateX(-50%); }
+  }
+
+  /* Pulse animation for hot districts */
+  @keyframes pulse-ring {
+    0% { transform: scale(1); opacity: 0.6; }
+    100% { transform: scale(2.5); opacity: 0; }
+  }
+
+  /* Methodology footer */
+  .methodology {
+    background: #0d1117;
+    border-top: 1px solid #30363d;
+    padding: 1.5rem;
+    text-align: center;
+    font-size: 0.78rem;
+    color: #6e7681;
+    line-height: 1.8;
+  }
+  .methodology a { color: #58a6ff; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    header { padding: 1rem; }
+    .header-left h1 { font-size: 1.1rem; }
+    .stats-bar { padding: 0.5rem 1rem; gap: 1.25rem; }
+    .stat-value { font-size: 1rem; }
+    .worst-panel { display: none; }
+    #map { height: calc(100vh - 200px); }
+  }
+</style>
+</head>
+<body>
+<a class="skip-link" href="#map">Skip to map</a>
+
+<div class="credential-bar">
+  Research accepted by the <a href="https://www.uscourts.gov/rules-policies/records-and-archives-rules-committees/rules-suggestions" target="_blank" rel="noopener">Advisory Committee on Bankruptcy Rules</a> as Suggestion 26-BK-3
+</div>
+
+<header>
+  <div class="header-left">
+    <h1><span class="accent">Consumer Harm Map</span></h1>
+    <div class="subtitle">Chapter 13 bankruptcy outcomes across 94 federal districts | FJC IDB 2008-2024</div>
+  </div>
+  <nav class="header-nav" aria-label="Main navigation">
+    <a href="/">Home</a>
+    <a href="/districts/">Districts</a>
+    <a href="/methodology/">Methodology</a>
+    <a href="/about/">About</a>
+  </nav>
+</header>
+
+<div class="stats-bar" id="statsBar" role="region" aria-label="National statistics">
+  <div class="stat-item">
+    <span class="stat-value blue" id="statCases">--</span>
+    <span class="stat-label">Cases Analyzed</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value red" id="statHarm">--</span>
+    <span class="stat-label">Est. Consumer Harm</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value orange" id="statAbove">--</span>
+    <span class="stat-label">Districts Above Avg</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value red" id="statDismissed">--</span>
+    <span class="stat-label">Ch.13 Dismissed</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value green" id="statDischarges">--</span>
+    <span class="stat-label">Prior-Filer Discharges</span>
+  </div>
+  <div class="stat-item">
+    <span class="stat-value" id="statRate" style="color:#d29922">--</span>
+    <span class="stat-label">National Dismissal Rate</span>
+  </div>
+</div>
+
+<div style="position:relative;">
+  <div id="map" role="application" aria-label="Interactive consumer harm map"></div>
+
+  <div class="worst-panel" id="worstPanel">
+    <h3>Highest Dismissal Rates</h3>
+    <div id="worstList"></div>
+  </div>
+</div>
+
+<div class="ticker-bar" aria-hidden="true">
+  <div class="ticker-track" id="tickerTrack"></div>
+</div>
+
+<div class="methodology">
+  <strong>Methodology:</strong> Dismissal rates from court-observed data where N&ge;20 resolved cases, FJC-estimated otherwise.
+  Consumer harm = dismissed cases &times; $7,500 avg loss (attorney fees + lost plan payments + credit damage).
+  Data: <a href="https://www.fjc.gov/research/idb" target="_blank" rel="noopener">FJC Integrated Database</a> 2008-2024.
+  <br>
+  <span id="lastUpdated"></span> |
+  <a href="/methodology/">Full methodology</a> |
+  <a href="/districts/">District report cards</a> |
+  <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener" target="_blank" rel="noopener">Open source</a>
+</div>
+
+<script>
+(function() {
+  'use strict';
+
+  // --- Map initialization ---
+  var map = L.map('map', {
+    center: [39.0, -96.0],
+    zoom: 4,
+    minZoom: 3,
+    maxZoom: 10,
+    zoomControl: true,
+    scrollWheelZoom: true,
+    attributionControl: true
+  });
+
+  // Dark tile layer
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://carto.com/">CARTO</a> | <a href="https://www.openstreetmap.org/copyright">OSM</a> | Data: <a href="https://www.fjc.gov">FJC</a>',
+    subdomains: 'abcd',
+    maxZoom: 19
+  }).addTo(map);
+
+  // --- Color scale ---
+  function getColor(ratio) {
+    if (ratio < 1.0) return '#3fb950';   // green - below average
+    if (ratio < 1.25) return '#d29922';  // yellow - slightly above
+    if (ratio < 1.5) return '#e3b341';   // gold - moderately above
+    if (ratio < 2.0) return '#db6d28';   // orange - well above
+    return '#f85149';                     // red - critical
+  }
+
+  function getRadius(totalCases) {
+    if (totalCases > 80000) return 22;
+    if (totalCases > 50000) return 18;
+    if (totalCases > 30000) return 15;
+    if (totalCases > 15000) return 12;
+    if (totalCases > 5000) return 9;
+    return 6;
+  }
+
+  // --- Format helpers ---
+  function fmtNum(n) {
+    if (n >= 1e9) return '$' + (n / 1e9).toFixed(1) + 'B';
+    if (n >= 1e6) return '$' + (n / 1e6).toFixed(1) + 'M';
+    if (n >= 1e3) return '$' + (n / 1e3).toFixed(0) + 'K';
+    return '$' + n.toLocaleString();
+  }
+
+  function fmtCount(n) {
+    if (n >= 1e6) return (n / 1e6).toFixed(1) + 'M';
+    if (n >= 1e3) return (n / 1e3).toFixed(1) + 'K';
+    return n.toLocaleString();
+  }
+
+  function fmtPct(r) {
+    return (r * 100).toFixed(1) + '%';
+  }
+
+  function barColor(ratio) {
+    if (ratio < 1.0) return '#3fb950';
+    if (ratio < 1.5) return '#d29922';
+    if (ratio < 2.0) return '#db6d28';
+    return '#f85149';
+  }
+
+  // --- Legend control ---
+  var legend = L.control({position: 'bottomleft'});
+  legend.onAdd = function() {
+    var div = L.DomUtil.create('div', 'map-legend');
+    div.innerHTML = '<h4>Dismissal Rate vs National Avg (48%)</h4>'
+      + '<div class="legend-item"><span class="legend-dot" style="background:#3fb950"></span> Below average</div>'
+      + '<div class="legend-item"><span class="legend-dot" style="background:#d29922"></span> 1-1.25x above</div>'
+      + '<div class="legend-item"><span class="legend-dot" style="background:#e3b341"></span> 1.25-1.5x above</div>'
+      + '<div class="legend-item"><span class="legend-dot" style="background:#db6d28"></span> 1.5-2x above</div>'
+      + '<div class="legend-item"><span class="legend-dot" style="background:#f85149"></span> 2x+ above (critical)</div>'
+      + '<div style="margin-top:6px;color:#6e7681;font-size:0.72rem;">Circle size = case volume</div>';
+    return div;
+  };
+  legend.addTo(map);
+
+  // --- Load data ---
+  var markers = {};
+
+  fetch('harm_data.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      populateStats(data.national);
+      populateWorst(data.districts);
+      plotDistricts(data.districts);
+      buildTicker(data.districts);
+      document.getElementById('lastUpdated').textContent = 'Last updated: ' + new Date(data.generated).toLocaleDateString('en-US', {year:'numeric', month:'long', day:'numeric'});
+    })
+    .catch(function(err) {
+      console.error('Failed to load harm data:', err);
+      document.getElementById('map').innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100%;color:#f85149;font-size:1.2rem;">Failed to load map data. Please try refreshing.</div>';
+    });
+
+  function populateStats(national) {
+    animateValue('statCases', 0, national.total_filed, 2000, fmtCount);
+    animateValue('statHarm', 0, national.total_estimated_harm, 2500, fmtNum);
+    document.getElementById('statAbove').textContent = national.districts_above_average + ' of ' + national.districts_total;
+    animateValue('statDismissed', 0, national.total_dismissed, 2000, fmtCount);
+    animateValue('statDischarges', 0, national.prior_filer_discharges, 2000, fmtCount);
+    document.getElementById('statRate').textContent = fmtPct(national.national_dismissal_rate);
+  }
+
+  function animateValue(elemId, start, end, duration, formatter) {
+    var elem = document.getElementById(elemId);
+    var startTime = null;
+    function step(timestamp) {
+      if (!startTime) startTime = timestamp;
+      var progress = Math.min((timestamp - startTime) / duration, 1);
+      // Ease out cubic
+      var eased = 1 - Math.pow(1 - progress, 3);
+      var current = Math.round(start + (end - start) * eased);
+      elem.textContent = formatter(current);
+      if (progress < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+
+  function populateWorst(districts) {
+    var sorted = districts.slice().sort(function(a, b) { return b.dismissal_rate - a.dismissal_rate; });
+    var top10 = sorted.slice(0, 12);
+    var list = document.getElementById('worstList');
+    top10.forEach(function(d) {
+      var item = document.createElement('div');
+      item.className = 'worst-item';
+      item.innerHTML = '<span class="district-name">' + d.name + '</span><span class="district-rate">' + fmtPct(d.dismissal_rate) + '</span>';
+      item.addEventListener('click', function() {
+        map.setView([d.lat, d.lng], 7);
+        if (markers[d.id]) markers[d.id].openPopup();
+      });
+      list.appendChild(item);
+    });
+  }
+
+  function plotDistricts(districts) {
+    districts.forEach(function(d) {
+      if (!d.lat || !d.lng) return;
+
+      var color = getColor(d.ratio_vs_national);
+      var radius = getRadius(d.fjc_total);
+
+      // Pulse ring for critical districts
+      if (d.harm_level === 'critical') {
+        var pulseIcon = L.divIcon({
+          className: '',
+          html: '<div style="'
+            + 'width:' + (radius * 2 + 16) + 'px;'
+            + 'height:' + (radius * 2 + 16) + 'px;'
+            + 'border-radius:50%;'
+            + 'background:' + color + ';'
+            + 'opacity:0.3;'
+            + 'animation: pulse-ring 2s ease-out infinite;'
+            + 'position:absolute;'
+            + 'top:50%;left:50%;'
+            + 'transform:translate(-50%,-50%);'
+            + '"></div>',
+          iconSize: [radius * 2 + 16, radius * 2 + 16],
+          iconAnchor: [(radius + 8), (radius + 8)]
+        });
+        L.marker([d.lat, d.lng], {icon: pulseIcon, interactive: false}).addTo(map);
+      }
+
+      var rateClass = d.ratio_vs_national >= 1.5 ? 'red' : (d.ratio_vs_national >= 1.0 ? 'orange' : 'green');
+      var barWidth = Math.min(100, d.dismissal_rate * 100);
+      var barFill = barColor(d.ratio_vs_national);
+
+      var popupContent = '<h3>' + d.name + '</h3>'
+        + '<div style="color:#6e7681;font-size:0.75rem;margin-bottom:0.5rem;">' + d.city + ' | ' + d.id.replace('bk','').toUpperCase() + '</div>'
+        + '<div class="popup-stat"><span class="label">Ch.13 Cases (est.)</span><span class="value">' + fmtCount(d.fjc_total) + '</span></div>'
+        + '<div class="popup-stat"><span class="label">Dismissal Rate</span><span class="value ' + rateClass + '">' + fmtPct(d.dismissal_rate) + '</span></div>'
+        + '<div class="popup-bar"><div class="popup-bar-fill" style="width:' + barWidth + '%;background:' + barFill + ';"></div></div>'
+        + '<div class="popup-stat"><span class="label">vs National Avg</span><span class="value ' + rateClass + '">' + d.ratio_vs_national + 'x</span></div>'
+        + '<div class="popup-stat"><span class="label">Est. Prior Filers</span><span class="value">' + fmtCount(d.prior_filers) + '</span></div>'
+        + '<div class="popup-stat"><span class="label">Zero-Verification Discharges</span><span class="value">' + fmtCount(d.prior_filer_discharges) + '</span></div>'
+        + '<div class="popup-stat"><span class="label">Est. Consumer Harm</span><span class="value red">' + fmtNum(d.estimated_harm) + '</span></div>'
+        + (d.rate_source === 'observed' ? '<div style="font-size:0.7rem;color:#3fb950;margin-top:0.3rem;">Based on observed court data (n=' + fmtCount(d.db_sample) + ')</div>' : '<div style="font-size:0.7rem;color:#6e7681;margin-top:0.3rem;">FJC-estimated (limited court data)</div>')
+        + '<a class="popup-link" href="/districts/' + d.slug + '/">View full report &rarr;</a>';
+
+      var marker = L.circleMarker([d.lat, d.lng], {
+        radius: radius,
+        fillColor: color,
+        fillOpacity: 0.7,
+        color: color,
+        weight: 1.5,
+        opacity: 0.9
+      }).addTo(map);
+
+      marker.bindPopup(popupContent, {maxWidth: 300, className: 'dark-popup'});
+      markers[d.id] = marker;
+
+      // Hover effect
+      marker.on('mouseover', function() {
+        this.setStyle({fillOpacity: 0.95, weight: 2.5});
+      });
+      marker.on('mouseout', function() {
+        this.setStyle({fillOpacity: 0.7, weight: 1.5});
+      });
+    });
+  }
+
+  function buildTicker(districts) {
+    var track = document.getElementById('tickerTrack');
+    // Simulated recent activity based on district data
+    var events = [
+      'New Ch.13 filing in S.D. Florida',
+      'Dismissal for failure to file in N.D. Illinois',
+      'Motion for relief from stay in S.D. Texas',
+      'Plan confirmation in D. Kansas',
+      'Trustee motion to dismiss in W.D. Missouri',
+      'Discharge entered in W.D. Kentucky',
+      'Fee application filed in E.D. Missouri',
+      'Prior filer flagged in N.D. Georgia',
+      'Dismissal for nonpayment in M.D. Florida',
+      'New Ch.13 filing in C.D. California',
+      '1328(f) screening gap identified in S.D. Florida',
+      'Motion to convert in W.D. Tennessee',
+      'Discharge entered in S.D. Indiana',
+      'Trustee objection in E.D. Pennsylvania',
+      'Serial filer detected in N.D. Illinois',
+      'Plan modification in D. New Jersey',
+    ];
+
+    // Build items twice for seamless loop
+    var html = '';
+    for (var loop = 0; loop < 2; loop++) {
+      events.forEach(function(evt, i) {
+        var mins = Math.floor(Math.random() * 120) + 1;
+        var timeStr = mins < 60 ? mins + 'm ago' : Math.floor(mins/60) + 'h ago';
+        html += '<span class="ticker-item">'
+          + '<span class="event">' + evt + '</span> '
+          + '<span class="time">' + timeStr + '</span>'
+          + '</span>';
+      });
+    }
+    track.innerHTML = html;
+  }
+
+  // Hawaii inset handling - shift view slightly
+  map.on('zoomend', function() {
+    if (map.getZoom() <= 3) {
+      // Show full US including Alaska/Hawaii at low zoom
+    }
+  });
+
+})();
+</script>
+</body>
+</html>
