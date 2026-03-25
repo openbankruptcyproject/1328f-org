@@ -220,14 +220,14 @@
 
     <p>The <strong>391,951</strong> figure is the cross-reference of two FJC fields that had never been joined before:</p>
     <ul>
-      <li><code>PRFILE</code> &mdash; "Prior filing" flag. Set to <code>Y</code> when the debtor has a prior bankruptcy on record.</li>
-      <li><code>DIESSION</code> (disposition) &mdash; Coded <code>D</code> (discharge), <code>DC</code> (discharge &amp; closed), or <code>DD</code> (discharge &amp; dismissed).</li>
+      <li><code>PRFILE</code> -"Prior filing" flag. Set to <code>Y</code> when the debtor has a prior bankruptcy on record.</li>
+      <li><code>DIESSION</code> (disposition) -Coded <code>D</code> (discharge), <code>DC</code> (discharge &amp; closed), or <code>DD</code> (discharge &amp; dismissed).</li>
     </ul>
     <p>Result: <strong>27.4%</strong> of prior filers with known dispositions received a discharge. Section 1328(f) requires a time-eligibility check before discharge. No federal database records whether this check occurred.</p>
 
     <div class="callout yellow">
-      <h4>What 391,951 is &mdash; and isn't</h4>
-      <p>This is the <em>universe of cases requiring verification</em>, not the confirmed violation count. The FJC does not include prior case filing dates, so the aggregate data cannot determine which discharges fall within the statutory bar window (4 years for Ch.&nbsp;7&rarr;13, 2 years for Ch.&nbsp;13&rarr;13). Determining actual violations requires pulling individual PACER dockets and checking the dates. That is what the screener does &mdash; and why PACER access is the bottleneck.</p>
+      <h4>What 391,951 is -and isn't</h4>
+      <p>This is the <em>universe of cases requiring verification</em>, not the confirmed violation count. The FJC does not include prior case filing dates, so the aggregate data cannot determine which discharges fall within the statutory bar window (4 years for Ch.&nbsp;7&rarr;13, 2 years for Ch.&nbsp;13&rarr;13). Determining actual violations requires pulling individual PACER dockets and checking the dates. That is what the screener does -and why PACER access is the bottleneck.</p>
     </div>
 
     <!-- ===== SECTION 2: DATA ARCHITECTURE ===== -->
@@ -291,27 +291,27 @@
     <h2>3. Methodology: How 391,951 Was Derived</h2>
 
     <div class="methodology-step">
-      <span class="step-num">STEP 1 &mdash; Ingest</span>
+      <span class="step-num">STEP 1 -Ingest</span>
       <p>Download FJC IDB public release files (civil &amp; bankruptcy). Two flat files covering FY&nbsp;2008&ndash;2024, totaling 37.9M rows. Load into SQLite.</p>
     </div>
 
     <div class="methodology-step">
-      <span class="step-num">STEP 2 &mdash; Filter</span>
+      <span class="step-num">STEP 2 -Filter</span>
       <p>Select Chapter 13 cases only (<code>ORGFLCHP = '13'</code>). Result: ~4.9M cases across 94 federal judicial districts.</p>
     </div>
 
     <div class="methodology-step">
-      <span class="step-num">STEP 3 &mdash; Identify prior filers</span>
+      <span class="step-num">STEP 3 -Identify prior filers</span>
       <p>Filter on <code>PRFILE = 'Y'</code> (FJC prior-filing flag). Result: 1,627,116 cases where the debtor had at least one prior bankruptcy filing.</p>
     </div>
 
     <div class="methodology-step">
-      <span class="step-num">STEP 4 &mdash; Cross-reference dispositions</span>
+      <span class="step-num">STEP 4 -Cross-reference dispositions</span>
       <p>Of the prior filers, filter on disposition codes indicating discharge (<code>D</code>, <code>DC</code>, <code>DD</code>). Exclude cases with null or pending dispositions. Result: <strong>391,951 prior filers received discharge</strong>.</p>
     </div>
 
     <div class="methodology-step">
-      <span class="step-num">STEP 5 &mdash; Compute rate</span>
+      <span class="step-num">STEP 5 -Compute rate</span>
       <p>391,951 / 1,428,833 (prior filers with known dispositions) = <strong>27.4% discharge rate</strong> among repeat Chapter 13 filers.</p>
     </div>
 
@@ -321,7 +321,7 @@
 
     <h2>4. Known Limitations</h2>
 
-    <p>These are openly acknowledged &mdash; not hidden. Several are the direct motivation for the research collaboration.</p>
+    <p>These are openly acknowledged -not hidden. Several are the direct motivation for the research collaboration.</p>
 
     <table>
       <thead>
@@ -341,7 +341,7 @@
         <tr>
           <td>Disposition coding inconsistency</td>
           <td>Some districts may code discharge events differently</td>
-          <td>Per-district discharge rates range from 18% to 57%, suggesting real variation &mdash; but coding differences cannot be ruled out without district-level auditing.</td>
+          <td>Per-district discharge rates range from 18% to 57%, suggesting real variation -but coding differences cannot be ruled out without district-level auditing.</td>
         </tr>
         <tr>
           <td>Survivorship bias in attorney dataset</td>
@@ -419,7 +419,7 @@
     </ul>
 
     <h3>What the attorney dataset is not</h3>
-    <p>This dataset is not the basis for the 391,951 finding. The two analyses are independent. The FJC analysis uses only free government data. The attorney analysis uses paid PACER data. They converge on the same structural failure &mdash; no systematic verification of discharge eligibility &mdash; from completely different starting points.</p>
+    <p>This dataset is not the basis for the 391,951 finding. The two analyses are independent. The FJC analysis uses only free government data. The attorney analysis uses paid PACER data. They converge on the same structural failure -no systematic verification of discharge eligibility -from completely different starting points.</p>
 
     <!-- ===== SECTION 7: THE SCREENER ===== -->
 
@@ -442,10 +442,10 @@
       </div>
       <div class="stat-card">
         <span class="number">16,000+</span>
-        <span class="label">Reddit upvotes<br>across posts</span>
+        <span class="label">Reddit upvotes<br>across 38 posts</span>
       </div>
       <div class="stat-card">
-        <span class="number">182</span>
+        <span class="number">198</span>
         <span class="label">Unique GitHub<br>cloners</span>
       </div>
       <div class="stat-card">
@@ -454,7 +454,7 @@
       </div>
     </div>
 
-    <p>Live at <a href="https://1328f.com">1328f.com</a>. Source code on <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>. Client-side only &mdash; no server, no database, no user data collected. Runs entirely in the browser using sql.js (SQLite compiled to WebAssembly).</p>
+    <p>Live at <a href="https://1328f.com">1328f.com</a>. Source code on <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>. Client-side only -no server, no database, no user data collected. Runs entirely in the browser using sql.js (SQLite compiled to WebAssembly).</p>
 
     <!-- ===== SECTION 8: CONVERGENCE STUDY DESIGN ===== -->
 
@@ -472,7 +472,7 @@
       <li><strong>Ground truth:</strong> 264 manually verified cases (private, held by dataset builder)</li>
       <li><strong>Independent collection:</strong> GitHub cloners running the screener against new districts</li>
       <li><strong>Convergence test:</strong> Do independently collected results match the ground truth where districts overlap?</li>
-      <li><strong>Expansion:</strong> With institutional PACER access, scale verification from 264 verified multi-district cases to thousands &mdash; stratified by district, attorney volume, and filing year</li>
+      <li><strong>Expansion:</strong> With institutional PACER access, scale verification from 264 verified multi-district cases to thousands -stratified by district, attorney volume, and filing year</li>
     </ol>
 
     <p>This design separates the person who built the tool from the people validating it. If the crowd finds the same patterns independently, that is a stronger result than any single-author study.</p>
@@ -491,7 +491,7 @@
       <li>National verification becomes feasible across all 94 districts at zero marginal cost</li>
       <li>The 391,951-case universe can be sampled systematically (stratified random sample by district and year)</li>
       <li>Attorney-level outcome tracking can scale from 6 districts to 94</li>
-      <li>Real-time RSS monitoring already covers every federal bankruptcy court &mdash; enrichment via PACER is the only paid step</li>
+      <li>Real-time RSS monitoring already covers every federal bankruptcy court -enrichment via PACER is the only paid step</li>
     </ul>
 
     <!-- ===== SECTION 10: POLICY IMPACT ===== -->
@@ -579,15 +579,22 @@
       <p>This project was built by one person with no institutional affiliation, no research training, and no PACER fee exemption. Every number above is real and reproducible. What it needs now is peer review, research design expertise, and institutional access. The data is ready. The tools are ready. The rules committee is already moving.</p>
     </div>
 
+    <h2>14. Path to Nonprofit Status</h2>
+
+    <p>This project is on track to become a 501(c)(3) nonprofit organization. The goal: unlock the entire PACER database through institutional access and bulk RECAP ingestion, and make comprehensive discharge eligibility screening available to every debtor in the United States, free of charge.</p>
+
+    <p>With fee-exempt PACER access and RECAP's open archive, the screener could move from sampling to <strong>full national coverage</strong>, checking every Chapter 13 filing against the complete prior-case record rather than relying on FJC statistical proxies. The technology already works at scale. The only barrier is access.</p>
+
   </article>
 
   <footer role="contentinfo">
-    <p><a href="https://1328f.org">1328f.org</a> &mdash; Consumer Bankruptcy Research &amp; Accountability</p>
+    <p><a href="https://1328f.org">1328f.org</a> -Consumer Bankruptcy Research &amp; Accountability</p>
     <div class="links">
       <a href="https://1328f.com">Screener</a>
       <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
       <a href="https://1328f.org/about/">About</a>
       <a href="https://1328f.org/methodology/">Methodology</a>
+      <a href="https://www.uscourts.gov/rules-policies/records-and-archives-rules-committees/rules-suggestions">Rules Suggestion 26-BK-3</a>
     </div>
   </footer>
 </body>
