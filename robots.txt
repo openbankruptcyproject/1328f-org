@@ -2,3 +2,6 @@ User-agent: *
 Allow: /
 
 Sitemap: https://1328f.org/sitemap.xml
+
+# AI/LLM crawlers -- structured site summary at /llms.txt
+# https://1328f.org/llms.txt

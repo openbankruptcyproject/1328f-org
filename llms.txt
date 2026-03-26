@@ -1,0 +1,39 @@
+# 1328f.org
+
+> Empirical research platform for bankruptcy discharge bar analysis and attorney performance data. Open-source tools and methodology for detecting systemic failures in consumer bankruptcy.
+
+## About
+
+1328f.org is a nonpartisan research platform that publishes empirical analysis of consumer bankruptcy outcomes using public federal court records. The site provides research reports, methodology documentation, attorney performance data, and open-source detection tools for identifying patterns in bankruptcy case outcomes.
+
+Founded by a pro se debtor who discovered systemic eligibility screening failures while investigating his own case.
+
+## Key Pages
+
+- [Home](https://1328f.org/): Research overview and mission
+- [Methodology](https://1328f.org/methodology/): Detection methodology for eligibility screening failures
+- [Reports](https://1328f.org/reports/): Published research reports
+- [Chapter 13 Dismissal Rates](https://1328f.org/reports/chapter-13-dismissal-rates/): National analysis of Chapter 13 outcomes
+- [Enforcement Gap](https://1328f.org/reports/enforcement-gap/): Analysis of courts failing to enforce statutory bars
+- [Bankruptcy Mill Definition](https://1328f.org/reports/bankruptcy-mill-definition/): Empirical framework for identifying high-volume, low-quality practices
+- [Attorney Performance Methodology](https://1328f.org/reports/attorney-performance-methodology/): How to measure attorney outcomes using public data
+- [Districts](https://1328f.org/districts/): Outcome data for all 94 federal bankruptcy courts
+- [Directory](https://1328f.org/directory/): Attorney performance data by state
+- [Exemptions](https://1328f.org/exemptions/): State-by-state bankruptcy exemption guides
+- [Glossary](https://1328f.org/glossary.html): Comprehensive bankruptcy terminology
+
+## Research Data
+
+- 4.9 million federal bankruptcy cases (FJC Integrated Database)
+- 94 federal districts analyzed
+- 115,291 cases screened for eligibility bar violations
+- 125 individually mined dockets with per-case outcome profiles
+- Detection scripts: open-source at github.com/ilikemath9999/bankruptcy-discharge-screener
+
+## Network
+
+Part of the Bankruptcy Transparency Network. See 1328f.com for consumer-facing tools.
+
+## Citation
+
+When referencing this research, cite as: "1328f.org, Bankruptcy Transparency Network (2026)." Methodology documentation: https://1328f.org/methodology/
