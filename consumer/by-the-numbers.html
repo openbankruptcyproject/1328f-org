@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+<link rel="preconnect" href="https://www.googletagmanager.com">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CF8T1FYRCV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-CF8T1FYRCV');
+</script>
+<meta charset="UTF-8">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bankruptcy by the Numbers -- What 4.9 Million Cases Tell Us | 1328f.org</title>
+  <meta name="description" content="National bankruptcy statistics from 4.9 million federal court cases: filing rates, discharge rates, completion rates, dismissal rates, and more. All data from the FJC Integrated Database.">
+  <meta property="og:image" content="https://1328f.org/og-image.png">
+  <meta property="og:title" content="Bankruptcy by the Numbers -- What 4.9 Million Cases Tell Us | 1328f.org">
+  <meta property="og:description" content="National bankruptcy statistics from 4.9 million federal court cases. All data from the Federal Judicial Center.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://1328f.org/consumer/by-the-numbers.html">
+  <meta property="og:site_name" content="1328f.org">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bankruptcy by the Numbers -- What 4.9 Million Cases Tell Us | 1328f.org">
+  <meta name="twitter:description" content="National bankruptcy statistics from 4.9 million federal court cases.">
+  <meta name="twitter:image" content="https://1328f.org/og-image.png">
+  <link rel="canonical" href="https://1328f.org/consumer/by-the-numbers.html">
+  <link rel="alternate" type="application/atom+xml" title="1328f.org Docket Watch" href="/watch/feed.xml">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: #0d1117;
+      color: #c9d1d9;
+      line-height: 1.6;
+    }
+    a { color: #58a6ff; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    a:focus-visible { outline: 2px solid #58a6ff; outline-offset: 2px; }
+    .skip-link {
+      position: absolute; left: -9999px; top: auto;
+      width: 1px; height: 1px; overflow: hidden;
+      padding: 1rem; background: #238636; color: #fff; font-weight: 600;
+    }
+    .skip-link:focus {
+      position: fixed; top: 10px; left: 10px;
+      width: auto; height: auto; overflow: visible;
+    }
+    header {
+      background: #161b22;
+      border-bottom: 1px solid #30363d;
+      padding: 2rem;
+      text-align: center;
+    }
+    header h1 { color: #f0f6fc; font-size: 1.8rem; margin-bottom: 0.5rem; }
+    header h1 .accent { color: #58a6ff; }
+    header .subtitle { color: #9eaab6; font-size: 1rem; }
+    main { max-width: 760px; margin: 0 auto; padding: 2rem; }
+    h2 { color: #f0f6fc; font-size: 1.3rem; margin: 2rem 0 1rem; padding-bottom: 0.5rem; border-bottom: 1px solid #30363d; }
+    h3 { color: #f0f6fc; font-size: 1.1rem; margin: 1.5rem 0 0.5rem; }
+    p { margin-bottom: 1rem; }
+    ul, ol { margin: 0 0 1rem 1.5rem; }
+    li { margin-bottom: 0.5rem; }
+    .card {
+      background: #161b22;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .card h3 { margin-top: 0; }
+    .stat-row {
+      display: flex;
+      align-items: baseline;
+      gap: 1rem;
+      padding: 1rem 0;
+      border-bottom: 1px solid #21262d;
+    }
+    .stat-row:last-child { border-bottom: none; }
+    .stat-number {
+      color: #58a6ff;
+      font-size: 1.6rem;
+      font-weight: 700;
+      min-width: 120px;
+      text-align: right;
+    }
+    .stat-label {
+      color: #c9d1d9;
+      font-size: 0.95rem;
+    }
+    .data-source {
+      background: #1c2333;
+      border: 1px solid #30363d;
+      border-radius: 6px;
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+      font-size: 0.9rem;
+      color: #9eaab6;
+    }
+    footer {
+      background: #161b22;
+      border-top: 1px solid #30363d;
+      padding: 2rem; text-align: center;
+      margin-top: 3rem; color: #9eaab6; font-size: 0.85rem;
+    }
+    footer a { color: #58a6ff; }
+    footer .links { margin-top: 0.5rem; }
+    footer .links a { margin: 0 0.75rem; }
+    @media (max-width: 600px) {
+      header { padding: 1.5rem 1rem; }
+      main { padding: 1rem; }
+      .stat-row { flex-direction: column; gap: 0.25rem; }
+      .stat-number { text-align: left; min-width: auto; }
+    }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many people file bankruptcy each year in the United States?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Federal court data shows approximately 750,000 bankruptcy cases are filed in the United States each year. The number fluctuates with economic conditions -- filings peaked at over 1.5 million in 2010 following the financial crisis and have been in the range of 400,000-800,000 in recent years."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What percentage of Chapter 13 bankruptcies are successful?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Federal court data shows approximately 33-40% of Chapter 13 cases result in discharge nationally. This means the majority of people who file Chapter 13 do not complete their repayment plans. Completion rates vary dramatically by district -- some districts are above 50% while others are below 25%."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the Chapter 7 discharge rate?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Federal court data shows the Chapter 7 discharge rate is above 95% nationally. The vast majority of people who file Chapter 7 bankruptcy successfully receive their discharge. Cases that do not result in discharge are typically dismissed for procedural reasons or failure to complete required courses."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where does this bankruptcy data come from?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All statistics come from the Federal Judicial Center's Integrated Database (FJC IDB), which records every bankruptcy case filed in every federal bankruptcy court in the United States. The dataset used on this site covers 4.9 million cases across 94 judicial districts from fiscal years 2008 through 2024. This is not survey data or estimates -- it is the complete federal court record."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "Organization", "name": "Open Bankruptcy Project", "url": "https://1328f.org", "description": "Free, open-source bankruptcy court transparency tools and research.", "foundingDate": "2026-03-27", "areaServed": "US", "nonprofitStatus": "Nonprofit501c3", "sameAs": ["https://1328f.com", "https://1328f.org"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://1328f.org/"},{"@type":"ListItem","position":2,"name":"Consumer Guide","item":"https://1328f.org/consumer/"},{"@type":"ListItem","position":3,"name":"By the Numbers","item":"https://1328f.org/consumer/by-the-numbers.html"}]}
+</script>
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+</head>
+<body>
+<style>
+#site-nav{background:#0d1117;border-bottom:1px solid #30363d;padding:0.5rem 1rem;text-align:center;font-size:0.78rem;line-height:1.9}
+#site-nav a{margin:0 0.3rem}
+#site-nav .sep{color:#30363d;margin:0 0.25rem}
+#site-nav .nav-label{color:#f0f6fc;margin:0 0.4rem;font-weight:700}
+#site-nav .nav-label:first-child{margin-right:0.4rem}
+.nav-toggle{display:none;background:none;border:1px solid #30363d;color:#c9d1d9;font-size:1.2rem;padding:0.4rem 0.75rem;border-radius:4px;cursor:pointer;line-height:1}
+.nav-toggle:focus-visible{outline:2px solid #58a6ff;outline-offset:2px}
+.nav-links{display:inline}
+@media(max-width:768px){
+.nav-toggle{display:inline-block;margin:0.25rem 0}
+.nav-links{display:none;text-align:left;padding:0.5rem 0}
+.nav-links.open{display:block}
+.nav-links a{display:block;padding:0.6rem 1rem;margin:0;font-size:0.9rem;min-height:44px;line-height:1.6;border-bottom:1px solid #21262d}
+.nav-links a:hover,.nav-links a:focus{background:#161b22}
+.nav-links .sep{display:none}
+.nav-links br{display:none}
+.nav-links .nav-label{display:block;padding:0.5rem 1rem 0.2rem;font-size:0.75rem;text-transform:uppercase;letter-spacing:0.05em;color:#9eaab6;margin:0}
+}
+</style>
+<nav id="site-nav" aria-label="Site navigation">
+  <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">&#9776; Menu</button>
+  <div class="nav-links" id="nav-links">
+<strong class="nav-label">Tools:</strong>
+  <a href="https://1328f.com/check.html">Eligibility Checker</a>
+  <a href="https://1328f.com/compare.html">Compare All Bars</a>
+  <a href="https://1328f.com/dashboard.html">Dashboard</a>
+  <a href="https://1328f.com/timeline.html">Timeline</a>
+  <span class="sep">|</span>
+  <strong class="nav-label">Learn:</strong>
+  <a href="https://1328f.com/explainer.html">1328(f) Explained</a>
+  <a href="https://1328f.com/discharge-bar.html">Discharge Bar</a>
+  <a href="https://1328f.com/727a8-discharge-bar.html">727(a)(8) Bar</a>
+  <a href="https://1328f.com/109g-filing-bar.html">109(g) Bar</a>
+  <a href="https://1328f.com/can-i-file-bankruptcy-again.html">Can I File Again?</a>
+  <a href="https://1328f.com/how-long-between-bankruptcies.html">How Long Between?</a>
+  <span class="sep">|</span>
+  <a href="https://1328f.com/chapter-7.html">Ch. 7</a>
+  <a href="https://1328f.com/chapter-11.html">Ch. 11</a>
+  <a href="https://1328f.com/chapter-12.html">Ch. 12</a>
+  <a href="https://1328f.com/chapter-13.html">Ch. 13</a>
+  <br>
+  <strong class="nav-label">Data:</strong>
+  <a href="https://1328f.com/chapter-13-failure-rate.html">Failure Rates</a>
+  <a href="https://1328f.com/chapter-13-success-rate-by-state.html">Success by State</a>
+  <a href="https://1328f.com/caselaw.html">Case Law</a>
+  <span class="sep">|</span>
+  <strong class="nav-label">For:</strong>
+  <a href="https://1328f.com/for-debtors.html">Debtors</a>
+  <a href="https://1328f.com/for-attorneys.html">Attorneys</a>
+  <a href="https://1328f.com/for-trustees.html">Trustees</a>
+  <a href="https://1328f.com/for-judges.html">Judges</a>
+  <a href="https://1328f.com/for-researchers.html">Researchers</a>
+  <span class="sep">|</span>
+  <a href="https://1328f.com/glossary.html">Glossary</a>
+  <a href="https://1328f.com/before-you-file.html">Before You File</a>
+  <a href="https://1328f.com/reading.html">Reading List</a>
+  <span class="sep">|</span>
+  <span class="sep">|</span>
+  <strong class="nav-label">1328f.org:</strong>
+  <a href="https://1328f.org/">Home</a>
+  <a href="https://1328f.org/reports/">Reports</a>
+  <a href="https://1328f.org/watch/">Docket Watch</a>
+  <a href="https://1328f.org/methodology/">Methodology</a>
+  <a href="https://1328f.org/tools/">Tools</a>
+  <a href="https://1328f.org/consumer/">Consumer Guide</a>
+  <a href="https://1328f.org/about/">About</a>
+  <a href="https://1328f.org/support/" style="color:#238636;font-weight:600">Support This Research</a>
+</div>
+</nav>
+<script>document.addEventListener('DOMContentLoaded',function(){var b=document.querySelector('.nav-toggle');if(b)b.addEventListener('click',function(){var l=document.querySelector('.nav-links');l.classList.toggle('open');b.setAttribute('aria-expanded',l.classList.contains('open'))})});</script>
+
+  <a href="#main" class="skip-link">Skip to main content</a>
+  <header role="banner">
+    <h1><a href="/" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+    <p class="subtitle">Consumer Bankruptcy Research & Accountability</p>
+  </header>
+
+  <main id="main">
+    <p style="font-size:0.85rem;color:#9eaab6;margin-bottom:0.5rem;"><a href="/consumer/">Consumer Guide</a> &raquo; By the Numbers</p>
+    <h2 style="margin-top:0.5rem;">Bankruptcy by the Numbers</h2>
+
+    <p>These numbers come from federal court records, not surveys or estimates. Every case filed in a U.S. bankruptcy court is recorded in the Federal Judicial Center's Integrated Database. Our dataset covers 4.9 million cases across 94 judicial districts from fiscal years 2008 through 2024.</p>
+
+    <div class="data-source">
+      <strong style="color:#f0f6fc;">Data source:</strong> Federal Judicial Center Integrated Database (FJC IDB), FY 2008-2024. All figures are approximate and reflect national averages unless otherwise noted. Individual districts may differ significantly.
+    </div>
+
+    <h2>How Many People File Bankruptcy</h2>
+
+    <div class="card">
+      <div class="stat-row">
+        <span class="stat-number">~750,000</span>
+        <span class="stat-label">Approximate bankruptcy filings per year in the United States</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-number">4.9M</span>
+        <span class="stat-label">Total cases in the FJC database (FY 2008-2024)</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-number">94</span>
+        <span class="stat-label">Federal judicial districts included</span>
+      </div>
+    </div>
+
+    <p>Bankruptcy filings fluctuate with economic conditions. Filings peaked at over 1.5 million in 2010 following the financial crisis. They dropped below 500,000 during the pandemic years when stimulus payments and eviction moratoriums reduced immediate financial pressure. As those protections expired, filings began climbing again.</p>
+
+    <h2>Which Chapter Do People File?</h2>
+
+    <div class="card">
+      <div class="stat-row">
+        <span class="stat-number">~65%</span>
+        <span class="stat-label">Chapter 7 (liquidation) -- the most common type</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-number">~30%</span>
+        <span class="stat-label">Chapter 13 (repayment plan) -- the second most common</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-number">~3%</span>
+        <span class="stat-label">Chapter 11 (reorganization) -- mostly businesses, some individuals</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-number">&lt;1%</span>
+        <span class="stat-label">Chapter 12 (family farmers and fishermen)</span>
+      </div>
+    </div>
+
+    <p>The split between Chapter 7 and Chapter 13 varies significantly by region. In some Southern districts, Chapter 13 filings exceed Chapter 7. This geographic variation is driven by state exemption laws, local legal culture, attorney practices, and judicial preferences. For a state-by-state comparison, see <a href="https://1328f.com/chapter-13-success-rate-by-state.html">success rates by state</a>.</p>
+
+    <h2>Discharge and Completion Rates</h2>
+
+    <div class="card">
+      <h3>Chapter 7</h3>
+      <div class="stat-row">
+        <span class="stat-number">95%+</span>
+        <span class="stat-label">Approximate Chapter 7 discharge rate nationally</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-number">~3.5 mo.</span>
+        <span class="stat-label">Median time from filing to discharge in Chapter 7</span>
+      </div>
+      <p style="margin-top:0.75rem;">The vast majority of Chapter 7 cases result in discharge. Cases that do not are typically dismissed for procedural reasons -- failure to complete required credit counseling, failure to file tax returns, or failure to attend the 341 meeting.</p>
+    </div>
+
+    <div class="card">
+      <h3>Chapter 13</h3>
+      <div class="stat-row">
+        <span class="stat-number">33-40%</span>
+        <span class="stat-label">Approximate Chapter 13 completion rate nationally</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-number">3-5 yrs</span>
+        <span class="stat-label">Length of a Chapter 13 repayment plan</span>
+      </div>
+      <p style="margin-top:0.75rem;">Federal court data shows that the majority of people who file Chapter 13 do not complete their plans. The cases are dismissed -- meaning the debtor does not receive a discharge and returns to the same financial position as before filing, minus whatever they paid in attorney fees and plan payments.</p>
+      <p>This is one of the most important statistics in consumer bankruptcy. A 33-40% completion rate means roughly 2 out of every 3 Chapter 13 filers will not get the relief they were seeking.</p>
+    </div>
+
+    <h2>The Dismissal Rate Problem</h2>
+
+    <p>Chapter 13 dismissal rates vary dramatically by district. Federal court data shows:</p>
+
+    <div class="card">
+      <div class="stat-row">
+        <span class="stat-number">50%+</span>
+        <span class="stat-label">Some districts have dismissal rates above 50%</span>
+      </div>
+      <div class="stat-row">
+        <span class="stat-number">2x</span>
+        <span class="stat-label">The gap between the best and worst districts</span>
+      </div>
+    </div>
+
+    <p>Why do some districts dismiss cases at twice the rate of others? The reasons are complex and include differences in local legal culture, judicial practices, trustee behavior, the prevalence of high-volume law firms, and debtor demographics. But the data is clear: where you file -- and who represents you -- measurably affects your chances of success.</p>
+
+    <p>To see your district's numbers, visit <a href="https://dismissalrate.org">dismissalrate.org</a>.</p>
+
+    <h2>Repeat Filers</h2>
+
+    <div class="card">
+      <div class="stat-row">
+        <span class="stat-number">8-12%</span>
+        <span class="stat-label">Approximate repeat filing rate</span>
+      </div>
+    </div>
+
+    <p>Federal court data shows that approximately 8-12% of bankruptcy filers have filed a previous case. Many of these are people whose Chapter 13 cases were dismissed and who are trying again. Repeat filing is not illegal, but there are statutory waiting periods between discharges (the "discharge bars" under Sections 727(a)(8), 727(a)(9), and 1328(f)).</p>
+
+    <p>Our research has identified that the system does not consistently verify whether repeat filers are eligible for a new discharge. In a screening of 4.9 million cases, we found 391,951 prior filers who received Chapter 13 discharges with zero eligibility verification. This gap is the subject of <a href="https://www.uscourts.gov/rules-policies/records-and-archives-rules-committees/rules-suggestions">Rules Suggestion 26-BK-3</a>, currently before the Advisory Committee on Bankruptcy Rules.</p>
+
+    <p>Use the <a href="https://1328f.com/check.html">eligibility checker</a> to see whether you qualify to file again. For a detailed explanation of discharge bars, see <a href="https://dischargebar.org">dischargebar.org</a>.</p>
+
+    <h2>Attorney Impact on Outcomes</h2>
+
+    <p>One of the most significant findings from large-scale bankruptcy data is that attorney choice measurably affects case outcomes. In the same district, handling similar clients, under the same judges:</p>
+
+    <ul>
+      <li>Some firms produce dismissal rates at or below the district average</li>
+      <li>Other firms produce dismissal rates 20-40 percentage points above the district average</li>
+      <li>The pattern holds even when controlling for debtor demographics and case characteristics</li>
+    </ul>
+
+    <p>This is not a matter of a few bad cases. When a firm handles hundreds or thousands of cases and consistently produces worse outcomes than other firms in the same courthouse, the data suggests a systemic problem with how those cases are handled.</p>
+
+    <p>For more on how to evaluate attorneys, see <a href="/consumer/finding-an-attorney.html">Finding a Good Bankruptcy Attorney</a>.</p>
+
+    <h2>What These Numbers Mean for You</h2>
+
+    <div class="card">
+      <h3>If you are considering Chapter 7</h3>
+      <p>The data is encouraging. Federal court data shows discharge rates above 95%, and the process typically takes 3-4 months. The key is meeting the eligibility requirements (means test, required courses) and filing accurate paperwork.</p>
+    </div>
+
+    <div class="card">
+      <h3>If you are considering Chapter 13</h3>
+      <p>The data should make you cautious. With completion rates of approximately 33-40% nationally, the odds are that you will not finish the plan. This does not mean you should not file -- Chapter 13 is the right choice for many people, especially those trying to save a home from foreclosure or manage debts that are not dischargeable in Chapter 7. But you should go in with realistic expectations, choose your attorney carefully, and understand that the next 3-5 years will require sustained commitment.</p>
+    </div>
+
+    <h2>Where to Learn More</h2>
+    <ul>
+      <li><a href="https://dismissalrate.org">dismissalrate.org</a> -- Dismissal rates by district</li>
+      <li><a href="https://1328f.com">1328f.com</a> -- Screening tool and discharge eligibility checker</li>
+      <li><a href="https://1328f.com/chapter-13-failure-rate.html">Chapter 13 failure rates</a> -- Detailed national analysis</li>
+      <li><a href="https://1328f.com/chapter-13-success-rate-by-state.html">Success rates by state</a> -- State-by-state comparison</li>
+      <li><a href="https://dischargebar.org">dischargebar.org</a> -- Discharge bar rules explained</li>
+    </ul>
+
+    <p style="color:#9eaab6;font-size:0.85rem;margin-top:2rem;">Last updated: March 2026. Data source: Federal Judicial Center Integrated Database, FY 2008-2024 (4.9 million cases, 94 districts). All figures are approximate national averages.</p>
+
+  </main>
+
+<div style="background:#161b22;border:1px solid #30363d;border-radius:6px;padding:1.5rem;text-align:center;max-width:600px;margin:2rem auto">
+  <p style="color:#f0f6fc;font-size:1rem;font-weight:600;margin-bottom:0.5rem">Stay updated on new datasets and research findings</p>
+  <p style="color:#9eaab6;font-size:0.85rem;margin-bottom:1rem">No spam. No marketing. Just data.</p>
+  <form action="https://formspree.io/f/xkoqeyzw" method="POST" style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap">
+    <input type="email" name="email" placeholder="your@email.com" required style="padding:0.5rem 1rem;border-radius:6px;border:1px solid #30363d;background:#0d1117;color:#f0f6fc;font-size:0.9rem;min-width:250px">
+    <input type="hidden" name="_subject" value="BTN Research Subscriber">
+    <button type="submit" style="padding:0.5rem 1.5rem;border-radius:6px;border:none;background:#238636;color:#fff;font-weight:600;font-size:0.9rem;cursor:pointer">Subscribe</button>
+  </form>
+</div>
+
+<footer role="contentinfo">
+    <p>1328f.org - Open Bankruptcy Project - Consumer bankruptcy research. Not legal advice.<br>A project of the <strong>Open Bankruptcy Project</strong>, a 501(c)(3) nonprofit (determination pending).</p>
+    <p class="links">
+      <a href="https://1328f.com">Screener Tool</a>
+      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+      <a href="/about/">About</a>
+      <a href="/support/">Support</a>
+    </p>
+  <br><span style="font-size:11px">This site provides general information only and does not constitute legal advice. No attorney-client relationship is created. Consult a licensed attorney for advice on your specific situation.</span>
+</footer>
+
+<div style="background:#161b22;border:1px solid #238636;border-radius:6px;padding:1rem 1.5rem;text-align:center;max-width:600px;margin:2rem auto 1rem">
+<p style="color:#e6edf3;margin:0 0 0.5rem;font-size:0.95rem">This site is free and open-source. Donations support the Open Bankruptcy Project, a 501(c)(3) nonprofit (determination pending), funding PACER access fees and bankruptcy court transparency research.</p>
+<a href="https://ko-fi.com/ilikemath9999" style="display:inline-block;background:#238636;color:#fff;padding:0.5rem 1.5rem;border-radius:6px;font-weight:600;font-size:0.9rem;text-decoration:none">Support on Ko-fi</a>
+</div>
+<div style="background:#161b22;border:1px solid #30363d;border-radius:6px;padding:1.5rem;text-align:center;max-width:900px;margin:2rem auto 0">
+  <p style="color:#f0f6fc;font-size:1.1rem;font-weight:600;margin-bottom:0.25rem">PACER cases made free through RECAP: <span style="color:#58a6ff">91</span> of 37.9 million</p>
+  <p style="color:#9eaab6;font-size:0.85rem;margin-bottom:0.75rem">Every document we access becomes permanently free for the next researcher, attorney, or debtor.</p>
+  <div style="background:#21262d;border-radius:6px;height:22px;overflow:hidden;margin:0.75rem auto;max-width:400px"><div style="background:linear-gradient(90deg,#238636,#2ea043);height:100%;width:0%;border-radius:6px;min-width:2px"></div></div>
+  <p style="margin-bottom:0.25rem"><span style="color:#58a6ff;font-size:1.2rem;font-weight:700">$0</span> <span style="color:#9eaab6">of</span> <span style="color:#f0f6fc;font-size:1.2rem;font-weight:700">$5,000</span> <span style="color:#9eaab6">Q1 PACER research goal</span></p>
+  <p style="color:#9eaab6;font-size:0.8rem;margin-bottom:0.75rem">1,500+ hours. No grants, no institutional backing. 0 supporters so far.</p>
+  <a href="https://ko-fi.com/ilikemath9999" style="display:inline-block;background:#238636;color:#fff;padding:0.5rem 1.5rem;border-radius:6px;font-weight:600;font-size:0.9rem;text-decoration:none">Fund this research</a>
+</div>
+<script src="/btn-engage.js"></script>
+</body>
+</html>
