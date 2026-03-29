@@ -156,6 +156,116 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Organization", "name": "Open Bankruptcy Project", "url": "https://1328f.org", "description": "Free, open-source bankruptcy court transparency tools and research.", "foundingDate": "2026-03-27", "areaServed": "US", "nonprofitStatus": "Nonprofit501c3", "sameAs": ["https://1328f.com", "https://1328f.org"]}
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "1328f.org",
+      "description": "No standard empirical definition of",
+      "author": {
+        "@type": "Organization",
+        "name": "Open Bankruptcy Project"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Open Bankruptcy Project",
+        "url": "https://1328f.org"
+      },
+      "datePublished": "2026-03-28",
+      "dateModified": "2026-03-29",
+      "mainEntityOfPage": "https://1328f.org/reports/bankruptcy-mill-definition/index.html"
+    },
+    {
+      "@type": "HowTo",
+      "name": "1328f.org",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "text": "window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n  gtag('config', 'G-CF8T1FYRCV');\n\n\n  \n  \n  What Is a Bankruptcy Mill? A Data-Driven "
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "text": "Batch filing could reflect efficient case management rather than assembly-line processing."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "text": "Low adversary rate could reflect a client base that does not require lien avoidance or preference actions."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "text": "Early dismissals could reflect clients who abandon their cases, not attorney neglect."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "text": "Judicial variation - different judges have different dismissal thresholds"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "text": "Trustee practices - some trustees pursue dismissals more aggressively"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "text": "Local rules - requirements vary by district"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "text": "Economic conditions - recessions and recoveries affect all local filers"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "text": "Elevated dismissal rates significantly above district baselines"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 10,
+          "text": "Intake-stage failures (bare petitions, filing fee dismissals) at multiples of control rates"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "name": "1328f.org",
+      "url": "https://1328f.org/reports/bankruptcy-mill-definition/index.html",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".quick-answer",
+          "h1",
+          ".summary",
+          "p:first-of-type"
+        ]
+      }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "BTN Network",
+      "url": [
+        "https://1328f.com",
+        "https://1328f.org",
+        "https://automaticstay.org",
+        "https://341meeting.org",
+        "https://523a.org",
+        "https://109g.org",
+        "https://727a8.com",
+        "https://meanstest.org",
+        "https://chapter7vs13.org",
+        "https://howtofilebankruptcy.org"
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <style>
@@ -252,7 +362,7 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 
     <div class="callout">
       <h4>Summary</h4>
-      <p style="margin-bottom: 0;">The term "bankruptcy mill" appears in judicial opinions, bar complaints, and media coverage, but no standard empirical definition exists. This report proposes a data-driven framework for identifying mill-pattern practices using publicly available court data. The framework uses eight quantitative indicators, validated against published sanctions, and requires a control-group comparison to reduce false positives.</p>
+      <p style="margin-bottom: 0;">The term "<a href="https://bankruptcymill.org" title="Bankruptcy Mills -- Open Bankruptcy Project" target="_blank" rel="noopener">bankruptcy mill</a>" appears in judicial opinions, bar complaints, and media coverage, but no standard empirical definition exists. This report proposes a data-driven framework for identifying mill-pattern practices using publicly available court data. The framework uses eight quantitative indicators, validated against published sanctions, and requires a control-group comparison to reduce false positives.</p>
     </div>
 
     <h2>1. The Problem With Existing Definitions</h2>
@@ -371,10 +481,10 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
       <li><strong>Measure intake-stage failures.</strong> Identify cases dismissed for filing fee nonpayment, failure to file schedules, or other administrative reasons within 90 days of filing.</li>
       <li><strong>Analyze filing day distribution.</strong> Plot the target practitioner's filings by day of the week and compare against the control group distribution.</li>
       <li><strong>Check for chapter divergence.</strong> Compare Chapter 7 vs. Chapter 13 outcomes for the target practitioner and control group.</li>
-      <li><strong>Assess repeat-filer patterns.</strong> Identify debtors who filed more than once with the same practitioner and calculate the re-dismissal rate.</li>
+      <li><strong>Assess repeat-filer patterns.</strong> Identify debtors who filed more than once with the same practitioner and calculate the re-<a href="https://dismissalrate.org" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project" target="_blank" rel="noopener">dismissal rate</a>.</li>
       <li><strong>Score the results.</strong> Count the number of indicators present. Five or more of eight indicators suggests a pattern warranting closer examination.</li>
     </ol>
-    <p>The <a href="/reports/reading-pacer-attorney-record/">guide to reading PACER attorney records</a> provides step-by-step instructions for obtaining the underlying data. For national baseline data on how often Chapter 13 cases fail, see <a href="https://1328f.com/chapter-13-failure-rate.html">Chapter 13 Failure Rates</a>. Consumers can use the <a href="https://1328f.com/check.html">Free Eligibility Screener</a> to check whether a discharge bar applies to their situation.</p>
+    <p>The <a href="/reports/reading-pacer-attorney-record/">guide to reading PACER attorney records</a> provides step-by-step instructions for obtaining the underlying data. For national baseline data on how often Chapter 13 cases fail, see <a href="https://1328f.com/chapter-13-failure-rate.html">Chapter 13 Failure Rates</a>. Consumers can use the <a href="https://1328f.com/check.html">Free Eligibility Screener</a> to check whether a <a href="https://dischargebar.org" title="Bankruptcy Discharge Bar -- Open Bankruptcy Project" target="_blank" rel="noopener">discharge bar</a> applies to their situation.</p>
 
     <h2>8. Related Reports</h2>
     <ul>

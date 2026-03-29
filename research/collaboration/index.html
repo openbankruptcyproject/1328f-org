@@ -102,6 +102,123 @@
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Organization", "name": "Open Bankruptcy Project", "url": "https://1328f.org", "description": "Free, open-source bankruptcy court transparency tools and research.", "foundingDate": "2026-03-27", "areaServed": "US", "nonprofitStatus": "Nonprofit501c3", "sameAs": ["https://1328f.com", "https://1328f.org"]}
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "1328f.org",
+      "description": "Methodology, datasets, and open research questions for academic collaboration on Section 1328(f) discharge eligibility enforcement.",
+      "author": {
+        "@type": "Organization",
+        "name": "Open Bankruptcy Project"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Open Bankruptcy Project",
+        "url": "https://1328f.org"
+      },
+      "datePublished": "2026-03-28",
+      "dateModified": "2026-03-29",
+      "mainEntityOfPage": "https://1328f.org/research/collaboration/index.html"
+    },
+    {
+      "@type": "HowTo",
+      "name": "1328f.org",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "text": "window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n  gtag('config', 'G-CF8T1FYRCV');\n\n\n  \n  \n  Research Collaboration Brief -- 1328f.org"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "text": "DIESSION (disposition) -Coded D (discharge), DC (discharge &amp; closed), or DD (discharge &amp; dismissed)."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "text": "Same-district controls: Other Chapter 13 attorneys in the same judicial district, same filing years. National Chapter 13 completion rate: ~33%. Subject firm: 11.2%."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "text": "Tiered controls: Attorneys grouped by caseload volume to control for practice scale. Subject firm is an outlier at every tier."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "text": "Cross-era tracking: The same attorney names appear across three separately sanctioned firms in two cities over 17 years (2007&ndash;2024). Dismissal rates remain stable across firm changes: 50.7% (Chi"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "text": "Queries PACER for prior bankruptcy filings"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "text": "Extracts filing dates and chapter types from each case"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "text": "Computes the statutory bar window (4 years for Ch.&nbsp;7&rarr;13, 2 years for Ch.&nbsp;13&rarr;13)"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "text": "Compares against the current case filing date"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 10,
+          "text": "Returns: eligible, barred, or insufficient data"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "name": "1328f.org",
+      "url": "https://1328f.org/research/collaboration/index.html",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".quick-answer",
+          "h1",
+          ".summary",
+          "p:first-of-type"
+        ]
+      }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "BTN Network",
+      "url": [
+        "https://1328f.com",
+        "https://1328f.org",
+        "https://automaticstay.org",
+        "https://341meeting.org",
+        "https://523a.org",
+        "https://109g.org",
+        "https://727a8.com",
+        "https://meanstest.org",
+        "https://chapter7vs13.org",
+        "https://howtofilebankruptcy.org"
+      ]
+    }
+  ]
+}
+</script>
+<meta property="og:title" content="Research Collaboration Brief -- 1328f.org">
+<meta property="og:description" content="Methodology, datasets, and open research questions for academic collaboration on Section 1328(f) discharge eligibility enforcement.">
+<meta property="og:url" content="https://1328f.org/research/collaboration/index.html">
+<meta property="og:type" content="article">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Research Collaboration Brief -- 1328f.org">
+<meta name="twitter:description" content="Methodology, datasets, and open research questions for academic collaboration on Section 1328(f) discharge eligibility enforcement.">
 </head>
 <body>
 <style>
@@ -230,7 +347,7 @@
       <li><code>PRFILE</code> -"Prior filing" flag. Set to <code>Y</code> when the debtor has a prior bankruptcy on record.</li>
       <li><code>DIESSION</code> (disposition) -Coded <code>D</code> (discharge), <code>DC</code> (discharge &amp; closed), or <code>DD</code> (discharge &amp; dismissed).</li>
     </ul>
-    <p>Result: <strong>27.4%</strong> of prior filers with known dispositions received a discharge. Section 1328(f) requires a time-eligibility check before discharge. No federal database records whether this check occurred.</p>
+    <p>Result: <strong>27.4%</strong> of prior filers with known dispositions received a discharge. <a href="https://section1328.org" title="Section 1328 Discharge -- Open Bankruptcy Project" target="_blank" rel="noopener">Section 1328</a>(f) requires a time-eligibility check before discharge. No federal database records whether this check occurred.</p>
 
     <div class="callout yellow">
       <h4>What 391,951 is -and isn't</h4>
@@ -390,7 +507,7 @@
 
     <div class="callout">
       <h4>The research question</h4>
-      <p>Same statute. Same discharge bar. A 39-point spread between the highest and lowest large-district rates. Is this enforcement variation, attorney practice variation, demographic differences in repeat filing patterns, or a combination? The FJC data alone cannot answer this. PACER docket-level verification can.</p>
+      <p>Same statute. Same <a href="https://dischargebar.org" title="Bankruptcy Discharge Bar -- Open Bankruptcy Project" target="_blank" rel="noopener">discharge bar</a>. A 39-point spread between the highest and lowest large-district rates. Is this enforcement variation, attorney practice variation, demographic differences in repeat filing patterns, or a combination? The FJC data alone cannot answer this. PACER docket-level verification can.</p>
     </div>
 
     <!-- ===== SECTION 6: ATTORNEY OUTCOME ANALYSIS ===== -->
@@ -578,7 +695,7 @@
           <td>~$5,000</td>
         </tr>
         <tr>
-          <td>88.8% dismissal rate / Z = 4.5</td>
+          <td>88.8% <a href="https://dismissalrate.org" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project" target="_blank" rel="noopener">dismissal rate</a> / Z = 4.5</td>
           <td>Standard proportions test against same-district controls</td>
           <td>Included above</td>
         </tr>

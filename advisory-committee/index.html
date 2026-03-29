@@ -106,6 +106,106 @@
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Organization", "name": "Open Bankruptcy Project", "url": "https://1328f.org", "description": "Free, open-source bankruptcy court transparency tools and research.", "foundingDate": "2026-03-27", "areaServed": "US", "nonprofitStatus": "Nonprofit501c3", "sameAs": ["https://1328f.com", "https://1328f.org"]}
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "1328f.org",
+      "description": "Empirical findings submitted to the Advisory Committee on Bankruptcy Rules as suggestion 26-BK-3, supporting the proposed amendment to Rule 4004 (26-BK-3). Data",
+      "author": {
+        "@type": "Organization",
+        "name": "Open Bankruptcy Project"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Open Bankruptcy Project",
+        "url": "https://1328f.org"
+      },
+      "datePublished": "2026-03-28",
+      "dateModified": "2026-03-29",
+      "mainEntityOfPage": "https://1328f.org/advisory-committee/index.html"
+    },
+    {
+      "@type": "HowTo",
+      "name": "1328f.org",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "text": "window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n  gtag('config', 'G-CF8T1FYRCV');\n\n\n  \n  \n  Section 1328(f) Enforcement Gap: Data Sum"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "text": "Prior case disposition &mdash; whether the prior case resulted in a discharge, dismissal, or conversion"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "text": "Current filing date &mdash; the date of the present case"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "text": "Download FJC IDB data from fjc.gov/research/idb for the desired fiscal years. The Chapter 13 dataset includes all cases filed nationally."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "text": "Filter to the target district using the DISTRICT field in the FJC data. Each of the 94 federal bankruptcy districts has a unique code."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "text": "Identify prior filers using Question 8/9 flags in the FJC data (PRESSION field), which indicates whether the debtor disclosed a prior filing within the relevant statutory period."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "text": "Cross-reference dispositions to determine which prior filers received a discharge, using the DISPOSITION field."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "text": "Calculate bar-period violations by comparing the prior case discharge date against the current filing date and applying the 2-year (Chapter 13) or 4-year (Chapter 7/11/12) statutory windows."
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "name": "1328f.org",
+      "url": "https://1328f.org/advisory-committee/index.html",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".quick-answer",
+          "h1",
+          ".summary",
+          "p:first-of-type"
+        ]
+      }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "BTN Network",
+      "url": [
+        "https://1328f.com",
+        "https://1328f.org",
+        "https://automaticstay.org",
+        "https://341meeting.org",
+        "https://523a.org",
+        "https://109g.org",
+        "https://727a8.com",
+        "https://meanstest.org",
+        "https://chapter7vs13.org",
+        "https://howtofilebankruptcy.org"
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <style>
@@ -205,7 +305,7 @@
 
     <h2>1. The Problem</h2>
 
-    <p>Section 1328(f) of the Bankruptcy Code bars a discharge for repeat filers within statutory waiting periods: two years after a prior Chapter 13 discharge, and four years after a prior Chapter 7, 11, or 12 discharge. These bars are absolute&mdash;if the time has not elapsed, the court <em>shall not</em> grant a discharge.</p>
+    <p><a href="https://section1328.org" title="Section 1328 Discharge -- Open Bankruptcy Project" target="_blank" rel="noopener">Section 1328</a>(f) of the Bankruptcy Code bars a discharge for repeat filers within statutory waiting periods: two years after a prior Chapter 13 discharge, and four years after a prior Chapter 7, 11, or 12 discharge. These bars are absolute&mdash;if the time has not elapsed, the court <em>shall not</em> grant a discharge.</p>
 
     <p>Enforcement of these bars relies entirely on the objection model. Someone&mdash;typically the U.S. Trustee, the Chapter 13 trustee, or a creditor&mdash;must identify the prior filing, calculate the timing, and file an objection to discharge. If no one objects, the discharge issues regardless of eligibility.</p>
 
@@ -277,7 +377,7 @@
         </tr>
         <tr>
           <td><a href="https://1328f.com/check.html">Eligibility Screener</a></td>
-          <td>Client-side discharge bar calculator. Enter prior filing dates and dispositions; returns eligibility determination with statutory citations.</td>
+          <td>Client-side <a href="https://dischargebar.org" title="Bankruptcy Discharge Bar -- Open Bankruptcy Project" target="_blank" rel="noopener">discharge bar</a> calculator. Enter prior filing dates and dispositions; returns eligibility determination with statutory citations.</td>
         </tr>
         <tr>
           <td><a href="https://1328f.org/methodology/">Full Methodology</a></td>

@@ -119,6 +119,60 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Organization", "name": "Open Bankruptcy Project", "url": "https://1328f.org", "description": "Free, open-source bankruptcy court transparency tools and research.", "foundingDate": "2026-03-27", "areaServed": "US", "nonprofitStatus": "Nonprofit501c3", "sameAs": ["https://1328f.com", "https://1328f.org"]}
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "1328f.org",
+      "description": "A methodology for measuring bankruptcy attorney performance using PACER data, including control group construction, metric selection, and statistical validation",
+      "author": {
+        "@type": "Organization",
+        "name": "Open Bankruptcy Project"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Open Bankruptcy Project",
+        "url": "https://1328f.org"
+      },
+      "datePublished": "2026-03-28",
+      "dateModified": "2026-03-29",
+      "mainEntityOfPage": "https://1328f.org/reports/attorney-performance-methodology/index.html"
+    },
+    {
+      "@type": "WebPage",
+      "name": "1328f.org",
+      "url": "https://1328f.org/reports/attorney-performance-methodology/index.html",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".quick-answer",
+          "h1",
+          ".summary",
+          "p:first-of-type"
+        ]
+      }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "BTN Network",
+      "url": [
+        "https://1328f.com",
+        "https://1328f.org",
+        "https://automaticstay.org",
+        "https://341meeting.org",
+        "https://523a.org",
+        "https://109g.org",
+        "https://727a8.com",
+        "https://meanstest.org",
+        "https://chapter7vs13.org",
+        "https://howtofilebankruptcy.org"
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <style>
@@ -246,7 +300,7 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
     <p>The percentage of completed cases ending in dismissal rather than discharge. This is the primary outcome metric. Calculated as: <code>dismissed / (dismissed + discharged)</code>, excluding open and converted cases. Resolving only completed cases avoids bias from recent cohorts that have high open-case percentages.</p>
 
     <h3>3.2 Discharge Rate (Resolved Cases)</h3>
-    <p>The inverse of dismissal rate: <code>discharged / (dismissed + discharged)</code>. A practitioner whose clients achieve discharge at significantly lower rates than peers in the same courts is underperforming on the most important metric.</p>
+    <p>The inverse of <a href="https://dismissalrate.org" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project" target="_blank" rel="noopener">dismissal rate</a>: <code>discharged / (dismissed + discharged)</code>. A practitioner whose clients achieve discharge at significantly lower rates than peers in the same courts is underperforming on the most important metric.</p>
 
     <h3>3.3 Early Dismissal Rate</h3>
     <p>The percentage of cases dismissed within 90 days of filing. These are intake-stage failures - cases that never reached plan confirmation, often dismissed for nonpayment of filing fees, failure to file schedules, or failure to attend the 341(a) meeting. A high early-dismissal rate indicates systemic problems in case preparation and client screening.</p>
@@ -354,7 +408,7 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
     <h2>9. Related Reports</h2>
     <ul>
       <li><a href="/reports/bankruptcy-mill-definition/">What Is a Bankruptcy Mill? A Data-Driven Definition</a> - eight quantitative indicators for identifying mill-pattern practices</li>
-      <li><a href="/reports/methodology-1328f-screening/">How We Screened 4.9 Million Bankruptcy Cases</a> - the Section 1328(f) screening methodology</li>
+      <li><a href="/reports/methodology-1328f-screening/">How We Screened 4.9 Million Bankruptcy Cases</a> - the <a href="https://section1328.org" title="Section 1328 Discharge -- Open Bankruptcy Project" target="_blank" rel="noopener">Section 1328</a>(f) screening methodology</li>
       <li><a href="/reports/chapter-13-dismissal-rates/">Chapter 13 Dismissal Rates by District</a> - national baseline data</li>
       <li><a href="/reports/prior-filer-discharge-rates/">Prior-Filer Discharge Rates</a> - repeat filing analysis</li>
     </ul>

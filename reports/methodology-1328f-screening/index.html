@@ -200,6 +200,116 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "Organization", "name": "Open Bankruptcy Project", "url": "https://1328f.org", "description": "Free, open-source bankruptcy court transparency tools and research.", "foundingDate": "2026-03-27", "areaServed": "US", "nonprofitStatus": "Nonprofit501c3", "sameAs": ["https://1328f.com", "https://1328f.org"]}
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "1328f.org",
+      "description": "Technical walkthrough of the Section 1328(f) screening methodology: data sources, filing-date-to-filing-date calculation, de-staling procedures, and verificatio",
+      "author": {
+        "@type": "Organization",
+        "name": "Open Bankruptcy Project"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Open Bankruptcy Project",
+        "url": "https://1328f.org"
+      },
+      "datePublished": "2026-03-28",
+      "dateModified": "2026-03-29",
+      "mainEntityOfPage": "https://1328f.org/reports/methodology-1328f-screening/index.html"
+    },
+    {
+      "@type": "HowTo",
+      "name": "1328f.org",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "text": "window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n  gtag('config', 'G-CF8T1FYRCV');\n\n\n  \n  \n  How We Screened 4.9 Million Bankruptcy Ca"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "text": "The gap between prior filing date and current filing date is less than the applicable bar window"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "text": "A Chapter 13 discharge was entered in the current case"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "text": "Extract prior-filer cases from FJC IDB. Filter to Chapter 13 cases with PRBANKFL indicating a prior filing. Result: 1,627,116 cases."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "text": "Identify discharged prior filers. Filter to cases where the disposition code indicates a discharge was entered. Result: 391,951 discharged prior filers."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "text": "Match prior case details. For each discharged prior filer, identify the prior case's chapter and filing date."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "text": "Calculate gap and apply bar. Compare filing dates and flag cases where the gap is less than the applicable bar window."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "text": "Raw flag count. Initial screening produces a raw list of potential violations before verification."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "text": "De-stale and verify. Each flagged case is checked against current docket records to confirm the discharge was actually entered and not subsequently vacated, converted, or dismissed."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 10,
+          "text": "The discharge order is still on the docket and has not been vacated"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "name": "1328f.org",
+      "url": "https://1328f.org/reports/methodology-1328f-screening/index.html",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".quick-answer",
+          "h1",
+          ".summary",
+          "p:first-of-type"
+        ]
+      }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "BTN Network",
+      "url": [
+        "https://1328f.com",
+        "https://1328f.org",
+        "https://automaticstay.org",
+        "https://341meeting.org",
+        "https://523a.org",
+        "https://109g.org",
+        "https://727a8.com",
+        "https://meanstest.org",
+        "https://chapter7vs13.org",
+        "https://howtofilebankruptcy.org"
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 <style>
@@ -296,7 +406,7 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 
     <div class="callout">
       <h4>Summary</h4>
-      <p style="margin-bottom: 0;">We built an open-source screening tool that screened 4,895,163 Chapter 13 bankruptcy filings across every federal bankruptcy district. We identified 391,951 prior filers who received discharges with zero eligibility verification. In a 7-district verified sample, 264 were confirmed violations where debtors received discharges despite falling within the statutory bar of 11 U.S.C. Section 1328(f). This report describes our data sources, methodology, quality controls, and results.</p>
+      <p style="margin-bottom: 0;">We built an open-source screening tool that screened 4,895,163 Chapter 13 bankruptcy filings across every federal bankruptcy district. We identified 391,951 prior filers who received discharges with zero eligibility verification. In a 7-district verified sample, 264 were confirmed violations where debtors received discharges despite falling within the statutory bar of 11 U.S.C. <a href="https://section1328.org" title="Section 1328 Discharge -- Open Bankruptcy Project" target="_blank" rel="noopener">Section 1328</a>(f). This report describes our data sources, methodology, quality controls, and results.</p>
     </div>
 
     <h2>1. Background</h2>
@@ -464,7 +574,7 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 <div style="background:#161b22;border:1px solid #30363d;border-radius:6px;padding:1rem 1.5rem;text-align:center;max-width:700px;margin:2rem auto">
 <p style="color:#9eaab6;font-size:0.8rem;text-transform:uppercase;letter-spacing:0.05em;margin-bottom:0.25rem">Federal Rules Committee</p>
 <p style="color:#e6edf3;font-size:0.95rem;margin-bottom:0.25rem">This research supports <a href="https://www.uscourts.gov/forms-rules/records-rules-committees/rules-suggestions" style="color:#58a6ff">Suggestion 26-BK-3</a> to the Advisory Committee on Bankruptcy Rules</p>
-<p style="color:#9eaab6;font-size:0.8rem;margin:0">Proposing automated Section 1328(f) discharge bar screening in federal bankruptcy courts</p>
+<p style="color:#9eaab6;font-size:0.8rem;margin:0">Proposing automated Section 1328(f) <a href="https://dischargebar.org" title="Bankruptcy Discharge Bar -- Open Bankruptcy Project" target="_blank" rel="noopener">discharge bar</a> screening in federal bankruptcy courts</p>
 </div>
 
 <div style="background:#161b22;border:1px solid #238636;border-radius:6px;padding:1rem 1.5rem;text-align:center;max-width:600px;margin:2rem auto 1rem">
