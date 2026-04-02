@@ -262,44 +262,88 @@
 {
   "@context": "https://schema.org",
   "@type": "Dataset",
-  "name": "1328f.org Open Bankruptcy Data",
-  "description": "Aggregated, anonymized bankruptcy statistics derived from public federal court data. Includes Chapter 13 dismissal rates by district, Section 1328(f) screening results, prior-filer discharge rates, and national filing statistics.",
+  "name": "National Consumer Bankruptcy Outcomes Dataset (2008-2024)",
+  "alternateName": ["1328f.org Open Bankruptcy Data", "FJC Bankruptcy Screening Dataset", "Open Bankruptcy Project National Dataset"],
+  "description": "Aggregated, anonymized bankruptcy statistics derived from 4.9 million federal court records in the FJC Integrated Database. Covers all 94 U.S. bankruptcy districts from 2008 through 2024. Includes Chapter 13 dismissal rates by district, Section 1328(f) discharge bar screening results, prior-filer discharge rates, attorney-level outcome variation, and national filing statistics. Used in Suggestion 26-BK-3 to the Advisory Committee on Bankruptcy Rules.",
   "url": "https://1328f.org/data/",
+  "identifier": "https://1328f.org/data/",
   "license": "https://creativecommons.org/licenses/by/4.0/",
+  "isAccessibleForFree": true,
   "creator": {
     "@type": "Organization",
-    "name": "1328f.org",
-    "url": "https://1328f.org"
+    "name": "Open Bankruptcy Project",
+    "url": "https://openbankruptcyproject.org",
+    "sameAs": ["https://github.com/ilikemath9999", "https://1328f.org", "https://1328f.com"]
   },
+  "funder": {
+    "@type": "Organization",
+    "name": "Open Bankruptcy Project",
+    "url": "https://openbankruptcyproject.org"
+  },
+  "keywords": [
+    "bankruptcy", "Chapter 13", "Chapter 7", "consumer bankruptcy", "dismissal rate",
+    "1328(f)", "727(a)(8)", "109(g)", "discharge bar", "prior filer",
+    "FJC", "Federal Judicial Center", "PACER", "bankruptcy court",
+    "attorney performance", "bankruptcy mill", "repeat filer", "BAPCPA",
+    "federal courts", "consumer protection", "bankruptcy statistics"
+  ],
+  "measurementTechnique": "Computational analysis of FJC Integrated Database civil case records cross-referenced with PACER docket data and CourtListener RECAP archives",
+  "variableMeasured": [
+    {"@type": "PropertyValue", "name": "Chapter 13 Dismissal Rate", "description": "Percentage of Chapter 13 cases dismissed by district"},
+    {"@type": "PropertyValue", "name": "Prior Filer Rate", "description": "Percentage of debtors with a prior bankruptcy filing within statutory bar periods"},
+    {"@type": "PropertyValue", "name": "1328(f) Bar Rate", "description": "Cases where a prior filing creates a potential discharge bar under 11 U.S.C. 1328(f)"},
+    {"@type": "PropertyValue", "name": "National Filing Volume", "description": "Annual bankruptcy filing counts by chapter and district"}
+  ],
   "distribution": [
     {
       "@type": "DataDownload",
+      "name": "Chapter 13 Dismissal Rates by District",
       "encodingFormat": "text/csv",
       "contentUrl": "https://1328f.org/data/chapter13_dismissal_by_district.csv"
     },
     {
       "@type": "DataDownload",
+      "name": "1328(f) Barred Cases",
       "encodingFormat": "text/csv",
       "contentUrl": "https://1328f.org/data/1328f_barred_cases.csv"
     },
     {
       "@type": "DataDownload",
+      "name": "1328(f) Barred Cases (JSON)",
       "encodingFormat": "application/json",
       "contentUrl": "https://1328f.org/data/1328f_barred_cases.json"
     },
     {
       "@type": "DataDownload",
+      "name": "Prior Filer Rates by District",
       "encodingFormat": "text/csv",
       "contentUrl": "https://1328f.org/data/prior_filer_rates_by_district.csv"
     },
     {
       "@type": "DataDownload",
+      "name": "National Filing Statistics",
       "encodingFormat": "text/csv",
       "contentUrl": "https://1328f.org/data/national_filing_stats.csv"
     }
   ],
   "temporalCoverage": "2008/2024",
-  "spatialCoverage": "United States"
+  "spatialCoverage": {
+    "@type": "Place",
+    "name": "United States",
+    "geo": {
+      "@type": "GeoShape",
+      "name": "All 94 U.S. federal bankruptcy districts"
+    }
+  },
+  "datePublished": "2026-03-28",
+  "dateModified": "2026-04-01",
+  "version": "2.0",
+  "citation": "Open Bankruptcy Project. National Consumer Bankruptcy Outcomes Dataset, 2008-2024. https://1328f.org/data/. CC BY 4.0.",
+  "includedInDataCatalog": {
+    "@type": "DataCatalog",
+    "name": "Open Bankruptcy Project Data Catalog",
+    "url": "https://1328f.org/data/"
+  }
 }
 </script>
 <script type="application/ld+json">
