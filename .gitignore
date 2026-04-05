@@ -1,1 +1,3 @@
 bankruptcy_master.db
+# Collaborator notebook registry -- NEVER deploy
+research/nb-registry.json

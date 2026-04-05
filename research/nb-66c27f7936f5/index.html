@@ -60,6 +60,128 @@
     article { padding: 1rem; }
   }
 </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": "SCALES Integration Report PRIVATE",
+      "description": "SCALES Integration Report PRIVATE",
+      "author": {
+        "@type": "Organization",
+        "name": "Open Bankruptcy Project"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Open Bankruptcy Project",
+        "url": "https://1328f.org"
+      },
+      "datePublished": "2026-04-05",
+      "dateModified": "2026-04-05",
+      "mainEntityOfPage": "https://1328f.org/research/nb-66c27f7936f5/index.html"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://1328f.org"
+        }
+      ]
+    },
+    {
+      "@type": "HowTo",
+      "name": "SCALES Integration Report PRIVATE",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "position": 1,
+          "text": "window.dataLayer = window.dataLayer || [];\n  function gtag(){dataLayer.push(arguments);}\n  gtag('js', new Date());\n  gtag('config', 'G-JH6HRMYL90');\n  gtag('config', 'G-CF8T1FYRCV');\n\n\n\n\nSCALES Integr"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 2,
+          "text": "National-scale docket enrichment (currently 11,038 cases; target: 100,000+)"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 3,
+          "text": "Template detection across districts (currently limited to 2 districts)"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 4,
+          "text": "Early warning system deployed nationally"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 5,
+          "text": "Publishable dataset with institutional credibility"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 6,
+          "text": "Bankruptcy domain module for SCALES: The 6 analytical modules could become a bankruptcy-specific extension of the SCALES platform. The event classifier and template detector are generalizable to any f"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 7,
+          "text": "Cross-domain template detection: The docket fingerprinting technique works on any court document sequence. Applying it to civil litigation could identify template-practice firms in personal injury, de"
+        },
+        {
+          "@type": "HowToStep",
+          "position": 8,
+          "text": "Enrichment pipeline contribution: The eyecite + LexNLP integration layer could be contributed upstream to SCALES as a standard enrichment pass."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 9,
+          "text": "National bankruptcy outcome dataset: The FJC + enriched docket combination is the largest open attorney-outcome dataset for bankruptcy. Could be published through SCALES-OKN infrastructure."
+        },
+        {
+          "@type": "HowToStep",
+          "position": 10,
+          "text": "PACER fee exemption: An institutional affiliation with Georgia Tech / SCALES would unlock the AO exemption pathway for national scaling."
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "name": "SCALES Integration Report PRIVATE",
+      "url": "https://1328f.org/research/nb-66c27f7936f5/index.html",
+      "speakable": {
+        "@type": "SpeakableSpecification",
+        "cssSelector": [
+          ".quick-answer",
+          "h1",
+          ".summary",
+          "p:first-of-type"
+        ]
+      }
+    },
+    {
+      "@type": "SiteNavigationElement",
+      "name": "BTN Network",
+      "url": [
+        "https://1328f.com",
+        "https://1328f.org",
+        "https://automaticstay.org",
+        "https://341meeting.org",
+        "https://523a.org",
+        "https://109g.org",
+        "https://727a8.com",
+        "https://meanstest.org",
+        "https://chapter7vs13.org",
+        "https://howtofilebankruptcy.org"
+      ]
+    }
+  ]
+}
+</script>
+<meta name="description" content="Learn about scales integration report -- open bankruptcy project in our free 2026 guide. Clear explanations, real data, and practical steps. Part of the Open Ba">
 </head>
 <body>
 
@@ -135,7 +257,7 @@
 
   <div class="pipeline-step">
     <span class="step-num">1. Portfolio Health</span>
-    <p>Per-attorney outcome analysis across all cases in the dataset. Computes discharge rate, dismissal rate, chapter mix, confidence intervals, and red flag counts. Outputs letter-grade scorecards (A through F) with peer comparison. Uses FJC data for the full 4.9M-case view, SCALES-parsed dockets for the detailed view.</p>
+    <p>Per-attorney outcome analysis across all cases in the dataset. Computes discharge rate, <a href="https://dismissalrate.org" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project" target="_blank" rel="noopener">dismissal rate</a>, chapter mix, confidence intervals, and red flag counts. Outputs letter-grade scorecards (A through F) with peer comparison. Uses FJC data for the full 4.9M-case view, SCALES-parsed dockets for the detailed view.</p>
     <p><strong>CLI:</strong> <code>run.py check [attorney_name]</code></p>
   </div>
 
@@ -164,7 +286,7 @@
 
   <div class="pipeline-step">
     <span class="step-num">6. Mill Composite Scorer (new -- April 2026)</span>
-    <p>3-axis detection model cross-linking independent signals: (1) Google review suppression, (2) review account padding, (3) Ch.13 dismissal rate delta from district baseline. Scored 38 firms. Identifies two mill archetypes: review-suppressed and unsuppressed. District adjustment is critical -- Ch.13 baselines range from 21% to 82% across districts.</p>
+    <p>3-axis detection model cross-linking independent signals: (1) Google review suppression, (2) review account padding, (3) Ch.13 <a href="https://dismissalrate.org" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project" target="_blank" rel="noopener">dismissal rate</a> delta from district baseline. Scored 38 firms. Identifies two mill archetypes: review-suppressed and unsuppressed. District adjustment is critical -- Ch.13 baselines range from 21% to 82% across districts.</p>
     <p><strong>Open question:</strong> Can this model predict mills out-of-sample? Requires attorney-level national case data (AACER or equivalent) for the outcome axis to work across all 94 districts.</p>
   </div>
 
@@ -234,7 +356,7 @@
     <tbody>
       <tr><td>391,951 prior filers received Ch.13 discharges with no verifiable 1328(f) check</td><td>FJC cross-tabulation (PRFILE x DIESSION)</td><td>National, 4.9M cases</td></tr>
       <tr><td>Two distinct mill archetypes identifiable from public review data</td><td>Google review analysis + FJC cross-reference</td><td>38 firms scored</td></tr>
-      <tr><td>Ch.13 dismissal rate varies 4x across districts (21%-82%)</td><td>FJC baseline computation</td><td>30 districts with sufficient data</td></tr>
+      <tr><td>Ch.13 <a href="https://dismissalrate.org" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project" target="_blank" rel="noopener">dismissal rate</a> varies 4x across districts (21%-82%)</td><td>FJC baseline computation</td><td>30 districts with sufficient data</td></tr>
       <tr><td>Template filing patterns persist across firms and decades</td><td>Docket sequence fingerprinting (SCALES parser)</td><td>125 deep-mined cases</td></tr>
       <tr><td>One firm's dismissal rate is +9pp above controls (p = 6.2 x 10^-38)</td><td>Tiered comparison with confidence intervals</td><td>56,256 comparison cases</td></tr>
       <tr><td>Rules Committee accepted proposed 1328(f) verification amendment</td><td>Formal submission, docketed as 26-BK-3</td><td>National policy</td></tr>
