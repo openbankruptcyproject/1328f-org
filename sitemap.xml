@@ -1855,18 +1855,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://1328f.org/research/collaboration/</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://1328f.org/research/convergence/</loc>
-    <lastmod>2026-04-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
     <loc>https://1328f.org/resources/</loc>
     <lastmod>2026-04-05</lastmod>
     <changefreq>weekly</changefreq>
