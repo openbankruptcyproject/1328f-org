@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<link rel="preconnect" href="https://www.googletagmanager.com">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JH6HRMYL90"></script>
+<link href="https://www.googletagmanager.com" rel="preconnect"/>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JH6HRMYL90"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -11,14 +12,14 @@
   gtag('config', 'G-JH6HRMYL90');
   gtag('config', 'G-CF8T1FYRCV');
 </script>
-<meta charset="UTF-8">
-  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Convergence Study Design - 1328f.org Explained | Free Bankruptcy Guide</title>
-  <meta name="description" content="Learn about convergence study design - 1328f.org in our free 2026 guide. Clear explanations, real data, and practical steps. Part of the Open Bankruptcy Project">
-  <meta name="robots" content="noindex, nofollow">
-  <link rel="canonical" href="https://1328f.org/research/convergence/">
-  <style>
+<meta charset="utf-8"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Convergence Study Design - 1328f.org Explained | Free Bankruptcy Guide</title>
+<meta content="Learn about convergence study design - 1328f.org in our free 2026 guide. Clear explanations, real data, and practical steps. Part of the Open Bankruptcy Project" name="description"/>
+<meta content="noindex, nofollow" name="robots"/>
+<link href="https://1328f.org/research/convergence/" rel="canonical"/>
+<style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
     a { color: #58a6ff; text-decoration: none; }
@@ -153,276 +154,231 @@
   ]
 }
 </script>
-<meta property="og:title" content="Convergence Study Design - 1328f.org">
-<meta property="og:description" content="A proposed methodology for independently validating bankruptcy discharge eligibility violations through crowdsourced PACER verification against a private ground-truth dataset.">
-<meta property="og:url" content="https://1328f.org/research/convergence/index.html">
-<meta property="og:type" content="article">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Convergence Study Design - 1328f.org">
-<meta name="twitter:description" content="A proposed methodology for independently validating bankruptcy discharge eligibility violations through crowdsourced PACER verification against a private ground-truth dataset.">
+<meta content="Convergence Study Design - 1328f.org" property="og:title"/>
+<meta content="A proposed methodology for independently validating bankruptcy discharge eligibility violations through crowdsourced PACER verification against a private ground-truth dataset." property="og:description"/>
+<meta content="https://1328f.org/research/convergence/index.html" property="og:url"/>
+<meta content="article" property="og:type"/>
+<meta content="summary" name="twitter:card"/>
+<meta content="Convergence Study Design - 1328f.org" name="twitter:title"/>
+<meta content="A proposed methodology for independently validating bankruptcy discharge eligibility violations through crowdsourced PACER verification against a private ground-truth dataset." name="twitter:description"/>
 </head>
 <body>
-  <a href="#main" class="skip-link">Skip to main content</a>
-  <header role="banner">
-    <h1><a href="/" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
-    <p class="subtitle">Consumer Bankruptcy Research &amp; Accountability</p>
-  </header>
-
-  <article id="main" role="article">
-    <a href="/research/collaboration/" class="back-link">&larr; Collaboration Brief</a>
-
-    <div class="article-header">
-      <h2>Convergence Study Design</h2>
-      <p class="meta">
-        <span class="tag">Methodology</span>
-        <span class="tag">Validation</span>
-        <span class="tag">Open Design</span>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header role="banner">
+<h1><a href="/" style="color: #f0f6fc; text-decoration: none;"><span class="accent">1328f</span>.org</a></h1>
+<p class="subtitle">Consumer Bankruptcy Research &amp; Accountability</p>
+</header>
+<article id="main" role="article">
+<a class="back-link" href="/research/collaboration/">← Collaboration Brief</a>
+<div class="article-header">
+<h2>Convergence Study Design</h2>
+<p class="meta">
+<span class="tag">Methodology</span>
+<span class="tag">Validation</span>
+<span class="tag">Open Design</span>
         Prepared March 25, 2026 - Draft for discussion
       </p>
-    </div>
-
-    <div class="callout green">
-      <h4>Status</h4>
-      <p>This is an open research design, not a finished protocol. It is intended as a starting point for collaboration. The framework, phases, and validation criteria below are all open to revision by a research partner with expertise in empirical study design.</p>
-    </div>
-
-    <!-- ===== THE PROBLEM ===== -->
-
-    <h2>1. The Problem</h2>
-
-    <p>A single independent researcher built a dataset of 264 confirmed <a href="https://section1328.org" title="Section 1328 Discharge -- Open Bankruptcy Project" target="_blank" rel="noopener">Section 1328</a>(f) violations across 7 federal judicial districts. The dataset was produced using open-source tools applied to public federal court records.</p>
-
-    <p>The central question any reviewer will ask:</p>
-
-    <div class="callout yellow">
-      <h4>How do we know these results aren't an artifact of one person's methodology, selection bias, or errors?</h4>
-    </div>
-
-    <p>The convergence study answers this by separating the person who built the tools from the people validating the results.</p>
-
-    <!-- ===== THE CORE IDEA ===== -->
-
-    <h2>2. The Core Idea</h2>
-
-    <p>Two independent data streams are being generated right now:</p>
-
-    <table>
-      <thead>
-        <tr><th>Stream</th><th>Source</th><th>Controller</th><th>Status</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td><strong>Ground truth</strong></td>
-          <td>264 verified cases, 7 districts</td>
-          <td>Dataset builder (private)</td>
-          <td>Complete</td>
-        </tr>
-        <tr>
-          <td><strong>Independent verification</strong></td>
-          <td>GitHub cloners running the screener</td>
-          <td>Self-selected public users</td>
-          <td>In progress (198 unique cloners)</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>If independent users running the same tool against the same public records in overlapping districts produce the same results, the findings are <strong>externally validated</strong> without requiring trust in any single researcher.</p>
-
-    <p>If results diverge, the study identifies exactly where and why, which is equally valuable.</p>
-
-    <!-- ===== WHY THIS IS NOVEL ===== -->
-
-    <h2>3. Why This Is Novel</h2>
-
-    <ul>
-      <li><strong>Crowdsourced legal data verification has not been done before.</strong> Legal empirical studies typically rely on one research team collecting, coding, and analyzing data. This design distributes the collection phase across independent actors.</li>
-      <li><strong>The tool is deterministic.</strong> Given the same PACER case record, the screener will always return the same result. There is no subjective coding, no human judgment in the verification step. This makes convergence testing clean.</li>
-      <li><strong>The ground truth is blinded.</strong> Independent users do not know the expected result for any given case. The screener returns "eligible" or "barred" based on dates. Users cannot confirm toward a known answer because no known answer is published.</li>
-      <li><strong>The methodology is a standalone contribution.</strong> Independent of the 1328(f) findings, a validated framework for crowdsourced court record verification is publishable on its own as a methods paper.</li>
-    </ul>
-
-    <!-- ===== STUDY PHASES ===== -->
-
-    <h2>4. Proposed Phases</h2>
-
-    <div class="phase">
-      <span class="phase-label">Phase 1 - Baseline</span>
-      <h3>Characterize existing data streams</h3>
-      <p>Determine which districts the 198 GitHub cloners have run the screener against. Identify overlap with the 7-district ground truth set. Measure: how many independent verification data points exist today, without any additional collection?</p>
-    </div>
-
-    <div class="phase">
-      <span class="phase-label">Phase 2 - Overlap test</span>
-      <h3>Compare results in shared districts</h3>
-      <p>For cases where both the ground truth and independent users screened the same district, compare results case by case. Metrics: agreement rate, false positive rate, false negative rate. If agreement exceeds a pre-specified threshold (to be determined by research design), the tool is validated.</p>
-    </div>
-
-    <div class="phase">
-      <span class="phase-label">Phase 3 - Expansion</span>
-      <h3>Extend to new districts with institutional PACER access</h3>
-      <p>Using fee-exempt access through a university affiliation, run the screener against a stratified random sample of the 391,951-case verification universe. Sample design: stratify by district, filing year, and prior-filer discharge rate. Target: statistically representative coverage across all 94 districts.</p>
-    </div>
-
-    <div class="phase">
-      <span class="phase-label">Phase 4 - Publication</span>
-      <h3>Two papers, not one</h3>
-      <p><strong>Paper 1 (methods):</strong> The convergence framework itself. Can crowdsourced verification of court records produce reliable results? What are the conditions for validity? Applicable beyond 1328(f) to any court-record verification task.</p>
-      <p><strong>Paper 2 (findings):</strong> The national 1328(f) violation rate, estimated from the expanded sample. Geographic variation analysis. Policy implications for Rule 4004 and discharge eligibility verification.</p>
-    </div>
-
-    <!-- ===== VALIDATION CRITERIA ===== -->
-
-    <h2>5. Validation Criteria (Open for Discussion)</h2>
-
-    <p>What constitutes "convergence"? Proposed thresholds, subject to revision:</p>
-
-    <table>
-      <thead>
-        <tr><th>Metric</th><th>Proposed threshold</th><th>Notes</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Case-level agreement rate</td>
-          <td>&ge; 95%</td>
-          <td>Independent result matches ground truth for same case</td>
-        </tr>
-        <tr>
-          <td>District-level violation rate</td>
-          <td>Within 5 percentage points</td>
-          <td>Independent district estimate vs. ground truth district estimate</td>
-        </tr>
-        <tr>
-          <td>False positive rate</td>
-          <td>&le; 2%</td>
-          <td>Cases flagged as violations that are not (dates outside bar window)</td>
-        </tr>
-        <tr>
-          <td>False negative rate</td>
-          <td>To be measured</td>
-          <td>Cases missed by the screener that are actual violations</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <p>These thresholds are preliminary. Final criteria should be established in collaboration with a research partner experienced in validation study design before data collection begins.</p>
-
-    <!-- ===== KNOWN THREATS ===== -->
-
-    <h2>6. Known Threats to Validity</h2>
-
-    <table>
-      <thead>
-        <tr><th>Threat</th><th>Description</th><th>Mitigation</th></tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Selection bias</td>
-          <td>GitHub cloners are self-selected. They found the tool through Reddit, search, or word of mouth. They may not be representative.</td>
-          <td>Phase 3 uses stratified random sampling with institutional access, removing self-selection entirely.</td>
-        </tr>
-        <tr>
-          <td>Tool error</td>
-          <td>The screener could have bugs that produce systematic errors.</td>
-          <td>The 264-case ground truth was manually verified against PACER dockets. Any screener error that contradicts manual verification would surface in Phase 2.</td>
-        </tr>
-        <tr>
-          <td>PACER data quality</td>
-          <td>PACER records may contain errors (incorrect dates, missing cases, miscoded chapters).</td>
-          <td>This affects all PACER-based research equally. The convergence design tests whether independent users encounter the same data quality, not whether PACER itself is perfect.</td>
-        </tr>
-        <tr>
-          <td>Temporal drift</td>
-          <td>PACER records can be amended. A case screened in March may show different data than the same case screened in June.</td>
-          <td>Timestamp all screenings. Compare only results generated within the same time window.</td>
-        </tr>
-        <tr>
-          <td>Non-independence</td>
-          <td>Some GitHub cloners may share results with each other, compromising independence.</td>
-          <td>The screener output is deterministic. If two users get the same result, it is because the data is the same, not because they compared notes. Non-independence does not affect a deterministic tool.</td>
-        </tr>
-      </tbody>
-    </table>
-
-    <!-- ===== WHAT THE RESEARCH PARTNER BRINGS ===== -->
-
-    <h2>7. What a Research Partner Brings</h2>
-
-    <p>The dataset builder built the infrastructure. The research partner designs the study. Specifically:</p>
-
-    <ul>
-      <li><strong>Sample design:</strong> How to stratify the Phase 3 sample. Which districts, how many cases per district, what filing years.</li>
-      <li><strong>Statistical framework:</strong> What tests to use for convergence. How to handle partial overlap. Power analysis for minimum sample sizes.</li>
-      <li><strong>Validation criteria:</strong> Setting the actual thresholds in Section 5 based on precedent in empirical legal studies or adjacent fields.</li>
-      <li><strong>Publication strategy:</strong> Whether to publish one paper or two. Which journal. How to frame the methods contribution vs. the substantive findings.</li>
-      <li><strong>IRB assessment:</strong> Whether this study requires institutional review, given that all data is from public federal court records with no human subjects contact.</li>
-      <li><strong>PACER fee exemption:</strong> Institutional affiliation that qualifies for the AO's researcher fee exemption, enabling Phase 3 at zero marginal cost.</li>
-    </ul>
-
-    <!-- ===== WHAT EXISTS TODAY ===== -->
-
-    <h2>8. What Exists Today</h2>
-
-    <table>
-      <thead>
-        <tr><th>Component</th><th>Status</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Ground truth dataset (264 cases, 7-district sample)</td><td>Complete</td></tr>
-        <tr><td>Screening tool (open-source, deterministic)</td><td>Live, ranking #1 nationally</td></tr>
-        <tr><td>FJC national dataset (4.9M Ch. 13 cases)</td><td>Loaded, queryable</td></tr>
-        <tr><td>391,951 verification universe identified</td><td>Complete</td></tr>
-        <tr><td>RSS real-time monitoring (all 94 districts)</td><td>Running</td></tr>
-        <tr><td>RECAP enrichment pipeline (16,000+ cases)</td><td>Running</td></tr>
-        <tr><td>Independent GitHub cloners</td><td>198 unique as of March 25, 2026</td></tr>
-        <tr><td>Research design for convergence test</td><td>This document (draft)</td></tr>
-        <tr><td>Institutional PACER access</td><td>Not yet available</td></tr>
-        <tr><td>Formal study protocol</td><td>Awaiting research partner</td></tr>
-      </tbody>
-    </table>
-
-    <!-- ===== INVITATION ===== -->
-
-    <div class="callout green">
-      <h4>This design is open</h4>
-      <p>Every element on this page - the phases, the thresholds, the threats, the publication strategy - is a proposal, not a decision. The purpose of this document is to show that a rigorous validation framework is possible and that the infrastructure to execute it already exists. The research design itself should be shaped by someone with the expertise to do it right.</p>
-    </div>
-
-  </article>
-
-<div style="background:#161b22;border:1px solid #30363d;border-radius:6px;padding:1.5rem;text-align:center;max-width:600px;margin:2rem auto">
-  <p style="color:#f0f6fc;font-size:1rem;font-weight:600;margin-bottom:0.5rem">Stay updated on new datasets and research findings</p>
-  <p style="color:#9eaab6;font-size:0.85rem;margin-bottom:1rem">No spam. No marketing. Just data.</p>
-  <form action="https://formspree.io/f/xkoqeyzw" method="POST" style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap">
-    <input type="email" name="email" placeholder="your@email.com" required style="padding:0.5rem 1rem;border-radius:6px;border:1px solid #30363d;background:#0d1117;color:#f0f6fc;font-size:0.9rem;min-width:250px">
-    <input type="hidden" name="_subject" value="BTN Research Subscriber">
-    <button type="submit" style="padding:0.5rem 1.5rem;border-radius:6px;border:none;background:#238636;color:#fff;font-weight:600;font-size:0.9rem;cursor:pointer">Subscribe</button>
-  </form>
 </div>
-
-  <footer role="contentinfo">
-    <p><a href="https://1328f.org">1328f.org</a> - Consumer Bankruptcy Research &amp; Accountability</p>
-    <div class="links">
-      <a href="/research/collaboration/">Collaboration Brief</a>
-      <a href="https://1328f.com">Screener</a>
-      <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
-      <a href="https://www.uscourts.gov/rules-policies/records-and-archives-rules-committees/rules-suggestions">Rules Suggestion 26-BK-3 (accepted March 23, 2026)</a>
-    </div>
-  <div style="margin-top:12px;font-size:0.8rem"><a href="https://openbankruptcyproject.org/privacy.html" style="color:#7d8590">Privacy</a> | <a href="https://openbankruptcyproject.org/terms.html" style="color:#7d8590">Terms</a></div>
-    <p style="margin-top:16px; font-size:0.8rem;">No legal advice is provided. This is educational information only.</p>
+<div class="callout green">
+<h4>Status</h4>
+<p>This is an open research design, not a finished protocol. It is intended as a starting point for collaboration. The framework, phases, and validation criteria below are all open to revision by a research partner with expertise in empirical study design.</p>
+</div>
+<!-- ===== THE PROBLEM ===== -->
+<h2>1. The Problem</h2>
+<p>A single independent researcher built a dataset of 264 confirmed <a href="https://section1328.org" rel="noopener" target="_blank" title="Section 1328 Discharge -- Open Bankruptcy Project">Section 1328</a>(f) violations across 7 federal judicial districts. The dataset was produced using open-source tools applied to public federal court records.</p>
+<p>The central question any reviewer will ask:</p>
+<div class="callout yellow">
+<h4>How do we know these results aren't an artifact of one person's methodology, selection bias, or errors?</h4>
+</div>
+<p>The convergence study answers this by separating the person who built the tools from the people validating the results.</p>
+<!-- ===== THE CORE IDEA ===== -->
+<h2>2. The Core Idea</h2>
+<p>Two independent data streams are being generated right now:</p>
+<table>
+<thead>
+<tr><th>Stream</th><th>Source</th><th>Controller</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Ground truth</strong></td>
+<td>264 verified cases, 7 districts</td>
+<td>Dataset builder (private)</td>
+<td>Complete</td>
+</tr>
+<tr>
+<td><strong>Independent verification</strong></td>
+<td>GitHub cloners running the screener</td>
+<td>Self-selected public users</td>
+<td>In progress (198 unique cloners)</td>
+</tr>
+</tbody>
+</table>
+<p>If independent users running the same tool against the same public records in overlapping districts produce the same results, the findings are <strong>externally validated</strong> without requiring trust in any single researcher.</p>
+<p>If results diverge, the study identifies exactly where and why, which is equally valuable.</p>
+<!-- ===== WHY THIS IS NOVEL ===== -->
+<h2>3. Why This Is Novel</h2>
+<ul>
+<li><strong>Crowdsourced legal data verification has not been done before.</strong> Legal empirical studies typically rely on one research team collecting, coding, and analyzing data. This design distributes the collection phase across independent actors.</li>
+<li><strong>The tool is deterministic.</strong> Given the same PACER case record, the screener will always return the same result. There is no subjective coding, no human judgment in the verification step. This makes convergence testing clean.</li>
+<li><strong>The ground truth is blinded.</strong> Independent users do not know the expected result for any given case. The screener returns "eligible" or "barred" based on dates. Users cannot confirm toward a known answer because no known answer is published.</li>
+<li><strong>The methodology is a standalone contribution.</strong> Independent of the 1328(f) findings, a validated framework for crowdsourced court record verification is publishable on its own as a methods paper.</li>
+</ul>
+<!-- ===== STUDY PHASES ===== -->
+<h2>4. Proposed Phases</h2>
+<div class="phase">
+<span class="phase-label">Phase 1 - Baseline</span>
+<h3>Characterize existing data streams</h3>
+<p>Determine which districts the 198 GitHub cloners have run the screener against. Identify overlap with the 7-district ground truth set. Measure: how many independent verification data points exist today, without any additional collection?</p>
+</div>
+<div class="phase">
+<span class="phase-label">Phase 2 - Overlap test</span>
+<h3>Compare results in shared districts</h3>
+<p>For cases where both the ground truth and independent users screened the same district, compare results case by case. Metrics: agreement rate, false positive rate, false negative rate. If agreement exceeds a pre-specified threshold (to be determined by research design), the tool is validated.</p>
+</div>
+<div class="phase">
+<span class="phase-label">Phase 3 - Expansion</span>
+<h3>Extend to new districts with institutional PACER access</h3>
+<p>Using fee-exempt access through a university affiliation, run the screener against a stratified random sample of the 391,951-case verification universe. Sample design: stratify by district, filing year, and prior-filer discharge rate. Target: statistically representative coverage across all 94 districts.</p>
+</div>
+<div class="phase">
+<span class="phase-label">Phase 4 - Publication</span>
+<h3>Two papers, not one</h3>
+<p><strong>Paper 1 (methods):</strong> The convergence framework itself. Can crowdsourced verification of court records produce reliable results? What are the conditions for validity? Applicable beyond 1328(f) to any court-record verification task.</p>
+<p><strong>Paper 2 (findings):</strong> The national 1328(f) violation rate, estimated from the expanded sample. Geographic variation analysis. Policy implications for <a href="https://www.law.cornell.edu/rules/frbp/rule_4004" rel="noopener" target="_blank">Rule 4004</a> and discharge eligibility verification.</p>
+</div>
+<!-- ===== VALIDATION CRITERIA ===== -->
+<h2>5. Validation Criteria (Open for Discussion)</h2>
+<p>What constitutes "convergence"? Proposed thresholds, subject to revision:</p>
+<table>
+<thead>
+<tr><th>Metric</th><th>Proposed threshold</th><th>Notes</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Case-level agreement rate</td>
+<td>≥ 95%</td>
+<td>Independent result matches ground truth for same case</td>
+</tr>
+<tr>
+<td>District-level violation rate</td>
+<td>Within 5 percentage points</td>
+<td>Independent district estimate vs. ground truth district estimate</td>
+</tr>
+<tr>
+<td>False positive rate</td>
+<td>≤ 2%</td>
+<td>Cases flagged as violations that are not (dates outside bar window)</td>
+</tr>
+<tr>
+<td>False negative rate</td>
+<td>To be measured</td>
+<td>Cases missed by the screener that are actual violations</td>
+</tr>
+</tbody>
+</table>
+<p>These thresholds are preliminary. Final criteria should be established in collaboration with a research partner experienced in validation study design before data collection begins.</p>
+<!-- ===== KNOWN THREATS ===== -->
+<h2>6. Known Threats to Validity</h2>
+<table>
+<thead>
+<tr><th>Threat</th><th>Description</th><th>Mitigation</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>Selection bias</td>
+<td>GitHub cloners are self-selected. They found the tool through Reddit, search, or word of mouth. They may not be representative.</td>
+<td>Phase 3 uses stratified random sampling with institutional access, removing self-selection entirely.</td>
+</tr>
+<tr>
+<td>Tool error</td>
+<td>The screener could have bugs that produce systematic errors.</td>
+<td>The 264-case ground truth was manually verified against PACER dockets. Any screener error that contradicts manual verification would surface in Phase 2.</td>
+</tr>
+<tr>
+<td>PACER data quality</td>
+<td>PACER records may contain errors (incorrect dates, missing cases, miscoded chapters).</td>
+<td>This affects all PACER-based research equally. The convergence design tests whether independent users encounter the same data quality, not whether PACER itself is perfect.</td>
+</tr>
+<tr>
+<td>Temporal drift</td>
+<td>PACER records can be amended. A case screened in March may show different data than the same case screened in June.</td>
+<td>Timestamp all screenings. Compare only results generated within the same time window.</td>
+</tr>
+<tr>
+<td>Non-independence</td>
+<td>Some GitHub cloners may share results with each other, compromising independence.</td>
+<td>The screener output is deterministic. If two users get the same result, it is because the data is the same, not because they compared notes. Non-independence does not affect a deterministic tool.</td>
+</tr>
+</tbody>
+</table>
+<!-- ===== WHAT THE RESEARCH PARTNER BRINGS ===== -->
+<h2>7. What a Research Partner Brings</h2>
+<p>The dataset builder built the infrastructure. The research partner designs the study. Specifically:</p>
+<ul>
+<li><strong>Sample design:</strong> How to stratify the Phase 3 sample. Which districts, how many cases per district, what filing years.</li>
+<li><strong>Statistical framework:</strong> What tests to use for convergence. How to handle partial overlap. Power analysis for minimum sample sizes.</li>
+<li><strong>Validation criteria:</strong> Setting the actual thresholds in Section 5 based on precedent in empirical legal studies or adjacent fields.</li>
+<li><strong>Publication strategy:</strong> Whether to publish one paper or two. Which journal. How to frame the methods contribution vs. the substantive findings.</li>
+<li><strong>IRB assessment:</strong> Whether this study requires institutional review, given that all data is from public federal court records with no human subjects contact.</li>
+<li><strong>PACER fee exemption:</strong> Institutional affiliation that qualifies for the AO's researcher fee exemption, enabling Phase 3 at zero marginal cost.</li>
+</ul>
+<!-- ===== WHAT EXISTS TODAY ===== -->
+<h2>8. What Exists Today</h2>
+<table>
+<thead>
+<tr><th>Component</th><th>Status</th></tr>
+</thead>
+<tbody>
+<tr><td>Ground truth dataset (264 cases, 7-district sample)</td><td>Complete</td></tr>
+<tr><td>Screening tool (open-source, deterministic)</td><td>Live, ranking #1 nationally</td></tr>
+<tr><td>FJC national dataset (4.9M Ch. 13 cases)</td><td>Loaded, queryable</td></tr>
+<tr><td>391,951 verification universe identified</td><td>Complete</td></tr>
+<tr><td>RSS real-time monitoring (all 94 districts)</td><td>Running</td></tr>
+<tr><td>RECAP enrichment pipeline (16,000+ cases)</td><td>Running</td></tr>
+<tr><td>Independent GitHub cloners</td><td>198 unique as of March 25, 2026</td></tr>
+<tr><td>Research design for convergence test</td><td>This document (draft)</td></tr>
+<tr><td>Institutional PACER access</td><td>Not yet available</td></tr>
+<tr><td>Formal study protocol</td><td>Awaiting research partner</td></tr>
+</tbody>
+</table>
+<!-- ===== INVITATION ===== -->
+<div class="callout green">
+<h4>This design is open</h4>
+<p>Every element on this page - the phases, the thresholds, the threats, the publication strategy - is a proposal, not a decision. The purpose of this document is to show that a rigorous validation framework is possible and that the infrastructure to execute it already exists. The research design itself should be shaped by someone with the expertise to do it right.</p>
+</div>
+</article>
+<div style="background:#161b22;border:1px solid #30363d;border-radius:6px;padding:1.5rem;text-align:center;max-width:600px;margin:2rem auto">
+<p style="color:#f0f6fc;font-size:1rem;font-weight:600;margin-bottom:0.5rem">Stay updated on new datasets and research findings</p>
+<p style="color:#9eaab6;font-size:0.85rem;margin-bottom:1rem">No spam. No marketing. Just data.</p>
+<form action="https://formspree.io/f/xkoqeyzw" method="POST" style="display:flex;gap:0.5rem;justify-content:center;flex-wrap:wrap">
+<input name="email" placeholder="your@email.com" required="" style="padding:0.5rem 1rem;border-radius:6px;border:1px solid #30363d;background:#0d1117;color:#f0f6fc;font-size:0.9rem;min-width:250px" type="email"/>
+<input name="_subject" type="hidden" value="BTN Research Subscriber"/>
+<button style="padding:0.5rem 1.5rem;border-radius:6px;border:none;background:#238636;color:#fff;font-weight:600;font-size:0.9rem;cursor:pointer" type="submit">Subscribe</button>
+</form>
+</div>
+<footer role="contentinfo">
+<p><a href="https://1328f.org">1328f.org</a> - Consumer Bankruptcy Research &amp; Accountability</p>
+<div class="links">
+<a href="/research/collaboration/">Collaboration Brief</a>
+<a href="https://1328f.com">Screener</a>
+<a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>
+<a href="https://www.uscourts.gov/rules-policies/records-and-archives-rules-committees/rules-suggestions">Rules Suggestion 26-BK-3 (accepted March 23, 2026)</a>
+</div>
+<div style="margin-top:12px;font-size:0.8rem"><a href="https://openbankruptcyproject.org/privacy.html" style="color:#7d8590">Privacy</a> | <a href="https://openbankruptcyproject.org/terms.html" style="color:#7d8590">Terms</a></div>
+<p style="margin-top:16px; font-size:0.8rem;">No legal advice is provided. This is educational information only.</p>
 <p>This site provides general information, not legal advice. Consult a qualified attorney for your specific situation.</p>
 </footer>
-
 <div style="background:#161b22;border:1px solid #238636;border-radius:6px;padding:1rem 1.5rem;text-align:center;max-width:600px;margin:2rem auto 1rem">
 <p style="color:#e6edf3;margin:0 0 0.5rem;font-size:0.95rem">This site is free and open-source. Donations support the Open Bankruptcy Project, a 501(c)(3) nonprofit (determination pending), funding PACER access fees and bankruptcy court transparency research.</p>
-<a href="https://github.com/sponsors/openbankruptcyproject" style="display:inline-block;background:#bf3989;color:#fff;padding:0.6rem 1.8rem;border-radius:6px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#9e2c6f'" onmouseout="this.style.background='#bf3989'">&#9829; Sponsor</a>
+<a href="https://github.com/sponsors/openbankruptcyproject" onmouseout="this.style.background='#bf3989'" onmouseover="this.style.background='#9e2c6f'" style="display:inline-block;background:#bf3989;color:#fff;padding:0.6rem 1.8rem;border-radius:6px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:background 0.2s">♥ Sponsor</a>
 </div>
 <div style="background:#161b22;border:1px solid #30363d;border-radius:6px;padding:1.5rem;text-align:center;max-width:900px;margin:2rem auto 0">
-  <p style="color:#f0f6fc;font-size:1.1rem;font-weight:600;margin-bottom:0.25rem">PACER cases made free through RECAP: <span id="recap-count" style="color:#58a6ff">91</span> of 37.9 million</p>
-  <p style="color:#9eaab6;font-size:0.85rem;margin-bottom:0.75rem">Every document we access becomes permanently free for the next researcher, attorney, or debtor.</p>
-  <div style="background:#21262d;border-radius:6px;height:22px;overflow:hidden;margin:0.75rem auto;max-width:400px"><div style="background:linear-gradient(90deg,#238636,#2ea043);height:100%;width:0%;border-radius:6px;min-width:2px"></div></div>
-  <p style="margin-bottom:0.25rem"><span style="color:#58a6ff;font-size:1.2rem;font-weight:700">$0</span> <span style="color:#9eaab6">of</span> <span style="color:#f0f6fc;font-size:1.2rem;font-weight:700">$5,000</span> <span style="color:#9eaab6">Q1 PACER research goal</span></p>
-  <p style="color:#9eaab6;font-size:0.8rem;margin-bottom:0.75rem">1,500+ hours. No grants, no institutional backing. 0 supporters so far.</p>
-  <a href="https://github.com/sponsors/openbankruptcyproject" style="display:inline-block;background:#bf3989;color:#fff;padding:0.6rem 1.8rem;border-radius:6px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:background 0.2s" onmouseover="this.style.background='#9e2c6f'" onmouseout="this.style.background='#bf3989'">&#9829; Sponsor</a>
+<p style="color:#f0f6fc;font-size:1.1rem;font-weight:600;margin-bottom:0.25rem">PACER cases made free through RECAP: <span id="recap-count" style="color:#58a6ff">91</span> of 37.9 million</p>
+<p style="color:#9eaab6;font-size:0.85rem;margin-bottom:0.75rem">Every document we access becomes permanently free for the next researcher, attorney, or debtor.</p>
+<div style="background:#21262d;border-radius:6px;height:22px;overflow:hidden;margin:0.75rem auto;max-width:400px"><div style="background:linear-gradient(90deg,#238636,#2ea043);height:100%;width:0%;border-radius:6px;min-width:2px"></div></div>
+<p style="margin-bottom:0.25rem"><span style="color:#58a6ff;font-size:1.2rem;font-weight:700">$0</span> <span style="color:#9eaab6">of</span> <span style="color:#f0f6fc;font-size:1.2rem;font-weight:700">$5,000</span> <span style="color:#9eaab6">Q1 PACER research goal</span></p>
+<p style="color:#9eaab6;font-size:0.8rem;margin-bottom:0.75rem">1,500+ hours. No grants, no institutional backing. 0 supporters so far.</p>
+<a href="https://github.com/sponsors/openbankruptcyproject" onmouseout="this.style.background='#bf3989'" onmouseover="this.style.background='#9e2c6f'" style="display:inline-block;background:#bf3989;color:#fff;padding:0.6rem 1.8rem;border-radius:6px;font-weight:600;font-size:0.95rem;text-decoration:none;transition:background 0.2s">♥ Sponsor</a>
 </div>
 <script src="/btn-engage.js"></script>
 </body>

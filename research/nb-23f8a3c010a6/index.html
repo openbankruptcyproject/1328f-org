@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-<link rel="preconnect" href="https://www.googletagmanager.com">
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-JH6HRMYL90"></script>
+<link href="https://www.googletagmanager.com" rel="preconnect"/>
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-JH6HRMYL90"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -11,11 +12,11 @@
   gtag('config', 'G-JH6HRMYL90');
   gtag('config', 'G-CF8T1FYRCV');
 </script>
-<meta charset="UTF-8">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8"/>
+<link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
 <title>Lab Notebook -- Open Bankruptcy Project Explained | Free Bankruptcy Guide</title>
-<meta name="robots" content="noindex, nofollow">
+<meta content="noindex, nofollow" name="robots"/>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; background: #0d1117; color: #c9d1d9; line-height: 1.7; }
@@ -183,245 +184,202 @@
   ]
 }
 </script>
-<meta name="description" content="Learn about lab notebook -- open bankruptcy project in our free 2026 guide. Clear explanations, real data, and practical steps. Part of the Open Bankruptcy Proj">
-
+<meta content="Learn about lab notebook -- open bankruptcy project in our free 2026 guide. Clear explanations, real data, and practical steps. Part of the Open Bankruptcy Proj" name="description"/>
 <script type="application/ld+json">
 {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why district-adjusted?", "acceptedAnswer": {"@type": "Answer", "text": "Raw Ch.13 dismissal rates vary dramatically by district. Without adjustment, a firm performing at the national average gets scored identically whether it's in a low-dismissal district or a high-dismissal one. The delta isolates firm-specific underperformance from structural variation."}}, {"@type": "Question", "name": "Where the Model Breaks Down?", "acceptedAnswer": {"@type": "Answer", "text": "Data coverage gap: Axis 3 depends on attorney-level case data The FJC database has 4.9M cases but does not include attorney first names or firm names -- only attorney_last (last name). Name matching produces false positives in large districts."}}, {"@type": "Question", "name": "What Comes Next?", "acceptedAnswer": {"@type": "Answer", "text": "With AACER access Populate Axis 3 for all 94 districts -- complete the composite model Attorney-level national benchmarking (every consumer bankruptcy attorney, scored) Verified 1328(f) violation count with attorney attribution Publishable dataset for peer review Without AACER access Continue..."}}]}
 </script>
 </head>
 <body>
-
 <header>
-  <h1>Lab Notebook <span class="private-badge">PRIVATE</span></h1>
-  <p class="subtitle">Open Bankruptcy Project -- Research Progress Log</p>
+<h1>Lab Notebook <span class="private-badge">PRIVATE</span></h1>
+<p class="subtitle">Open Bankruptcy Project -- Research Progress Log</p>
 </header>
-
 <article>
-
-  <p class="timestamp">Last updated: April 2, 2026</p>
-
-  <div class="callout">
-    <h4>What this page is</h4>
-    <p>A running research notebook documenting new tools, datasets, and findings as they develop. Not public, not indexed, not linked from anywhere. Updated between conversations. Intended as a shared reference for research collaborators -- see what's been built, what the data says, and where the gaps are.</p>
-  </div>
-
-  <!-- ===== CURRENT STATE ===== -->
-
-  <h2>Current State of the Toolkit</h2>
-
-  <div class="stat-row">
-    <div class="stat-card">
-      <span class="number">4.9M</span>
-      <span class="label">FJC cases loaded<br>(94 districts)</span>
-    </div>
-    <div class="stat-card">
-      <span class="number">347</span>
-      <span class="label">Analysis tools<br>(Python scripts)</span>
-    </div>
-    <div class="stat-card">
-      <span class="number">38</span>
-      <span class="label">Firms scored<br>(review + FJC cross-ref)</span>
-    </div>
-    <div class="stat-card">
-      <span class="number">264</span>
-      <span class="label">Verified 1328(f)<br>violations</span>
-    </div>
-    <div class="stat-card">
-      <span class="number">30</span>
-      <span class="label">Districts with<br>Ch.13 baselines</span>
-    </div>
-  </div>
-
-  <!-- ===== 3-AXIS MODEL ===== -->
-
-  <h2>New: 3-Axis Composite Mill Detection Model</h2>
-  <p class="timestamp">Built April 2, 2026</p>
-
-  <p>The core question: can you identify bankruptcy mills from public data alone, without relying on insider knowledge or media reports? We now have a working 3-axis model that cross-links independent signals.</p>
-
-  <div class="axis-diagram">
-    <div class="axis-card">
-      <h4>Axis 1: Suppression</h4>
-      <p class="signal">Google review 1-star percentage</p>
-      <p>Mills suppress or prevent negative reviews. Control group median: ~11%. Suppressed mills: 0-3%.</p>
-      <p class="range">Weight: 0-35 points</p>
-    </div>
-    <div class="axis-card">
-      <h4>Axis 2: Solicitation</h4>
-      <p class="signal">1-review Google account ratio</p>
-      <p>Mills pad reviews with single-use accounts. Legitimate firms: 0-15%. Mills: 15-25%+.</p>
-      <p class="range">Weight: 0-35 points</p>
-    </div>
-    <div class="axis-card">
-      <h4>Axis 3: Outcome</h4>
-      <p class="signal">Ch.13 <a href="https://dismissalrate.org" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project" target="_blank" rel="noopener">dismissal rate</a> delta from district baseline</p>
-      <p>Not raw <a href="https://dismissalrate.org" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project" target="_blank" rel="noopener">dismissal rate</a> -- the <em>delta from the firm's own district baseline</em>. A 48% rate means different things in a 27% district vs. a 54% district.</p>
-      <p class="range">Weight: 0-30 points</p>
-    </div>
-  </div>
-
-  <h3>Why district-adjusted?</h3>
-  <p>Raw Ch.13 dismissal rates vary dramatically by district. Without adjustment, a firm performing at the national average gets scored identically whether it's in a low-dismissal district or a high-dismissal one. The delta isolates firm-specific underperformance from structural variation.</p>
-
-  <p>District baselines computed from the FJC dataset range from ~21% to ~82%, a nearly 4x spread. Example range from districts with 10,000+ closed Ch.13 cases:</p>
-
-  <table>
-    <thead>
-      <tr><th>District Type</th><th>Ch.13 Baseline</th><th>Closed Cases</th></tr>
-    </thead>
-    <tbody>
-      <tr><td>Low-dismissal district</td><td>~27%</td><td>16,000+</td></tr>
-      <tr><td>Mid-range district</td><td>~43%</td><td>16,000+</td></tr>
-      <tr><td>National average (all Ch.13)</td><td>~45%</td><td>4.9M</td></tr>
-      <tr><td>High-dismissal district</td><td>~63%</td><td>17,000+</td></tr>
-    </tbody>
-  </table>
-
-  <h3>Archetype discovery</h3>
-  <p>The model identifies two distinct mill archetypes through the cross-link of Axes 1 and 2:</p>
-  <ul>
-    <li><strong>Suppressed mills</strong> (low 1-star + high 1-review accounts): Actively manage reputation. Near-zero negative reviews. Heavy padding with single-use Google accounts. Observed: 0.3-2.5% one-star, 14-24% one-review accounts.</li>
-    <li><strong>Unsuppressed mills</strong> (high 1-star + high 1-review accounts): Solicit reviews aggressively but don't suppress negatives. Bad outcomes leak through. Observed: 10-27% one-star, 16-22% one-review accounts.</li>
-  </ul>
-  <p>Both archetypes can be confirmed by Axis 3 (outcome delta), but this axis requires attorney-level case data in the firm's actual operating district.</p>
-
-  <h3>Sample results</h3>
-  <p>38 firms scored: NACBA board members, circuit leaders, known mills, and controls. Firms with fewer than 10 reviews receive a 60% confidence discount; fewer than 20 receive a 30% discount.</p>
-
-  <table>
-    <thead>
-      <tr><th>Firm Type</th><th>Reviews</th><th>1-Star %</th><th>1-Acct %</th><th>Delta</th><th>Score Range</th></tr>
-    </thead>
-    <tbody>
-      <tr style="background:rgba(255,68,68,0.12)"><td>Known suppressed mill (A)</td><td>734</td><td>0.3%</td><td>23.6%</td><td>+3.2</td><td>70-75</td></tr>
-      <tr style="background:rgba(255,136,0,0.08)"><td>Known suppressed mill (B)</td><td>324</td><td>1.2%</td><td>14.2%</td><td>+4.0</td><td>47-48</td></tr>
-      <tr style="background:rgba(255,204,0,0.06)"><td>Known unsuppressed mill (C)</td><td>1,500</td><td>26.5%</td><td>21.6%</td><td>+6.8</td><td>38</td></tr>
-      <tr><td>Legitimate firm (control avg)</td><td>18-280</td><td>7-23%</td><td>3-15%</td><td>-3 to -15</td><td>0-15</td></tr>
-    </tbody>
-  </table>
-
-  <p><strong>Key finding:</strong> The reviewer sample for Axis 3 understates the real outcome gap, because clients who leave Google reviews are biased toward satisfied clients. In one case, the composite scorer showed a +4.0 delta from the reviewer sample, but direct PACER docket mining of the same firm's full caseload revealed an actual Ch.13 <a href="https://dismissalrate.org" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project" target="_blank" rel="noopener">dismissal rate</a> of 89% -- more than 3x the district baseline. The reviewer sample sees the happy clients; the docket sees everyone.</p>
-
-  <!-- ===== THE GAP ===== -->
-
-  <h2>Where the Model Breaks Down</h2>
-
-  <div class="gap-box">
-    <h4>Data coverage gap: Axis 3 depends on attorney-level case data</h4>
-    <ul>
-      <li>The FJC database has 4.9M cases but <strong>does not include attorney first names or firm names</strong> -- only <code>attorney_last</code> (last name). Name matching produces false positives in large districts.</li>
-      <li>District-constrained matching fixes cross-district contamination but reduces hit rates. Many firms return N/A on Axis 3 because their districts lack sufficient FJC coverage.</li>
-      <li><strong>Only 4 districts have deep FJC coverage</strong> (10,000+ closed Ch.13 cases each). The remaining 90 districts have sparse or zero closed-case data for this methodology.</li>
-      <li>Axes 1 and 2 (review signals) work everywhere -- they require only a Google Maps listing. Axis 3 (outcome) is the bottleneck.</li>
-    </ul>
-  </div>
-
-  <div class="callout green">
-    <h4>What AACER would unlock</h4>
-    <p>AACER provides attorney-level case data nationally: attorney names (first and last), firm names, filing dates, dispositions, prior filing history, case-level detail across all 94 districts. With AACER:</p>
-    <ul>
-      <li>Axis 3 goes from 4-district coverage to <strong>94-district coverage</strong></li>
-      <li>Name matching goes from fuzzy debtor-name LIKE queries to <strong>exact attorney-firm linkage</strong></li>
-      <li>Enables the first <strong>national attorney-level outcome benchmarking</strong> -- every consumer bankruptcy attorney in the country scored against their district peers</li>
-      <li>Combined with the review signals (Axes 1-2), produces a <strong>validated mill detection model</strong> testable against the full population</li>
-      <li>The 391,951 prior-filer discharge count could be refined to an <strong>actual verified violation count</strong> with attorney attribution</li>
-    </ul>
-  </div>
-
-  <!-- ===== TOOL INVENTORY ===== -->
-
-  <h2>Tool Inventory (Research-Relevant)</h2>
-
-  <table>
-    <thead>
-      <tr><th>Tool</th><th>What it does</th><th>Data source</th></tr>
-    </thead>
-    <tbody>
-      <tr><td><code>mill_composite_score.py</code></td><td>3-axis composite scorer with district baselines</td><td>Google reviews + FJC 4.9M cases</td></tr>
-      <tr><td><code>review_scrape.py</code></td><td>Google Maps review scraper (CDP automation)</td><td>Google Maps</td></tr>
-      <tr><td><code>review_audit.py</code></td><td>Cross-reference reviewers against FJC cases</td><td>Scraped reviews + FJC</td></tr>
-      <tr><td><code>run.py check [name]</code></td><td>Attorney scorecard: caseload, <a href="https://dismissalrate.org" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project" target="_blank" rel="noopener">dismissal rate</a>, chapter mix, red flags</td><td>FJC 4.9M cases</td></tr>
-      <tr><td><code>run.py scan</code></td><td>Blind outlier detection across all attorneys in dataset</td><td>FJC</td></tr>
-      <tr><td><code>run.py predict [name]</code></td><td>ML mill probability (logistic regression, 7 features)</td><td>FJC</td></tr>
-      <tr><td><code>run.py compare</code></td><td>Subject firm vs. same-district controls</td><td>FJC</td></tr>
-      <tr><td><code>run.py worst N</code></td><td>Worst N attorneys by composite score</td><td>FJC</td></tr>
-      <tr><td>1328(f) Screener</td><td>Client-side SQL.js tool checking discharge eligibility</td><td>PACER case data (user-provided)</td></tr>
-      <tr><td>FJC MCP Server</td><td>Natural language queries against FJC data</td><td>FJC 4.9M cases</td></tr>
-    </tbody>
-  </table>
-
-  <!-- ===== RESEARCH LOG ===== -->
-
-  <h2>Research Log</h2>
-
-  <div class="log-entry">
-    <span class="date">April 2, 2026</span>
-    <p><strong>Built 3-axis composite mill scorer.</strong> Cross-linked review suppression, review padding, and Ch.13 <a href="https://dismissalrate.org" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project" target="_blank" rel="noopener">dismissal rate</a> delta from district baseline. Scored 38 firms (NACBA board/leaders, known mills, controls). Discovery: district adjustment is essential -- without it, firms in low-baseline districts appear similar to firms in high-baseline districts despite vastly different performance relative to local peers. Identified data gap: FJC coverage insufficient for Axis 3 in most districts. AACER data would close the gap.</p>
-  </div>
-
-  <div class="log-entry">
-    <span class="date">April 1, 2026</span>
-    <p><strong>Built Google review scraping and audit pipeline.</strong> CDP-based scraper for Google Maps reviews. Forensic cross-reference engine matching reviewer names against 4.9M FJC bankruptcy cases (nickname expansion, fuzzy matching). Scraped 38 firms. Discovered two mill archetypes: review-suppressed (0-2% one-star) and unsuppressed (10-27% one-star). Both show elevated one-review Google accounts (15-25%).</p>
-  </div>
-
-  <div class="log-entry">
-    <span class="date">March 30, 2026</span>
-    <p><strong>Built national audit tool.</strong> 9-screen detection model (inspired by Madoff-style red flags: outsized returns without visible mechanism). 93-district heatmap visualization. Automated detection of all previously-known mill attorneys validated against manual identification.</p>
-  </div>
-
-  <div class="log-entry">
-    <span class="date">March 25, 2026</span>
-    <p><strong>First research call.</strong> Methodology reviewed -- no red flags identified. Co-authorship interest expressed. AACER dataset access discussed as path to national coverage. LoPucki introduction mentioned.</p>
-  </div>
-
-  <div class="log-entry">
-    <span class="date">March 17-23, 2026</span>
-    <p><strong>Rules Committee submission accepted.</strong> Proposed amendment to Rule 4004 (mandatory 1328(f) verification with docket notation). Assigned docket number 26-BK-3. Published on uscourts.gov.</p>
-  </div>
-
-  <!-- ===== OPEN QUESTIONS ===== -->
-
-  <h2>Open Research Questions</h2>
-
-  <ol>
-    <li><strong>Can the composite model predict mills out-of-sample?</strong> Train on known mills, test against unlabeled firms. Requires AACER for Axis 3 coverage nationally.</li>
-    <li><strong>What is the true 1328(f) violation rate?</strong> The 391,951 figure is the universe of cases requiring verification. With AACER date data, the actual violation count could be computed directly.</li>
-    <li><strong>Is there an attorney-level correlation between dismissal rate and 1328(f) violation rate?</strong> Hypothesis: high-dismissal attorneys are more likely to file barred cases because they churn clients through repeat filings.</li>
-    <li><strong>Does review manipulation correlate with other misconduct indicators?</strong> Axes 1-2 are cheap to compute (no PACER costs). If they predict Axis 3 outcomes, review data alone could serve as a national screening tool.</li>
-    <li><strong>District-level structural variation:</strong> Why does the Ch.13 dismissal baseline range from 21% to 82% across districts? Judicial culture, debtor demographics, trustee behavior, or attorney quality? The FJC data can answer this with the right controls.</li>
-  </ol>
-
-  <!-- ===== NEXT STEPS ===== -->
-
-  <h2>What Comes Next</h2>
-
-  <div class="callout green">
-    <h4>With AACER access</h4>
-    <ul>
-      <li>Populate Axis 3 for all 94 districts -- complete the composite model</li>
-      <li>Attorney-level national benchmarking (every consumer bankruptcy attorney, scored)</li>
-      <li>Verified 1328(f) violation count with attorney attribution</li>
-      <li>Publishable dataset for peer review</li>
-    </ul>
-  </div>
-
-  <div class="callout yellow">
-    <h4>Without AACER access</h4>
-    <ul>
-      <li>Continue targeted PACER pulls for specific firms (expensive, slow)</li>
-      <li>Publish Axes 1-2 findings (review signals alone) as a preliminary paper</li>
-      <li>Expand review scraping to top 200 consumer bankruptcy firms nationally</li>
-      <li>Use RECAP/CourtListener for additional case enrichment</li>
-    </ul>
-  </div>
-
+<p class="timestamp">Last updated: April 2, 2026</p>
+<div class="callout">
+<h4>What this page is</h4>
+<p>A running research notebook documenting new tools, datasets, and findings as they develop. Not public, not indexed, not linked from anywhere. Updated between conversations. Intended as a shared reference for research collaborators -- see what's been built, what the data says, and where the gaps are.</p>
+</div>
+<!-- ===== CURRENT STATE ===== -->
+<h2>Current State of the Toolkit</h2>
+<div class="stat-row">
+<div class="stat-card">
+<span class="number">4.9M</span>
+<span class="label">FJC cases loaded<br/>(94 districts)</span>
+</div>
+<div class="stat-card">
+<span class="number">347</span>
+<span class="label">Analysis tools<br/>(Python scripts)</span>
+</div>
+<div class="stat-card">
+<span class="number">38</span>
+<span class="label">Firms scored<br/>(review + FJC cross-ref)</span>
+</div>
+<div class="stat-card">
+<span class="number">264</span>
+<span class="label">Verified 1328(f)<br/>violations</span>
+</div>
+<div class="stat-card">
+<span class="number">30</span>
+<span class="label">Districts with<br/>Ch.13 baselines</span>
+</div>
+</div>
+<!-- ===== 3-AXIS MODEL ===== -->
+<h2>New: 3-Axis Composite Mill Detection Model</h2>
+<p class="timestamp">Built April 2, 2026</p>
+<p>The core question: can you identify bankruptcy mills from public data alone, without relying on insider knowledge or media reports? We now have a working 3-axis model that cross-links independent signals.</p>
+<div class="axis-diagram">
+<div class="axis-card">
+<h4>Axis 1: Suppression</h4>
+<p class="signal">Google review 1-star percentage</p>
+<p>Mills suppress or prevent negative reviews. Control group median: ~11%. Suppressed mills: 0-3%.</p>
+<p class="range">Weight: 0-35 points</p>
+</div>
+<div class="axis-card">
+<h4>Axis 2: Solicitation</h4>
+<p class="signal">1-review Google account ratio</p>
+<p>Mills pad reviews with single-use accounts. Legitimate firms: 0-15%. Mills: 15-25%+.</p>
+<p class="range">Weight: 0-35 points</p>
+</div>
+<div class="axis-card">
+<h4>Axis 3: Outcome</h4>
+<p class="signal">Ch.13 <a href="https://dismissalrate.org" rel="noopener" target="_blank" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project">dismissal rate</a> delta from district baseline</p>
+<p>Not raw <a href="https://dismissalrate.org" rel="noopener" target="_blank" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project">dismissal rate</a> -- the <em>delta from the firm's own district baseline</em>. A 48% rate means different things in a 27% district vs. a 54% district.</p>
+<p class="range">Weight: 0-30 points</p>
+</div>
+</div>
+<h3>Why district-adjusted?</h3>
+<p>Raw Ch.13 dismissal rates vary dramatically by district. Without adjustment, a firm performing at the national average gets scored identically whether it's in a low-dismissal district or a high-dismissal one. The delta isolates firm-specific underperformance from structural variation.</p>
+<p>District baselines computed from the FJC dataset range from ~21% to ~82%, a nearly 4x spread. Example range from districts with 10,000+ closed Ch.13 cases:</p>
+<table>
+<thead>
+<tr><th>District Type</th><th>Ch.13 Baseline</th><th>Closed Cases</th></tr>
+</thead>
+<tbody>
+<tr><td>Low-dismissal district</td><td>~27%</td><td>16,000+</td></tr>
+<tr><td>Mid-range district</td><td>~43%</td><td>16,000+</td></tr>
+<tr><td>National average (all Ch.13)</td><td>~45%</td><td>4.9M</td></tr>
+<tr><td>High-dismissal district</td><td>~63%</td><td>17,000+</td></tr>
+</tbody>
+</table>
+<h3>Archetype discovery</h3>
+<p>The model identifies two distinct mill archetypes through the cross-link of Axes 1 and 2:</p>
+<ul>
+<li><strong>Suppressed mills</strong> (low 1-star + high 1-review accounts): Actively manage reputation. Near-zero negative reviews. Heavy padding with single-use Google accounts. Observed: 0.3-2.5% one-star, 14-24% one-review accounts.</li>
+<li><strong>Unsuppressed mills</strong> (high 1-star + high 1-review accounts): Solicit reviews aggressively but don't suppress negatives. Bad outcomes leak through. Observed: 10-27% one-star, 16-22% one-review accounts.</li>
+</ul>
+<p>Both archetypes can be confirmed by Axis 3 (outcome delta), but this axis requires attorney-level case data in the firm's actual operating district.</p>
+<h3>Sample results</h3>
+<p>38 firms scored: NACBA board members, circuit leaders, known mills, and controls. Firms with fewer than 10 reviews receive a 60% confidence discount; fewer than 20 receive a 30% discount.</p>
+<table>
+<thead>
+<tr><th>Firm Type</th><th>Reviews</th><th>1-Star %</th><th>1-Acct %</th><th>Delta</th><th>Score Range</th></tr>
+</thead>
+<tbody>
+<tr style="background:rgba(255,68,68,0.12)"><td>Known suppressed mill (A)</td><td>734</td><td>0.3%</td><td>23.6%</td><td>+3.2</td><td>70-75</td></tr>
+<tr style="background:rgba(255,136,0,0.08)"><td>Known suppressed mill (B)</td><td>324</td><td>1.2%</td><td>14.2%</td><td>+4.0</td><td>47-48</td></tr>
+<tr style="background:rgba(255,204,0,0.06)"><td>Known unsuppressed mill (C)</td><td>1,500</td><td>26.5%</td><td>21.6%</td><td>+6.8</td><td>38</td></tr>
+<tr><td>Legitimate firm (control avg)</td><td>18-280</td><td>7-23%</td><td>3-15%</td><td>-3 to -15</td><td>0-15</td></tr>
+</tbody>
+</table>
+<p><strong>Key finding:</strong> The reviewer sample for Axis 3 understates the real outcome gap, because clients who leave Google reviews are biased toward satisfied clients. In one case, the composite scorer showed a +4.0 delta from the reviewer sample, but direct PACER docket mining of the same firm's full caseload revealed an actual Ch.13 <a href="https://dismissalrate.org" rel="noopener" target="_blank" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project">dismissal rate</a> of 89% -- more than 3x the district baseline. The reviewer sample sees the happy clients; the docket sees everyone.</p>
+<!-- ===== THE GAP ===== -->
+<h2>Where the Model Breaks Down</h2>
+<div class="gap-box">
+<h4>Data coverage gap: Axis 3 depends on attorney-level case data</h4>
+<ul>
+<li>The FJC database has 4.9M cases but <strong>does not include attorney first names or firm names</strong> -- only <code>attorney_last</code> (last name). Name matching produces false positives in large districts.</li>
+<li>District-constrained matching fixes cross-district contamination but reduces hit rates. Many firms return N/A on Axis 3 because their districts lack sufficient FJC coverage.</li>
+<li><strong>Only 4 districts have deep FJC coverage</strong> (10,000+ closed Ch.13 cases each). The remaining 90 districts have sparse or zero closed-case data for this methodology.</li>
+<li>Axes 1 and 2 (review signals) work everywhere -- they require only a Google Maps listing. Axis 3 (outcome) is the bottleneck.</li>
+</ul>
+</div>
+<div class="callout green">
+<h4>What AACER would unlock</h4>
+<p>AACER provides attorney-level case data nationally: attorney names (first and last), firm names, filing dates, dispositions, prior filing history, case-level detail across all 94 districts. With AACER:</p>
+<ul>
+<li>Axis 3 goes from 4-district coverage to <strong>94-district coverage</strong></li>
+<li>Name matching goes from fuzzy debtor-name LIKE queries to <strong>exact attorney-firm linkage</strong></li>
+<li>Enables the first <strong>national attorney-level outcome benchmarking</strong> -- every consumer bankruptcy attorney in the country scored against their district peers</li>
+<li>Combined with the review signals (Axes 1-2), produces a <strong>validated mill detection model</strong> testable against the full population</li>
+<li>The 391,951 prior-filer discharge count could be refined to an <strong>actual verified violation count</strong> with attorney attribution</li>
+</ul>
+</div>
+<!-- ===== TOOL INVENTORY ===== -->
+<h2>Tool Inventory (Research-Relevant)</h2>
+<table>
+<thead>
+<tr><th>Tool</th><th>What it does</th><th>Data source</th></tr>
+</thead>
+<tbody>
+<tr><td><code>mill_composite_score.py</code></td><td>3-axis composite scorer with district baselines</td><td>Google reviews + FJC 4.9M cases</td></tr>
+<tr><td><code>review_scrape.py</code></td><td>Google Maps review scraper (CDP automation)</td><td>Google Maps</td></tr>
+<tr><td><code>review_audit.py</code></td><td>Cross-reference reviewers against FJC cases</td><td>Scraped reviews + FJC</td></tr>
+<tr><td><code>run.py check [name]</code></td><td>Attorney scorecard: caseload, <a href="https://dismissalrate.org" rel="noopener" target="_blank" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project">dismissal rate</a>, chapter mix, red flags</td><td>FJC 4.9M cases</td></tr>
+<tr><td><code>run.py scan</code></td><td>Blind outlier detection across all attorneys in dataset</td><td>FJC</td></tr>
+<tr><td><code>run.py predict [name]</code></td><td>ML mill probability (logistic regression, 7 features)</td><td>FJC</td></tr>
+<tr><td><code>run.py compare</code></td><td>Subject firm vs. same-district controls</td><td>FJC</td></tr>
+<tr><td><code>run.py worst N</code></td><td>Worst N attorneys by composite score</td><td>FJC</td></tr>
+<tr><td>1328(f) Screener</td><td>Client-side SQL.js tool checking discharge eligibility</td><td>PACER case data (user-provided)</td></tr>
+<tr><td>FJC MCP Server</td><td>Natural language queries against FJC data</td><td>FJC 4.9M cases</td></tr>
+</tbody>
+</table>
+<!-- ===== RESEARCH LOG ===== -->
+<h2>Research Log</h2>
+<div class="log-entry">
+<span class="date">April 2, 2026</span>
+<p><strong>Built 3-axis composite mill scorer.</strong> Cross-linked review suppression, review padding, and Ch.13 <a href="https://dismissalrate.org" rel="noopener" target="_blank" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project">dismissal rate</a> delta from district baseline. Scored 38 firms (NACBA board/leaders, known mills, controls). Discovery: district adjustment is essential -- without it, firms in low-baseline districts appear similar to firms in high-baseline districts despite vastly different performance relative to local peers. Identified data gap: FJC coverage insufficient for Axis 3 in most districts. AACER data would close the gap.</p>
+</div>
+<div class="log-entry">
+<span class="date">April 1, 2026</span>
+<p><strong>Built Google review scraping and audit pipeline.</strong> CDP-based scraper for Google Maps reviews. Forensic cross-reference engine matching reviewer names against 4.9M FJC bankruptcy cases (nickname expansion, fuzzy matching). Scraped 38 firms. Discovered two mill archetypes: review-suppressed (0-2% one-star) and unsuppressed (10-27% one-star). Both show elevated one-review Google accounts (15-25%).</p>
+</div>
+<div class="log-entry">
+<span class="date">March 30, 2026</span>
+<p><strong>Built national audit tool.</strong> 9-screen detection model (inspired by Madoff-style red flags: outsized returns without visible mechanism). 93-district heatmap visualization. Automated detection of all previously-known mill attorneys validated against manual identification.</p>
+</div>
+<div class="log-entry">
+<span class="date">March 25, 2026</span>
+<p><strong>First research call.</strong> Methodology reviewed -- no red flags identified. Co-authorship interest expressed. AACER dataset access discussed as path to national coverage. LoPucki introduction mentioned.</p>
+</div>
+<div class="log-entry">
+<span class="date">March 17-23, 2026</span>
+<p><strong>Rules Committee submission accepted.</strong> Proposed amendment to <a href="https://www.law.cornell.edu/rules/frbp/rule_4004" rel="noopener" target="_blank">Rule 4004</a> (mandatory 1328(f) verification with docket notation). Assigned docket number 26-BK-3. Published on uscourts.gov.</p>
+</div>
+<!-- ===== OPEN QUESTIONS ===== -->
+<h2>Open Research Questions</h2>
+<ol>
+<li><strong>Can the composite model predict mills out-of-sample?</strong> Train on known mills, test against unlabeled firms. Requires AACER for Axis 3 coverage nationally.</li>
+<li><strong>What is the true 1328(f) violation rate?</strong> The 391,951 figure is the universe of cases requiring verification. With AACER date data, the actual violation count could be computed directly.</li>
+<li><strong>Is there an attorney-level correlation between dismissal rate and 1328(f) violation rate?</strong> Hypothesis: high-dismissal attorneys are more likely to file barred cases because they churn clients through repeat filings.</li>
+<li><strong>Does review manipulation correlate with other misconduct indicators?</strong> Axes 1-2 are cheap to compute (no PACER costs). If they predict Axis 3 outcomes, review data alone could serve as a national screening tool.</li>
+<li><strong>District-level structural variation:</strong> Why does the Ch.13 dismissal baseline range from 21% to 82% across districts? Judicial culture, debtor demographics, trustee behavior, or attorney quality? The FJC data can answer this with the right controls.</li>
+</ol>
+<!-- ===== NEXT STEPS ===== -->
+<h2>What Comes Next</h2>
+<div class="callout green">
+<h4>With AACER access</h4>
+<ul>
+<li>Populate Axis 3 for all 94 districts -- complete the composite model</li>
+<li>Attorney-level national benchmarking (every consumer bankruptcy attorney, scored)</li>
+<li>Verified 1328(f) violation count with attorney attribution</li>
+<li>Publishable dataset for peer review</li>
+</ul>
+</div>
+<div class="callout yellow">
+<h4>Without AACER access</h4>
+<ul>
+<li>Continue targeted PACER pulls for specific firms (expensive, slow)</li>
+<li>Publish Axes 1-2 findings (review signals alone) as a preliminary paper</li>
+<li>Expand review scraping to top 200 consumer bankruptcy firms nationally</li>
+<li>Use RECAP/CourtListener for additional case enrichment</li>
+</ul>
+</div>
 </article>
-
 <footer>
-  <p>Open Bankruptcy Project -- Lab Notebook</p>
-  <p>This page is not indexed, not linked, and not public. Shared directly with research collaborators only.</p>
+<p>Open Bankruptcy Project -- Lab Notebook</p>
+<p>This page is not indexed, not linked, and not public. Shared directly with research collaborators only.</p>
 <p>This site provides general information, not legal advice. Consult a qualified attorney for your specific situation.</p>
 </footer>
-
 </body>
 </html>
