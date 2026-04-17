@@ -435,8 +435,10 @@ document.addEventListener('click', function(e) {
 
 <div class="methodology">
   <strong>Methodology:</strong> Dismissal rates from court-observed data where N&ge;20 resolved cases, FJC-estimated otherwise.
-  Consumer harm = dismissed cases &times; $7,500 avg loss (attorney fees + lost plan payments + credit damage).
+  Consumer harm estimate = dismissed cases &times; $7,500 (conservative composite: attorney fees ~$3,500 + forfeited plan payments ~$2,800 + credit damage opportunity cost ~$1,200; does not include wage garnishment losses, re-filing costs, or non-economic impacts).
   Data: <a href="https://www.fjc.gov/research/idb" target="_blank" rel="noopener">FJC Integrated Database</a> 2008-2024.
+  <br><br>
+  <strong>Recency-bias caveat:</strong> Chapter 13 plans run 3-5 years. Cases filed 2020-2024 are still active if succeeding; only their early dismissals are currently visible in the dataset. The national 48% dismissal rate therefore reflects an <em>upper-bound</em> estimate. Restricting analysis to mature cohorts (2008-2019, where most cases have reached final outcomes) produces a somewhat lower dismissal rate. Total estimated harm should be read as the high end of a defensible range.
   <br>
   <span id="lastUpdated"></span> |
   <a href="/methodology/">Full methodology</a> |
