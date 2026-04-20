@@ -1,5 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /data/spine-v1/
 
 Sitemap: https://1328f.org/sitemap.xml
 
