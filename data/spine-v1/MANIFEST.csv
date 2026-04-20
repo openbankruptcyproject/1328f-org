@@ -1,0 +1,11 @@
+filename,description,derivation,row_count,bytes,retrieved_at
+district_violations_fy2008_2024.csv,"District cross-section, FY08-24 aggregate",fjc_rank_districts MCP call,92,8477,2026-04-19
+national_trend_fy2008_2024.csv,National time series by fiscal year,fjc_query (direct SQL),17,1965,2026-04-19
+district_year_matrix_fy2008_2024.csv,Full district × year panel,fjc_query (direct SQL),1586,153590,2026-04-19
+state_rollup_fy2008_2024.csv,State cross-section (all districts in state summed),derived from matrix,55,5642,2026-04-19
+state_year_matrix_fy2008_2024.csv,State × year panel,derived from matrix,923,86222,2026-04-19
+district_rank_change_fy08_13_vs_fy14_19.csv,Mature-period rank shift per district,derived from matrix,94,7128,2026-04-19
+district_violation_rate_mature_fy08_19.csv,"Violations per 1000 filings, mature years only",derived from matrix,94,8025,2026-04-19
+circuit_rollup_fy2008_2024.csv,"Circuit-level rollup, 11 circuits + DC",derived from matrix,12,1237,2026-04-19
+district_pathology_quadrant_fy2008_2024.csv,Attorney-mill vs pro-se-pathology classifier,derived from cross-section,92,9922,2026-04-19
+METHODOLOGY.md,"Provenance, estimator formula, coefficient limitations",hand-written,,8040,2026-04-19

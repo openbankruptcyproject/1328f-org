@@ -1,0 +1,95 @@
+district_code,district_name,state,est_violations_fy08_13,est_violations_fy14_19,delta_abs,delta_pct,rank_fy08_13,rank_fy14_19,rank_movement,retrieved_at,source
+3E,N.D. Ga.,GA,3854,3313,-541,-14.0,1,2,-1,2026-04-19,derived_from_matrix
+52,N.D. Ill.,IL,2650,4131,1481,55.9,2,1,1,2026-04-19,derived_from_matrix
+26,N.D. Ala.,AL,2643,2335,-308,-11.7,3,3,0,2026-04-19,derived_from_matrix
+36,W.D. La.,LA,2506,2144,-362,-14.4,6,4,2,2026-04-19,derived_from_matrix
+51,W.D. Tenn.,TN,2600,1997,-603,-23.2,4,6,-2,2026-04-19,derived_from_matrix
+48,S.D. Ohio,OH,2590,1749,-841,-32.5,5,10,-5,2026-04-19,derived_from_matrix
+3G,M.D. Ga.,GA,2354,1931,-423,-18.0,7,8,-1,2026-04-19,derived_from_matrix
+3J,S.D. Ga.,GA,2213,2043,-170,-7.7,9,5,4,2026-04-19,derived_from_matrix
+56,S.D. Ind.,IN,2225,1668,-557,-25.0,8,11,-3,2026-04-19,derived_from_matrix
+22,E.D. Va.,VA,1993,1661,-332,-16.7,10,13,-3,2026-04-19,derived_from_matrix
+27,M.D. Ala.,AL,1487,1991,504,33.9,17,7,10,2026-04-19,derived_from_matrix
+50,M.D. Tenn.,TN,1584,1863,279,17.6,15,9,6,2026-04-19,derived_from_matrix
+49,E.D. Tenn.,TN,1630,1407,-223,-13.7,13,17,-4,2026-04-19,derived_from_matrix
+88,D. Utah,UT,1375,1536,161,11.7,21,14,7,2026-04-19,derived_from_matrix
+3A,M.D. Fla.,FL,1673,1236,-437,-26.1,11,19,-8,2026-04-19,derived_from_matrix
+12,D. New Jersey,NJ,1243,1665,422,34.0,24,12,12,2026-04-19,derived_from_matrix
+47,N.D. Ohio,OH,1670,1210,-460,-27.5,12,20,-8,2026-04-19,derived_from_matrix
+39,N.D. Tex.,TX,1616,1138,-478,-29.6,14,23,-9,2026-04-19,derived_from_matrix
+60,E.D. Ark.,AR,1575,1163,-412,-26.2,16,21,-5,2026-04-19,derived_from_matrix
+73,C.D. Cal.,CA,1289,1411,122,9.5,22,16,6,2026-04-19,derived_from_matrix
+41,S.D. Tex.,TX,1376,1118,-258,-18.8,20,26,-6,2026-04-19,derived_from_matrix
+57,E.D. Wis.,WI,1016,1466,450,44.3,33,15,18,2026-04-19,derived_from_matrix
+71,N.D. Cal.,CA,1274,1148,-126,-9.9,23,22,1,2026-04-19,derived_from_matrix
+81,W.D. Wash.,WA,1407,1015,-392,-27.9,19,30,-11,2026-04-19,derived_from_matrix
+82,D. Colo.,CO,1470,911,-559,-38.0,18,38,-20,2026-04-19,derived_from_matrix
+37,N.D. Miss.,MS,1216,1114,-102,-8.4,25,27,-2,2026-04-19,derived_from_matrix
+83,D. Kan.,KS,1199,1017,-182,-15.2,26,29,-3,2026-04-19,derived_from_matrix
+65,E.D. Mo.,MO,1013,1121,108,10.7,34,25,9,2026-04-19,derived_from_matrix
+3C,S.D. Fla.,FL,772,1359,587,76.0,46,18,28,2026-04-19,derived_from_matrix
+23,W.D. Va.,VA,1115,1005,-110,-9.9,30,31,-1,2026-04-19,derived_from_matrix
+20,D.S.C.,SC,963,1126,163,16.9,38,24,14,2026-04-19,derived_from_matrix
+28,S.D. Ala.,AL,997,1072,75,7.5,35,28,7,2026-04-19,derived_from_matrix
+42,W.D. Tex.,TX,1116,953,-163,-14.6,29,35,-6,2026-04-19,derived_from_matrix
+55,N.D. Ind.,IN,1053,998,-55,-5.2,31,32,-1,2026-04-19,derived_from_matrix
+38,S.D. Miss.,MS,984,988,4,0.4,37,33,4,2026-04-19,derived_from_matrix
+17,E.D.N.C.,NC,1124,829,-295,-26.2,28,42,-14,2026-04-19,derived_from_matrix
+66,W.D. Mo.,MO,992,950,-42,-4.2,36,36,0,2026-04-19,derived_from_matrix
+72,E.D. Cal.,CA,1040,861,-179,-17.2,32,41,-9,2026-04-19,derived_from_matrix
+45,E.D. Mich.,MI,962,867,-95,-9.9,39,40,-1,2026-04-19,derived_from_matrix
+79,D. Or.,OR,1141,661,-480,-42.1,27,46,-19,2026-04-19,derived_from_matrix
+43,E.D. Ky.,KY,889,879,-10,-1.1,40,39,1,2026-04-19,derived_from_matrix
+04,D. Puerto Rico,PR,783,981,198,25.3,43,34,9,2026-04-19,derived_from_matrix
+16,D. Maryland,MD,747,930,183,24.5,47,37,10,2026-04-19,derived_from_matrix
+67,D. Neb.,NE,835,629,-206,-24.7,42,47,-5,2026-04-19,derived_from_matrix
+64,D. Minn.,MN,783,665,-118,-15.1,44,45,-1,2026-04-19,derived_from_matrix
+44,W.D. Ky.,KY,644,695,51,7.9,53,43,10,2026-04-19,derived_from_matrix
+61,W.D. Ark.,AR,777,554,-223,-28.7,45,50,-5,2026-04-19,derived_from_matrix
+78,D. Nev.,NV,733,545,-188,-25.6,49,52,-3,2026-04-19,derived_from_matrix
+18,M.D.N.C.,NC,698,553,-145,-20.8,50,51,-1,2026-04-19,derived_from_matrix
+54,S.D. Ill.,IL,845,354,-491,-58.1,41,61,-20,2026-04-19,derived_from_matrix
+87,W.D. Okla.,OK,693,499,-194,-28.0,51,53,-2,2026-04-19,derived_from_matrix
+13,E.D. Pa.,PA,503,679,176,35.0,58,44,14,2026-04-19,derived_from_matrix
+15,W.D. Pa.,PA,584,561,-23,-3.9,54,49,5,2026-04-19,derived_from_matrix
+70,D. Ariz.,AZ,498,600,102,20.5,60,48,12,2026-04-19,derived_from_matrix
+53,C.D. Ill.,IL,738,354,-384,-52.0,48,60,-12,2026-04-19,derived_from_matrix
+19,W.D.N.C.,NC,649,409,-240,-37.0,52,56,-4,2026-04-19,derived_from_matrix
+40,E.D. Tex.,TX,541,482,-59,-10.9,55,54,1,2026-04-19,derived_from_matrix
+14,M.D. Pa.,PA,529,444,-85,-16.1,57,55,2,2026-04-19,derived_from_matrix
+80,E.D. Wash.,WA,534,341,-193,-36.1,56,62,-6,2026-04-19,derived_from_matrix
+06,N.D.N.Y.,NY,488,379,-109,-22.3,61,59,2,2026-04-19,derived_from_matrix
+74,S.D. Cal.,CA,365,398,33,9.0,62,57,5,2026-04-19,derived_from_matrix
+09,W.D.N.Y.,NY,498,206,-292,-58.6,59,69,-10,2026-04-19,derived_from_matrix
+3L,E.D. La.,LA,324,380,56,17.3,66,58,8,2026-04-19,derived_from_matrix
+58,W.D. Wis.,WI,360,324,-36,-10.0,63,64,-1,2026-04-19,derived_from_matrix
+01,D. Massachusetts,MA,342,329,-13,-3.8,64,63,1,2026-04-19,derived_from_matrix
+46,W.D. Mich.,MI,325,321,-4,-1.2,65,65,0,2026-04-19,derived_from_matrix
+76,D. Idaho,ID,285,194,-91,-31.9,67,70,-3,2026-04-19,derived_from_matrix
+08,S.D.N.Y.,NY,177,229,52,29.4,68,66,2,2026-04-19,derived_from_matrix
+11,D. Delaware,DE,158,207,49,31.0,70,68,2,2026-04-19,derived_from_matrix
+07,E.D.N.Y.,NY,107,215,108,100.9,74,67,7,2026-04-19,derived_from_matrix
+3N,M.D. La.,LA,165,109,-56,-33.9,69,72,-3,2026-04-19,derived_from_matrix
+02,D. New Hampshire,NH,119,88,-31,-26.1,72,76,-4,2026-04-19,derived_from_matrix
+63,S.D. Iowa,IA,112,94,-18,-16.1,73,74,-1,2026-04-19,derived_from_matrix
+05,D. Connecticut,CT,86,117,31,36.0,78,71,7,2026-04-19,derived_from_matrix
+85,N.D. Okla.,OK,146,50,-96,-65.8,71,80,-9,2026-04-19,derived_from_matrix
+75,D. Hawaii,HI,95,97,2,2.1,75,73,2,2026-04-19,derived_from_matrix
+84,D.N.M.,NM,92,77,-15,-16.3,77,77,0,2026-04-19,derived_from_matrix
+03,D. Rhode Island,RI,62,89,27,43.5,82,75,7,2026-04-19,derived_from_matrix
+86,E.D. Okla.,OK,95,43,-52,-54.7,76,82,-6,2026-04-19,derived_from_matrix
+00,D. Maine,ME,72,55,-17,-23.6,80,79,1,2026-04-19,derived_from_matrix
+29,N.D. Fla.,FL,67,56,-11,-16.4,81,78,3,2026-04-19,derived_from_matrix
+24,N.D.W. Va.,WV,78,44,-34,-43.6,79,81,-2,2026-04-19,derived_from_matrix
+25,S.D.W. Va.,WV,55,37,-18,-32.7,83,85,-2,2026-04-19,derived_from_matrix
+69,D.S.D.,SD,53,36,-17,-32.1,84,86,-2,2026-04-19,derived_from_matrix
+77,D. Mont.,MT,46,40,-6,-13.0,86,84,2,2026-04-19,derived_from_matrix
+62,N.D. Iowa,IA,37,40,3,8.1,89,83,6,2026-04-19,derived_from_matrix
+10,D. Vermont,VT,45,24,-21,-46.7,88,87,1,2026-04-19,derived_from_matrix
+89,D. Wyo.,WY,46,19,-27,-58.7,87,89,-2,2026-04-19,derived_from_matrix
+68,D.N.D.,ND,46,18,-28,-60.9,85,90,-5,2026-04-19,derived_from_matrix
+90,D.D.C.,DC,26,21,-5,-19.2,90,88,2,2026-04-19,derived_from_matrix
+7-,D. Alaska,AK,8,6,-2,-25.0,91,91,0,2026-04-19,derived_from_matrix
+93,D. Guam,GU,0,2,2,,93,92,1,2026-04-19,derived_from_matrix
+91,D.V.I.,VI,0,0,0,,92,93,-1,2026-04-19,derived_from_matrix
+94,D.N. Mar. I.,MP,0,0,0,,94,94,0,2026-04-19,derived_from_matrix
