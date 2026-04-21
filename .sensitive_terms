@@ -6,7 +6,7 @@
 Wagoner
 Blay
 Stowell
-Williamson
+CTX:Williamson
 Cardwell
 Tiede
 Jeppson
@@ -18,7 +18,7 @@ wmlaw-kc
 # Attorney names — opposing counsel
 Moscov
 Hayden
-Pappas
+CTX:Pappas
 
 # Case-specific
 Victory Cleaning
@@ -58,7 +58,7 @@ CLAUDE.md
 # Trustee / Judge
 Messerli
 Norton
-Fink
+WB:Fink
 Skinner
 
 # Creditor contacts
