@@ -183,7 +183,7 @@
 
   <div class="callout yellow">
     <h4>Status: Ready, on strategic hold</h4>
-    <p>549+ cases and 3,100+ documents are packaged and ready for RECAP upload. The donation is on hold pending a court hearing (mid-April 2026). The documents include docket sheets, fee applications, and case disposition records from multiple districts -- all paid PACER pulls that would otherwise be unavailable in the RECAP archive.</p>
+    <p><span data-obp-c="recap_cases">549+</span> cases and <span data-obp-c="recap_documents">3,100+</span> documents are packaged and ready for RECAP upload. The donation is on hold pending a court hearing (mid-April 2026). The documents include docket sheets, fee applications, and case disposition records from multiple districts -- all paid PACER pulls that would otherwise be unavailable in the RECAP archive.</p>
   </div>
 
   <h3>Donation contents</h3>
@@ -216,7 +216,7 @@
     </div>
     <div class="status-item">
       <h4>RECAP Donation <span class="badge badge-hold">ON HOLD</span></h4>
-      <p>549+ cases / 3,100+ docs packaged. Will upload after mid-April hearing.</p>
+      <p><span data-obp-c="recap_cases">549+</span> cases / <span data-obp-c="recap_documents">3,100+</span> docs packaged. Will upload after mid-April hearing.</p>
     </div>
     <div class="status-item">
       <h4>Citation Extraction <span class="badge badge-planned">PLANNED</span></h4>
@@ -279,7 +279,7 @@
 
   <div class="log-entry">
     <span class="date">March 30, 2026</span>
-    <p><strong>RECAP donation packaged.</strong> 549+ cases, 3,100+ documents. On hold until post-hearing. Format: organized by court/case number, with metadata JSON for each case.</p>
+    <p><strong>RECAP donation packaged.</strong> <span data-obp-c="recap_cases">549+</span> cases, <span data-obp-c="recap_documents">3,100+</span> documents. On hold until post-hearing. Format: organized by court/case number, with metadata JSON for each case.</p>
   </div>
 
   <div class="log-entry">
@@ -300,5 +300,6 @@
 <p>This site provides general information, not legal advice. Consult a qualified attorney for your specific situation.</p>
 </footer>
 
+<script data-obp-counter-loader>(function(){var urls=["/data/counters.json","https://1328f.com/data/counters.json"];function tryNext(i){if(i>=urls.length)return;fetch(urls[i]).then(function(r){if(!r.ok)throw 0;return r.json()}).then(function(d){document.querySelectorAll("[data-obp-c]").forEach(function(e){var v=d[e.getAttribute("data-obp-c")];if(v)e.textContent=v})}).catch(function(){tryNext(i+1)})}tryNext(0)})();</script>
 </body>
 </html>
