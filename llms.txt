@@ -1,5 +1,7 @@
 # 1328f.org
 
+> Last updated: 2026-05-01
+
 > Empirical research platform for bankruptcy discharge bar analysis and attorney performance data. Open-source tools and methodology for detecting systemic failures in consumer bankruptcy.
 
 ## About
