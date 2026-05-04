@@ -245,7 +245,7 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 <p style="margin-bottom: 0;">La calidad del abogado es el predictor mas fuerte de los resultados del Capítulo 13. Este informe describe una metodologia para medir el desempeno del abogado usando datos de PACER disponibles publicamente, incluyendo construccion de grupo de control, seleccion de metricas y validacion estadistica. Todas las herramientas son de código abierto y reproducibles para cualquier distrito federal de bancarrota.</p>
 </div>
 <h2>1. Por que medir el desempeno del abogado</h2>
-<p>El exito del Capítulo 13 depende del trabajo legal sostenido durante 3-5 anos. A diferencia del Capítulo 7 - donde la condonacion es en gran parte automática para deudores elegibles - el Capítulo 13 requiere redaccion del plan, negociacion con acreedores, analisis de gravamenes, practica de mociones, monitoreo de cumplimiento y comunicación continua con el cliente. La calidad de este trabajo varia dramaticamente entre profesionales.</p>
+<p>El exito del Capítulo 13 depende del trabajo legal sostenido durante 3-5 años. A diferencia del Capítulo 7 - donde la condonación es en gran parte automática para deudores elegibles - el Capítulo 13 requiere redaccion del plan, negociacion con acreedores, analisis de gravamenes, practica de mociones, monitoreo de cumplimiento y comunicación continua con el cliente. La calidad de este trabajo varia dramaticamente entre profesionales.</p>
 <p>La investigacion confirma la variacion. Los profesores Jimenez e Hynes (2025 JELS) documentaron diferencias significativas en el efecto del abogado sobre los resultados del Capítulo 13. La Oficina de Responsabilidad Gubernamental ha senalado que las tasas de completacion del Capítulo 13 varian desde menos del 30% hasta mas del 60% dependiendo de la jurisdiccion y el profesional. Sin embargo, no existe una metodologia estandar para medir el desempeno individual del abogado usando datos disponibles publicamente.</p>
 <p>Este informe llena ese vacio. Usando exportaciones de PACER Case Locator y metodos estadisticos directos, cualquier investigador, fideicomisario o autoridad del colegio de abogados puede evaluar el desempeno del abogado contra puntos de referencia locales.</p>
 <h2>2. Fuente de datos: PACER Case Locator</h2>
@@ -253,8 +253,8 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 <table>
 <thead><tr><th scope="col">Campo</th><th scope="col">Uso</th></tr></thead>
 <tbody>
-<tr><td>Numero de caso</td><td>Identificador unico del caso</td></tr>
-<tr><td>Fecha de presentacion</td><td>Fecha de inicio del caso, asignacion de cohorte</td></tr>
+<tr><td>Número de caso</td><td>Identificador unico del caso</td></tr>
+<tr><td>Fecha de presentación</td><td>Fecha de inicio del caso, asignacion de cohorte</td></tr>
 <tr><td>Disposicion</td><td>Clasificacion del resultado (condonado, desestimado, convertido, abierto)</td></tr>
 <tr><td>Capítulo</td><td>Comparacion Capítulo 7 vs. 13</td></tr>
 <tr><td>Nombre del abogado</td><td>Identificacion y agrupacion del profesional</td></tr>
@@ -264,29 +264,29 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 <p>El costo es minimo. Las busquedas en PCL cuestan $0.10 por página, con un tope de $3.00 por busqueda. Una exportacion completa de abogado para un solo distrito tipicamente cuesta $3.00-$9.00. Las cuentas de PACER exentas de tarifa estan disponibles para investigadores y organizaciones calificadas.</p>
 <h2>3. Metricas clave</h2>
 <h3>3.1 Tasa de desestimiento (casos resueltos)</h3>
-<p>El porcentaje de casos completados que terminan en desestimiento en lugar de condonacion. Esta es la metrica principal de resultado. Se calcula como: <code>desestimados / (desestimados + condonados)</code>, excluyendo casos abiertos y convertidos. Resolver solo los casos completados evita el sesgo de cohortes recientes que tienen altos porcentajes de casos abiertos.</p>
-<h3>3.2 Tasa de condonacion (casos resueltos)</h3>
-<p>El inverso de la tasa de desestimiento: <code>condonados / (desestimados + condonados)</code>. Un profesional cuyos clientes logran la condonacion a tasas significativamente menores que sus pares en los mismos tribunales tiene un desempeno inferior en la metrica mas importante.</p>
+<p>El porcentaje de casos completados que terminan en desestimiento en lugar de condonación. Esta es la metrica principal de resultado. Se calcula como: <code>desestimados / (desestimados + condonados)</code>, excluyendo casos abiertos y convertidos. Resolver solo los casos completados evita el sesgo de cohortes recientes que tienen altos porcentajes de casos abiertos.</p>
+<h3>3.2 Tasa de condonación (casos resueltos)</h3>
+<p>El inverso de la tasa de desestimiento: <code>condonados / (desestimados + condonados)</code>. Un profesional cuyos clientes logran la condonación a tasas significativamente menores que sus pares en los mismos tribunales tiene un desempeno inferior en la metrica mas importante.</p>
 <h3>3.3 Tasa de desestimiento temprano</h3>
-<p>El porcentaje de casos desestimados dentro de los 90 dias de la presentacion. Estos son fracasos en etapa de recepcion - casos que nunca llegaron a la confirmacion del plan, frecuentemente desestimados por falta de pago de tasas de presentacion, incumplimiento de presentar listas o incomparecencia a la reunion 341(a). Una alta tasa de desestimiento temprano indica problemas sistemicos en la preparacion de casos y seleccion de clientes.</p>
-<h3>3.4 Distribucion de dia de presentacion</h3>
+<p>El porcentaje de casos desestimados dentro de los 90 dias de la presentación. Estos son fracasos en etapa de recepcion - casos que nunca llegaron a la confirmacion del plan, frecuentemente desestimados por falta de pago de tasas de presentación, incumplimiento de presentar listas o incomparecencia a la reunion 341(a). Una alta tasa de desestimiento temprano indica problemas sistemicos en la preparacion de casos y seleccion de clientes.</p>
+<h3>3.4 Distribucion de dia de presentación</h3>
 <p>La distribucion de presentaciones de casos a lo largo de los dias de la semana. Los profesionales independientes tipicamente muestran una distribucion relativamente uniforme entre los dias habiles, con quizas una concentracion modesta en ciertos dias. La concentracion extrema - mas del 50% de las presentaciones en un solo dia - sugiere procesamiento por lotes en lugar de preparacion individualizada de casos.</p>
 <h3>3.5 Desglose de disposicion</h3>
 <p>Lo que causa los desestimientos importa tanto como la tasa de desestimiento en si. Los codigos de disposicion de PCL y la revision a nivel de expediente pueden distinguir entre:</p>
 <ul>
 <li>Fracaso en pagos del plan (el deudor no pudo mantener los pagos)</li>
-<li>Desestimiento por tasa de presentacion (nunca pago la tasa de presentacion)</li>
+<li>Desestimiento por tasa de presentación (nunca pago la tasa de presentación)</li>
 <li>Incumplimiento de presentar información (listas, plan u otros documentos requeridos nunca presentados)</li>
 <li>Mocion del fideicomisario para desestimar (fracasos de cumplimiento)</li>
 <li>Desestimiento voluntario (el deudor eligio retirarse)</li>
 </ul>
-<p>Un profesional con una alta tasa de desestimientos por tasa de presentacion e incumplimiento de presentar tiene un problema diferente a uno cuyos clientes fracasan en los pagos del plan. El primero sugiere fracasos en la recepcion; el segundo puede reflejar efectos de la poblacion de clientes.</p>
+<p>Un profesional con una alta tasa de desestimientos por tasa de presentación e incumplimiento de presentar tiene un problema diferente a uno cuyos clientes fracasan en los pagos del plan. El primero sugiere fracasos en la recepcion; el segundo puede reflejar efectos de la poblacion de clientes.</p>
 <h3>3.6 Comparacion entre capítulos</h3>
-<p>Comparar los resultados del Capítulo 7 y del Capítulo 13 del mismo profesional proporciona un control interno para la calidad del cliente. Si la tasa de condonacion del Capítulo 7 de un profesional es comparable a sus pares pero los resultados del Capítulo 13 son significativamente peores, la divergencia sugiere una deficiencia en el trabajo legal sostenido que el Capítulo 13 requiere en lugar de una base de clientes dificil.</p>
+<p>Comparar los resultados del Capítulo 7 y del Capítulo 13 del mismo profesional proporciona un control interno para la calidad del cliente. Si la tasa de condonación del Capítulo 7 de un profesional es comparable a sus pares pero los resultados del Capítulo 13 son significativamente peores, la divergencia sugiere una deficiencia en el trabajo legal sostenido que el Capítulo 13 requiere en lugar de una base de clientes dificil.</p>
 <h2>4. Construccion del grupo de control</h2>
 <h3>4.1 Por que importan los controles</h3>
 <p>Las metricas brutas no tienen significado sin comparacion. Una tasa de desestimiento del 45% del Capítulo 13 podria ser excelente en un distrito donde la linea base es del 55%, o alarmante en un distrito donde la linea base es del 30%. Comparar contra promedios nacionales es insuficiente porque los factores locales - jueces, fideicomisarios, reglas locales, condiciones economicas - producen una variacion significativa de distrito a distrito.</p>
-<p>La comparacion valida es contra profesionales independientes que presentan en los mismos tribunales durante los mismos periodos.</p>
+<p>La comparacion valida es contra profesionales independientes que presentan en los mismos tribunales durante los mismos períodos.</p>
 <h3>4.2 Estructura de control escalonada</h3>
 <p>Nuestra metodologia utiliza un grupo de control de dos niveles:</p>
 <table>
@@ -300,7 +300,7 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 <p>Los abogados de control deben cumplir los siguientes requisitos:</p>
 <ul>
 <li><strong>Practica independiente.</strong> No afiliado al profesional objetivo ni a ninguna firma bajo investigacion. Profesionales independientes o firmas pequenas que operan de forma independiente.</li>
-<li><strong>Mismos tribunales.</strong> Presentando en los mismos distritos federales de bancarrota que el profesional objetivo durante los mismos periodos.</li>
+<li><strong>Mismos tribunales.</strong> Presentando en los mismos distritos federales de bancarrota que el profesional objetivo durante los mismos períodos.</li>
 <li><strong>Volumen suficiente.</strong> Minimo 100 casos del Capítulo 13 resueltos para asegurar estabilidad estadistica.</li>
 <li><strong>Sin anomalias conocidas.</strong> Sin sanciones publicadas, acciones disciplinarias u otros factores que los harian puntos de referencia inapropiados.</li>
 </ul>
@@ -318,18 +318,18 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 <table>
 <thead><tr><th scope="col">Factor de confusion</th><th scope="col">Metodo de control</th></tr></thead>
 <tbody>
-<tr><td>Condiciones economicas</td><td>Comparar los mismos periodos. Analisis de cohorte ano por ano.</td></tr>
-<tr><td>Asignacion judicial</td><td>Comparar los mismos tribunales. Donde la asignacion de casos es aleatoria, los efectos del juez se promedian con suficiente volumen.</td></tr>
+<tr><td>Condiciones economicas</td><td>Comparar los mismos períodos. Analisis de cohorte ano por ano.</td></tr>
+<tr><td>Asignacion judicial</td><td>Comparar los mismos tribunales. Dónde la asignacion de casos es aleatoria, los efectos del juez se promedian con suficiente volumen.</td></tr>
 <tr><td>Demografia de clientes</td><td>Capítulo 7 como control interno para la calidad del cliente (mismo abogado, misma recepcion).</td></tr>
 <tr><td>Antiguedad del caso</td><td>Excluir cohortes recientes con altos porcentajes de casos abiertos. Usar metricas de solo-resueltos.</td></tr>
-<tr><td>Variacion por distrito</td><td>Ponderar las metricas del grupo de control por distrito para coincidir con la distribucion de presentacion del profesional objetivo.</td></tr>
+<tr><td>Variacion por distrito</td><td>Ponderar las metricas del grupo de control por distrito para coincidir con la distribucion de presentación del profesional objetivo.</td></tr>
 </tbody>
 </table>
 <h3>6.1 El control interno del Capítulo 7</h3>
-<p>Este es el control de factor de confusion mas poderoso disponible. Si los clientes del Capítulo 7 de un profesional logran condonacion a tasas comparables a sus pares, la base de clientes no es obviamente diferente en calidad. Si los resultados del Capítulo 13 divergen marcadamente de los resultados del Capítulo 7 para el mismo profesional - pero no para los controles - la divergencia aisla el trabajo del Capítulo 13 del abogado como la variable probable.</p>
+<p>Este es el control de factor de confusion mas poderoso disponible. Si los clientes del Capítulo 7 de un profesional logran condonación a tasas comparables a sus pares, la base de clientes no es obviamente diferente en calidad. Si los resultados del Capítulo 13 divergen marcadamente de los resultados del Capítulo 7 para el mismo profesional - pero no para los controles - la divergencia aisla el trabajo del Capítulo 13 del abogado como la variable probable.</p>
 <h2>7. Interpretacion de resultados</h2>
 <h3>7.1 Que significan las metricas elevadas</h3>
-<p>Un profesional con metricas significativamente peores que el grupo de control esta produciendo peores resultados para sus clientes que otros abogados en los mismos tribunales. Esta es una declaracion factual sobre resultados observables. No explica, por si misma, el por que.</p>
+<p>Un profesional con metricas significativamente peores que el grupo de control esta produciendo peores resultados para sus clientes que otros abogados en los mismos tribunales. Esta es una declaración factual sobre resultados observables. No explica, por si misma, el por que.</p>
 <h3>7.2 Que no significan las metricas elevadas</h3>
 <ul>
 <li><strong>No son prueba de mala conducta.</strong> Una alta tasa de desestimiento podria tener explicaciones que no tienen nada que ver con la calidad del abogado.</li>
@@ -337,13 +337,13 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 <li><strong>No son un veredicto.</strong> La metodologia identifica profesionales cuyos resultados ameritan investigacion, no profesionales que han cometido irregularidades.</li>
 </ul>
 <h3>7.3 Multiples metricas son mas informativas que una</h3>
-<p>Una sola metrica elevada tiene valor diagnostico limitado. Multiples metricas elevadas - alta tasa de desestimiento, alta tasa de desestimiento temprano, concentracion en dia de presentacion, divergencia entre capítulos - colectivamente pintan un cuadro mas informativo. Vea el <a href="/reports/bankruptcy-mill-definition/">informe de definición de fabrica de bancarrotas</a> para un marco de puntuacion usando ocho indicadores cuantitativos.</p>
+<p>Una sola metrica elevada tiene valor diagnostico limitado. Multiples metricas elevadas - alta tasa de desestimiento, alta tasa de desestimiento temprano, concentracion en dia de presentación, divergencia entre capítulos - colectivamente pintan un cuadro mas informativo. Vea el <a href="/reports/bankruptcy-mill-definition/">informe de definición de fabrica de bancarrotas</a> para un marco de puntuacion usando ocho indicadores cuantitativos.</p>
 <h2>8. Reproducibilidad</h2>
 <p>Todas las herramientas usadas en esta metodologia son de código abierto y estan disponibles en <a href="https://github.com/ilikemath9999/bankruptcy-discharge-screener">GitHub</a>. El repositorio incluye:</p>
 <ul>
 <li>Analizadores de exportacion PCL para extraccion de casos a nivel de abogado</li>
-<li>Calculadoras de tasas de desestimiento y condonacion</li>
-<li>Analisis de distribucion de dia de presentacion</li>
+<li>Calculadoras de tasas de desestimiento y condonación</li>
+<li>Analisis de distribucion de dia de presentación</li>
 <li>Pruebas de significancia chi-cuadrado</li>
 <li>Herramientas de comparacion con grupo de control</li>
 <li>Scripts de visualizacion para graficos y mapas</li>
@@ -351,10 +351,10 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 <p>Cualquier profesional, investigador, autoridad del colegio de abogados o periodista puede replicar esta metodologia para su distrito usando las mismas herramientas y fuentes de datos. La <a href="/reports/reading-pacer-attorney-record/">guía para leer registros de abogados en PACER</a> proporciona instrucciones paso a paso para obtener los datos subyacentes.</p>
 <h2>9. Informes relacionados</h2>
 <ul>
-<li><a href="/reports/bankruptcy-mill-definition/">Que es una fabrica de bancarrotas? Una definición basada en datos</a> - ocho indicadores cuantitativos para identificar practicas con patrones de fabrica</li>
+<li><a href="/reports/bankruptcy-mill-definition/">Qué es una fabrica de bancarrotas? Una definición basada en datos</a> - ocho indicadores cuantitativos para identificar practicas con patrones de fabrica</li>
 <li><a href="/reports/methodology-1328f-screening/">Como analizamos 4.9 millones de casos de bancarrota</a> - la metodologia de analisis de <a href="https://section1328.org" rel="noopener" target="_blank" title="Section 1328 Discharge -- Open Bankruptcy Project">Section 1328</a>(f)</li>
 <li><a href="/reports/chapter-13-dismissal-rates/">Tasas de desestimiento del Capítulo 13 por distrito</a> - datos de linea base nacional</li>
-<li><a href="/reports/prior-filer-discharge-rates/">Tasas de condonacion de presentadores previos</a> - analisis de presentacion repetida</li>
+<li><a href="/reports/prior-filer-discharge-rates/">Tasas de condonación de presentadores previos</a> - analisis de presentación repetida</li>
 </ul>
 <div class="callout" style="border-left-color: #9eaab6;">
 <h4>Como citar</h4>
@@ -362,7 +362,7 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 </div>
 <div class="callout yellow">
 <h4>No constituye asesoramiento legal</h4>
-<p style="margin-bottom: 0;">Este informe describe una metodologia de investigacion usando datos publicos del tribunal disponibles publicamente. No constituye asesoramiento legal, no evalua a ningun profesional especifico y no debe usarse como base unica para ninguna accion legal o disciplinaria. Los investigadores que apliquen esta metodologia deben ejercer la cautela apropiada al interpretar los resultados y considerar todas las explicaciones potenciales para las diferencias observadas.</p>
+<p style="margin-bottom: 0;">Este informe describe una metodologia de investigacion usando datos publicos del tribunal disponibles publicamente. No constituye asesoramiento legal, no evalua a ningun profesional especifico y no debe usarse como base unica para ninguna acción legal o disciplinaria. Los investigadores que apliquen esta metodologia deben ejercer la cautela apropiada al interpretar los resultados y considerar todas las explicaciones potenciales para las diferencias observadas.</p>
 </div>
 </article>
 <footer role="contentinfo">
