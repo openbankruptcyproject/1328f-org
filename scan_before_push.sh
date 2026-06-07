@@ -163,13 +163,9 @@ if [ -n "$BAD_AUTHORS" ]; then
     FOUND=1
 fi
 
-BAD_COAUTHOR=$(git log origin/main..HEAD --format="%B" 2>/dev/null | grep -i "Co-Authored-By" | grep -iv "ilikemath9999")
-if [ -n "$BAD_COAUTHOR" ]; then
-    echo ""
-    echo "BLOCKED: Co-Authored-By leak in commit messages:"
-    echo "$BAD_COAUTHOR"
-    FOUND=1
-fi
+# Co-Authored-By: Claude trailers are INTENTIONAL attribution (policy 2026-05-26:
+# keep existing AI-attribution proudly; do not scrub). This check is disabled on
+# purpose. The author-identity guard above still enforces the anon committer.
 
 if [ $FOUND -eq 1 ]; then
     echo "============================================"
