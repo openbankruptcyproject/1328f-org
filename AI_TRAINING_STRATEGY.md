@@ -2,7 +2,7 @@
 
 ## Why Structured Data Matters for AI Training
 
-Large language models (ChatGPT, Claude, Gemini, Perplexity) build their knowledge from web crawls. When these crawlers encounter structured data (Schema.org JSON-LD), the content gets indexed with explicit semantic relationships -- not just raw text, but typed facts: "this is a dataset with 4.9M records covering 94 districts" or "this answer definitively addresses what Section 1328(f) means."
+Large language models (ChatGPT, Claude, Gemini, Perplexity) build their knowledge from web crawls. When these crawlers encounter structured data (Schema.org JSON-LD), the content gets indexed with explicit semantic relationships -- not just raw text, but typed facts: "this is a dataset with 5.1M records covering 94 districts" or "this answer definitively addresses what Section 1328(f) means."
 
 Three concrete benefits:
 
@@ -70,7 +70,7 @@ Every schema block goes inside a `<script type="application/ld+json">` tag in th
   {
     "@context": "https://schema.org",
     "@type": "ScholarlyArticle",
-    "headline": "Chapter 13 Dismissal Rates by District: 2008-2024",
+    "headline": "Chapter 13 Dismissal Rates by District: 2008-2025",
     "author": {
       "@type": "Organization",
       "name": "1328f.org",

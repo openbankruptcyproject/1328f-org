@@ -223,7 +223,7 @@
 <meta content="Research Collaboration Brief -- 1328f.org" name="twitter:title"/>
 <meta content="Methodology, datasets, and open research questions for academic collaboration on Section 1328(f) discharge eligibility enforcement." name="twitter:description"/>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What the attorney dataset is not?", "acceptedAnswer": {"@type": "Answer", "text": "This dataset is not the basis for the 391,951 finding. The two analyses are independent. The FJC analysis uses only free government data. The attorney analysis uses paid PACER data."}}, {"@type": "Question", "name": "How it works?", "acceptedAnswer": {"@type": "Answer", "text": "RECAP partnership: The Free Law Project's RECAP archive is the largest open collection of federal court documents. Through bulk RECAP ingestion, the system has enriched over 16,000 cases at zero cost."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "What the attorney dataset is not?", "acceptedAnswer": {"@type": "Answer", "text": "This dataset is not the basis for the 392,412 finding. The two analyses are independent. The FJC analysis uses only free government data. The attorney analysis uses paid PACER data."}}, {"@type": "Question", "name": "How it works?", "acceptedAnswer": {"@type": "Answer", "text": "RECAP partnership: The Free Law Project's RECAP archive is the largest open collection of federal court documents. Through bulk RECAP ingestion, the system has enriched over 16,000 cases at zero cost."}}]}
 </script>
 </head>
 <body>
@@ -324,30 +324,30 @@
 <div class="stat-row">
 <div class="stat-card">
 <span class="number">37.9M</span>
-<span class="label">Total FJC IDB rows<br/>(FY 2008–2024)</span>
+<span class="label">Total FJC IDB rows<br/>(FY 2008–2025)</span>
 </div>
 <div class="stat-card">
-<span class="number">4.9M</span>
+<span class="number">5.1M</span>
 <span class="label">Chapter 13 cases</span>
 </div>
 <div class="stat-card">
-<span class="number">1,627,116</span>
+<span class="number">1,692,878</span>
 <span class="label">Prior filers flagged<br/>(PRFILE = Y)</span>
 </div>
 <div class="stat-card">
-<span class="number">391,951</span>
+<span class="number">392,412</span>
 <span class="label">Prior filers discharged<br/>(no 1328(f) check)</span>
 </div>
 </div>
 <p class="source">Source: FJC Integrated Database, public release files (civil + bankruptcy). Downloaded March 2026. Loaded into SQLite, 94 districts.</p>
-<p>The <strong>391,951</strong> figure is the cross-reference of two FJC fields that had never been joined before:</p>
+<p>The <strong>392,412</strong> figure is the cross-reference of two FJC fields that had never been joined before:</p>
 <ul>
 <li><code>PRFILE</code> -"Prior filing" flag. Set to <code>Y</code> when the debtor has a prior bankruptcy on record.</li>
 <li><code>DIESSION</code> (disposition) -Coded <code>D</code> (discharge), <code>DC</code> (discharge &amp; closed), or <code>DD</code> (discharge &amp; dismissed).</li>
 </ul>
 <p>Result: <strong>27.4%</strong> of prior filers with known dispositions received a discharge. <a href="https://section1328.org" rel="noopener" target="_blank" title="Section 1328 Discharge -- Open Bankruptcy Project">Section 1328</a>(f) requires a time-eligibility check before discharge. No federal database records whether this check occurred.</p>
 <div class="callout yellow">
-<h4>What 391,951 is -and isn't</h4>
+<h4>What 392,412 is -and isn't</h4>
 <p>This is the <em>universe of cases requiring verification</em>, not the confirmed violation count. The FJC does not include prior case filing dates, so the aggregate data cannot determine which discharges fall within the statutory bar window (4 years for Ch. 7→13, 2 years for Ch. 13→13). Determining actual violations requires pulling individual PACER dockets and checking the dates. That is what the screener does -and why PACER access is the bottleneck.</p>
 </div>
 <!-- ===== SECTION 2: DATA ARCHITECTURE ===== -->
@@ -403,26 +403,26 @@
 </table>
 <p>The critical asymmetry: <strong>the data showing the problem is free; the data confirming actual violations costs money.</strong> The FJC publishes the question. PACER paywalls the answer at $0.10/page.</p>
 <!-- ===== SECTION 3: METHODOLOGY ===== -->
-<h2>3. Methodology: How 391,951 Was Derived</h2>
+<h2>3. Methodology: How 392,412 Was Derived</h2>
 <div class="methodology-step">
 <span class="step-num">STEP 1 -Ingest</span>
-<p>Download FJC IDB public release files (civil &amp; bankruptcy). Two flat files covering FY 2008–2024, totaling 37.9M rows. Load into SQLite.</p>
+<p>Download FJC IDB public release files (civil &amp; bankruptcy). Two flat files covering FY 2008–2025, totaling 37.9M rows. Load into SQLite.</p>
 </div>
 <div class="methodology-step">
 <span class="step-num">STEP 2 -Filter</span>
-<p>Select Chapter 13 cases only (<code>ORGFLCHP = '13'</code>). Result: ~4.9M cases across 94 federal judicial districts.</p>
+<p>Select Chapter 13 cases only (<code>ORGFLCHP = '13'</code>). Result: ~5.1M cases across 94 federal judicial districts.</p>
 </div>
 <div class="methodology-step">
 <span class="step-num">STEP 3 -Identify prior filers</span>
-<p>Filter on <code>PRFILE = 'Y'</code> (FJC prior-filing flag). Result: 1,627,116 cases where the debtor had at least one prior bankruptcy filing.</p>
+<p>Filter on <code>PRFILE = 'Y'</code> (FJC prior-filing flag). Result: 1,692,878 cases where the debtor had at least one prior bankruptcy filing.</p>
 </div>
 <div class="methodology-step">
 <span class="step-num">STEP 4 -Cross-reference dispositions</span>
-<p>Of the prior filers, filter on disposition codes indicating discharge (<code>D</code>, <code>DC</code>, <code>DD</code>). Exclude cases with null or pending dispositions. Result: <strong>391,951 prior filers received discharge</strong>.</p>
+<p>Of the prior filers, filter on disposition codes indicating discharge (<code>D</code>, <code>DC</code>, <code>DD</code>). Exclude cases with null or pending dispositions. Result: <strong>392,412 prior filers received discharge</strong>.</p>
 </div>
 <div class="methodology-step">
 <span class="step-num">STEP 5 -Compute rate</span>
-<p>391,951 / 1,428,833 (prior filers with known dispositions) = <strong>27.4% discharge rate</strong> among repeat Chapter 13 filers.</p>
+<p>392,412 / 1,428,833 (prior filers with known dispositions) = <strong>27.4% discharge rate</strong> among repeat Chapter 13 filers.</p>
 </div>
 <p class="source">All queries run against SQLite. Schema and SQL available on request. Reproducible by anyone who downloads the same FJC files.</p>
 <!-- ===== SECTION 4: KNOWN LIMITATIONS ===== -->
@@ -455,13 +455,13 @@
 </tr>
 <tr>
 <td>PACER cost barrier limits verification scale</td>
-<td>Only 264 of 391,951 cases individually verified</td>
+<td>Only 264 of 392,412 cases individually verified</td>
 <td><strong>This is the research bottleneck.</strong> Fee-exempt institutional access would enable national verification.</td>
 </tr>
 <tr>
 <td>Builder's case is in the dataset</td>
 <td>Potential perception of confirmation bias</td>
-<td>The 391,951 number uses zero PACER data and zero case-specific data. It is derived entirely from the government's own published database. Methodology is district-agnostic and attorney-agnostic.</td>
+<td>The 392,412 number uses zero PACER data and zero case-specific data. It is derived entirely from the government's own published database. Methodology is district-agnostic and attorney-agnostic.</td>
 </tr>
 </tbody>
 </table>
@@ -513,7 +513,7 @@
 <li><strong>Cross-era tracking:</strong> The same attorney names appear across three separately sanctioned firms in two cities over 17 years (2007–2024). Dismissal rates remain stable across firm changes: 50.7% (Chicago, 2007–2014) → 51.7% (Kansas City, 2019–present).</li>
 </ul>
 <h3>What the attorney dataset is not</h3>
-<p>This dataset is not the basis for the 391,951 finding. The two analyses are independent. The FJC analysis uses only free government data. The attorney analysis uses paid PACER data. They converge on the same structural failure -no systematic verification of discharge eligibility -from completely different starting points.</p>
+<p>This dataset is not the basis for the 392,412 finding. The two analyses are independent. The FJC analysis uses only free government data. The attorney analysis uses paid PACER data. They converge on the same structural failure -no systematic verification of discharge eligibility -from completely different starting points.</p>
 <!-- ===== SECTION 7: THE SCREENER ===== -->
 <h2>7. The Screening Tool</h2>
 <p>An open-source tool that automates <a href="https://section1328.org" rel="noopener" target="_blank" title="Section 1328 Discharge -- Open Bankruptcy Project">Section 1328</a>(f) eligibility verification. Given a debtor name and district, it:</p>
@@ -569,7 +569,7 @@
 <p>With fee-exempt access through a university affiliation:</p>
 <ul>
 <li>National verification becomes feasible across all 94 districts at zero marginal cost</li>
-<li>The 391,951-case universe can be sampled systematically (stratified random sample by district and year)</li>
+<li>The 392,412-case universe can be sampled systematically (stratified random sample by district and year)</li>
 <li>Attorney-level outcome tracking can scale from 6 districts to 94</li>
 <li>Real-time RSS monitoring already covers every federal bankruptcy court -enrichment via PACER is the only paid step</li>
 </ul>
@@ -592,7 +592,7 @@
 <h2>11. Open Research Questions</h2>
 <p>These are the questions this dataset can answer that no one has answered yet:</p>
 <ol>
-<li><strong>What is the actual 1328(f) violation rate?</strong> The 391,951 is the verification universe. How many are actual violations vs. cases where the bar window had expired? Requires PACER docket-level date checking at scale.</li>
+<li><strong>What is the actual 1328(f) violation rate?</strong> The 392,412 is the verification universe. How many are actual violations vs. cases where the bar window had expired? Requires PACER docket-level date checking at scale.</li>
 <li><strong>What explains the 39-point geographic spread?</strong> Is D. Kansas (57.4%) genuinely less enforcement-intensive than N.D. Georgia (18.1%), or do demographic and filing-pattern differences account for the gap?</li>
 <li><strong>Does attorney volume predict dismissal rate?</strong> The 13,615-case dataset suggests yes (Z = 4.5). Can this hold nationally across all 94 districts?</li>
 <li><strong>What is the dollar cost of non-verification?</strong> Each ineligible discharge that proceeds represents fees paid to an attorney, trustee payments made, and court resources consumed. Can a per-case harm estimate be built?</li>
@@ -609,7 +609,7 @@
 </thead>
 <tbody>
 <tr>
-<td>391,951 prior filers discharged</td>
+<td>392,412 prior filers discharged</td>
 <td>Download FJC IDB files, run the 5-step query in Section 3</td>
 <td>Free</td>
 </tr>

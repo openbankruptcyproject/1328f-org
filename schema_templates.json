@@ -140,7 +140,7 @@
     "@context": "https://schema.org",
     "@type": "Dataset",
     "name": "U.S. Bankruptcy Court Repeat Filer Analysis Dataset",
-    "description": "Comprehensive dataset of 4.9 million federal bankruptcy cases across 94 districts, with repeat-filer identification, discharge outcomes, Section 1328(f) eligibility screening, and attorney performance metrics. Derived from Federal Judicial Center Integrated Database public records and PACER docket data.",
+    "description": "Comprehensive dataset of 5.1 million federal bankruptcy cases across 94 districts, with repeat-filer identification, discharge outcomes, Section 1328(f) eligibility screening, and attorney performance metrics. Derived from Federal Judicial Center Integrated Database public records and PACER docket data.",
     "url": "https://1328f.org/data/",
     "identifier": "1328f-bankruptcy-dataset-v1",
     "license": "https://creativecommons.org/licenses/by/4.0/",
@@ -171,7 +171,7 @@
       {
         "@type": "PropertyValue",
         "name": "Total cases screened",
-        "value": "4,900,000+"
+        "value": "5,097,521+"
       },
       {
         "@type": "PropertyValue",
@@ -208,7 +208,7 @@
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Section 1328(f) Discharge Bar Screener",
-    "description": "Free, open-source tool that screens bankruptcy cases for Section 1328(f) discharge eligibility bars. Runs entirely in the browser using sql.js to query 4.9 million FJC records. No server, no login, no personal data collected.",
+    "description": "Free, open-source tool that screens bankruptcy cases for Section 1328(f) discharge eligibility bars. Runs entirely in the browser using sql.js to query 5.1 million FJC records. No server, no login, no personal data collected.",
     "url": "https://1328f.com",
     "applicationCategory": "LegalService",
     "applicationSubCategory": "Bankruptcy Screening Tool",
@@ -340,7 +340,7 @@
     "@type": "WebSite",
     "name": "Section 1328(f) Discharge Bar Screener",
     "url": "https://1328f.com",
-    "description": "Free tool to screen bankruptcy cases for Section 1328(f) discharge eligibility bars using 4.9 million public court records",
+    "description": "Free tool to screen bankruptcy cases for Section 1328(f) discharge eligibility bars using 5.1 million public court records",
     "publisher": {
       "@type": "Organization",
       "name": "1328f.org",

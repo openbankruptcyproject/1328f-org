@@ -198,14 +198,14 @@
 </div>
 <!-- ===== WHAT WE BUILT ON TOP OF SCALES ===== -->
 <h2>What PACER-tools Made Possible</h2>
-<p>Starting from the SCALES docket scraper and parser, we built a bankruptcy-specific analytics pipeline that now spans 347 tools, 4.9 million FJC cases, and 11,000+ enriched dockets. Every analytical layer depends on PACER-tools as the ingestion foundation.</p>
+<p>Starting from the SCALES docket scraper and parser, we built a bankruptcy-specific analytics pipeline that now spans 347 tools, 5.1 million FJC cases, and 11,000+ enriched dockets. Every analytical layer depends on PACER-tools as the ingestion foundation.</p>
 <div class="stat-row">
 <div class="stat-card">
 <span class="number">347</span>
 <span class="label">Analysis tools built<br/>(Python)</span>
 </div>
 <div class="stat-card">
-<span class="number">4.9M</span>
+<span class="number">5.1M</span>
 <span class="label">FJC cases loaded<br/>(94 districts)</span>
 </div>
 <div class="stat-card">
@@ -227,7 +227,7 @@
 <span class="scales">SCALES PACER-tools</span> -- docket scraping, HTML parsing, party extraction<br/>
 <span class="flp">eyecite (Free Law Project)</span> -- citation extraction from docket text<br/>
 <span class="obp">LexNLP</span> -- money/amount extraction from fee applications<br/>
-<span class="dim">FJC IDB</span> -- 4.9M case records (public download)<br/>
+<span class="dim">FJC IDB</span> -- 5.1M case records (public download)<br/>
 <br/>
 <span class="dim">Enrichment layer</span> <span class="obp">(OBP)</span><br/>
     ├ Case Enricher -- unified pipeline: <span class="scales">SCALES parser</span> + <span class="flp">eyecite</span> + <span class="obp">LexNLP</span> + event classification<br/>
@@ -246,7 +246,7 @@
 <h2>Analytical Modules (Detail)</h2>
 <div class="pipeline-step">
 <span class="step-num">1. Portfolio Health</span>
-<p>Per-attorney outcome analysis across all cases in the dataset. Computes discharge rate, <a href="https://dismissalrate.org" rel="noopener" target="_blank" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project">dismissal rate</a>, chapter mix, confidence intervals, and red flag counts. Outputs letter-grade scorecards (A through F) with peer comparison. Uses FJC data for the full 4.9M-case view, SCALES-parsed dockets for the detailed view.</p>
+<p>Per-attorney outcome analysis across all cases in the dataset. Computes discharge rate, <a href="https://dismissalrate.org" rel="noopener" target="_blank" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project">dismissal rate</a>, chapter mix, confidence intervals, and red flag counts. Outputs letter-grade scorecards (A through F) with peer comparison. Uses FJC data for the full 5.1M-case view, SCALES-parsed dockets for the detailed view.</p>
 <p><strong>CLI:</strong> <code>run.py check [attorney_name]</code></p>
 </div>
 <div class="pipeline-step">
@@ -322,7 +322,7 @@
 <tr><th>Finding</th><th>Method</th><th>Scale</th></tr>
 </thead>
 <tbody>
-<tr><td>391,951 prior filers received Ch.13 discharges with no verifiable 1328(f) check</td><td>FJC cross-tabulation (PRFILE x DIESSION)</td><td>National, 4.9M cases</td></tr>
+<tr><td>392,412 prior filers received Ch.13 discharges with no verifiable 1328(f) check</td><td>FJC cross-tabulation (PRFILE x DIESSION)</td><td>National, 5.1M cases</td></tr>
 <tr><td>Two distinct mill archetypes identifiable from public review data</td><td>Google review analysis + FJC cross-reference</td><td>38 firms scored</td></tr>
 <tr><td>Ch.13 <a href="https://dismissalrate.org" rel="noopener" target="_blank" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project">dismissal rate</a> varies 4x across districts (21%-82%)</td><td>FJC baseline computation</td><td>30 districts with sufficient data</td></tr>
 <tr><td>Template filing patterns persist across firms and decades</td><td>Docket sequence fingerprinting (SCALES parser)</td><td>125 deep-mined cases</td></tr>

@@ -3,7 +3,7 @@
 **Artifact:** `district_violations_fy2008_2024.csv`
 **Version:** v1
 **Retrieved:** 2026-04-19
-**Source:** FJC Integrated Database (C13 pending file), FY2008-2024, via local `fjc` MCP server
+**Source:** FJC Integrated Database (C13 pending file), FY2008-2025, via local `fjc` MCP server
 
 ## 0. Purpose
 
@@ -20,7 +20,7 @@ The bar is not discretionary. It is not an affirmative defense a creditor must r
 
 ## 2. Data source
 
-The underlying data is the **Federal Judicial Center's Integrated Database (IDB), Bankruptcy -- Chapter 13 Pending File**, covering federal fiscal years 2008 through 2024.
+The underlying data is the **Federal Judicial Center's Integrated Database (IDB), Bankruptcy -- Chapter 13 Pending File**, covering federal fiscal years 2008 through 2025.
 
 - Local store: `pacer/data/fjc_national.db` (SQLite, ~37.9M rows, table `fjc_cases`)
 - Query server: `docker/fjc-mcp/server.py` (Python FastMCP, stdio transport)
@@ -81,13 +81,13 @@ where `prior_discharged` is the deduplicated count of cases satisfying **all** o
 ## 6. What the numbers are, and are not
 
 **MEASURED directly from the IDB (no coefficient):**
-- National count of Ch. 13 cases filed FY2008-2024 with `prfile = 'Y'` and a discharge entered: **391,951**
-- National Ch. 13 total filings in period: **4,895,163**
+- National count of Ch. 13 cases filed FY2008-2025 with `prfile = 'Y'` and a discharge entered: **392,412**
+- National Ch. 13 total filings in period: **5,097,521**
 - National dismissal rate: **58.3%**
 - National prior-filer rate: **33.2%**
 
 **ESTIMATED via the 0.43 coefficient:**
-- National §1328(f) violations FY2008-2024: **168,539** (= round(391,951 × 0.43))
+- National §1328(f) violations FY2008-2025: **168,737** (= round(392,412 × 0.43))
 - District-level violation counts in the CSV (same derivation, per-district)
 
 **NOT established by this dataset:**
@@ -133,7 +133,7 @@ For external reproduction without the MCP server, the equivalent SQL is in Secti
 
 Any downstream use of the spine should cite as:
 
-> District-level §1328(f) violation estimates derived from the FJC Integrated Database (C13 pending file, FY2008-2024) via the 1328f.org research spine v1 (retrieved 2026-04-19). See methodology note at [URL] Section 5 for the 0.43 coefficient assumption and Section 7.1 for the validation path.
+> District-level §1328(f) violation estimates derived from the FJC Integrated Database (C13 pending file, FY2008-2025) via the 1328f.org research spine v1 (retrieved 2026-04-19). See methodology note at [URL] Section 5 for the 0.43 coefficient assumption and Section 7.1 for the validation path.
 
 ## 10. Revision history
 

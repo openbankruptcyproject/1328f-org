@@ -164,12 +164,12 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
         {
           "@type": "HowToStep",
           "position": 4,
-          "text": "Extraer casos de deudores con presentaciones previas de la IDB del FJC. Filtrar a casos del Capítulo 13 con PRBANKFL indicando una presentación previa. Resultado: 1,627,116 casos."
+          "text": "Extraer casos de deudores con presentaciones previas de la IDB del FJC. Filtrar a casos del Capítulo 13 con PRBANKFL indicando una presentación previa. Resultado: 1,692,878 casos."
         },
         {
           "@type": "HowToStep",
           "position": 5,
-          "text": "Identificar deudores con presentaciones previas que recibieron descarga. Filtrar a casos donde el código de disposicion indica que se ingreso una descarga. Resultado: 391,951 deudores con presentación"
+          "text": "Identificar deudores con presentaciones previas que recibieron descarga. Filtrar a casos donde el código de disposicion indica que se ingreso una descarga. Resultado: 392,412 deudores con presentación"
         },
         {
           "@type": "HowToStep",
@@ -298,7 +298,7 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 </div>
 <div class="callout">
 <h4>Resumen</h4>
-<p style="margin-bottom: 0;">Construimos una herramienta de deteccion de código abierto que examino 4,895,163 solicitudes de quiebra del Capítulo 13 en los 94 distritos federales de quiebras. Identificamos 391,951 deudores con presentaciones previas que recibieron descargas sin verificacion de elegibilidad. En una muestra verificada de 7 distritos, 264 fueron violaciones confirmadas donde deudores recibieron descargas a pesar de caer dentro del impedimento legal de 11 U.S.C. <a href="https://section1328.org" rel="noopener" target="_blank" title="Section 1328 Discharge -- Open Bankruptcy Project">Section 1328</a>(f). Este informe describe nuestras fuentes de datos, metodologia, controles de calidad y resultados.</p>
+<p style="margin-bottom: 0;">Construimos una herramienta de deteccion de código abierto que examino 5,097,521 solicitudes de quiebra del Capítulo 13 en los 94 distritos federales de quiebras. Identificamos 392,412 deudores con presentaciones previas que recibieron descargas sin verificacion de elegibilidad. En una muestra verificada de 7 distritos, 264 fueron violaciones confirmadas donde deudores recibieron descargas a pesar de caer dentro del impedimento legal de 11 U.S.C. <a href="https://section1328.org" rel="noopener" target="_blank" title="Section 1328 Discharge -- Open Bankruptcy Project">Section 1328</a>(f). Este informe describe nuestras fuentes de datos, metodologia, controles de calidad y resultados.</p>
 </div>
 <h2>1. Antecedentes</h2>
 <p><a href="https://section1328.org" rel="noopener" target="_blank" title="Section 1328 Discharge -- Open Bankruptcy Project">Section 1328</a>(f), anadida por BAPCPA en 2005, impide la descarga del Capítulo 13 para deudores que recibieron una descarga previa dentro de una ventana especificada: cuatro años para una descarga previa del Capítulo 7, 11 o 12, y dos años para una descarga previa del Capítulo 13. La medicion va de fecha de presentación a fecha de presentación.</p>
@@ -307,14 +307,14 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 <h2>2. Fuentes de datos</h2>
 <h3>2.1 Base de datos integrada del FJC</h3>
 <p>El Centro Judicial Federal mantiene la base de datos integrada (IDB), que contiene registros a nivel de caso para todas las solicitudes de tribunales federales. El subconjunto de quiebras incluye campos para fecha de presentación, fecha de terminacion, disposicion, capítulo, distrito e indicadores de presentación previa.</p>
-<p>Utilizamos el subconjunto del Capítulo 13 que cubre los años fiscales 2008 a 2024. Este conjunto de datos contiene 4,895,163 casos presentados en los 94 distritos federales de quiebras.</p>
+<p>Utilizamos el subconjunto del Capítulo 13 que cubre los años fiscales 2008 a 2024. Este conjunto de datos contiene 5,097,521 casos presentados en los 94 distritos federales de quiebras.</p>
 <h3>2.2 PACER Case Locator</h3>
 <p>El PACER Case Locator (PCL) proporciona datos de casos buscables incluyendo asociaciones abogado-caso, fechas de presentación y codigos de disposicion. Utilizamos exportaciones CSV del PCL para analisis a nivel de abogado en distritos objetivo, cubriendo 56,256 casos del Capítulo 13 en el Distrito Oeste de Missouri, el Distrito de Kansas y el Distrito Este de Missouri.</p>
 <h3>2.3 Archivo CourtListener RECAP</h3>
 <p>CourtListener del Free Law Project alberga el archivo RECAP, una coleccion de millones de documentos de PACER contribuidos por usuarios de la extension de navegador RECAP. Utilizamos la API de CL para verificacion a nivel de expediente, seguimiento de carreras de abogados e identificacion de casos entre distritos.</p>
 <h2>3. Metodologia de deteccion</h2>
 <h3>3.1 Identificacion de deudores con presentaciones previas</h3>
-<p>La IDB del FJC incluye un campo <code>PRBANKFL</code> que indica si el deudor tenia una presentación previa de quiebra. De 4,895,163 casos del Capítulo 13 en nuestro conjunto de datos, 1,627,116 (33.2%) tenian presentaciones previas.</p>
+<p>La IDB del FJC incluye un campo <code>PRBANKFL</code> que indica si el deudor tenia una presentación previa de quiebra. De 5,097,521 casos del Capítulo 13 en nuestro conjunto de datos, 1,692,878 (33.2%) tenian presentaciones previas.</p>
 <h3>3.2 Emparejamiento de casos previos</h3>
 <p>Para cada caso de deudor con presentación previa, identificamos la presentación de quiebra previa mas reciente para determinar su capítulo y fecha de presentación. Este paso utiliza una combinacion de referencias cruzadas del FJC, busquedas en PACER y emparejamiento de nombres de deudores con validacion de fechas.</p>
 <h3>3.3 Calculo de la brecha</h3>
@@ -338,8 +338,8 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 </ol>
 <h3>3.5 El pipeline de deteccion</h3>
 <ol class="step-list">
-<li><strong>Extraer casos de deudores con presentaciones previas de la IDB del FJC.</strong> Filtrar a casos del Capítulo 13 con <code>PRBANKFL</code> indicando una presentación previa. Resultado: 1,627,116 casos.</li>
-<li><strong>Identificar deudores con presentaciones previas que recibieron descarga.</strong> Filtrar a casos donde el código de disposicion indica que se ingreso una descarga. Resultado: 391,951 deudores con presentaciones previas que recibieron descarga.</li>
+<li><strong>Extraer casos de deudores con presentaciones previas de la IDB del FJC.</strong> Filtrar a casos del Capítulo 13 con <code>PRBANKFL</code> indicando una presentación previa. Resultado: 1,692,878 casos.</li>
+<li><strong>Identificar deudores con presentaciones previas que recibieron descarga.</strong> Filtrar a casos donde el código de disposicion indica que se ingreso una descarga. Resultado: 392,412 deudores con presentaciones previas que recibieron descarga.</li>
 <li><strong>Emparejar detalles del caso previo.</strong> Para cada deudor con presentación previa que recibio descarga, identificar el capítulo y fecha de presentación del caso previo.</li>
 <li><strong>Calcular brecha y aplicar impedimento.</strong> Comparar fechas de presentación y senalar casos donde la brecha es menor que la ventana de impedimento aplicable.</li>
 <li><strong>Conteo bruto de senalados.</strong> La deteccion inicial produce una lista bruta de posibles violaciones antes de la verificacion.</li>
@@ -365,8 +365,8 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 </ul>
 <h2>5. Resultados</h2>
 <div class="callout green">
-<h4>Conteo final: 391,951 descargas sin verificacion</h4>
-<p style="margin-bottom: 0;">391,951 deudores con presentaciones previas recibieron descargas del Capítulo 13 sin verificacion de elegibilidad. En una muestra verificada de 7 distritos, 264 casos unicos fueron confirmados donde deudores presentaron dentro de la ventana de impedimento legal de <a href="https://section1328.org" rel="noopener" target="_blank" title="Section 1328 Discharge -- Open Bankruptcy Project">Section 1328</a>(f) y recibieron descarga de todas formas.</p>
+<h4>Conteo final: 392,412 descargas sin verificacion</h4>
+<p style="margin-bottom: 0;">392,412 deudores con presentaciones previas recibieron descargas del Capítulo 13 sin verificacion de elegibilidad. En una muestra verificada de 7 distritos, 264 casos unicos fueron confirmados donde deudores presentaron dentro de la ventana de impedimento legal de <a href="https://section1328.org" rel="noopener" target="_blank" title="Section 1328 Discharge -- Open Bankruptcy Project">Section 1328</a>(f) y recibieron descarga de todas formas.</p>
 </div>
 <h3>5.1 Distribucion nacional</h3>
 <p>Se identificaron violaciones en multiples distritos federales, con concentracion en distritos que tienen tasas mas altas de deudores con presentaciones previas. El <a href="https://1328f.com">panel nacional</a> proporciona un mapa interactivo con resultados por distrito.</p>
@@ -378,7 +378,7 @@ article { max-width: 760px; margin: 0 auto; padding: 2rem; }
 <li>La representacion por la misma firma en la presentación previa y actual ocurre en el 42.8% de los casos senalados</li>
 </ul>
 <h3>5.3 Tasas de descarga para deudores con presentaciones previas</h3>
-<p>De 1,627,116 deudores del Capítulo 13 con quiebras previas, 391,951 (24.1%) recibieron descargas. Esta tasa varia significativamente por distrito, desde menos del 10% hasta mas del 50%. Vea el <a href="/reports/prior-filer-discharge-rates/index-es.html">analisis completo de tasas de descarga de deudores con presentaciones previas</a>.</p>
+<p>De 1,692,878 deudores del Capítulo 13 con quiebras previas, 392,412 (24.1%) recibieron descargas. Esta tasa varia significativamente por distrito, desde menos del 10% hasta mas del 50%. Vea el <a href="/reports/prior-filer-discharge-rates/index-es.html">analisis completo de tasas de descarga de deudores con presentaciones previas</a>.</p>
 <h2>6. Limitaciones</h2>
 <ul>
 <li><strong>Retraso de datos del FJC.</strong> La IDB se actualiza periodicamente, no en tiempo real. Los casos presentados o resueltos después de la actualizacion mas reciente no estan incluidos.</li>

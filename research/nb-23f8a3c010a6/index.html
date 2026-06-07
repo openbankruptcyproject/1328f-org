@@ -112,7 +112,7 @@
         {
           "@type": "HowToStep",
           "position": 3,
-          "text": "The FJC database has 4.9M cases but does not include attorney first names or firm names -- only attorney_last (last name). Name matching produces false positives in large districts."
+          "text": "The FJC database has 5.1M cases but does not include attorney first names or firm names -- only attorney_last (last name). Name matching produces false positives in large districts."
         },
         {
           "@type": "HowToStep",
@@ -186,7 +186,7 @@
 </script>
 <meta content="Learn about lab notebook -- open bankruptcy project in our free 2026 guide. Clear explanations, real data, and practical steps. Part of the Open Bankruptcy Proj" name="description"/>
 <script type="application/ld+json">
-{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why district-adjusted?", "acceptedAnswer": {"@type": "Answer", "text": "Raw Ch.13 dismissal rates vary dramatically by district. Without adjustment, a firm performing at the national average gets scored identically whether it's in a low-dismissal district or a high-dismissal one. The delta isolates firm-specific underperformance from structural variation."}}, {"@type": "Question", "name": "Where the Model Breaks Down?", "acceptedAnswer": {"@type": "Answer", "text": "Data coverage gap: Axis 3 depends on attorney-level case data The FJC database has 4.9M cases but does not include attorney first names or firm names -- only attorney_last (last name). Name matching produces false positives in large districts."}}, {"@type": "Question", "name": "What Comes Next?", "acceptedAnswer": {"@type": "Answer", "text": "With AACER access Populate Axis 3 for all 94 districts -- complete the composite model Attorney-level national benchmarking (every consumer bankruptcy attorney, scored) Verified 1328(f) violation count with attorney attribution Publishable dataset for peer review Without AACER access Continue..."}}]}
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Why district-adjusted?", "acceptedAnswer": {"@type": "Answer", "text": "Raw Ch.13 dismissal rates vary dramatically by district. Without adjustment, a firm performing at the national average gets scored identically whether it's in a low-dismissal district or a high-dismissal one. The delta isolates firm-specific underperformance from structural variation."}}, {"@type": "Question", "name": "Where the Model Breaks Down?", "acceptedAnswer": {"@type": "Answer", "text": "Data coverage gap: Axis 3 depends on attorney-level case data The FJC database has 5.1M cases but does not include attorney first names or firm names -- only attorney_last (last name). Name matching produces false positives in large districts."}}, {"@type": "Question", "name": "What Comes Next?", "acceptedAnswer": {"@type": "Answer", "text": "With AACER access Populate Axis 3 for all 94 districts -- complete the composite model Attorney-level national benchmarking (every consumer bankruptcy attorney, scored) Verified 1328(f) violation count with attorney attribution Publishable dataset for peer review Without AACER access Continue..."}}]}
 </script>
 </head>
 <body>
@@ -204,7 +204,7 @@
 <h2>Current State of the Toolkit</h2>
 <div class="stat-row">
 <div class="stat-card">
-<span class="number">4.9M</span>
+<span class="number">5.1M</span>
 <span class="label">FJC cases loaded<br/>(94 districts)</span>
 </div>
 <div class="stat-card">
@@ -258,7 +258,7 @@
 <tbody>
 <tr><td>Low-dismissal district</td><td>~27%</td><td>16,000+</td></tr>
 <tr><td>Mid-range district</td><td>~43%</td><td>16,000+</td></tr>
-<tr><td>National average (all Ch.13)</td><td>~45%</td><td>4.9M</td></tr>
+<tr><td>National average (all Ch.13)</td><td>~45%</td><td>5.1M</td></tr>
 <tr><td>High-dismissal district</td><td>~63%</td><td>17,000+</td></tr>
 </tbody>
 </table>
@@ -288,7 +288,7 @@
 <div class="gap-box">
 <h4>Data coverage gap: Axis 3 depends on attorney-level case data</h4>
 <ul>
-<li>The FJC database has 4.9M cases but <strong>does not include attorney first names or firm names</strong> -- only <code>attorney_last</code> (last name). Name matching produces false positives in large districts.</li>
+<li>The FJC database has 5.1M cases but <strong>does not include attorney first names or firm names</strong> -- only <code>attorney_last</code> (last name). Name matching produces false positives in large districts.</li>
 <li>District-constrained matching fixes cross-district contamination but reduces hit rates. Many firms return N/A on Axis 3 because their districts lack sufficient FJC coverage.</li>
 <li><strong>Only 4 districts have deep FJC coverage</strong> (10,000+ closed Ch.13 cases each). The remaining 90 districts have sparse or zero closed-case data for this methodology.</li>
 <li>Axes 1 and 2 (review signals) work everywhere -- they require only a Google Maps listing. Axis 3 (outcome) is the bottleneck.</li>
@@ -302,7 +302,7 @@
 <li>Name matching goes from fuzzy debtor-name LIKE queries to <strong>exact attorney-firm linkage</strong></li>
 <li>Enables the first <strong>national attorney-level outcome benchmarking</strong> -- every consumer bankruptcy attorney in the country scored against their district peers</li>
 <li>Combined with the review signals (Axes 1-2), produces a <strong>validated mill detection model</strong> testable against the full population</li>
-<li>The 391,951 prior-filer discharge count could be refined to an <strong>actual verified violation count</strong> with attorney attribution</li>
+<li>The 392,412 prior-filer discharge count could be refined to an <strong>actual verified violation count</strong> with attorney attribution</li>
 </ul>
 </div>
 <!-- ===== TOOL INVENTORY ===== -->
@@ -312,16 +312,16 @@
 <tr><th>Tool</th><th>What it does</th><th>Data source</th></tr>
 </thead>
 <tbody>
-<tr><td><code>mill_composite_score.py</code></td><td>3-axis composite scorer with district baselines</td><td>Google reviews + FJC 4.9M cases</td></tr>
+<tr><td><code>mill_composite_score.py</code></td><td>3-axis composite scorer with district baselines</td><td>Google reviews + FJC 5.1M cases</td></tr>
 <tr><td><code>review_scrape.py</code></td><td>Google Maps review scraper (CDP automation)</td><td>Google Maps</td></tr>
 <tr><td><code>review_audit.py</code></td><td>Cross-reference reviewers against FJC cases</td><td>Scraped reviews + FJC</td></tr>
-<tr><td><code>run.py check [name]</code></td><td>Attorney scorecard: caseload, <a href="https://dismissalrate.org" rel="noopener" target="_blank" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project">dismissal rate</a>, chapter mix, red flags</td><td>FJC 4.9M cases</td></tr>
+<tr><td><code>run.py check [name]</code></td><td>Attorney scorecard: caseload, <a href="https://dismissalrate.org" rel="noopener" target="_blank" title="Bankruptcy Dismissal Rates -- Open Bankruptcy Project">dismissal rate</a>, chapter mix, red flags</td><td>FJC 5.1M cases</td></tr>
 <tr><td><code>run.py scan</code></td><td>Blind outlier detection across all attorneys in dataset</td><td>FJC</td></tr>
 <tr><td><code>run.py predict [name]</code></td><td>ML mill probability (logistic regression, 7 features)</td><td>FJC</td></tr>
 <tr><td><code>run.py compare</code></td><td>Subject firm vs. same-district controls</td><td>FJC</td></tr>
 <tr><td><code>run.py worst N</code></td><td>Worst N attorneys by composite score</td><td>FJC</td></tr>
 <tr><td>1328(f) Screener</td><td>Client-side SQL.js tool checking discharge eligibility</td><td>PACER case data (user-provided)</td></tr>
-<tr><td>FJC MCP Server</td><td>Natural language queries against FJC data</td><td>FJC 4.9M cases</td></tr>
+<tr><td>FJC MCP Server</td><td>Natural language queries against FJC data</td><td>FJC 5.1M cases</td></tr>
 </tbody>
 </table>
 <!-- ===== RESEARCH LOG ===== -->
@@ -332,7 +332,7 @@
 </div>
 <div class="log-entry">
 <span class="date">April 1, 2026</span>
-<p><strong>Built Google review scraping and audit pipeline.</strong> CDP-based scraper for Google Maps reviews. Forensic cross-reference engine matching reviewer names against 4.9M FJC bankruptcy cases (nickname expansion, fuzzy matching). Scraped 38 firms. Discovered two mill archetypes: review-suppressed (0-2% one-star) and unsuppressed (10-27% one-star). Both show elevated one-review Google accounts (15-25%).</p>
+<p><strong>Built Google review scraping and audit pipeline.</strong> CDP-based scraper for Google Maps reviews. Forensic cross-reference engine matching reviewer names against 5.1M FJC bankruptcy cases (nickname expansion, fuzzy matching). Scraped 38 firms. Discovered two mill archetypes: review-suppressed (0-2% one-star) and unsuppressed (10-27% one-star). Both show elevated one-review Google accounts (15-25%).</p>
 </div>
 <div class="log-entry">
 <span class="date">March 30, 2026</span>
@@ -350,7 +350,7 @@
 <h2>Open Research Questions</h2>
 <ol>
 <li><strong>Can the composite model predict mills out-of-sample?</strong> Train on known mills, test against unlabeled firms. Requires AACER for Axis 3 coverage nationally.</li>
-<li><strong>What is the true 1328(f) violation rate?</strong> The 391,951 figure is the universe of cases requiring verification. With AACER date data, the actual violation count could be computed directly.</li>
+<li><strong>What is the true 1328(f) violation rate?</strong> The 392,412 figure is the universe of cases requiring verification. With AACER date data, the actual violation count could be computed directly.</li>
 <li><strong>Is there an attorney-level correlation between dismissal rate and 1328(f) violation rate?</strong> Hypothesis: high-dismissal attorneys are more likely to file barred cases because they churn clients through repeat filings.</li>
 <li><strong>Does review manipulation correlate with other misconduct indicators?</strong> Axes 1-2 are cheap to compute (no PACER costs). If they predict Axis 3 outcomes, review data alone could serve as a national screening tool.</li>
 <li><strong>District-level structural variation:</strong> Why does the Ch.13 dismissal baseline range from 21% to 82% across districts? Judicial culture, debtor demographics, trustee behavior, or attorney quality? The FJC data can answer this with the right controls.</li>
