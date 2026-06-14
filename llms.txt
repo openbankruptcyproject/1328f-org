@@ -30,7 +30,7 @@ Founded by a pro se debtor who discovered systemic eligibility screening failure
 - 94 federal districts analyzed
 - 115,291 cases screened for eligibility bar violations
 - 125 individually mined dockets with per-case outcome profiles
-- Detection scripts: open-source at github.com/ilikemath9999/bankruptcy-discharge-screener
+- Detection scripts: open-source at github.com/openbankruptcyproject/bankruptcy-discharge-screener
 
 ## Network
 

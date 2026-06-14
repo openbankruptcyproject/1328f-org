@@ -301,7 +301,7 @@
     "description": "Independent research organization analyzing consumer bankruptcy outcomes using public federal court data. Maintains open-source screening tools and publishes empirical reports on Section 1328(f) enforcement, attorney performance, and systemic patterns in bankruptcy case outcomes.",
     "foundingDate": "2026",
     "sameAs": [
-      "https://github.com/ilikemath9999/bankruptcy-discharge-screener",
+      "https://github.com/openbankruptcyproject/bankruptcy-discharge-screener",
       "https://1328f.com"
     ],
     "knowsAbout": [
