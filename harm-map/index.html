@@ -289,7 +289,7 @@ document.addEventListener('click', function(e) {
   }
   .ticker-item .court { color: #58a6ff; }
   .ticker-item .event { color: #c9d1d9; }
-  .ticker-item .time { color: #6e7681; }
+  .ticker-item .time { color: #8b949e; }
   @keyframes ticker {
     from { transform: translateY(-50%) translateX(0); }
     to { transform: translateY(-50%) translateX(-50%); }
@@ -308,7 +308,7 @@ document.addEventListener('click', function(e) {
     padding: 1.5rem;
     text-align: center;
     font-size: 0.78rem;
-    color: #6e7681;
+    color: #8b949e;
     line-height: 1.8;
   }
   .methodology a { color: #58a6ff; }
@@ -372,6 +372,7 @@ document.addEventListener('click', function(e) {
   ]
 }
 </script>
+<style id="btn-a11y">:where(p,li,dd,td,th,blockquote,h1,h2,h3,h4,h5,h6,figcaption,small) a{text-decoration:underline}</style>
 </head>
 <body>
 <a class="skip-link" href="#map">Skip to map</a>
@@ -521,7 +522,7 @@ document.addEventListener('click', function(e) {
       + '<div class="legend-item"><span class="legend-dot" style="background:#e3b341"></span> 1.25-1.5x above</div>'
       + '<div class="legend-item"><span class="legend-dot" style="background:#db6d28"></span> 1.5-2x above</div>'
       + '<div class="legend-item"><span class="legend-dot" style="background:#f85149"></span> 2x+ above (critical)</div>'
-      + '<div style="margin-top:6px;color:#6e7681;font-size:0.72rem;">Circle size = case volume</div>';
+      + '<div style="margin-top:6px;color:#8b949e;font-size:0.72rem;">Circle size = case volume</div>';
     return div;
   };
   legend.addTo(map);
@@ -616,7 +617,7 @@ document.addEventListener('click', function(e) {
       var barFill = barColor(d.ratio_vs_national);
 
       var popupContent = '<h3>' + d.name + '</h3>'
-        + '<div style="color:#6e7681;font-size:0.75rem;margin-bottom:0.5rem;">' + d.city + ' | ' + d.id.replace('bk','').toUpperCase() + '</div>'
+        + '<div style="color:#8b949e;font-size:0.75rem;margin-bottom:0.5rem;">' + d.city + ' | ' + d.id.replace('bk','').toUpperCase() + '</div>'
         + '<div class="popup-stat"><span class="label">Ch.13 Cases (est.)</span><span class="value">' + fmtCount(d.fjc_total) + '</span></div>'
         + '<div class="popup-stat"><span class="label">Dismissal Rate</span><span class="value ' + rateClass + '">' + fmtPct(d.dismissal_rate) + '</span></div>'
         + '<div class="popup-bar"><div class="popup-bar-fill" style="width:' + barWidth + '%;background:' + barFill + ';"></div></div>'
@@ -624,7 +625,7 @@ document.addEventListener('click', function(e) {
         + '<div class="popup-stat"><span class="label">Est. Prior Filers</span><span class="value">' + fmtCount(d.prior_filers) + '</span></div>'
         + '<div class="popup-stat"><span class="label">Zero-Verification Discharges</span><span class="value">' + fmtCount(d.prior_filer_discharges) + '</span></div>'
         + '<div class="popup-stat"><span class="label">Est. Consumer Harm</span><span class="value red">' + fmtNum(d.estimated_harm) + '</span></div>'
-        + (d.rate_source === 'observed' ? '<div style="font-size:0.7rem;color:#3fb950;margin-top:0.3rem;">Based on observed court data (n=' + fmtCount(d.db_sample) + ')</div>' : '<div style="font-size:0.7rem;color:#6e7681;margin-top:0.3rem;">FJC-estimated (limited court data)</div>')
+        + (d.rate_source === 'observed' ? '<div style="font-size:0.7rem;color:#3fb950;margin-top:0.3rem;">Based on observed court data (n=' + fmtCount(d.db_sample) + ')</div>' : '<div style="font-size:0.7rem;color:#8b949e;margin-top:0.3rem;">FJC-estimated (limited court data)</div>')
         + '<a class="popup-link" href="/districts/' + d.slug + '/">View full report &rarr;</a>';
 
       var marker = L.circleMarker([d.lat, d.lng], {
